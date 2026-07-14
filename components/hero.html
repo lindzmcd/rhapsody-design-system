@@ -1,0 +1,53 @@
+<!-- @dsCard group="Patterns" name="Hero (type in context)" subtitle="Light & dark hero layouts with eyebrow, headline, CTA" width="960" height="720" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+</head><body>
+<div class="wrap">
+<h2>Hero type in context</h2>
+<p>The hero pattern: an IBM Plex Mono eyebrow, a light Poppins headline with one accent word, a short supporting line, and one pill button. One graphic device only, anchored to the right and clear of the copy.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:12px 0;">
+
+  <div>
+    <div style="border:1px solid var(--lgray);border-radius:12px;overflow:hidden;"><div style="container-type:inline-size;position:relative;background:#fff;aspect-ratio:16/9;overflow:hidden;padding:6cqw 6cqw;">
+      <div style="max-width:62cqw;position:relative;z-index:1;">
+        <p style="font-family:var(--mono);font-weight:500;font-size:2.6cqw;letter-spacing:0.17em;text-transform:uppercase;color:var(--blue);margin:0 0 2cqw;">Healthcare interoperability</p>
+        <div style="font-weight:400;font-size:6cqw;line-height:1.18;color:var(--navy);">We integrate <span style="color:var(--blue);">healthcare.</span></div>
+        <p style="font-weight:400;font-size:2.9cqw;color:var(--dgray);margin:2.2cqw 0 3.5cqw;max-width:none;">Move clinical data between any systems with the platform trusted by more than 1,900 teams worldwide.</p>
+        <span style="height:8cqw;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:3cqw;display:inline-flex;align-items:center;padding:0 4.5cqw;">Request a demo</span>
+      </div>
+      <span style="position:absolute;right:5cqw;top:5cqw;width:2cqw;height:2cqw;border-radius:50%;background:#1A81F4;"></span>
+      <span style="position:absolute;right:10cqw;top:5cqw;width:2cqw;height:2cqw;border-radius:50%;background:#7340E4;"></span>
+      <span style="position:absolute;right:5cqw;top:11cqw;width:2cqw;height:2cqw;border-radius:50%;background:#23C5BF;"></span>
+      <span style="position:absolute;right:10cqw;top:11cqw;width:2cqw;height:2cqw;border-radius:50%;background:#90C5FF;"></span>
+      <span style="position:absolute;right:15cqw;top:11cqw;width:2cqw;height:2cqw;border-radius:50%;background:#1A81F4;"></span>
+      <span style="position:absolute;right:5cqw;top:17cqw;width:2cqw;height:2cqw;border-radius:50%;background:#90C5FF;"></span>
+      <span style="position:absolute;right:10cqw;top:17cqw;width:2cqw;height:2cqw;border-radius:50%;background:#23C5BF;"></span>
+      <span style="position:absolute;right:15cqw;top:17cqw;width:2cqw;height:2cqw;border-radius:50%;background:#7340E4;"></span>
+    </div></div>
+    <p class="caption" style="margin:6px 0 0;">Light mode: navy headline, blue accent word, dot accent top-right.</p>
+  </div>
+
+  <div>
+    <div style="border-radius:12px;overflow:hidden;"><div style="container-type:inline-size;position:relative;background:var(--navy);aspect-ratio:16/9;overflow:hidden;padding:6cqw 6cqw;">
+      <div style="position:absolute;right:-10cqw;top:50%;transform:translateY(-50%);width:52cqw;height:52cqw;border-radius:50%;background:radial-gradient(circle, rgba(35,197,191,0.45) 0%, rgba(26,129,244,0.22) 40%, transparent 70%);"></div>
+      <div style="max-width:62cqw;position:relative;z-index:1;">
+        <p style="font-family:var(--mono);font-weight:500;font-size:2.6cqw;letter-spacing:0.17em;text-transform:uppercase;color:var(--teal);margin:0 0 2cqw;">Healthcare interoperability</p>
+        <div style="font-weight:400;font-size:6cqw;line-height:1.18;color:#fff;">We integrate <span style="color:#90C5FF;">healthcare.</span></div>
+        <p style="font-weight:400;font-size:2.9cqw;color:#D9DFE6;margin:2.2cqw 0 3.5cqw;max-width:none;">Move clinical data between any systems with the platform trusted by more than 1,900 teams worldwide.</p>
+        <span style="height:8cqw;border-radius:999px;background:var(--teal);color:var(--navy);font-weight:500;font-size:3cqw;display:inline-flex;align-items:center;padding:0 4.5cqw;">Request a demo</span>
+      </div>
+    </div></div>
+    <p class="caption" style="margin:6px 0 0;">Dark mode: white headline, light-blue accent word, teal eyebrow, Pulse glow right.</p>
+  </div>
+</div>
+<ul>
+  <li><strong>Length caps:</strong> hero headline no more than 40 characters; supporting line no more than 110 characters (about two short lines). If it doesn&rsquo;t fit, cut the copy, not the type size.</li>
+  <li>Eyebrow in IBM Plex Mono (blue on light, teal on dark), headline in Poppins with one accent word, one pill button.</li>
+  <li>One device only, offset right and clear of the copy.</li>
+</ul>
+</div>
+</body></html>

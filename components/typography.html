@@ -1,0 +1,110 @@
+<!-- @dsCard group="Foundations" name="Typography" subtitle="Type scale, eyebrows, mono, dates & name lockups" width="960" height="1500" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typography</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+</head><body>
+<div class="wrap">
+<h2>Typography</h2>
+<p>Two typefaces carry the system. <strong>Poppins</strong> sets headlines and body copy; <strong>IBM Plex Mono</strong> sets eyebrows and technical annotations. Load both from Google Fonts and reference them through the design tokens.</p>
+
+<h3>Type scale</h3>
+<p>Headlines lean light (Poppins 300&ndash;400); weight comes from size and space, not bold. Body is Poppins 300&ndash;400.</p>
+<div style="max-width:640px;margin:12px 0;">
+  <div class="type-row"><span class="w">H1 · Poppins 300 · 38px</span><span style="font-weight:300;font-size:38px;line-height:1.15;color:var(--navy);">We integrate healthcare</span></div>
+  <div class="type-row"><span class="w">H2 · Poppins 400 · 27px</span><span style="font-weight:400;font-size:27px;color:var(--navy);">Section headline</span></div>
+  <div class="type-row"><span class="w">H3 · Poppins 600 · 18px</span><span style="font-weight:600;font-size:18px;color:var(--blue);">Subsection heading</span></div>
+  <div class="type-row"><span class="w">H4 · Poppins 600 · 13px caps</span><span style="font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--dgray);">Label heading</span></div>
+  <div class="type-row"><span class="w">Body · Poppins 300 · 15&ndash;16px</span><span style="font-weight:300;font-size:16px;color:var(--navy);">Comfortable reading copy for paragraphs.</span></div>
+  <div class="type-row"><span class="w">Eyebrow · IBM Plex Mono 500 · 12px</span><span style="font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:var(--blue);">Interoperability platform</span></div>
+</div>
+
+<h3>Eyebrows (kicker labels)</h3>
+<p><strong>Standard:</strong> the small label above a headline (the eyebrow or kicker) sets in <strong>IBM Plex Mono</strong>, replacing the previous Poppins Medium uppercase treatment.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:12px 0;">
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 24px;">
+    <p style="font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:0.17em;text-transform:uppercase;color:var(--blue);margin:0 0 8px;">Interoperability platform</p>
+    <div style="font-weight:400;font-size:26px;line-height:1.15;color:var(--navy);">Headline follows in Poppins</div>
+    <p class="caption" style="margin:10px 0 0;">On light: IBM Plex Mono 500, Rhapsody Blue.</p>
+  </div>
+  <div style="background:var(--navy);border-radius:12px;padding:22px 24px;">
+    <p style="font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:0.17em;text-transform:uppercase;color:var(--teal);margin:0 0 8px;">Interoperability platform</p>
+    <div style="font-weight:400;font-size:26px;line-height:1.15;color:#fff;">Headline follows in Poppins</div>
+    <p class="caption" style="margin:10px 0 0;color:#90C5FF;">On dark: IBM Plex Mono 500, teal.</p>
+  </div>
+</div>
+<ul>
+  <li>All caps, always.</li>
+  <li>IBM Plex Mono Medium (500). Regular 400 is acceptable where 500 renders heavy at very small sizes.</li>
+  <li>Size roughly 12&ndash;13px, sitting above the headline with clear space between.</li>
+  <li>Letter-spacing about 0.16 to 0.18em so the caps do not look cramped.</li>
+  <li>Rhapsody Blue on light backgrounds, teal on dark grounds.</li>
+  <li>Markup: a <code>&lt;p&gt;</code> or <code>&lt;span&gt;</code>, never a heading tag.</li>
+  <li>Avoid: Poppins for eyebrows (retired), bold weight, tight or absent letter-spacing, and purple or orange for the eyebrow.</li>
+</ul>
+
+<h3>Technical annotations (IBM Plex Mono)</h3>
+<p>Use IBM Plex Mono for code, field names, versions, IDs, and similar technical strings, so they read as machine text distinct from prose.</p>
+<p>Implementation: load <code>https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap</code> and reference it via the token <code>--mono: "IBM Plex Mono", monospace;</code>.</p>
+
+<h3>Dates, times, and name lockups</h3>
+<h4>Dates and times</h4>
+<ul>
+  <li>Dates: abbreviated month, no period: <strong>Jan 4, 2026</strong>. Ranges use a hyphen with no spaces: <strong>Jan 1-4, 2026</strong>.</li>
+  <li>Times: lowercase <strong>a.m.</strong>/<strong>p.m.</strong> with periods, hyphenated range, time zone after: <strong>10-11 a.m. EST</strong>.</li>
+  <li>Multiple time zones separate with a pipe: <strong>10-11 a.m. EST | 9-10 a.m. CST</strong>.</li>
+</ul>
+<h4>Name lockup</h4>
+<p>Order is always name, then title, then company, each on its own line.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:12px 0;">
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 24px;display:flex;align-items:center;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="width:52px;height:52px;border-radius:50%;flex:none;background:linear-gradient(150deg,#EAF1F8,#DCE6F0);border:2px solid var(--blue);"></div>
+      <div>
+        <div style="font-weight:500;font-size:16px;color:var(--navy);">Firstname Lastname</div>
+        <div style="font-weight:400;font-size:13px;color:var(--dgray);">Chief Executive Officer</div>
+        <div style="font-weight:500;font-size:13px;color:var(--blue);">Rhapsody</div>
+      </div>
+    </div>
+  </div>
+  <div style="background:var(--navy);border-radius:12px;padding:22px 24px;">
+    <p style="font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:0.17em;text-transform:uppercase;color:var(--teal);margin:0 0 6px;">Webinar</p>
+    <div style="font-weight:300;font-size:22px;color:#fff;line-height:1.2;">Agent-ready interoperability in practice</div>
+    <div style="font-weight:400;font-size:13px;color:#90C5FF;margin-top:6px;">Jan 14, 2026 &middot; 10-11 a.m. EST | 9-10 a.m. CST</div>
+    <div style="margin-top:16px;display:flex;align-items:center;gap:13px;">
+      <div style="width:46px;height:46px;border-radius:50%;flex:none;background:linear-gradient(150deg,#123a5c,#0B2C47);border:2px solid var(--teal);"></div>
+      <div>
+        <div style="font-weight:500;font-size:15px;color:#fff;">Firstname Lastname</div>
+        <div style="font-weight:400;font-size:12.5px;color:#D9DFE6;">Chief Executive Officer</div>
+        <div style="font-weight:500;font-size:12.5px;color:#90C5FF;">Rhapsody</div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+  <li>Order is always name &rarr; title &rarr; company; never reorder or merge lines.</li>
+  <li>Company is written as text (&ldquo;Rhapsody&rdquo;), not the wordmark; don&rsquo;t drop a logo into the lockup.</li>
+  <li>Titles follow the person&rsquo;s actual title; don&rsquo;t abbreviate or retitle for fit; reduce size instead.</li>
+  <li>On light, pair the lockup with the thin-ring portrait.</li>
+  <li>On dark, use the event card pattern: eyebrow, session title, date/time line, then the lockup.</li>
+</ul>
+
+<h3>Headline color combination (dark backgrounds)</h3>
+<p>On navy or dark backgrounds, set a two-part headline in white plus light blue, the emphasis word in light blue #90C5FF and the rest in white. This is the release-notes banner treatment. On light backgrounds use navy with a blue accent word instead.</p>
+<div style="background:var(--navy);border-radius:12px;padding:26px 30px;margin:12px 0;">
+  <div style="font-weight:300;font-size:34px;color:#fff;line-height:1.1;">Release <span style="color:#90C5FF;">notes</span></div>
+  <div style="font-weight:300;font-size:15px;color:#90C5FF;margin-top:6px;">What's new, and what it means for you</div>
+</div>
+
+<h3>Minimum font size (web)</h3>
+<ul>
+  <li>Body copy: at least 16px on web. This is the baseline for comfortable reading.</li>
+  <li>Secondary and supporting text: at least 14px.</li>
+  <li>Captions, labels, and fine print: at least 12px. Do not go below 12px for anything a user needs to read.</li>
+  <li>Legal or disclaimer text: at least 11px, used only where unavoidable.</li>
+  <li>Maintain at least 3:1 contrast for large text and 4.5:1 for normal body text, so size and contrast work together.</li>
+</ul>
+</div>
+</body></html>

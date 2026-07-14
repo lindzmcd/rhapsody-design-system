@@ -1,0 +1,99 @@
+<!-- @dsCard group="Components" name="Buttons & CTAs" subtitle="Pill buttons, primary/secondary, text links + arrow" width="960" height="1080" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buttons &amp; CTAs</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+</head><body>
+<div class="wrap">
+<h2>Buttons and CTAs</h2>
+<p>Buttons are pill-shaped, set in Poppins Medium (500), sentence case, with a short action label like &ldquo;Learn more&rdquo; or &ldquo;Request a demo.&rdquo; Keep one primary button per view. Use a secondary outline button for a lower-priority action.</p>
+
+<h3>The pill shape</h3>
+<p>The pill is <strong>fully rounded</strong>: the corner radius equals half the button&rsquo;s height, so the left and right ends are perfect semicircles. In CSS this is <code>border-radius: 999px</code> (any value at or above half the height produces the same full curve).</p>
+<div class="compare">
+  <div class="card do">
+    <div class="head">Do: full pill</div>
+    <div style="padding:36px 18px 26px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div style="height:44px;border-radius:999px;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;background:var(--blue);color:#fff;">Request a demo</div>
+      <p class="caption" style="margin:0;text-align:center;">Radius = &frac12; the height; the ends are perfect semicircles.</p>
+    </div>
+  </div>
+  <div class="card dont">
+    <div class="head">Don&rsquo;t: partial radius</div>
+    <div style="padding:36px 18px 26px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <div style="height:44px;border-radius:8px;background:#fff;border:1px solid var(--lgray);color:var(--dgray);font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Request a demo</div>
+      <p class="caption" style="margin:0;text-align:center;">Partial corners read as a generic rounded rectangle, not the Rhapsody pill.</p>
+    </div>
+  </div>
+</div>
+
+<h3>Primary and secondary</h3>
+<p>Primary is a filled pill and there is one per view: teal on dark grounds, blue on light. Secondary is the same pill as an outline, for a lower-priority action: white on dark, blue on light.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0;">
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:26px 22px;background:#fff;">
+    <div class="tworeg" style="grid-template-columns:1fr;gap:14px;">
+      <div class="lbl">On light &middot; primary</div>
+      <div><span style="height:44px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Request a demo</span></div>
+      <div class="lbl" style="margin-top:6px;">On light &middot; secondary</div>
+      <div><span style="height:44px;border-radius:999px;background:#fff;border:1.5px solid var(--blue);color:var(--blue);font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Explore the platform</span></div>
+    </div>
+  </div>
+  <div style="border-radius:12px;padding:26px 22px;background:var(--navy);">
+    <div class="tworeg" style="grid-template-columns:1fr;gap:14px;">
+      <div class="lbl" style="color:#90C5FF;">On dark &middot; primary</div>
+      <div><span style="height:44px;border-radius:999px;background:var(--teal);color:var(--navy);font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Request a demo</span></div>
+      <div class="lbl" style="margin-top:6px;color:#90C5FF;">On dark &middot; secondary</div>
+      <div><span style="height:44px;border-radius:999px;background:transparent;border:1.5px solid #fff;color:#fff;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Explore the platform</span></div>
+    </div>
+  </div>
+</div>
+<ul>
+  <li>Fully rounded pill: <code>border-radius: 999px</code> (radius = half the height). Never a partial-radius rounded rectangle.</li>
+  <li>Poppins Medium (500), sentence case, no bold (700).</li>
+  <li>One primary button per view; secondary actions use the outline style.</li>
+  <li>Labels are short and action-led, and stay consistent through a flow.</li>
+  <li>Primary fill is teal on dark, blue on light. Keep to no more than three brand colors in the surrounding layout.</li>
+  <li>Give buttons clear padding and space; do not place dots or graphics over them.</li>
+</ul>
+
+<h3>Text links and the CTA arrow</h3>
+<p>Secondary and tertiary text links carry a trailing arrow. Pill buttons never do.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0;">
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;">
+    <div class="lbl">On light &middot; infrastructure</div>
+    <span style="font-weight:500;font-size:14.5px;color:var(--blue);">Explore agent-ready interoperability &rarr;</span>
+  </div>
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;">
+    <div class="lbl">On light &middot; automation</div>
+    <span style="font-weight:500;font-size:14.5px;color:#23C5BF;">Meet Rhapsody Axon &rarr;</span>
+  </div>
+  <div style="background:var(--navy);border-radius:12px;padding:18px 20px 26px;">
+    <div class="lbl" style="color:#90C5FF;">On dark</div>
+    <span style="font-weight:500;font-size:14.5px;color:#fff;">Learn more &rarr;</span>
+  </div>
+</div>
+<div class="compare">
+  <div class="card do">
+    <div class="head">Do: arrow on text links only</div>
+    <div style="padding:30px 18px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <span style="font-weight:500;font-size:14px;color:var(--blue);">See how SimonMed did it &rarr;</span>
+    </div>
+  </div>
+  <div class="card dont">
+    <div class="head">Don&rsquo;t: no arrow on buttons</div>
+    <div style="padding:24px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <span style="height:40px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:14px;display:inline-flex;align-items:center;padding:0 22px;">Book a demo &rarr;</span>
+    </div>
+  </div>
+</div>
+<ul>
+  <li>Applies to secondary and tertiary text links: &ldquo;Explore &hellip;&rdquo;, &ldquo;Meet &hellip;&rdquo;, &ldquo;Learn more&rdquo;, card CTAs, and inline navigational links.</li>
+  <li>Does not apply to primary or secondary pill buttons. Buttons never take an arrow.</li>
+  <li>Glyph: the right-arrow character <code>&amp;rarr;</code> ( &rarr; ), not <code>-&gt;</code>, <code>&raquo;</code>, or an icon font. One arrow per link, always trailing, never leading.</li>
+  <li>Color: the link inherits its context color: blue on light infrastructure contexts, teal (<code>#23C5BF</code>) on light automation contexts, white or light on dark grounds. The arrow matches the link text color. Never orange.</li>
+  <li>Motion (optional): the arrow may nudge 2&ndash;3px to the right on hover; keep it subtle.</li>
+</ul>
+</div>
+</body></html>

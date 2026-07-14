@@ -1,0 +1,70 @@
+<!-- @dsCard group="Foundations" name="Color palette" subtitle="Primary, secondary, tertiary, neutrals, accessibility" width="960" height="1180" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color palette</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+</head><body>
+<div class="wrap">
+<h2>Color</h2>
+<p>Rhapsody Blue and Rhapsody Navy are the primary colors, used most prominently. Light blue and teal are secondary. Purple and orange are tertiary accents, used sparingly. Backgrounds stay white, gray, or blue.</p>
+
+<h3>Palette</h3>
+<h4>Primary</h4>
+<div class="swatches" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:620px;">
+  <div class="sw"><div class="chip" style="background:#1A81F4;height:96px;"></div><div class="meta"><div class="name">Rhapsody Blue</div><div class="tier">Primary</div><div class="hex">#1A81F4</div></div></div>
+  <div class="sw"><div class="chip" style="background:#0B2C47;height:96px;"></div><div class="meta"><div class="name">Rhapsody Navy</div><div class="tier">Primary</div><div class="hex">#0B2C47</div></div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+  <div>
+    <h4>Secondary</h4>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#90C5FF"></div><div class="meta"><div class="name">Light blue</div><div class="tier">Secondary</div><div class="hex">#90C5FF</div></div></div>
+      <div class="sw"><div class="chip" style="background:#23C5BF"></div><div class="meta"><div class="name">Teal</div><div class="tier">Secondary</div><div class="hex">#23C5BF</div></div></div>
+    </div>
+  </div>
+  <div>
+    <h4>Tertiary accents</h4>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#7340E4"></div><div class="meta"><div class="name">Purple</div><div class="tier">Tertiary</div><div class="hex">#7340E4</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FA7E2E"></div><div class="meta"><div class="name">Orange</div><div class="tier">Tertiary</div><div class="hex">#FA7E2E</div></div></div>
+    </div>
+  </div>
+</div>
+<h4>Neutrals</h4>
+<div class="swatches">
+  <div class="sw"><div class="chip" style="background:#050F19"></div><div class="meta"><div class="name">Black</div><div class="tier">Neutral</div><div class="hex">#050F19</div></div></div>
+  <div class="sw"><div class="chip" style="background:#7E858C"></div><div class="meta"><div class="name">Dark gray</div><div class="tier">Neutral</div><div class="hex">#7E858C</div></div></div>
+  <div class="sw"><div class="chip" style="background:#D9DFE6"></div><div class="meta"><div class="name">Light gray</div><div class="tier">Neutral</div><div class="hex">#D9DFE6</div></div></div>
+  <div class="sw"><div class="chip" style="background:#E8EDF2"></div><div class="meta"><div class="name">Gray-blue</div><div class="tier">Neutral (backgrounds)</div><div class="hex">#E8EDF2</div></div></div>
+  <div class="sw"><div class="chip" style="background:#fff;border-top:1px solid #eee"></div><div class="meta"><div class="name">White</div><div class="tier">Neutral</div><div class="hex">#FFFFFF</div></div></div>
+</div>
+
+<h4>Text color</h4>
+<ul>
+  <li>Copy uses only black, white, or the primary colors (Rhapsody Blue and Rhapsody Navy).</li>
+  <li>On light backgrounds: text in black or navy, with Rhapsody Blue as the accent.</li>
+  <li>On dark backgrounds: text in white, with light blue as the accent (its dark-background counterpart to blue).</li>
+  <li>Teal, purple, and orange are not used for copy. Exception: text links in automation contexts may use teal (#23C5BF); see Buttons and CTAs.</li>
+  <li>The one exception: an H3 heading may take a secondary or tertiary color. Body copy, captions, and larger headings (H1, H2) stay within the colors above.</li>
+  <li>Minimum 3:1 contrast. Digital uses HEX or RGB; print uses CMYK or Pantone.</li>
+  <li>Gray-blue (#E8EDF2) is a neutral for subtle background fills such as alternating table rows.</li>
+</ul>
+
+<div class="principle">
+  <div class="k">The three-color rule, and its exceptions</div>
+  <p>Keep any single layout to no more than three brand colors. The dot pattern is exempt (it may run multicolor, including a few orange dots), and functional UI marks (the check and cross) sit outside the count.</p>
+</div>
+
+<h3>Color accessibility</h3>
+<p>Type and background combinations must meet a minimum <strong>3:1 contrast ratio</strong>. Checking contrast is always your responsibility. A good rule of thumb: black or white type plus one other color.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;margin:14px 0;max-width:900px;">
+  <div style="background:#1A81F4;border-radius:10px;padding:20px 22px;"><div style="color:#fff;font-weight:500;font-size:16px;">White on Rhapsody Blue</div><div style="color:#fff;font-size:13px;opacity:.9;">Passes for large and UI text.</div></div>
+  <div style="background:#0B2C47;border-radius:10px;padding:20px 22px;"><div style="color:#90C5FF;font-weight:500;font-size:16px;">Light blue on Navy</div><div style="color:#D9DFE6;font-size:13px;">The dark-ground accent pairing.</div></div>
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:20px 22px;"><div style="color:#0B2C47;font-weight:500;font-size:16px;">Navy on white</div><div style="color:#7E858C;font-size:13px;">Default body pairing on light.</div></div>
+  <div style="background:#E8EDF2;border-radius:10px;padding:20px 22px;"><div style="color:#0B2C47;font-weight:500;font-size:16px;">Navy on gray-blue</div><div style="color:#7E858C;font-size:13px;">Subtle fills, still legible.</div></div>
+</div>
+<p class="caption">Test pairings with the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a> or the <a href="https://contrast-grid.eightshapes.com/">EightShapes Contrast Grid</a>.</p>
+</div>
+</body></html>
