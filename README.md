@@ -11,9 +11,17 @@ It is a code version of the approved *Brand identity guide for AI-assisted desig
 
 ```
 tokens.css            Shared design tokens (color, type) + reusable classes + logo image classes
-assets/               Brand raster assets (logos, monograms)
+assets/               Tight-cropped logo/monogram rasters used inline by the component cards
+brand/                Downloadable logo master files (vector + raster), organized by color
 components/           One preview file per component/section — each a card in Claude Design
 ```
+
+> **`assets/` vs `brand/`** — `assets/` holds tightly-cropped marks the preview cards
+> reference inline. `brand/` holds the full logo package (with clear space) for real use:
+> `.svg` + `.eps` vector masters plus `-300` (300 dpi) / `-72` (72 dpi) PNG and JPG.
+> This is the FY26 navy set (former black recolored to Rhapsody Navy `#0B2C47`, blue
+> unchanged); it mirrors the SharePoint Brand Package folder structure. See
+> `brand/README-navy-update.txt`.
 
 Each file in `components/` is a standalone HTML preview whose **first line** carries a
 `<!-- @dsCard group="…" name="…" subtitle="…" -->` marker. Claude Design reads these markers
