@@ -4,8 +4,14 @@ The Rhapsody rebrand identity, in code. This repository is the source of truth f
 brand's visual system and is structured to sync with **Claude Design**
 (claude.ai/design) via `/design-sync`, where each file below appears as a component card.
 
-It is a code version of the approved *Brand identity guide for AI-assisted design*
+It is a code version of the approved *Rhapsody Brand VisID Guide*
 (current standard, 2026). Company name is always **Rhapsody**, never "Rhapsody Health".
+
+Latest guide update folded in: light blue refreshed to `#B4D8FF`; all headings set in
+Poppins Regular (400); logo is navy-bar + blue wordmark on light and blue-bar + white
+wordmark on dark (`logo-inv`); the graduated dot field is retired (uniform scattered field
+only); light devices are Aurora, Aurora ribbon, Burst, and Plexus (Pulse retired); and the
+Color card adds contrast pairings, per-color caveats, and a "text on teal" rule.
 
 ## Structure
 

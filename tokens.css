@@ -1,6 +1,6 @@
 /* ============================================================
    Rhapsody Design System — shared tokens & base styles
-   Brand identity guide for AI-assisted design (current standard, 2026)
+   Rhapsody Brand VisID Guide (current standard, 2026)
    Company name is always "Rhapsody", never "Rhapsody Health".
    ============================================================ */
 
@@ -9,7 +9,7 @@
   --blue:#1A81F4;      /* Rhapsody Blue  */
   --navy:#0B2C47;      /* Rhapsody Navy  */
   /* Secondary */
-  --lblue:#90C5FF;     /* Light blue     */
+  --lblue:#B4D8FF;     /* Light blue (dark-ground accent) */
   --teal:#23C5BF;      /* Teal           */
   /* Tertiary accents (sparingly) */
   --purple:#7340E4;
@@ -28,11 +28,11 @@
 body{font-family:'Poppins',sans-serif;font-weight:300;color:var(--navy);line-height:1.6;background:#fff;}
 .wrap{max-width:940px;margin:0 auto;padding:40px 40px 72px;}
 
-/* Headings */
-h1{font-weight:300;font-size:38px;line-height:1.15;margin-bottom:10px;}
+/* Headings — all H1–H4 set in Poppins Regular (400) for one consistent weight */
+h1{font-weight:400;font-size:38px;line-height:1.15;margin-bottom:10px;}
 h2{font-weight:400;font-size:27px;margin:8px 0 18px;color:var(--navy);}
-h3{font-weight:600;font-size:18px;margin:32px 0 10px;color:var(--blue);}
-h4{font-weight:600;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;margin:22px 0 8px;color:var(--dgray);}
+h3{font-weight:400;font-size:18px;margin:32px 0 10px;color:var(--blue);}
+h4{font-weight:400;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;margin:22px 0 8px;color:var(--dgray);}
 h2:first-child,h3:first-child{margin-top:0;}
 
 /* Body */
@@ -117,14 +117,19 @@ a{color:var(--blue);}
 .tworeg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
 .tworeg .lbl{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:6px;}
 
-/* Logo image classes — point to extracted brand assets.
+/* Logo & shared image classes — point to extracted brand assets.
    url() resolves relative to this stylesheet (repo root). */
 .logo-i{display:inline-block;background-repeat:no-repeat;background-size:contain;background-position:left center;}
-.logo-bb{background-image:url(assets/logo-primary.png);}    /* black + blue, light bg  */
-.logo-bw{background-image:url(assets/logo-reverse.png);}    /* white + blue, dark bg   */
-.logo-blk{background-image:url(assets/logo-black.png);}     /* one-color black         */
-.logo-wht{background-image:url(assets/logo-white.png);}     /* one-color white          */
-.logo-a{background-image:url(assets/logo-clearspace.png);}  /* mark for clear-space art */
+.logo-bb{background-image:url(assets/logo-primary.png);}     /* navy bar + blue wordmark, light bg */
+.logo-blk{background-image:url(assets/logo-black.png);}      /* one-color navy/black */
+.logo-wht{background-image:url(assets/logo-white.png);}      /* one-color white */
+.logo-a{background-image:url(assets/logo-clearspace.png);}   /* mark for clear-space art */
+.logo-inv{background-image:url(assets/logo-inverse.png);}    /* blue bar + white wordmark, dark bg */
+
+.dupimg0{background-image:url(assets/dupimg0.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:360/360;display:block;}
+.dupimg1{background-image:url(assets/dupimg1.png);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:600/600;display:block;}
+.dupimg2{background-image:url(assets/dupimg2.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:600/600;display:block;}
+.dupimg3{background-image:url(assets/dupimg3.png);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:300/300;display:block;}
 
 @media(max-width:680px){
   .compare,.tworeg{grid-template-columns:1fr;}

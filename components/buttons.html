@@ -1,7 +1,7 @@
-<!-- @dsCard group="Components" name="Buttons & CTAs" subtitle="Pill buttons, primary/secondary, text links + arrow" width="960" height="1080" -->
+<!-- @dsCard group="Components" name="Buttons & CTAs" subtitle="Pill buttons, primary/secondary, text links + arrow" width="960" height="1200" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buttons &amp; CTAs</title>
+<title>Buttons and CTAs</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tokens.css">
@@ -31,24 +31,15 @@
 
 <h3>Primary and secondary</h3>
 <p>Primary is a filled pill and there is one per view: teal on dark grounds, blue on light. Secondary is the same pill as an outline, for a lower-priority action: white on dark, blue on light.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0;">
-  <div style="border:1px solid var(--lgray);border-radius:12px;padding:26px 22px;background:#fff;">
-    <div class="tworeg" style="grid-template-columns:1fr;gap:14px;">
-      <div class="lbl">On light &middot; primary</div>
-      <div><span style="height:44px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Request a demo</span></div>
-      <div class="lbl" style="margin-top:6px;">On light &middot; secondary</div>
-      <div><span style="height:44px;border-radius:999px;background:#fff;border:1.5px solid var(--blue);color:var(--blue);font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Explore the platform</span></div>
-    </div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0 0;">
+  <div style="background:var(--navy);border-radius:12px;padding:18px 20px 26px;display:flex;flex-direction:column;align-items:center;gap:18px;"><div style="align-self:flex-start;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#B4D8FF;">Primary &middot; on dark</div><span style="height:44px;border-radius:999px;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;background:var(--teal);color:var(--navy);">Request a demo</span></div>
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;display:flex;flex-direction:column;align-items:center;gap:18px;"><div style="align-self:flex-start;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);">Primary &middot; on light</div><span style="height:44px;border-radius:999px;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;background:var(--blue);color:#fff;">Request a demo</span></div>
   </div>
-  <div style="border-radius:12px;padding:26px 22px;background:var(--navy);">
-    <div class="tworeg" style="grid-template-columns:1fr;gap:14px;">
-      <div class="lbl" style="color:#90C5FF;">On dark &middot; primary</div>
-      <div><span style="height:44px;border-radius:999px;background:var(--teal);color:var(--navy);font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Request a demo</span></div>
-      <div class="lbl" style="margin-top:6px;color:#90C5FF;">On dark &middot; secondary</div>
-      <div><span style="height:44px;border-radius:999px;background:transparent;border:1.5px solid #fff;color:#fff;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;">Explore the platform</span></div>
-    </div>
-  </div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0 6px;">
+  <div style="background:var(--navy);border-radius:12px;padding:18px 20px 26px;display:flex;flex-direction:column;align-items:center;gap:18px;"><div style="align-self:flex-start;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#B4D8FF;">Secondary &middot; on dark</div><span style="height:44px;border-radius:999px;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;background:transparent;border:1.5px solid #fff;color:#fff;">Learn more</span></div>
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;display:flex;flex-direction:column;align-items:center;gap:18px;"><div style="align-self:flex-start;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);">Secondary &middot; on light</div><span style="height:44px;border-radius:999px;font-weight:500;font-size:15px;display:inline-flex;align-items:center;padding:0 26px;background:transparent;border:1.5px solid var(--blue);color:var(--blue);">Learn more</span></div>
 </div>
+
 <ul>
   <li>Fully rounded pill: <code>border-radius: 999px</code> (radius = half the height). Never a partial-radius rounded rectangle.</li>
   <li>Poppins Medium (500), sentence case, no bold (700).</li>
@@ -58,19 +49,20 @@
   <li>Give buttons clear padding and space; do not place dots or graphics over them.</li>
 </ul>
 
+
 <h3>Text links and the CTA arrow</h3>
-<p>Secondary and tertiary text links carry a trailing arrow. Pill buttons never do.</p>
+<p>Text-style calls to action (the non-button &ldquo;actionlink&rdquo; links that sit inside or below content) end with a trailing right arrow, set with a preceding space: <code>Explore agent-ready interoperability &rarr;</code>. The arrow signals forward movement into a deeper page and visually distinguishes these low-emphasis links from primary pill buttons. Adopted from the homepage prototype.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0;">
   <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;">
-    <div class="lbl">On light &middot; infrastructure</div>
+    <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:16px;">On light &middot; infrastructure</div>
     <span style="font-weight:500;font-size:14.5px;color:var(--blue);">Explore agent-ready interoperability &rarr;</span>
   </div>
   <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;">
-    <div class="lbl">On light &middot; automation</div>
+    <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:16px;">On light &middot; automation</div>
     <span style="font-weight:500;font-size:14.5px;color:#23C5BF;">Meet Rhapsody Axon &rarr;</span>
   </div>
   <div style="background:var(--navy);border-radius:12px;padding:18px 20px 26px;">
-    <div class="lbl" style="color:#90C5FF;">On dark</div>
+    <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#B4D8FF;margin-bottom:16px;">On dark</div>
     <span style="font-weight:500;font-size:14.5px;color:#fff;">Learn more &rarr;</span>
   </div>
 </div>
@@ -90,10 +82,29 @@
 </div>
 <ul>
   <li>Applies to secondary and tertiary text links: &ldquo;Explore &hellip;&rdquo;, &ldquo;Meet &hellip;&rdquo;, &ldquo;Learn more&rdquo;, card CTAs, and inline navigational links.</li>
-  <li>Does not apply to primary or secondary pill buttons. Buttons never take an arrow.</li>
+  <li>Does not apply to primary or secondary pill buttons (e.g. &ldquo;Book a demo&rdquo;, &ldquo;Explore the platform&rdquo;). Buttons never take an arrow.</li>
   <li>Glyph: the right-arrow character <code>&amp;rarr;</code> ( &rarr; ), not <code>-&gt;</code>, <code>&raquo;</code>, or an icon font. One arrow per link, always trailing, never leading.</li>
   <li>Color: the link inherits its context color: blue on light infrastructure contexts, teal (<code>#23C5BF</code>) on light automation contexts, white or light on dark grounds. The arrow matches the link text color. Never orange.</li>
   <li>Motion (optional): the arrow may nudge 2&ndash;3px to the right on hover; keep it subtle.</li>
 </ul>
+
+<h3>Module accent line</h3>
+<p>An H2-led module can open with a short accent bar above the eyebrow or heading: a <strong>44&times;3px</strong> bar with a 2px corner radius, set about <strong>20&ndash;22px</strong> above the eyebrow. It is <strong>Rhapsody Blue</strong> in build and infrastructure contexts and <strong>teal</strong> in automation contexts, never orange. One bar per module, and never full-width. The accent color applies to the line only; keep the eyebrow and heading text navy (or blue), since teal is not legible as small text on white.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:12px 0;">
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 24px;">
+    <div style="width:44px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:20px;"></div>
+    <p style="font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:0.17em;text-transform:uppercase;color:var(--blue);margin:0 0 6px;">Build the infrastructure</p>
+    <div style="font-weight:400;font-size:22px;color:var(--navy);line-height:1.15;">Blue bar &middot; infrastructure</div>
+  </div>
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 24px;">
+    <div style="width:44px;height:3px;border-radius:2px;background:var(--teal);margin-bottom:20px;"></div>
+    <p style="font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:0.17em;text-transform:uppercase;color:var(--navy);margin:0 0 6px;">Automate the work</p>
+    <div style="font-weight:400;font-size:22px;color:var(--navy);line-height:1.15;">Teal bar &middot; automation</div>
+  </div>
+</div>
+<div class="principle">
+  <div class="k">Keep the accent color consistent across an activation</div>
+  <p>Pick one accent-line color per activation and hold it. If a slide deck opens with the Rhapsody Blue bar, every slide in that deck uses the blue bar; don't switch to teal partway through. The same applies to a landing page, an email, or a report: the accent line is a steady thread across the whole piece, not a per-surface choice. Change color only when the context itself changes, for example a dedicated automation section, and change it deliberately, not slide to slide.</p>
+</div>
 </div>
 </body></html>

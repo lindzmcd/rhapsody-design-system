@@ -1,7 +1,7 @@
-<!-- @dsCard group="Foundations" name="Layout & spacing" subtitle="Clear margin, teal separator, module accent line" width="960" height="820" -->
+<!-- @dsCard group="Foundations" name="Layout & spacing" subtitle="Clear margin, teal seam, module accent line" width="960" height="900" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Layout &amp; spacing</title>
+<title>Layout and spacing</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tokens.css">
@@ -9,40 +9,40 @@
 <div class="wrap">
 <h2>Layout and spacing</h2>
 <p>Layouts should always breathe. Two rules keep graphics clean and consistent.</p>
-
 <h3>Clear margin (padding)</h3>
 <p>Keep a clear margin around every graphic of about 6 to 7 percent of the shorter side, with no copy, photo, or logo inside it. For example, roughly a 40 pixel margin on a 600 pixel wide graphic, scaling proportionally. This safe zone keeps content off the edges so the layout always breathes.</p>
-
 <h3>Teal separator line</h3>
-<p>Where a navy band meets the body (web hero, email header), close it with a thin teal seam. It signals the connection motif and separates dark from light without a hard rule.</p>
+<p>When a graphic borders other content, such as a webpage hero or an email banner seam, a thin teal rule sits along one edge (the bottom by default) to separate it from the content below. On standalone pieces like ads or social posts, no line is needed. Keep it teal only and thin, spanning the full width of the block.</p>
 <div style="border-radius:12px;overflow:hidden;margin:12px 0;border:1px solid var(--lgray);">
   <div style="background:var(--navy);height:44px;"></div>
   <div style="background:var(--teal);height:6px;"></div>
   <div style="background:#fff;height:30px;"></div>
 </div>
 
+
 <h3>Module accent line (H2 sections)</h3>
-<p>A short accent bar sits above each H2 module. It carries the section&rsquo;s pillar meaning through color and ties section headers, pillar cards, and case cards into one system.</p>
+<p>Section modules led by an H2 open with a short horizontal accent line (&ldquo;accent bar&rdquo;) set directly above the heading, or above the eyebrow where one is present. It signals the start of a new content module and gives each section a consistent, engineered entry point. Adopted from the homepage prototype.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:12px 0;">
   <div style="border:1px solid var(--lgray);border-radius:12px;padding:26px 26px 30px;background:#fff;">
     <div style="width:44px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:21px;"></div>
     <p style="font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:0.17em;text-transform:uppercase;color:var(--blue);margin:0 0 10px;">The platform</p>
-    <div style="font-weight:300;font-size:24px;line-height:1.2;color:var(--navy);">Build on proven&nbsp;interoperability.</div>
+    <div style="font-weight:400;font-size:24px;line-height:1.2;color:var(--navy);">Build on proven<br>interoperability.</div>
     <p class="caption" style="margin:14px 0 0;">Blue bar: infrastructure / &ldquo;build&rdquo; contexts.</p>
   </div>
   <div style="border:1px solid var(--lgray);border-radius:12px;padding:26px 26px 30px;background:#fff;">
     <div style="width:44px;height:3px;border-radius:2px;background:var(--teal);margin-bottom:21px;"></div>
     <p style="font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:0.17em;text-transform:uppercase;color:var(--blue);margin:0 0 10px;">Automation</p>
-    <div style="font-weight:300;font-size:24px;line-height:1.2;color:var(--navy);">Automate the work around&nbsp;the&nbsp;data.</div>
+    <div style="font-weight:400;font-size:24px;line-height:1.2;color:var(--navy);">Automate the work around&nbsp;the&nbsp;data.</div>
     <p class="caption" style="margin:14px 0 0;">Teal bar: automation / &ldquo;automate the work&rdquo; contexts.</p>
   </div>
 </div>
 <ul>
   <li>Dimensions: <strong>44px wide &times; 3px tall</strong>, 2px corner radius.</li>
   <li>Spacing: sits above the eyebrow/H2 with about 20&ndash;22px below it before the heading.</li>
-  <li>Color carries the section&rsquo;s pillar meaning: blue (#1A81F4) for infrastructure/&ldquo;build&rdquo; contexts, teal (#23C5BF) for automation/&ldquo;automate the work&rdquo; contexts. Default to blue when a section is neutral. Never orange.</li>
-  <li>One accent line per module, tied to the primary H2. Do not repeat it on sub-cards within the same module.</li>
+  <li>Color carries the section&rsquo;s pillar meaning: blue (#1A81F4) for infrastructure/&ldquo;build&rdquo; contexts, teal (#23C5BF) for automation/&ldquo;automate the work&rdquo; contexts. Default to blue when a section is neutral. Never orange. Apply this pairing consistently wherever both paths appear together, in a deck, page, or diagram, so build always reads blue and automation always reads teal.</li>
+  <li>One accent line per module, tied to the primary H2. Do not repeat it on sub-cards within the same module (cards use their own thin top bar where needed).</li>
   <li>It is decorative structure, not a divider; don&rsquo;t stretch it full-width.</li>
+  <li>The same device appears on section headers, pillar cards, and case cards, always at the same 44&times;3 size, so the whole site reads as one system.</li>
 </ul>
 </div>
 </body></html>
