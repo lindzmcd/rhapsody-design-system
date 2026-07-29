@@ -8,7 +8,20 @@ WHAT CHANGED
   Rhapsody logo - blue-black ->  Rhapsody logo - blue-navy  (navy bar + blue letters)
   black monogram R           ->  navy monogram R
   black blue monogram R      ->  navy blue monogram R
-Unchanged (no black present): blue-white and white logo sets, white/white-blue monograms.
+
+DARK-BACKGROUND SETS (added)
+  Rhapsody logo - blue-white   blue wordmark + WHITE line accent (the 2-color dark logo)
+  Rhapsody logo - white        one-color all-white wordmark
+  blue white monogram R        blue R + white line accent
+  white monogram R             one-color all-white R
+  These are for navy/dark backgrounds. PNGs are transparent; JPGs sit on a
+  navy (#0B2C47) background so the white parts are visible.
+
+DARK LOGO SIZE RULE
+  Use the blue-white (blue wordmark + white line) logo on dark ONLY when it is
+  large enough for the blue to stay legible and vibrant, about 240px / 2.25in
+  wide and up. Below that size, use the all-white logo instead. On light
+  backgrounds keep using blue-navy (primary) or one-color navy.
 
 SOURCE
   Recolored from your Illustrator EPS masters. Vectors (.svg/.eps) were rebuilt
@@ -19,8 +32,8 @@ SOURCE
 FILES PER LOGO FOLDER
   .svg              vector master (transparent)
   .eps              vector master (print), navy + blue exact
-  -300.png/.jpg     300 dpi  (wordmark 1250x417 px)   png transparent / jpg white bg
-  -72.png/.jpg      72 dpi   (wordmark 300x100 px)
+  -300.png/.jpg     300 dpi  (wordmark 1250x417 px)   png transparent
+  -72.png/.jpg      72 dpi   (wordmark 300x100 px)     jpg: light sets white bg, dark sets navy bg
 
 MONOGRAMS
   .svg / .eps       scalable masters
