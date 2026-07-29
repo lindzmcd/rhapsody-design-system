@@ -1,0 +1,49 @@
+<!-- @dsCard group="Foundations" name="Corners & shape" subtitle="Pills are CTA-only; square-top / rounded-bottom module frames" width="960" height="640" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corners &amp; shape</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+</head><body>
+<div class="wrap">
+<h2>Corners &amp; shape</h2>
+<p>Two different rounded shapes do two different jobs, keep them separate. The <strong>fully rounded pill is for CTAs only</strong> (see Buttons and CTAs); never use it to frame a module, card, chart, or image. <strong>Rounded corners are welcome for framing content</strong>, modules, cards, charts, callouts, and image frames, across webpages, PowerPoint slides, and editorial layouts. The recommendation below is how we do that most on brand.</p>
+<div class="principle">
+  <div class="k">Recommended: square the top, round the bottom</div>
+  <p>For framing modules and components, <strong>square off the top two corners and round the bottom two</strong> to the standard module radius (about 12px). This asymmetric shape reads as the sleekest and most distinctly Rhapsody, engineered at the top, settled at the base. Use it as the default frame for content blocks, and keep the treatment consistent across a page or deck.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:14px 0;">
+  <div>
+    <div style="border:1px solid var(--lgray);border-radius:0 0 12px 12px;background:#fff;padding:22px 22px 26px;">
+      <div style="width:44px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:18px;"></div>
+      <div style="font-weight:400;font-size:18px;line-height:1.2;color:var(--navy);">Module frame</div>
+      <p class="caption" style="margin:10px 0 0;">Squared top, rounded bottom (12px).</p>
+    </div>
+    <p class="caption" style="margin:6px 0 0;"><span class="pfbadge pass">&#10003; Recommended</span><br>Sleekest, most on-brand.</p>
+  </div>
+  <div>
+    <div style="border:1px solid var(--lgray);border-radius:12px;background:#fff;padding:22px 22px 26px;">
+      <div style="width:44px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:18px;"></div>
+      <div style="font-weight:400;font-size:18px;line-height:1.2;color:var(--navy);">Chart / uniform</div>
+      <p class="caption" style="margin:10px 0 0;">All four corners rounded (12px).</p>
+    </div>
+    <p class="caption" style="margin:6px 0 0;"><span class="pfbadge pass">&#10003; Also fine</span><br>Charts and dense grids where a uniform frame suits.</p>
+  </div>
+  <div>
+    <div style="border:1px solid var(--lgray);border-radius:40px;background:#fff;padding:22px 22px 26px;">
+      <div style="width:44px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:18px;"></div>
+      <div style="font-weight:400;font-size:18px;line-height:1.2;color:var(--navy);">Over-rounded</div>
+      <p class="caption" style="margin:10px 0 0;">Pill-like radius on a module.</p>
+    </div>
+    <p class="caption" style="margin:6px 0 0;"><span class="pfbadge fail">&#10005; Off-brand</span><br>The full pill radius is for CTAs only.</p>
+  </div>
+</div>
+<ul>
+  <li><strong>Pill = CTA only.</strong> The fully rounded pill (<code>border-radius: 999px</code>) is reserved for buttons; never frame a module, card, chart, or image with it.</li>
+  <li><strong>Default module frame:</strong> square the top two corners, round the bottom two to about <strong>12px</strong> (<code>border-radius: 0 0 12px 12px</code>).</li>
+  <li><strong>Acceptable alternatives:</strong> all four corners rounded (~12px) or fully square, especially for charts and dense grids. Just avoid the pill radius.</li>
+  <li><strong>Stay consistent.</strong> Use one corner treatment across a page or deck; don&rsquo;t mix squared-top frames with fully rounded ones in the same view.</li>
+</ul>
+</div>
+</body></html>
