@@ -41,6 +41,7 @@ to build the Design System pane, grouping cards by `group`. Every component link
 | Foundations | `components/colors.html` | Palette (primary/secondary/tertiary/neutral), text color, accessibility |
 | Foundations | `components/typography.html` | Type scale, eyebrows, mono annotations, dates & name lockups, min sizes |
 | Foundations | `components/spacing.html` | Clear margin, teal separator, module accent line |
+| Foundations | `components/pathways.html` | Build (blue) vs Automate (teal) color coding + wayfinding directive |
 | Brand | `components/logo.html` | Primary, variations, monogram, clear space, product & co-brand lockups, restrictions |
 | Graphic devices | `components/dots.html` | Graduated field, scattered field, dot-row accent |
 | Graphic devices | `components/light-devices.html` | Pulse, Aurora, Burst glows + rules |
