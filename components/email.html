@@ -1,4 +1,4 @@
-<!-- @dsCard group="Patterns" name="Email template" subtitle="Header banners (Aurora, dots, Plexus, photo), teal seam, single CTA" width="960" height="1120" -->
+<!-- @dsCard group="Patterns" name="Email template" subtitle="Header banners (Aurora, dots, Plexus, photo), teal seam, single CTA, Pardot notes" width="960" height="1260" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Email</title>
@@ -74,6 +74,13 @@
   <li><strong>Images off by default.</strong> Many clients block images, so never lock the core message or the CTA inside an image. Set the headline and button as live HTML text, and give every image alt text, including the wordmark.</li>
   <li><strong>Width.</strong> Keep the content column around 600px so it renders reliably across clients and on mobile.</li>
   <li><strong>Dark mode.</strong> Assume some clients recolor. The navy header with the white wordmark (transparent PNG) holds up; avoid dark type on transparent PNGs that can invert into dark-on-dark.</li>
+</ul>
+<h4>Pardot &amp; client rendering</h4>
+<ul>
+  <li><strong>Build for Pardot (Account Engagement).</strong> Use a table-based layout with inline styles (like the signature), a single ~600px column, and hosted images in Pardot. Include the required merge fields, unsubscribe link and mailing address, and keep handlebars/merge tokens out of the visible design.</li>
+  <li><strong>Fonts degrade, don&rsquo;t embed.</strong> Poppins won&rsquo;t load in most inboxes, so set <code>font-family:'Poppins',Arial,Helvetica,sans-serif</code> and design so the Arial fallback still looks right. Don&rsquo;t ship copy baked into images to force the font.</li>
+  <li><strong>Outlook (Windows) uses Word to render.</strong> Stick to tables, avoid CSS <code>background-image</code> (put the navy header color on a table cell, with the glow/dots as a hosted image), and expect <code>border-radius</code> to square off, so use bulletproof table-cell buttons (VML for a rounded pill) rather than a CSS pill.</li>
+  <li><strong>Gmail.</strong> Keep the HTML lean, Gmail clips messages over ~102KB (&ldquo;View entire message&rdquo;) and favors inline styles. Test in Gmail web and the mobile app alongside Outlook.</li>
 </ul>
 
 <h3>Employee email signature</h3>
