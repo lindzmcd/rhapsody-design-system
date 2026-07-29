@@ -1,0 +1,55 @@
+<!-- @dsCard group="Patterns" name="Email signature" subtitle="Employee signature: wordmark, teal divider, name lockup, certifications" width="960" height="920" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email signature</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+</head><body>
+<div class="wrap">
+<h2>Email signature</h2>
+<p>A consistent employee signature keeps everyday email on brand. Keep it text-based and simple so it renders in every client: the wordmark, a thin teal divider, then the name lockup and contact lines. Use Poppins where the client supports it, with Arial as the fallback. Set copy in navy, dark gray, and Rhapsody Blue on a white background; don&rsquo;t add background colors, images behind text, or quotes.</p>
+<div style="border:1px solid var(--lgray);border-radius:12px;padding:26px 28px;max-width:560px;margin:12px 0;background:#fff;">
+  <div style="display:flex;align-items:center;gap:18px;">
+    <span class="logo-i logo-bb" style="width:132px;aspect-ratio:6.897;flex:none;"></span>
+    <span style="width:1px;height:56px;background:var(--teal);flex:none;"></span>
+    <div style="font-family:'Poppins',Arial,sans-serif;line-height:1.35;">
+      <div style="font-weight:500;font-size:15px;color:var(--navy);">Jordan Rivera</div>
+      <div style="font-weight:400;font-size:13px;color:var(--dgray);">Senior Integration Consultant</div>
+      <div style="font-weight:400;font-size:12.5px;color:var(--dgray);margin-top:8px;">+1 555 012 3456 &nbsp;&middot;&nbsp; jordan.rivera@rhapsody.health</div>
+      <div style="margin-top:4px;"><span style="font-weight:500;font-size:12.5px;color:var(--blue);">rhapsody.health &rarr;</span></div>
+    </div>
+  </div>
+</div>
+<ul>
+  <li><strong>Wordmark.</strong> Use the primary logo (navy bar, blue wordmark) at roughly 120&ndash;140px wide on the white signature. Never stretch, recolor, or drop a glow behind it. In tight signatures the R monogram may stand in.</li>
+  <li><strong>Divider.</strong> One thin teal rule about the cap height of the wordmark separates the logo from the text, the same device as the co-brand lockup. No box around either element.</li>
+  <li><strong>Name lockup.</strong> Name in Poppins Medium (500) navy, then title in Regular (400) dark gray. Don&rsquo;t repeat the company name in the text; the wordmark lockup to the left already carries it.</li>
+  <li><strong>Contact lines.</strong> Phone and email in dark gray; the website as an actionlink ending in a trailing arrow (<code>rhapsody.health &rarr;</code>) in Rhapsody Blue. Keep everything at least 12px.</li>
+  <li><strong>Keep it clean.</strong> No quotes, taglines set as images, banners, or social icons in unapproved colors. If a campaign banner is required, use an approved template rather than building one inline.</li>
+  <li><strong>Certifications (required roles).</strong> Some roles must display compliance badges (for example Cyber Essentials Plus or ISO 27001). Add them as a small row below the signature (see below). Both current badges are <strong>stacked (vertical) lockups</strong>, so size them to a consistent height of about <strong>44px</strong> and keep even spacing. Use the official issued badge art only, on a transparent background, hosted like the logo; never stretch, crop, or recolor a certification mark.</li>
+  <li><strong>Company name.</strong> Always &ldquo;Rhapsody,&rdquo; never &ldquo;Rhapsody Health.&rdquo;</li>
+</ul>
+
+<h3>With required certifications</h3>
+<p>Where a role must show compliance badges, add them in a row below the signature, separated by a thin divider. Both current badges are <strong>stacked (vertical) lockups</strong>, so size them to a consistent height of about <strong>44px</strong> with even spacing. The frames below show placement and size; drop in the official issued badge art (transparent background) in place of each frame.</p>
+<div style="border:1px solid var(--lgray);border-radius:12px;padding:26px 28px;max-width:560px;margin:12px 0;background:#fff;">
+  <div style="display:flex;align-items:center;gap:18px;">
+    <span class="logo-i logo-bb" style="width:132px;aspect-ratio:6.897;flex:none;"></span>
+    <span style="width:1px;height:56px;background:var(--teal);flex:none;"></span>
+    <div style="font-family:'Poppins',Arial,sans-serif;line-height:1.35;">
+      <div style="font-weight:500;font-size:15px;color:var(--navy);">Jordan Rivera</div>
+      <div style="font-weight:400;font-size:13px;color:var(--dgray);">Senior Integration Consultant</div>
+      <div style="font-weight:400;font-size:12.5px;color:var(--dgray);margin-top:8px;">+1 555 012 3456 &nbsp;&middot;&nbsp; jordan.rivera@rhapsody.health</div>
+      <div style="margin-top:4px;"><span style="font-weight:500;font-size:12.5px;color:var(--blue);">rhapsody.health &rarr;</span></div>
+    </div>
+  </div>
+  <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--lgray);display:flex;align-items:flex-end;gap:14px;">
+    <span style="display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:40px;height:44px;border:1px dashed var(--lgray);border-radius:5px;font-size:7px;letter-spacing:0.06em;text-transform:uppercase;color:var(--dgray);text-align:center;line-height:1.25;">Cert<br>badge</span>
+    <span style="display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:40px;height:44px;border:1px dashed var(--lgray);border-radius:5px;font-size:7px;letter-spacing:0.06em;text-transform:uppercase;color:var(--dgray);text-align:center;line-height:1.25;">Cert<br>badge</span>
+    <span style="font-size:10px;color:var(--dgray);font-style:italic;">stacked badges, ~44px tall</span>
+  </div>
+</div>
+<p class="caption">Certification row below the signature: stacked badges at a consistent ~44px height, even spacing, official art on a transparent background.</p>
+</div>
+</body></html>
