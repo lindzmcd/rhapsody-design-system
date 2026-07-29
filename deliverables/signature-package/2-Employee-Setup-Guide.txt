@@ -1,0 +1,58 @@
+RHAPSODY EMAIL SIGNATURE — EMPLOYEE SETUP GUIDE
+================================================================
+If your signature isn't set automatically by IT, follow these steps
+so yours matches the company standard. It takes about two minutes.
+
+WHAT YOU NEED
+  - The signature template (ask IT, or use signature-standard.html
+    from this package).
+  - Your name, job title, phone number, and Rhapsody email.
+
+------------------------------------------------------------------
+OUTLOOK (new Outlook for Windows / Mac, and Outlook on the web)
+------------------------------------------------------------------
+  1. Settings (gear) > Accounts > Signatures  (or Mail > Compose and
+     reply).
+  2. Create a new signature named "Rhapsody".
+  3. Open signature-standard.html in a browser, select the whole
+     signature, copy it, and paste into the signature box. (Pasting the
+     rendered signature keeps the logo, divider, and formatting.)
+  4. Replace the placeholders with your details: name, title, phone,
+     email.
+  5. Set it as the default for New messages and Replies/forwards.
+
+Classic Outlook (older Windows): File > Options > Mail > Signatures >
+New, then paste as above.
+
+------------------------------------------------------------------
+GMAIL (web)
+------------------------------------------------------------------
+  1. Settings (gear) > See all settings > General > Signature.
+  2. Create a new signature named "Rhapsody".
+  3. Open signature-standard.html in a browser, copy the whole
+     signature, and paste it into the signature box.
+  4. Replace the placeholders with your details.
+  5. Under "Signature defaults," select it for new emails and
+     replies/forwards. Save Changes at the bottom.
+
+------------------------------------------------------------------
+FILL IN THESE FIELDS
+------------------------------------------------------------------
+  [First Last]            -> your full name
+  [Job Title]             -> your job title
+  [+1 555 000 0000]       -> your phone number
+  [name@rhapsody.health]  -> your Rhapsody email
+
+------------------------------------------------------------------
+KEEP IT ON BRAND (please don't change)
+------------------------------------------------------------------
+  - Don't swap the logo, change the fonts, or recolor anything.
+  - No quotes, taglines, banners, background colors, or social icons.
+  - Company name is always "Rhapsody," never "Rhapsody Health."
+  - Certifications: only if your role requires them. Use the
+    "with-certifications" version and ask IT / Security for the official
+    badge images, don't add your own.
+
+If the logo doesn't appear, your email is showing images as "off" for
+that message, the recipient will still see it once images load. If it
+never shows, contact IT, the logo needs to be hosted at a public URL.
