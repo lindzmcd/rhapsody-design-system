@@ -2,15 +2,15 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Typography</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tokens.css">
 </head><body>
 <div class="wrap">
 <h2>Typography</h2>
-<p>Poppins is primary, favoring Poppins Light (font-weight 300). Apply bolder weights sparingly, only for hierarchy or emphasis. The weights in use are Light 300, Regular 400, and Medium 500. Arial is the fallback where Poppins is unavailable. <strong>IBM Plex Mono</strong> (weights 400 and 500) is the support typeface; see Eyebrows and Technical annotations below.</p>
+<p>Poppins is the primary typeface, with Arial as the fallback where Poppins is unavailable. Headings (H1 through H4 and the hero) set in <strong>Poppins Regular (400)</strong> for one consistent weight; body copy sets in <strong>Poppins Light (300)</strong>. Medium (500) carries small emphasis such as labels and buttons, and <strong>Bold (700)</strong> is reserved for short standalone &ldquo;moment&rdquo; headlines (see Bold headlines for moments, below). <strong>IBM Plex Mono</strong> (weights 400 and 500) is the support typeface; see Eyebrows and Technical annotations below.</p>
 <h3>Type scale</h3>
-<p>Poppins Light-led. On navy or dark backgrounds, set type in white with light blue for a secondary or accent line. Same weights and scale on both. The numbers below are the CSS <code>font-weight</code> values for web. All headings, H1 through H4 and the hero, use Poppins Regular (400) for one consistent weight across the hierarchy. Body copy stays Poppins Light (300).</p>
+<p>Headings set in Poppins Regular (400); body copy in Poppins Light (300). On navy or dark backgrounds, set type in white with light blue for a secondary or accent line. Same weights and scale on both. The numbers below are the CSS <code>font-weight</code> values for web. All headings, H1 through H4 and the hero, use Poppins Regular (400) for one consistent weight across the hierarchy. Body copy stays Poppins Light (300).</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:12px 0;align-items:start;">
   <div>
     <div class="lbl" style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:6px;">On light</div>
@@ -21,6 +21,30 @@
     <div style="background:var(--navy);border-radius:12px;padding:14px 18px;"><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">Hero &middot; Regular 400 &middot; 60px</div><div style="font-weight:400;font-size:30px;color:#fff;">Hero headline</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">H2 &middot; Regular 400 &middot; 40px</div><div style="font-weight:400;font-size:24px;color:#fff;">Section heading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">H3 &middot; Regular 400 &middot; 20px</div><div style="font-weight:400;font-size:17px;color:#fff;">Subheading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">P1 &middot; Regular 400 &middot; 16px</div><div style="font-weight:400;font-size:15px;color:#fff;">Body copy</div></div><div style="display:flex;align-items:baseline;gap:10px;padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">P2 &middot; Regular 400 &middot; 11px</div><div style="font-weight:400;font-size:12px;color:#fff;">Caption</div></div></div>
   </div>
 </div>
+
+<h3>Bold headlines for moments</h3>
+<p>Headlines normally set in Poppins Regular (400). The exception is a <strong>short, standalone headline that marks a moment or a step in a journey</strong> rather than leading a block of narrative copy. With only a few words and no supporting paragraph to lend it weight, a Light or Regular headline reads thin, so set it in <strong>Poppins Bold (700)</strong> to give the moment the confidence it deserves. Reserve this for confirmation and milestone screens, a submitted form, a completed step, not for section or narrative headlines.</p>
+<div class="compare">
+  <div class="card do">
+    <div class="head">Do: bold for a standalone moment</div>
+    <div style="padding:34px 24px;text-align:center;">
+      <div style="font-weight:700;font-size:36px;color:var(--navy);line-height:1.05;">You&rsquo;re in!</div>
+      <p style="font-weight:400;font-size:14px;color:var(--dgray);margin:12px 0 0;max-width:none;">Thanks for completing the survey. Watch your inbox for what&rsquo;s next.</p>
+    </div>
+  </div>
+  <div class="card dont">
+    <div class="head">Don&rsquo;t: light headline reads weak</div>
+    <div style="padding:34px 24px;text-align:center;">
+      <div style="font-weight:300;font-size:36px;color:var(--navy);line-height:1.05;">You&rsquo;re in!</div>
+      <p style="font-weight:400;font-size:14px;color:var(--dgray);margin:12px 0 0;max-width:none;">A few words in Light float without a narrative around them.</p>
+    </div>
+  </div>
+</div>
+<ul>
+  <li>Use Poppins Bold (700) only for short, standalone moment or confirmation headlines, for example a post-submission &ldquo;You&rsquo;re in!&rdquo;</li>
+  <li>Keep narrative and section headlines in Regular (400); bold is the exception, not the default.</li>
+  <li>One bold moment headline per screen, paired with a short Regular supporting line.</li>
+</ul>
 
 <h3>Eyebrows (kicker labels)</h3>
 <p><strong>New standard:</strong> the small label above a headline (the eyebrow or kicker) now sets in <strong>IBM Plex Mono</strong>, replacing the previous Poppins Medium uppercase treatment.</p>
