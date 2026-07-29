@@ -1,4 +1,4 @@
-<!-- @dsCard group="Patterns" name="Email template" subtitle="Navy header + glow, teal seam, single CTA" width="960" height="760" -->
+<!-- @dsCard group="Patterns" name="Email template" subtitle="Navy header + glow, teal seam, single CTA, signature" width="960" height="900" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Email</title>
@@ -22,10 +22,18 @@
   </div></div>
 <ul>
   <li><strong>Header.</strong> Navy band with the white wordmark and an optional Aurora glow offset to one side. Add the program or series name (for example, “The Modern Integrator”) in light blue beneath the wordmark. Close the band with the teal seam.</li>
-  <li><strong>Body.</strong> Black or navy body copy on white, Poppins, generous line spacing. Glows and dot fields stay in the header, not behind body text.</li>
+  <li><strong>Body.</strong> Navy or black body copy on white, Poppins, generous line spacing. Glows and dot fields stay in the header, not behind body text.</li>
   <li><strong>One CTA.</strong> A single primary button, teal on the light body. Secondary links can be inline text in Rhapsody Blue.</li>
   <li><strong>Imagery.</strong> Follow the photography rules; portraits use the thin-ring treatment. Keep the clear margin around any graphic.</li>
   <li><strong>Accessibility.</strong> Maintain the 3:1 minimum contrast; don't set long copy in light blue or teal on white.</li>
+</ul>
+
+<h3>Building for email</h3>
+<ul>
+  <li><strong>Subject &amp; preheader.</strong> One clear subject in brand voice, front-loading the value (around 40 characters); write the preheader as a real complement to it, never &ldquo;View in browser.&rdquo;</li>
+  <li><strong>Images off by default.</strong> Many clients block images, so never lock the core message or the CTA inside an image. Set the headline and button as live HTML text, and give every image alt text, including the wordmark.</li>
+  <li><strong>Width.</strong> Keep the content column around 600px so it renders reliably across clients and on mobile.</li>
+  <li><strong>Dark mode.</strong> Assume some clients recolor. The navy header with the white wordmark (transparent PNG) holds up; avoid dark type on transparent PNGs that can invert into dark-on-dark.</li>
 </ul>
 
 <h3>Employee email signature</h3>
