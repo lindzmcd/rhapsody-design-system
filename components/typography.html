@@ -2,48 +2,48 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Typography</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tokens.css">
 </head><body>
 <div class="wrap">
 <h2>Typography</h2>
-<p>Poppins is the primary typeface, with Arial as the fallback where Poppins is unavailable. Headings (H1 through H4 and the hero) set in <strong>Poppins Regular (400)</strong> for one consistent weight; body copy sets in <strong>Poppins Light (300)</strong>. Medium (500) carries small emphasis such as labels and buttons, and <strong>Bold (700)</strong> is reserved for short standalone &ldquo;moment&rdquo; headlines (see Bold headlines for moments, below). <strong>IBM Plex Mono</strong> (weights 400 and 500) is the support typeface; see Eyebrows and Technical annotations below.</p>
+<p>Poppins is the primary typeface, with Arial as the fallback where Poppins is unavailable. The hierarchy runs on a single weight: H2 through H4 and all body copy set in <strong>Poppins Regular (400)</strong>. The hero and H1 step up to <strong>Poppins Medium (500)</strong> so the largest headline carries a little more presence, and Medium also handles small emphasis such as labels and buttons and short standalone &ldquo;moment&rdquo; headlines (see Stronger headlines for moments, below). <strong>IBM Plex Mono</strong> (weights 400 and 500) is the support typeface; see Eyebrows and Technical annotations below.</p>
 <h3>Type scale</h3>
-<p>Headings set in Poppins Regular (400); body copy in Poppins Light (300). On navy or dark backgrounds, set type in white with light blue for a secondary or accent line. Same weights and scale on both. The numbers below are the CSS <code>font-weight</code> values for web. All headings, H1 through H4 and the hero, use Poppins Regular (400) for one consistent weight across the hierarchy. Body copy stays Poppins Light (300).</p>
+<p>The hero and H1 set in Poppins Medium (500); H2 through H4 and body copy set in Poppins Regular (400). The scale is identical on light and dark backgrounds. The numbers below are the CSS <code>font-weight</code> values for web.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:12px 0;align-items:start;">
   <div>
     <div class="lbl" style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:6px;">On light</div>
-    <div style="border:1px solid var(--lgray);border-radius:12px;padding:14px 18px;"><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">Hero &middot; Regular 400 &middot; 60px</div><div style="font-weight:400;font-size:30px;">Hero headline</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">H2 &middot; Regular 400 &middot; 40px</div><div style="font-weight:400;font-size:24px;">Section heading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">H3 &middot; Regular 400 &middot; 20px</div><div style="font-weight:400;font-size:17px;">Subheading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">P1 &middot; Regular 400 &middot; 16px</div><div style="font-weight:400;font-size:15px;">Body copy</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">P2 &middot; Regular 400 &middot; 11px</div><div style="font-weight:400;font-size:12px;">Caption</div></div></div>
+    <div style="border:1px solid var(--lgray);border-radius:12px;padding:14px 18px;"><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">Hero &middot; Medium 500 &middot; 60px</div><div style="font-weight:500;font-size:30px;">Hero headline</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">H2 &middot; Regular 400 &middot; 40px</div><div style="font-weight:400;font-size:24px;">Section heading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">H3 &middot; Regular 400 &middot; 20px</div><div style="font-weight:400;font-size:17px;">Subheading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">P1 &middot; Regular 400 &middot; 16px</div><div style="font-weight:400;font-size:15px;">Body copy</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--lgray);padding:8px 0;"><div style="font-size:12px;color:var(--dgray);width:150px;flex:none;">P2 &middot; Regular 400 &middot; 11px</div><div style="font-weight:400;font-size:12px;">Caption</div></div></div>
   </div>
   <div>
     <div class="lbl" style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:6px;">On navy</div>
-    <div style="background:var(--navy);border-radius:12px;padding:14px 18px;"><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">Hero &middot; Regular 400 &middot; 60px</div><div style="font-weight:400;font-size:30px;color:#fff;">Hero headline</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">H2 &middot; Regular 400 &middot; 40px</div><div style="font-weight:400;font-size:24px;color:#fff;">Section heading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">H3 &middot; Regular 400 &middot; 20px</div><div style="font-weight:400;font-size:17px;color:#fff;">Subheading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">P1 &middot; Regular 400 &middot; 16px</div><div style="font-weight:400;font-size:15px;color:#fff;">Body copy</div></div><div style="display:flex;align-items:baseline;gap:10px;padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">P2 &middot; Regular 400 &middot; 11px</div><div style="font-weight:400;font-size:12px;color:#fff;">Caption</div></div></div>
+    <div style="background:var(--navy);border-radius:12px;padding:14px 18px;"><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">Hero &middot; Medium 500 &middot; 60px</div><div style="font-weight:500;font-size:30px;color:#fff;">Hero headline</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">H2 &middot; Regular 400 &middot; 40px</div><div style="font-weight:400;font-size:24px;color:#fff;">Section heading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">H3 &middot; Regular 400 &middot; 20px</div><div style="font-weight:400;font-size:17px;color:#fff;">Subheading</div></div><div style="display:flex;align-items:baseline;gap:10px;border-bottom:1px solid rgba(255,255,255,0.14);padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">P1 &middot; Regular 400 &middot; 16px</div><div style="font-weight:400;font-size:15px;color:#fff;">Body copy</div></div><div style="display:flex;align-items:baseline;gap:10px;padding:8px 0;"><div style="font-size:12px;color:#B4D8FF;width:150px;flex:none;">P2 &middot; Regular 400 &middot; 11px</div><div style="font-weight:400;font-size:12px;color:#fff;">Caption</div></div></div>
   </div>
 </div>
 
-<h3>Bold headlines for moments</h3>
-<p>Headlines normally set in Poppins Regular (400). The exception is a <strong>short, standalone headline that marks a moment or a step in a journey</strong> rather than leading a block of narrative copy. With only a few words and no supporting paragraph to lend it weight, a Light or Regular headline reads thin, so set it in <strong>Poppins Bold (700)</strong> to give the moment the confidence it deserves. Reserve this for confirmation and milestone screens, a submitted form, a completed step, not for section or narrative headlines.</p>
+<h3>Stronger headlines for moments</h3>
+<p>Headlines normally set in Poppins Regular (400), and the hero and H1 in Medium (500). The exception is a <strong>short, standalone headline that marks a moment or a step in a journey</strong> rather than leading a block of narrative copy. With only a few words and no supporting paragraph to lend it weight, a Regular headline reads thin, so step it up to <strong>Poppins Medium (500)</strong> to give the moment the confidence it deserves. Reserve this for confirmation and milestone screens, a submitted form, a completed step, not for section or narrative headlines.</p>
 <div class="compare">
   <div class="card do">
-    <div class="head">Do: bold for a standalone moment</div>
+    <div class="head">Do: Medium for a standalone moment</div>
     <div style="padding:34px 24px;text-align:center;">
-      <div style="font-weight:700;font-size:36px;color:var(--navy);line-height:1.05;">You&rsquo;re in!</div>
+      <div style="font-weight:500;font-size:36px;color:var(--navy);line-height:1.05;">You&rsquo;re in!</div>
       <p style="font-weight:400;font-size:14px;color:var(--dgray);margin:12px 0 0;max-width:none;">Thanks for completing the survey. Watch your inbox for what&rsquo;s next.</p>
     </div>
   </div>
   <div class="card dont">
-    <div class="head">Don&rsquo;t: light headline reads weak</div>
+    <div class="head">Don&rsquo;t: Regular headline reads weak</div>
     <div style="padding:34px 24px;text-align:center;">
-      <div style="font-weight:300;font-size:36px;color:var(--navy);line-height:1.05;">You&rsquo;re in!</div>
-      <p style="font-weight:400;font-size:14px;color:var(--dgray);margin:12px 0 0;max-width:none;">A few words in Light float without a narrative around them.</p>
+      <div style="font-weight:400;font-size:36px;color:var(--navy);line-height:1.05;">You&rsquo;re in!</div>
+      <p style="font-weight:400;font-size:14px;color:var(--dgray);margin:12px 0 0;max-width:none;">A few words in Regular float without a narrative around them.</p>
     </div>
   </div>
 </div>
 <ul>
-  <li>Use Poppins Bold (700) only for short, standalone moment or confirmation headlines, for example a post-submission &ldquo;You&rsquo;re in!&rdquo;</li>
-  <li>Keep narrative and section headlines in Regular (400); bold is the exception, not the default.</li>
-  <li>One bold moment headline per screen, paired with a short Regular supporting line.</li>
+  <li>Use Poppins Medium (500) only for short, standalone moment or confirmation headlines, for example a post-submission &ldquo;You&rsquo;re in!&rdquo;</li>
+  <li>Keep narrative and section headlines in Regular (400); the Medium moment headline is the exception, not the default.</li>
+  <li>One moment headline per screen, paired with a short Regular supporting line.</li>
 </ul>
 
 <h3>Eyebrows (kicker labels)</h3>
@@ -52,12 +52,12 @@
   <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 24px;">
     <p style="font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:0.17em;text-transform:uppercase;color:var(--blue);margin:0 0 8px;">Interoperability platform</p>
     <div style="font-weight:400;font-size:26px;line-height:1.15;color:var(--navy);">Headline follows in Poppins</div>
-    <p class="caption" style="margin:10px 0 0;">On light: IBM Plex Mono 500, Rhapsody Blue.</p>
+    <p class="caption" style="margin:10px 0 0;">On light: IBM Plex Mono 500.</p>
   </div>
   <div style="background:var(--navy);border-radius:12px;padding:22px 24px;">
     <p style="font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:0.17em;text-transform:uppercase;color:var(--teal);margin:0 0 8px;">Interoperability platform</p>
     <div style="font-weight:400;font-size:26px;line-height:1.15;color:#fff;">Headline follows in Poppins</div>
-    <p class="caption" style="margin:10px 0 0;color:#B4D8FF;">On dark: IBM Plex Mono 500, teal.</p>
+    <p class="caption" style="margin:10px 0 0;color:#B4D8FF;">On dark: IBM Plex Mono 500.</p>
   </div>
 </div>
 <ul>
@@ -65,9 +65,9 @@
   <li>IBM Plex Mono Medium (500). Regular 400 is acceptable where 500 renders heavy at very small sizes.</li>
   <li>Size roughly 12&ndash;13px, sitting above the headline with clear space between.</li>
   <li>Letter-spacing about 0.16 to 0.18em so the caps do not look cramped.</li>
-  <li>Rhapsody Blue on light backgrounds, teal on dark grounds.</li>
   <li>Markup: a <code>&lt;p&gt;</code> or <code>&lt;span&gt;</code>, never a heading tag.</li>
-  <li>Avoid: Poppins for eyebrows (retired treatment), bold weight, tight or absent letter-spacing, and purple or orange for the eyebrow.</li>
+  <li>Avoid: Poppins for eyebrows (retired treatment), bold weight, and tight or absent letter-spacing.</li>
+  <li>Color follows the color rules (see Color); this card doesn&rsquo;t restate it.</li>
 </ul>
 
 <h3>Technical annotations (IBM Plex Mono)</h3>
@@ -126,11 +126,11 @@
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:12px 0;">
   <div style="background:var(--navy);border-radius:12px;padding:24px 28px;">
     <div style="font-weight:400;font-size:29px;color:#fff;line-height:1.15;">Health data, finally <span style="color:#1A81F4;">connected</span></div>
-    <div style="font-weight:300;font-size:14px;color:#fff;margin-top:8px;">On dark: at headline size the emphasis word is Rhapsody Blue; the rest of the headline and this description stay white.</div>
+    <div style="font-weight:400;font-size:14px;color:#fff;margin-top:8px;">On dark: at headline size the emphasis word is Rhapsody Blue; the rest of the headline and this description stay white.</div>
   </div>
   <div style="border:1px solid var(--lgray);border-radius:12px;padding:24px 28px;">
     <div style="font-weight:400;font-size:29px;color:var(--navy);line-height:1.15;">Health data, finally <span style="color:var(--blue);">connected</span></div>
-    <div style="font-weight:300;font-size:14px;color:var(--navy);margin-top:8px;">On light: the emphasis word is Rhapsody Blue; the rest and this description stay navy or black.</div>
+    <div style="font-weight:400;font-size:14px;color:var(--navy);margin-top:8px;">On light: the emphasis word is Rhapsody Blue; the rest and this description stay navy or black.</div>
   </div>
 </div>
 <div class="compare">
@@ -145,6 +145,16 @@
     <li>Apply it to every headline across a layout or deck.</li>
   </ul></div></div>
 </div>
+
+<h3>Leading &amp; tracking</h3>
+<p>Line height (leading) and letter-spacing (tracking) keep the type feeling calm and open. Poppins is set at its natural spacing almost everywhere; the exceptions below are deliberate and few.</p>
+<ul>
+  <li><strong>Body leading:</strong> about <strong>1.5&ndash;1.6&times;</strong> the font size (150&ndash;160%). This is the baseline for comfortable reading and matches the system default.</li>
+  <li><strong>Headline leading:</strong> tighter, about <strong>1.1&ndash;1.2&times;</strong>. The larger the headline, the tighter it can sit; keep multi-line headlines from opening up into loose bands.</li>
+  <li><strong>Body &amp; headline tracking:</strong> leave Poppins at its <strong>default (0)</strong>. Don&rsquo;t manually tighten or loosen running text or headlines.</li>
+  <li><strong>All-caps &amp; eyebrows:</strong> the one place to add tracking. Eyebrows and any all-caps label take <strong>0.16&ndash;0.18em</strong> so the caps don&rsquo;t look cramped; smaller all-caps labels (H4-style) take a lighter <strong>0.04em</strong>.</li>
+  <li><strong>Consistency:</strong> pick one leading value per text role and hold it across a layout; don&rsquo;t adjust line height line-by-line to force copy to fit. Cut or resize instead.</li>
+</ul>
 
 <h3>Minimum font size (web)</h3>
 <p>For legibility on screen, keep body and interface text at a readable minimum. These are floors, not targets, most body copy should sit comfortably above them.</p>
