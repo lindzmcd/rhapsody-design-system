@@ -17,3 +17,13 @@ Design notes (kept minimal on purpose):
   - No quotes, taglines, banners, or social icons.
   - Poppins with Arial fallback; colors are inline hex (Navy #0B2C47,
     Rhapsody Blue #1A81F4, Teal #23C5BF, Gray #7E858C).
+
+CERTIFICATION-BADGE VARIANT
+===========================
+File: rhapsody-email-signature-with-certifications.html
+  - For roles required to show compliance badges (Cyber Essentials Plus,
+    ISO 27001, etc.).
+  - Host the OFFICIAL badge art from Security/Compliance and replace
+    CERT1_URL_HERE / CERT2_URL_HERE. Add/remove badge cells per role.
+  - Keep each badge ~44px tall; never stretch, crop, or recolor a
+    certification mark. Even spacing between badges.
