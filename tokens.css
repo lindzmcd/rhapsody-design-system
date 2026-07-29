@@ -124,7 +124,7 @@ a{color:var(--blue);}
 .logo-blk{background-image:url(assets/logo-black.png);}      /* one-color navy/black */
 .logo-wht{background-image:url(assets/logo-white.png);}      /* one-color white */
 .logo-a{background-image:url(assets/logo-clearspace.png);}   /* mark for clear-space art */
-.logo-inv{background-image:url(assets/logo-inverse.png);}    /* blue bar + white wordmark, dark bg */
+.logo-blw{background-image:url(assets/logo-blueline.png);}   /* blue wordmark + white line, dark bg (large only) */
 
 .dupimg0{background-image:url(assets/dupimg0.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:360/360;display:block;}
 .dupimg1{background-image:url(assets/dupimg1.png);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:600/600;display:block;}
