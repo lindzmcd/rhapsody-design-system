@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" name="Charts & graphs" subtitle="Bar, line, stacked bar, donut" width="960" height="1000" -->
+<!-- @dsCard group="Components" name="Charts & graphs" subtitle="Bar, line, stacked bar, donut, color order + rules" width="960" height="1320" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Charts, graphs, and tables</title>
@@ -128,11 +128,31 @@
     <text x="230" y="184" text-anchor="middle" font-size="32" font-weight="500" fill="#0B2C47" font-family='Poppins,Arial,sans-serif'>62%</text>
   </svg></div><p class="caption" style="margin:6px 0 0;">Donut: blue leads with teal, light blue, purple, and orange; gray for the remainder; key number in the center.</p></div>
 </div>
+<h3>Chart color order</h3>
+<p>When a chart needs more than one color, assign them in this fixed order so every chart reads as one system. Add only as many as the data needs, and use gray for a remainder or context series. This data-series order is for distinguishing values and is separate from the Pathways build/automate wayfinding order.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;">
+  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#1A81F4;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">1 &middot; Blue</div></div>
+  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#0B2C47;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">2 &middot; Navy</div></div>
+  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#23C5BF;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">3 &middot; Teal</div></div>
+  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#B4D8FF;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">4 &middot; Light blue</div></div>
+  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#7340E4;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">5 &middot; Purple</div></div>
+  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#FA7E2E;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">6 &middot; Orange</div></div>
+  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#D9DFE6;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">Gray &middot; remainder</div></div>
+</div>
+<h4>Color rules in charts</h4>
 <ul>
-  <li>Use Rhapsody colors, adding more only when the data needs distinguishing. Blue leads, then navy, teal, light blue, purple, and orange; gray for remainder or context. Blue and navy make a strong two-series pairing. This data-series order is for distinguishing values and is separate from the build/automate wayfinding order (see Pathways).</li>
-  <li>Navy titles, dark gray axis labels, light gray gridlines. Remove top and right borders.</li>
+  <li><strong>Blue leads,</strong> then navy; blue and navy make a strong two-series pairing. Blue, navy, and teal are the workhorse series colors.</li>
+  <li><strong>Light blue is for fills and large areas</strong> (bar, stacked, and donut segments), not thin lines or small marks on white, where it is too low-contrast. On navy it reads at any size.</li>
+  <li><strong>Orange is a sparing accent</strong>, a few marks at most, never a whole palette of orange. Put dark (navy or black) labels on orange fills.</li>
+  <li><strong>Purple</strong> rounds out the sequence; don&rsquo;t set purple as labels on navy or black.</li>
+  <li><strong>Teal fills take dark labels only</strong> (navy or black), never white.</li>
+  <li><strong>Gray (#D9DFE6)</strong> is the remainder or context series, and the gridline color. Titles navy, axis labels dark gray.</li>
+  <li>Stay within the order and add a color only when the data needs distinguishing; charts are the one place the three-color rule relaxes.</li>
+</ul>
+<h4>Chart style</h4>
+<ul>
   <li>No gradients, 3D, drop shadows, or heavy outlines. Data first.</li>
-  <li>Label directly where possible; keep legends minimal.</li>
+  <li>Label directly where possible; keep legends minimal. Remove top and right borders.</li>
 </ul>
 </div>
 </body></html>

@@ -131,6 +131,11 @@ a{color:var(--blue);}
 .dupimg2{background-image:url(assets/dupimg2.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:600/600;display:block;}
 .dupimg3{background-image:url(assets/dupimg3.png);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:300/300;display:block;}
 
+/* Pass/fail annotation badges (documentation chrome, not brand palette) */
+.pfbadge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;padding:2px 8px;border-radius:999px;letter-spacing:.03em;color:#fff;line-height:1.5;white-space:nowrap;}
+.pfbadge.pass{background:#1E9E63;}
+.pfbadge.fail{background:#D64545;}
+
 @media(max-width:680px){
   .compare,.tworeg{grid-template-columns:1fr;}
   .wrap{padding:28px 20px 56px;}
