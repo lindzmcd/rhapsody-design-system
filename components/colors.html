@@ -1,4 +1,4 @@
-<!-- @dsCard group="Foundations" name="Color palette" subtitle="Palette, text color, accessibility, text on teal" width="960" height="1500" -->
+<!-- @dsCard group="Foundations" name="Color palette" subtitle="Palette, text color, accessibility, blue on navy, text on teal" width="960" height="1700" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Color</title>
@@ -40,14 +40,14 @@
   <div class="sw"><div class="chip" style="background:#fff;border-top:1px solid #eee"></div><div class="meta"><div class="name">White</div><div class="tier">Neutral</div><div class="hex">#FFFFFF</div></div></div>
 </div>
 <h4>Text color</h4>
-<p>Copy uses only these colors: Rhapsody Navy, black, white, and Rhapsody Blue as the accent. Work down the list in order.</p>
+<p>Body copy uses only <strong>white, Rhapsody Navy, or black</strong>. Rhapsody Blue is an accent color, never running body copy. Work down the list in order.</p>
 <ul>
   <li><strong>Rhapsody Navy is the default text color.</strong> On light backgrounds, set body copy and headings in Rhapsody Navy (#0B2C47) rather than black. Navy is the on-brand dark and clears contrast on white easily.</li>
   <li><strong>Black is a fallback, not a default.</strong> Reach for black (#050F19) only when navy falls short of a contrast or accessibility requirement for a given pairing, or when print is limited to options that can&rsquo;t reproduce navy accurately (for example single-color or limited-ink jobs). Otherwise, navy.</li>
   <li><strong>Rhapsody Blue is the accent on light.</strong> Use it for emphasis, links, and one accent word in a headline, not for running body copy.</li>
   <li><strong>On dark backgrounds, text is white.</strong> For a blue accent on navy, use <strong>Rhapsody Blue</strong> where the element is large enough to read as vibrant (large headlines, sizable graphic elements); drop to <strong>light blue (#B4D8FF)</strong> for smaller type and small graphic elements, where Rhapsody Blue loses legibility against navy. Light blue is the small-scale, dark-ground counterpart to blue, not a wholesale replacement for it.</li>
   <li><strong>Not for copy:</strong> teal, purple, and orange. Exception: text links in automation contexts may use teal (#23C5BF); see Text links and the CTA arrow in Buttons and CTAs.</li>
-  <li><strong>One heading exception:</strong> an H3 may take a secondary or tertiary color. Body copy, captions, and larger headings (H1, H2) stay within the colors above.</li>
+  <li><strong>No tertiary color in type:</strong> purple and orange are never used for any heading, eyebrow, or label. The one color exception is an H3, which may take a <strong>secondary</strong> color (navy, light blue, or teal, contrast permitting). Body copy, captions, and larger headings (H1, H2) stay within the copy colors above.</li>
   <li><strong>Contrast:</strong> minimum 3:1. Digital uses HEX or RGB; print uses CMYK or Pantone.</li>
   <li><strong>Module backgrounds:</strong> light gray (#D9DFE6) and gray-blue (#E8EDF2) fill content blocks such as cards, tables, and panels (including alternating table rows), never a full page. Full-page backgrounds stay white, Rhapsody Blue, or Rhapsody Navy.</li>
 </ul>
@@ -88,6 +88,20 @@
   <li>Set all copy on teal in <strong>navy or black</strong>. Body and interface text at least <strong>16px</strong>; supporting labels at least <strong>14px</strong>; never below <strong>12px</strong> on teal.</li>
   <li>Because only dark text clears the threshold, size is a legibility floor here, not a way to pass contrast: white and light copy stay non-compliant on teal at any size.</li>
   <li>Same rule for teal buttons: the label is navy (as in the dark-mode primary button), never white.</li>
+</ul>
+<h3>Rhapsody Blue on navy</h3>
+<p>On navy (<code>#0B2C47</code>), the two blues split by size. <strong>Rhapsody Blue (#1A81F4) reads at 3.75:1</strong>, which clears 3:1 for large or heavy type but falls short of the 4.5:1 needed for small body text. <strong>Light blue (#B4D8FF) reads at about 9.7:1</strong> and stays legible on navy at any size. So use <strong>Rhapsody Blue for large, vibrant moments</strong> and <strong>light blue for anything small</strong>. Light blue is the small-scale counterpart to blue on dark grounds, not a wholesale replacement for it.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:520px;margin:8px 0 14px;">
+  <div style="background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:64px;"><div style="color:var(--blue);font-weight:500;font-size:24px;line-height:1;">Connected</div><span style="color:#B4D8FF;font-size:10px;font-weight:400;margin-top:8px;">Large Rhapsody Blue &middot; 3.75:1 &middot; pass</span></div>
+  <div style="background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:64px;"><div style="color:var(--blue);font-weight:400;font-size:12px;line-height:1.3;">Small caption in blue</div><span style="color:#B4D8FF;font-size:10px;font-weight:400;margin-top:8px;">Small Rhapsody Blue &middot; 3.75:1 &middot; fails</span></div>
+  <div style="background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:64px;"><div style="color:#B4D8FF;font-weight:400;font-size:12px;line-height:1.3;">Small caption in light blue</div><span style="color:#B4D8FF;font-size:10px;font-weight:400;margin-top:8px;">Small light blue &middot; 9.7:1 &middot; pass</span></div>
+</div>
+<h4>When to use which on navy</h4>
+<ul>
+  <li><strong>Rhapsody Blue on navy:</strong> large headlines and accent words (roughly 24px+, or ~19px bold), plus sizable graphic elements such as large bars, blocks, and big dots, where the blue stays vibrant.</li>
+  <li><strong>Light blue on navy:</strong> body copy, captions, labels, secondary and accent lines, thin rules, small icons, and small dots, anything below the large-text threshold.</li>
+  <li><strong>Rule of thumb:</strong> if the element is large enough to pass 3:1, Rhapsody Blue is fine; if it is small text that needs 4.5:1, switch to light blue.</li>
+  <li>Don&rsquo;t rely on size alone to rescue small Rhapsody Blue copy on navy, it stays below 4.5:1; drop to light blue instead.</li>
 </ul>
 <p class="caption">Test pairings with the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a> or the <a href="https://contrast-grid.eightshapes.com/">EightShapes Contrast Grid</a>.</p>
 </div>
