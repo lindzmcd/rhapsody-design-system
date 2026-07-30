@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" name="Tables" subtitle="Navy header, alternating rows, blue result column" width="960" height="480" -->
+<!-- @dsCard group="Components" name="Tables" subtitle="Navy header, alternating rows, blue result column, status tags" width="960" height="720" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tables</title>
@@ -21,5 +21,25 @@
     <tr style="background:#fff;"><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">Unplanned downtime</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">Monthly</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;color:#1A81F4;">None in 1,000 days</td></tr>
   </tbody>
 </table>
+
+<h3>When a table needs color</h3>
+<p>Most tables stay monochrome, navy header, alternating rows, and one blue result column, because color-coding <em>data</em> is the charts&rsquo; job, not the table&rsquo;s. The one case that calls for more color is a <strong>status or category column</strong>, where a small colored tag speeds scanning. Keep the color to that one column, use a single tag color per state, and put dark text on light fills.</p>
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:12px 0;max-width:560px;">
+  <thead><tr>
+    <th style="text-align:left;padding:11px 14px;background:#0B2C47;color:#fff;font-weight:500;">Interface</th>
+    <th style="text-align:left;padding:11px 14px;background:#0B2C47;color:#fff;font-weight:500;">Messages / day</th>
+    <th style="text-align:left;padding:11px 14px;background:#0B2C47;color:#fff;font-weight:500;">Status</th>
+  </tr></thead>
+  <tbody>
+    <tr style="background:#fff;"><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">Epic ADT</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">128,400</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;"><span style="display:inline-flex;align-items:center;padding:2px 11px;border-radius:999px;font-size:12px;font-weight:500;background:#1E9E63;color:#fff;">Live</span></td></tr>
+    <tr style="background:#E8EDF2;"><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">Quest Labs</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">54,900</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;"><span style="display:inline-flex;align-items:center;padding:2px 11px;border-radius:999px;font-size:12px;font-weight:500;background:#FA7E2E;color:#0B2C47;">Degraded</span></td></tr>
+    <tr style="background:#fff;"><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">Legacy RIS</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;">0</td><td style="padding:10px 14px;border-bottom:1px solid #D9DFE6;"><span style="display:inline-flex;align-items:center;padding:2px 11px;border-radius:999px;font-size:12px;font-weight:500;background:#D64545;color:#fff;">Down</span></td></tr>
+  </tbody>
+</table>
+<ul>
+  <li>Status tags are the one place a table carries several colors; hold them to that single column.</li>
+  <li>Use functional colors for state (green live, orange degraded, red down) and one tag per row, dark text on the light orange fill.</li>
+  <li>Everywhere else, let the blue result column do the emphasis; don&rsquo;t color-code whole rows or multiple data columns.</li>
+</ul>
 </div>
 </body></html>

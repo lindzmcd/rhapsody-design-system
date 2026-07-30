@@ -52,15 +52,11 @@
 
 
 <h3>Text links and the CTA arrow</h3>
-<p>Text-style calls to action (the non-button &ldquo;actionlink&rdquo; links that sit inside or below content) end with a trailing right arrow, set with a preceding space: <code>Explore agent-ready interoperability &rarr;</code>. The arrow signals forward movement into a deeper page and visually distinguishes these low-emphasis links from primary pill buttons. Adopted from the homepage prototype.</p>
+<p>Text-style calls to action, the low-emphasis &ldquo;actionlink&rdquo; links that sit inside or below content, end with a trailing right arrow (a preceding space, then the arrow): <code>Explore agent-ready interoperability &rarr;</code>. It signals forward movement into a deeper page and sets these apart from pill buttons, which never take an arrow.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0;">
   <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;">
-    <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:16px;">On light &middot; infrastructure</div>
+    <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:16px;">On light</div>
     <span style="font-weight:500;font-size:14.5px;color:var(--blue);">Explore agent-ready interoperability &rarr;</span>
-  </div>
-  <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;">
-    <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:16px;">On light &middot; automation</div>
-    <span style="font-weight:500;font-size:14.5px;color:#23C5BF;">Meet Rhapsody Axon &rarr;</span>
   </div>
   <div style="background:var(--navy);border-radius:12px;padding:18px 20px 26px;">
     <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#B4D8FF;margin-bottom:16px;">On dark</div>
@@ -69,27 +65,23 @@
 </div>
 <div class="compare">
   <div class="card do">
-    <div class="head">Do: arrow on text links only</div>
+    <div class="head">Do: arrow on a text link</div>
     <div style="padding:30px 18px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;">
       <span style="font-weight:500;font-size:14px;color:var(--blue);">See how SimonMed did it &rarr;</span>
     </div>
   </div>
   <div class="card dont">
-    <div class="head">Don&rsquo;t: no arrow on buttons</div>
+    <div class="head">Don&rsquo;t: arrow on a button</div>
     <div style="padding:24px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;">
       <span style="height:40px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:14px;display:inline-flex;align-items:center;padding:0 22px;">Book a demo &rarr;</span>
     </div>
   </div>
 </div>
 <ul>
-  <li>Applies to secondary and tertiary text links: &ldquo;Explore &hellip;&rdquo;, &ldquo;Meet &hellip;&rdquo;, &ldquo;Learn more&rdquo;, card CTAs, and inline navigational links.</li>
-  <li>Does not apply to primary or secondary pill buttons (e.g. &ldquo;Book a demo&rdquo;, &ldquo;Explore the platform&rdquo;). Buttons never take an arrow.</li>
-  <li>Glyph: the right-arrow character <code>&amp;rarr;</code> ( &rarr; ), not <code>-&gt;</code>, <code>&raquo;</code>, or an icon font. One arrow per link, always trailing, never leading.</li>
-  <li>Color: the link inherits its context color: blue on light infrastructure contexts, teal (<code>#23C5BF</code>) on light automation contexts, white or light on dark grounds. The arrow matches the link text color. Never orange.</li>
-  <li>Motion (optional): the arrow may nudge 2&ndash;3px to the right on hover; keep it subtle.</li>
+  <li>Text links only, &ldquo;Explore &hellip;&rdquo;, &ldquo;Meet &hellip;&rdquo;, &ldquo;Learn more&rdquo;, card CTAs, inline nav. Never on pill buttons.</li>
+  <li>Use the arrow character <code>&amp;rarr;</code> (&rarr;), one per link, always trailing with a leading space, never <code>-&gt;</code>, <code>&raquo;</code>, or an icon.</li>
+  <li>The arrow takes the link&rsquo;s color, which follows its context, blue or teal (see Color and Pathways); never orange.</li>
 </ul>
 
-<h3>Module accent line</h3>
-<p>The module accent line, the short 44&times;3px bar above an H2 or eyebrow (Rhapsody Blue for Build, teal for Automate), is documented in <strong>Layout &amp; spacing</strong>, and its color meaning is set by <strong>Pathways: build &amp; automate</strong>. It is not a button treatment.</p>
 </div>
 </body></html>

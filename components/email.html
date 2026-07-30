@@ -1,4 +1,4 @@
-<!-- @dsCard group="Patterns" name="Email template" subtitle="Header banners (Aurora, dots, Plexus, photo), teal seam, single CTA, Pardot notes" width="960" height="1260" -->
+<!-- @dsCard group="Patterns" name="Email template" subtitle="Header banners (Aurora, big dot, photo), seam, single CTA, Pardot notes" width="960" height="1260" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Email</title>
@@ -21,7 +21,7 @@
     </div>
   </div></div>
 <ul>
-  <li><strong>Header.</strong> Navy band with the white wordmark and an optional Aurora glow offset to one side. Add the program or series name (for example, “The Modern Integrator”) in light blue beneath the wordmark. Close the band with the seam (see Layout &amp; spacing for its color).</li>
+  <li><strong>Header.</strong> Navy band with the white wordmark and an optional Aurora glow offset to one side. Add the program or series name (for example, a “Release Notes” or newsletter series) in light blue beneath the wordmark. Close the band with the seam (see Layout &amp; spacing for its color).</li>
   <li><strong>Body.</strong> Navy or black body copy on white, Poppins, generous line spacing. Glows and dot fields stay in the header, not behind body text.</li>
   <li><strong>One CTA.</strong> A single primary button, teal on the light body. Secondary links can be inline text in Rhapsody Blue.</li>
   <li><strong>Imagery.</strong> Follow the photography rules; portraits use the thin-ring treatment. Keep the clear margin around any graphic.</li>
@@ -35,25 +35,29 @@
   <div>
     <div style="container-type:inline-size;position:relative;background:var(--navy);aspect-ratio:5/2;overflow:hidden;border-radius:10px 10px 0 0;border-bottom:4px solid var(--teal);">
       <div style="position:absolute;right:-10cqw;top:-26cqw;width:58cqw;height:58cqw;border-radius:50%;background:radial-gradient(circle, rgba(35,197,191,0.45) 0%, rgba(26,129,244,0.16) 45%, transparent 72%);"></div>
-      <div style="position:absolute;left:6cqw;top:50%;transform:translateY(-50%);z-index:1;"><span class="logo-i logo-wht" style="display:block;width:34cqw;aspect-ratio:6.897;"></span><div style="font-family:var(--mono);font-weight:500;font-size:2.8cqw;letter-spacing:0.14em;text-transform:uppercase;color:#B4D8FF;margin-top:2.6cqw;">The Modern Integrator</div></div>
+      <div style="position:absolute;left:6cqw;top:50%;transform:translateY(-50%);z-index:1;"><span class="logo-i logo-wht" style="display:block;width:34cqw;aspect-ratio:6.897;"></span><div style="font-family:var(--mono);font-weight:500;font-size:2.8cqw;letter-spacing:0.14em;text-transform:uppercase;color:#B4D8FF;margin-top:2.6cqw;">Release Notes: Product Version #.#</div></div>
     </div>
     <p class="caption" style="margin:6px 0 0;">Navy + Aurora glow (default), for atmosphere.</p>
   </div>
 
   <div>
     <div style="container-type:inline-size;position:relative;background:var(--blue);aspect-ratio:5/2;overflow:hidden;border-radius:10px 10px 0 0;border-bottom:4px solid var(--navy);">
-      <img src="../assets/dots-multicolor.png" alt="" style="position:absolute;top:0;right:0;width:44cqw;height:auto;">
+      <div style="position:absolute;right:-6cqw;top:-22cqw;width:46cqw;height:46cqw;border-radius:50%;background:#23C5BF;"></div>
+      <div style="position:absolute;right:34cqw;top:20cqw;width:4cqw;height:4cqw;border-radius:50%;background:#B4D8FF;"></div>
+      <div style="position:absolute;right:42cqw;top:10cqw;width:2.6cqw;height:2.6cqw;border-radius:50%;background:#fff;"></div>
       <div style="position:absolute;left:6cqw;top:50%;transform:translateY(-50%);z-index:1;"><span class="logo-i logo-wht" style="display:block;width:34cqw;aspect-ratio:6.897;"></span><div style="font-family:var(--mono);font-weight:500;font-size:2.8cqw;letter-spacing:0.14em;text-transform:uppercase;color:#fff;margin-top:2.6cqw;">The Platform</div></div>
     </div>
-    <p class="caption" style="margin:6px 0 0;">Rhapsody Blue + dots, navy seam.</p>
+    <p class="caption" style="margin:6px 0 0;">Rhapsody Blue + big dot, navy seam.</p>
   </div>
 
   <div>
     <div style="container-type:inline-size;position:relative;background:#fff;aspect-ratio:5/2;overflow:hidden;border-radius:10px 10px 0 0;border:1px solid var(--lgray);border-bottom:4px solid var(--blue);">
-      <img src="../assets/dots-multicolor.png" alt="" style="position:absolute;top:0;right:0;width:44cqw;height:auto;">
+      <div style="position:absolute;right:-6cqw;top:-22cqw;width:46cqw;height:46cqw;border-radius:50%;background:#B4D8FF;"></div>
+      <div style="position:absolute;right:34cqw;top:20cqw;width:4cqw;height:4cqw;border-radius:50%;background:var(--blue);"></div>
+      <div style="position:absolute;right:42cqw;top:10cqw;width:2.6cqw;height:2.6cqw;border-radius:50%;background:var(--navy);"></div>
       <div style="position:absolute;left:6cqw;top:50%;transform:translateY(-50%);z-index:1;"><span class="logo-i logo-bb" style="display:block;width:34cqw;aspect-ratio:6.897;"></span><div style="font-family:var(--mono);font-weight:500;font-size:2.8cqw;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-top:2.6cqw;">Newsletter</div></div>
     </div>
-    <p class="caption" style="margin:6px 0 0;">Dots on white (primary logo, navy/blue seam).</p>
+    <p class="caption" style="margin:6px 0 0;">Big dot on white (primary logo, blue seam).</p>
   </div>
 
   <div>
@@ -83,7 +87,5 @@
   <li><strong>Gmail.</strong> Keep the HTML lean, Gmail clips messages over ~102KB (&ldquo;View entire message&rdquo;) and favors inline styles. Test in Gmail web and the mobile app alongside Outlook.</li>
 </ul>
 
-<h3>Employee email signature</h3>
-<p>The everyday employee signature is its own deliverable, see the <strong>Email signature</strong> pattern for the layout, the name lockup, contact lines, and the certification-badge rules.</p>
 </div>
 </body></html>

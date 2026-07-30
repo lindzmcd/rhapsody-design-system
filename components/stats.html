@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" name="Stats" subtitle="Number-led stat cards" width="960" height="560" -->
+<!-- @dsCard group="Components" name="Stats" subtitle="Number-led stat cards" width="960" height="820" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stats</title>
@@ -8,11 +8,51 @@
 </head><body>
 <div class="wrap">
 <h2>Stats</h2>
+<p>Stats lead with the number or result, so the takeaway lands in a glance. A big number in a brand color, one short label beneath it, and the customer named in small text, no logo. Group several with consistent number size and spacing.</p>
+
+<h3>On light</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:14px 0;">
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 22px 20px;">
+    <div style="font-weight:500;font-size:46px;line-height:1;color:var(--blue);">30<span style="font-size:24px;font-weight:500;"> min</span></div>
+    <div style="font-size:14px;color:var(--navy);margin-top:12px;line-height:1.35;">Average onboarding, down from three weeks</div>
+    <div style="font-size:11.5px;color:var(--dgray);margin-top:10px;">SimonMed</div>
+  </div>
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 22px 20px;">
+    <div style="font-weight:500;font-size:46px;line-height:1;color:var(--blue);">5&times;</div>
+    <div style="font-size:14px;color:var(--navy);margin-top:12px;line-height:1.35;">Faster interface builds across the network</div>
+    <div style="font-size:11.5px;color:var(--dgray);margin-top:10px;">Regional HIE</div>
+  </div>
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:22px 22px 20px;">
+    <div style="font-weight:500;font-size:46px;line-height:1;color:var(--blue);">1,000</div>
+    <div style="font-size:14px;color:var(--navy);margin-top:12px;line-height:1.35;">Days with zero unplanned downtime</div>
+    <div style="font-size:11.5px;color:var(--dgray);margin-top:10px;">Nationwide lab network</div>
+  </div>
+</div>
+
+<h3>On dark</h3>
+<div style="background:var(--navy);border-radius:12px;padding:28px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px;margin:14px 0;">
+  <div>
+    <div style="font-weight:500;font-size:46px;line-height:1;color:#fff;">99.99%</div>
+    <div style="font-size:14px;color:#fff;margin-top:12px;line-height:1.35;">Platform uptime, measured yearly</div>
+    <div style="font-size:11.5px;color:#B4D8FF;margin-top:10px;">Rhapsody EMPI</div>
+  </div>
+  <div>
+    <div style="font-weight:500;font-size:46px;line-height:1;color:#fff;">300M+</div>
+    <div style="font-size:14px;color:#fff;margin-top:12px;line-height:1.35;">Patient records unified and deduplicated</div>
+    <div style="font-size:11.5px;color:#B4D8FF;margin-top:10px;">Health system</div>
+  </div>
+  <div>
+    <div style="font-weight:500;font-size:46px;line-height:1;color:#fff;">62%</div>
+    <div style="font-size:14px;color:#fff;margin-top:12px;line-height:1.35;">Matches automated, no human review</div>
+    <div style="font-size:11.5px;color:#B4D8FF;margin-top:10px;">Diagnostics provider</div>
+  </div>
+</div>
+
 <ul>
   <li>Lead with the number or result. Cut the wordiness and get straight to the takeaway.</li>
-  <li>Big number in a brand color, one short label beneath it.</li>
-  <li>Attribute with the customer name in small text, not a logo.</li>
-  <li>Group several stats with consistent number size and spacing.</li>
+  <li>Big number in a brand color (blue on light, white on dark), Poppins Medium; one short label beneath it.</li>
+  <li>Attribute with the customer name in small text, navy or light blue, not a logo.</li>
+  <li>Group several stats with consistent number size and spacing; keep to one accent color per set.</li>
 </ul>
 </div>
 </body></html>
