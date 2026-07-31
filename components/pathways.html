@@ -1,21 +1,46 @@
-<!-- @dsCard group="1 · Foundations" name="Pathways: build & automate" subtitle="Pillar color coding as a wayfinding cue" width="960" height="1160" -->
+<!-- @dsCard group="1 · Foundations" name="Pathways" subtitle="Color-coding paths and journeys; build vs automate as an example" width="960" height="1180" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pathways: build &amp; automate</title>
+<title>Pathways</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../tokens.css">
 </head><body>
 <div class="wrap">
-<h2>Pathways: build and automate</h2>
-<p>There are two ways to work with Rhapsody, and each carries a consistent color so a user always knows which path they are on. <strong>Build the infrastructure</strong> is <strong>Rhapsody Blue</strong>; <strong>Automate the work</strong> is <strong>Teal</strong>. This is a wayfinding system, not just a section accent: it governs how the website, path-specific content, and journeys are themed, so the color itself signals the path.</p>
+<h2>Pathways</h2>
+<p>Rhapsody color-codes distinct paths so a user always knows which one they are on. Give each path or journey its own color and carry it as a wayfinding cue across every surface, so the color itself signals the path. This is a foundation for theming any set of parallel journeys, not a one-off section accent.</p>
 
 <div class="principle">
   <div class="k">The directive</div>
-  <p>Wherever a surface belongs to a path, carry its pillar color as the cue: the module accent line, the eyebrow, in-context links and buttons, diagrams, and section theming. Hold the color across the whole journey, a page, a deck, a nav branch, so Build always reads blue and Automate always reads teal. Default to blue when a surface is neutral or spans both.</p>
+  <p>Assign each path a color and hold it end to end, across a page, a deck, a nav branch, a whole journey. Carry it as the cue wherever a surface belongs to the path: the module accent line, the eyebrow, in-context links and buttons, diagrams, and section theming. Default to blue when a surface is neutral or spans paths.</p>
 </div>
 
-<h3>The two pathways</h3>
+<h3>How to assign path colors</h3>
+<ul>
+  <li><strong>One color per path, held across its journey.</strong> A path reads the same color everywhere it appears, page, deck, and nav branch, so the cue stays predictable.</li>
+  <li><strong>Assign in a fixed order</strong> so coding stays consistent as paths are added: blue &rarr; teal &rarr; purple &rarr; orange &rarr; light blue &rarr; navy.</li>
+  <li><strong>Default to blue</strong> for neutral surfaces, or ones that span more than one path.</li>
+</ul>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;">
+  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#1A81F4;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">1 · Blue</div></div>
+  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#23C5BF;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">2 · Teal</div></div>
+  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#7340E4;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">3 · Purple</div></div>
+  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#FA7E2E;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">4 · Orange</div></div>
+  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#B4D8FF;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">5 · Light blue</div></div>
+  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#0B2C47;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">6 · Navy</div></div>
+</div>
+<p class="caption">Assign in order and hold each path&rsquo;s color across its whole journey.</p>
+
+<h4>Where the cue appears</h4>
+<ul>
+  <li><strong>Website and navigation.</strong> Path landing pages and their sections theme to the path color, so moving into a branch is visible at a glance.</li>
+  <li><strong>Module accent line.</strong> Takes the path color (see Layout and spacing for the device spec).</li>
+  <li><strong>Eyebrows and links.</strong> In-context kickers, text links, and the CTA arrow take the path color. <strong>Feature icons stay in the blue family</strong> (navy, Rhapsody blue, light blue), never the path color, so the cue is carried by the accent line, eyebrow, and links, not the icons. On white, a light path color like teal drops to the line only; keep teal copy off white (see Color, Text on teal).</li>
+  <li><strong>Content and diagrams.</strong> Path-specific decks, one-pagers, and diagrams carry the color consistently end to end.</li>
+</ul>
+
+<h3>Example: Build and Automate</h3>
+<p>The clearest current application is Rhapsody&rsquo;s two pillars, the first two colors in the sequence. <strong>Build the infrastructure</strong> is <strong>Rhapsody Blue</strong>; <strong>Automate the work</strong> is <strong>Teal</strong>. It shows the system in practice: each pillar holds its color across its whole journey, on the website, in path-specific content, and in section theming.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0;">
   <div style="border:1px solid var(--lgray);border-radius:12px;padding:26px 26px 30px;background:#fff;">
     <div style="width:44px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:21px;"></div>
@@ -31,38 +56,18 @@
   </div>
 </div>
 
-<h3>Where the cue appears</h3>
-<ul>
-  <li><strong>Website and navigation.</strong> Path landing pages and their sections theme to the pillar color, so moving into a Build or Automate branch is visible at a glance.</li>
-  <li><strong>Module accent line.</strong> Blue for Build modules, teal for Automate modules (see Layout and spacing for the device spec).</li>
-  <li><strong>Eyebrows and links.</strong> In-context kickers, text links, and the CTA arrow take the path color. <strong>Feature icons stay in the blue family</strong> (navy, Rhapsody blue, light blue), never teal, so on an Automate surface the pillar cue is carried by the accent line, eyebrow, and links, not the icons. On white, teal drops to the line only; keep teal copy off white (see Color, Text on teal).</li>
-  <li><strong>Content and diagrams.</strong> Path-specific decks, one-pagers, and diagrams carry the color consistently end to end.</li>
-</ul>
-
-<h3>More than two items</h3>
-<p>When a third pathway is introduced, or the accent device carries more than two items, extend the sequence in this fixed order so coding stays predictable:</p>
-<div style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;">
-  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#1A81F4;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">1 · Blue<br>Build</div></div>
-  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#23C5BF;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">2 · Teal<br>Automate</div></div>
-  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#7340E4;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">3 · Purple</div></div>
-  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#FA7E2E;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">4 · Orange</div></div>
-  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#B4D8FF;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">5 · Light blue</div></div>
-  <div style="text-align:center;"><div style="width:64px;height:44px;border-radius:8px;background:#0B2C47;"></div><div class="caption" style="margin:6px 0 0;font-size:11.5px;">6 · Navy</div></div>
-</div>
-<p class="caption">Blue &rarr; teal &rarr; purple &rarr; orange &rarr; light blue &rarr; navy. Assign in order and hold each path&rsquo;s color across its whole journey.</p>
-
 <div class="compare">
   <div class="card do"><div class="head">Do</div><div class="body"><ul>
-    <li>Keep Build blue and Automate teal everywhere the paths appear together.</li>
-    <li>Hold a path&rsquo;s color across its full journey, page, deck, and nav branch.</li>
-    <li>Default to blue for neutral surfaces or ones that span both paths.</li>
-    <li>Add colors in the fixed order only when a genuine third-plus path exists.</li>
+    <li>Give each path one color and hold it across its full journey, page, deck, and nav branch.</li>
+    <li>Default to blue for neutral surfaces or ones that span paths.</li>
+    <li>Add colors in the fixed order only when a genuine new path exists.</li>
+    <li>In the pillar example, keep Build blue and Automate teal wherever the two appear together.</li>
   </ul></div></div>
   <div class="card dont"><div class="head">Don&rsquo;t</div><div class="body"><ul>
-    <li>Swap or mix the path colors, or switch a path&rsquo;s color mid-journey.</li>
-    <li>Set teal as small copy on white; the cue is the line or fill.</li>
+    <li>Swap or mix path colors, or switch a path&rsquo;s color mid-journey.</li>
+    <li>Set teal, or any light path color, as small copy on white; the cue is the line or fill.</li>
     <li>Invent a new color for a path, or reorder the sequence.</li>
-    <li>Theme a neutral, cross-path surface to one pillar&rsquo;s color.</li>
+    <li>Theme a neutral, cross-path surface to one path&rsquo;s color.</li>
   </ul></div></div>
 </div>
 </div>
