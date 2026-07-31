@@ -10,7 +10,7 @@
 <h2>Typography</h2>
 <p>Poppins is the primary typeface, and <strong>Arial is the system fallback</strong> wherever Poppins can&rsquo;t load, notably email (most clients won&rsquo;t render Poppins) and some documents and devices. Set the stack as <code>'Poppins', Arial, sans-serif</code> and design so the layout still holds in Arial; never ship copy baked into an image just to force the font. The hierarchy runs on a single weight: H2 through H4 and all body copy set in <strong>Poppins Regular (400)</strong>. The hero and H1 step up to <strong>Poppins Medium (500)</strong> so the largest headline carries a little more presence, and Medium also handles small emphasis such as labels and buttons and short standalone &ldquo;moment&rdquo; headlines (see Stronger headlines for moments, below). <strong>IBM Plex Mono</strong> (weights 400 and 500) is the support typeface; see Eyebrows and Technical annotations below.</p>
 <h3>Type scale</h3>
-<p>The hero and H1 set in Poppins Medium (500); H2 through H4 and body copy set in Poppins Regular (400). The scale is identical on light and dark backgrounds. The numbers below are the CSS <code>font-weight</code> values for web.</p>
+<p>The scale is identical on light and dark backgrounds. The numbers below are the CSS <code>font-weight</code> values for web.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:12px 0;align-items:start;">
   <div>
     <div class="lbl" style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:6px;">On light</div>
@@ -23,7 +23,7 @@
 </div>
 
 <h3>Stronger headlines for moments</h3>
-<p>Headlines normally set in Poppins Regular (400), and the hero and H1 in Medium (500). The exception is a <strong>short, standalone headline that marks a moment or a step in a journey</strong> rather than leading a block of narrative copy. With only a few words and no supporting paragraph to lend it weight, a Regular headline reads thin, so step it up to <strong>Poppins Medium (500)</strong> to give the moment the confidence it deserves. Reserve this for confirmation and milestone screens, a submitted form, a completed step, not for section or narrative headlines.</p>
+<p>Headlines normally set in Poppins Regular (400), and the hero and H1 in Medium (500). The exception is a <strong>short, standalone headline that marks a moment or a step in a journey</strong> rather than leading a block of narrative copy. With only a few words and no supporting paragraph to lend it weight, a Regular headline reads thin, so step it up to <strong>Poppins Medium (500)</strong>. Reserve this for confirmation and milestone screens, a submitted form, a completed step, not for section or narrative headlines.</p>
 <div class="compare">
   <div class="card do">
     <div class="head">Do: Medium for a standalone moment</div>
@@ -41,8 +41,6 @@
   </div>
 </div>
 <ul>
-  <li>Use Poppins Medium (500) only for short, standalone moment or confirmation headlines, for example a post-submission &ldquo;You&rsquo;re in!&rdquo;</li>
-  <li>Keep narrative and section headlines in Regular (400); the Medium moment headline is the exception, not the default.</li>
   <li>One moment headline per screen, paired with a short Regular supporting line.</li>
 </ul>
 
@@ -64,7 +62,7 @@
   <li>All caps, always.</li>
   <li>IBM Plex Mono Medium (500). Regular 400 is acceptable where 500 renders heavy at very small sizes.</li>
   <li>Size roughly 12&ndash;13px, sitting above the headline with clear space between.</li>
-  <li>Letter-spacing about 0.16 to 0.18em so the caps do not look cramped.</li>
+  <li>Add letter-spacing so the caps don&rsquo;t look cramped (see Leading &amp; tracking for the value).</li>
   <li>Markup: a <code>&lt;p&gt;</code> or <code>&lt;span&gt;</code>, never a heading tag.</li>
   <li>Avoid: Poppins for eyebrows (retired treatment), bold weight, and tight or absent letter-spacing.</li>
   <li>Color follows the color rules (see Color); this card doesn&rsquo;t restate it.</li>
