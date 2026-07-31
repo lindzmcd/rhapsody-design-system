@@ -8,7 +8,12 @@
 </head><body>
 <div class="wrap">
 <h2>Typography</h2>
-<p>Poppins is the primary typeface, and <strong>Arial is the system fallback</strong> wherever Poppins can&rsquo;t load, notably email (most clients won&rsquo;t render Poppins) and some documents and devices. Set the stack as <code>'Poppins', Arial, sans-serif</code> and design so the layout still holds in Arial; never ship copy baked into an image just to force the font. The hierarchy runs on a single weight: H2 through H4 and all body copy set in <strong>Poppins Regular (400)</strong>. The hero and H1 step up to <strong>Poppins Medium (500)</strong> so the largest headline carries a little more presence, and Medium also handles small emphasis such as labels and buttons and short standalone &ldquo;moment&rdquo; headlines (see Stronger headlines for moments, below). <strong>IBM Plex Mono</strong> (weights 400 and 500) is the support typeface; see Eyebrows and Technical annotations below.</p>
+<p>Poppins is the primary typeface; <strong>IBM Plex Mono</strong> (weights 400 and 500) is the support face, for eyebrows and technical annotations (see below).</p>
+<ul>
+  <li><strong>Fallback &mdash; Arial</strong> wherever Poppins can&rsquo;t load, notably email (most clients won&rsquo;t render Poppins) and some documents and devices. Set the stack <code>'Poppins', Arial, sans-serif</code> and design so the layout still holds in Arial. Never bake copy into an image just to force the font.</li>
+  <li><strong>One weight for the hierarchy</strong> &mdash; H2&ndash;H4 and all body copy in <strong>Poppins Regular (400)</strong>; the hero and H1 step up to <strong>Poppins Medium (500)</strong> for a little more presence.</li>
+  <li><strong>Medium (500) also handles</strong> small emphasis (labels, buttons) and short standalone &ldquo;moment&rdquo; headlines (see Stronger headlines for moments).</li>
+</ul>
 <h3>Type scale</h3>
 <p>The scale is identical on light and dark backgrounds. The numbers below are the CSS <code>font-weight</code> values for web.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:12px 0;align-items:start;">
@@ -23,7 +28,7 @@
 </div>
 
 <h3>Stronger headlines for moments</h3>
-<p>Headlines normally set in Poppins Regular (400), and the hero and H1 in Medium (500). The exception is a <strong>short, standalone headline that marks a moment or a step in a journey</strong> rather than leading a block of narrative copy. With only a few words and no supporting paragraph to lend it weight, a Regular headline reads thin, so step it up to <strong>Poppins Medium (500)</strong>. Reserve this for confirmation and milestone screens, a submitted form, a completed step, not for section or narrative headlines.</p>
+<p>The exception to the single-weight scale is a <strong>short, standalone headline that marks a moment or a step in a journey</strong> rather than leading a block of narrative copy. With only a few words and no supporting paragraph to lend it weight, a Regular headline reads thin, so step it up to <strong>Poppins Medium (500)</strong>. Reserve this for confirmation and milestone screens, a submitted form, a completed step, not for section or narrative headlines.</p>
 <div class="compare">
   <div class="card do">
     <div class="head">Do: Medium for a standalone moment</div>
