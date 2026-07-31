@@ -8,7 +8,7 @@
 </head><body>
 <div class="wrap">
 <h2>Buttons and CTAs</h2>
-<p>Buttons are pill-shaped, set in Poppins Medium (500), sentence case, with a short action label like &ldquo;Learn more&rdquo; or &ldquo;Request a demo.&rdquo; Keep one primary button per view. Use a secondary outline button for a lower-priority action.</p>
+<p>Buttons are pill-shaped, set in Poppins Medium (500), sentence case, with a short action label like &ldquo;Learn more&rdquo; or &ldquo;Request a demo.&rdquo;</p>
 
 <h3>The pill shape</h3>
 <p>The pill is <strong>fully rounded</strong>: the corner radius equals half the button&rsquo;s height, so the left and right ends are perfect semicircles. In CSS this is <code>border-radius: 999px</code> (any value at or above half the height produces the same full curve).</p>
@@ -41,18 +41,17 @@
 </div>
 
 <ul>
-  <li>Fully rounded pill: <code>border-radius: 999px</code> (radius = half the height). Never a partial-radius rounded rectangle.</li>
+  <li>Fully rounded pill (see The pill shape); never a partial-radius rounded rectangle.</li>
   <li>The pill radius is <strong>exclusive to CTAs</strong>: never use it to frame a module, card, chart, or image. For framing content, see Layout and spacing &rarr; Corners and shape.</li>
   <li>Poppins Medium (500), sentence case, no bold (700).</li>
-  <li>One primary button per view; secondary actions use the outline style.</li>
   <li>Labels are short and action-led, and stay consistent through a flow.</li>
-  <li>Primary fill is teal on dark, blue on light. Keep to no more than three brand colors in the surrounding layout.</li>
+  <li>Keep to no more than three brand colors in the surrounding layout.</li>
   <li>Give buttons clear padding and space; do not place dots or graphics over them.</li>
 </ul>
 
 
 <h3>Text links and the CTA arrow</h3>
-<p>Text-style calls to action, the low-emphasis &ldquo;actionlink&rdquo; links that sit inside or below content, end with a trailing right arrow (a preceding space, then the arrow): <code>Explore agent-ready interoperability &rarr;</code>. It signals forward movement into a deeper page and sets these apart from pill buttons, which never take an arrow.</p>
+<p>Text-style CTAs (&ldquo;actionlinks&rdquo;) end with a trailing right arrow (a leading space, then &rarr;), signaling forward movement into a deeper page. Pill buttons never take an arrow.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0;">
   <div style="background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:18px 20px 26px;">
     <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:16px;">On light</div>
@@ -78,7 +77,7 @@
   </div>
 </div>
 <ul>
-  <li>Text links only, &ldquo;Explore &hellip;&rdquo;, &ldquo;Meet &hellip;&rdquo;, &ldquo;Learn more&rdquo;, card CTAs, inline nav. Never on pill buttons.</li>
+  <li>Text links only, &ldquo;Explore &hellip;&rdquo;, &ldquo;Meet &hellip;&rdquo;, &ldquo;Learn more&rdquo;, card CTAs, inline nav.</li>
   <li>Use the arrow character <code>&amp;rarr;</code> (&rarr;), one per link, always trailing with a leading space, never <code>-&gt;</code>, <code>&raquo;</code>, or an icon.</li>
   <li>The arrow takes the link&rsquo;s color, which follows its context, blue or teal (see Color and Pathways); never orange.</li>
 </ul>
