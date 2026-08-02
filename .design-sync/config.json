@@ -1,0 +1,5 @@
+{
+  "projectId": "160a053b-22d7-45bb-b8aa-e57c93af44ad",
+  "shape": "hand-authored",
+  "note": "Hand-authored @dsCard design system (brand reference), not a code repo. No package.json/dist/Storybook. Cards are components/*.html with a first-line @dsCard marker; grouping/subtitles are read from those markers into _ds_manifest.json."
+}
