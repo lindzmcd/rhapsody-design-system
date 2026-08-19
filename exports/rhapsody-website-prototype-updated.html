@@ -12,7 +12,7 @@
   --blue:#1A81F4; --navy:#0B2C47; --teal:#23C5BF; --orange:#FA7E2E; --purple:#7340E4;
   --light-blue:#90C5FF; --gray-box:#E9EEF4; --card:#EEF2F7; --light-gray:#D9DFE6;
   --dark-gray:#7E858C; --border:#E2E6EC; --ink:#1D1D1F; --ink-soft:#2A2A2A;
-  --black:#050F19; --fine:#555555; --teal-ink:#12a49e; --orange-ink:#d9660f;
+  --black:#050F19; --fine:#555555; --teal-ink:#0f9b95; --orange-ink:#d9660f;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:"Poppins",sans-serif;font-weight:300;color:var(--ink-soft);line-height:1.55;background:#fff;}
@@ -61,7 +61,8 @@ a{color:inherit;}
 .mega__item span{display:block;font-weight:300;font-size:12.5px;color:var(--fine);}
 .mega__pathlink{display:inline-block;margin-top:14px;font-weight:500;font-size:13.5px;text-decoration:none;cursor:pointer;}
 .mega__pathlink:hover{text-decoration:underline;}
-.tag-soon{font-weight:400;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--orange);margin-left:6px;}
+.tag-soon{font-weight:400;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--orange);margin-left:6px;vertical-align:middle;}
+.mega__item .tag-soon{display:inline-block;}
 .mega__feature{background:linear-gradient(165deg,#0B2C47,#0e3a5e);border-radius:12px;padding:24px 22px;height:100%;display:flex;flex-direction:column;}
 .mega__feature .k{font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--light-blue);margin-bottom:10px;}
 .mega__feature h4{font-weight:500;font-size:17px;color:#fff;margin-bottom:8px;line-height:1.3;}
@@ -2386,7 +2387,7 @@ html,body{overflow-x:hidden;max-width:100%;}
         <ul class="mega__list">
           <li><a class="mega__item" data-go="integration"><b>Integration</b><span>Rhapsody &amp; Corepoint engines for every team</span></a></li>
           <li><a class="mega__item" data-go="prod-guardian"><b>Guardian</b><span>Governance and secure access</span></a></li>
-          <li><a class="mega__item" data-go="prod-identity"><b>Identity</b><span>EMPI and patient matching with Autopilot</span></a></li>
+          <li><a class="mega__item" data-go="prod-identity"><b>Identity</b><span>EMPI and patient matching</span></a></li>
           <li><a class="mega__item" data-go="prod-semantic"><b>Semantic</b><span>Terminology and code set management</span></a></li>
           <li><a class="mega__item" data-go="prod-image"><b>Image Director</b><span>DICOM and multimodal exchange</span></a></li>
         </ul>
@@ -2400,7 +2401,6 @@ html,body{overflow-x:hidden;max-width:100%;}
           <li><a class="mega__item" data-go="prod-envoy"><b>Envoy</b><span>Managed, automated integration</span></a></li>
           <li><a class="mega__item" data-go="prod-axonconnect"><b>Axon Connect <span class="tag-soon">Soon</span></b><span>Health tech onboarding acceleration</span></a></li>
           <li><a class="mega__item" data-go="autopilot"><b>Autopilot</b><span>24/7 data steward agent</span></a></li>
-          <li><a class="mega__item" data-go="datahealth"><b>Data Health Agent</b><span>Autonomous data quality · soon</span></a></li>
         </ul>
         <span class="mega__pathlink" style="color:var(--teal-ink);" data-go="pillar-auto">Explore agentic automation →</span>
       </div>
@@ -2408,17 +2408,18 @@ html,body{overflow-x:hidden;max-width:100%;}
         <span class="k">The platform</span>
         <h4>Infrastructure for the agentic healthcare era</h4>
         <p>See how every layer connects, governs, and automates the data healthcare agents depend on.</p>
-        <a data-go="home">View the full platform →</a>
+        <a data-go="strategy">View the full platform →</a>
       </div></div>
     </div></div>
   </div>
 
   <!-- SOLUTIONS -->
   <div class="panel" id="panel-solutions"><div class="panel__inner"><div class="simple sol">
-    <a class="mega__item" data-go="sol-ehr"><b>Integrate with EHRs</b><span>Any EHR, legacy to FHIR, incl. Epic</span></a>
-    <a class="mega__item" data-go="sol-connect"><b>Connect healthcare, any standard</b><span>FHIR, HL7, X12, DICOM, MCP</span></a>
-    <a class="mega__item" data-go="sol-agentready"><b>Agent-ready interoperability</b><span>Governed, clean, ready to act on</span></a>
+    <a class="mega__item" data-go="sol-connect"><b>Connect healthcare, any standard</b><span>APIs and interfaces for FHIR, HL7, and more</span></a>
+    <a class="mega__item" data-go="sol-agentready"><b>AI-ready interoperability</b><span>Governed, clean, ready to act on</span></a>
     <a class="mega__item" data-go="sol-cloud"><b>Move to the cloud</b><span>Migrate and modernize, de-risked</span></a>
+    <a class="mega__item" data-go="sol-ehr"><b>Integrate with EHRs</b><span>Any EHR, legacy to FHIR, incl. Epic</span></a>
+    <a class="mega__item" data-go="sol-epic"><b>Epic migration support</b><span>De-risk your migration, stay connected</span></a>
     <a class="mega__item" data-go="seg-hub"><b>By market →</b><span>Providers, Payers, Health Tech, Public Health</span></a>
   </div></div></div>
 
@@ -2468,7 +2469,7 @@ html,body{overflow-x:hidden;max-width:100%;}
       <p class="mgroup-label">Build the infrastructure</p>
       <a class="msub msub--build" data-go="integration">Integration<small>Rhapsody &amp; Corepoint engines for every team</small></a>
       <a class="msub msub--build" data-go="prod-guardian">Guardian<small>Governance and secure access</small></a>
-      <a class="msub msub--build" data-go="prod-identity">Identity<small>EMPI with Autopilot</small></a>
+      <a class="msub msub--build" data-go="prod-identity">Identity<small>EMPI and patient matching</small></a>
       <a class="msub msub--build" data-go="prod-semantic">Semantic<small>Terminology management</small></a>
       <a class="msub msub--build" data-go="prod-image">Image Director<small>DICOM and multimodal</small></a>
       <a class="msub msub--build" data-go="pillar-infra">Explore agentic infrastructure →</a>
@@ -2477,18 +2478,18 @@ html,body{overflow-x:hidden;max-width:100%;}
       <a class="msub msub--auto" data-go="prod-envoy">Envoy<small>Managed integration</small></a>
       <a class="msub msub--auto" data-go="prod-axonconnect">Axon Connect<small>Health tech onboarding · soon</small></a>
       <a class="msub msub--auto" data-go="autopilot">Autopilot<small>24/7 data steward</small></a>
-      <a class="msub msub--auto" data-go="datahealth">Data Health Agent<small>Autonomous data quality · soon</small></a>
       <a class="msub msub--auto" data-go="pillar-auto">Explore agentic automation →</a>
     </div>
   </div>
   <div class="macc">
     <button class="macc__btn">Solutions <span class="caret"></span></button>
     <div class="macc__body">
-      <a class="msub" data-go="sol-ehr">Integrate with EHRs</a>
       <a class="msub" data-go="sol-connect">Connect healthcare, any standard</a>
-      <a class="msub" data-go="sol-agentready">Agent-ready interoperability</a>
+      <a class="msub" data-go="sol-agentready">AI-ready interoperability</a>
       <a class="msub" data-go="sol-cloud">Move to the cloud</a>
-      <a class="msub" data-go="seg-hub">By segment →</a>
+      <a class="msub" data-go="sol-ehr">Integrate with EHRs</a>
+      <a class="msub" data-go="sol-epic">Epic migration support</a>
+      <a class="msub" data-go="seg-hub">By market →</a>
     </div>
   </div>
   <div class="macc">
