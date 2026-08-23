@@ -380,7 +380,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 
 <!-- ================= INTRO ================= -->
 <section class="screen active" id="screen-intro" aria-labelledby="introTitle">
-  <div class="eyebrow">A Rhapsody Identity game</div>
+  <div class="eyebrow">Rhapsody Arcade &middot; Vol. 1</div>
   <h1 id="introTitle">The Patient Matching Game</h1>
   <p class="lede">It plays like the classic face-flipping board game, but with worse data and higher stakes. One patient, twelve records, and clues that arrive the way they do in real life: over the phone, by fax, off a card.</p>
 
@@ -389,7 +389,6 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
       <div class="mission">
         <div class="k" id="missionK">Your mission</div>
         <p id="missionP1"></p>
-        <p>Work the clues, rule out the records that don&rsquo;t fit, and lock in your match when one card is left standing. Then we&rsquo;ll see how it went.</p>
       </div>
       <ol class="steps">
         <li><span class="n">1</span><span>Read the clue. It&rsquo;s exactly what came in, nothing more. How to interpret it is your call.</span></li>
@@ -460,7 +459,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
     <div class="results">
       <div class="eyebrow">One more thing</div>
       <h2>We were timing you. Sorry.</h2>
-      <p class="lede">Not to be rude. Because in the real world, this puzzle has a clock on it: a patient on the phone, a bed to assign, a med to give.</p>
+      <p class="lede">In the real world, this puzzle has a clock on it: a patient on the phone, a bed to assign, a med to give.</p>
       <div class="resgrid">
         <div class="rescard">
           <div class="k">Your time</div>
@@ -707,7 +706,7 @@ const CASES = [
   pron:{s:'she', o:'her'},
   clues:[
     { text:'<span class="clue-src">Phone</span> It sounded like she said &ldquo;Amy.&rdquo;', fact:'Sounds like: Amy', src:'the phone call' },
-    { text:'<span class="clue-src">Fax</span> First initial: J.', fact:'First initial: J', src:'the fax' },
+    { text:'<span class="clue-src">Fax</span> The referral cover sheet says: &ldquo;RE: J. (reschedule).&rdquo;', fact:'First initial: J', src:'the fax' },
     { text:'<span class="clue-src">Insurance card</span> Date of birth: 04/12/1988.', fact:'DOB: 04/12/1988', src:'the insurance card' },
     { text:'<span class="clue-src">Referral letter</span> Jayme Reyes-Calloway. That&rsquo;s everything that came in.', fact:'Name on referral: Jayme Reyes-Calloway', src:'the referral letter' },
   ],
@@ -780,8 +779,8 @@ const CASES = [
   },
   twist:{
     type:'twins',
-    title:'The right answer was Alexandra.',
-    lede:'Two records, same birthday, same last name, same system. The person checking in goes by Alex; her chart is under her legal name. Nothing on the board could tell you which was which, and the two are one careless merge away from becoming one record. That&rsquo;s called an overlay, and it&rsquo;s the most dangerous identity error in healthcare.',
+    title:'One goes by Alex. One is named Alex.',
+    lede:'Two records, same birthday, same last name, same system, and nothing on the board to tell you which chart belongs to the person at your desk. Records this close are one careless merge away from becoming one, and that&rsquo;s an overlay: the most dangerous identity error in healthcare.',
     labels:{ good:'Your patient &middot; legal name Alexandra', bad:'A different person &middot; also goes by Alex' },
     after:'A match engine that guesses is a coin flip at scale. Rhapsody Identity scores every match, links what belongs together, keeps apart what doesn&rsquo;t, and flags a pair like this for human review with the evidence attached.',
   },
@@ -851,13 +850,12 @@ const CASES = [
 /* ---------- Case: Sam — one person, two charts in the same system ---------- */
 {
   key:'sam',
-  rig:true,
   mission:'A patient of your own clinic is calling about his lab results. He&rsquo;s right there in the system. What could go wrong?',
   cards:[
     { id:1,  name:'Sam Whitaker', dob:'03/15/1990', src:'Riverbend Primary Care', mrn:'RB-10476',
       ring:'r-teal',  av:{...SAM, hair:'#2B211A', style:'waves', build:.95, shirt:'#23C5BF'}, target:true, twin:'good' },
-    { id:2,  name:'Sam Whitaker', dob:'03/15/1990', src:'Riverbend Primary Care', mrn:'RB-88213',
-      ring:'r-blue',  av:{...SAM, hair:'#2B211A', style:'short', hat:'cap', hatColor:'#1A81F4', beard:true, build:1.05, attire:'hoodie', shirt:'#7E858C'}, twin:'bad' },
+    { id:2,  name:'Sam Whitaker', dob:'03/15/1962', src:'Riverbend Primary Care', mrn:'RB-00427',
+      ring:'r-blue',  av:{skin:'#EDBE9A', hair:'#6E6E72', style:'short', gray:true, glasses:true, mouth:'flat', shirt:'#1A81F4'}, twin:'bad' },
     { id:3,  name:'Samantha Whitaker', dob:'03/15/1992', src:'Patient portal signup', mrn:'PP-61930',
       ring:'r-purple', av:{skin:'#F2C9A4', hair:'#B0552E', style:'long', shirt:'#7340E4'} },
     { id:4,  name:'Sam Whitfield', dob:'03/15/1990', src:'Pharmacy system', mrn:'RX-71066',
@@ -881,25 +879,28 @@ const CASES = [
   ],
   pron:{s:'he', o:'him'},
   clues:[
-    { text:'<span class="clue-src">Phone</span> &ldquo;Sam Whitaker, calling about my labs.&rdquo;', fact:'Name: Sam Whitaker', src:'the phone call' },
-    { text:'<span class="clue-src">Phone</span> He spelled it: W-H-I-T-A-K-E-R.', fact:'Spelled: Whitaker', src:'the spelling' },
+    { text:'<span class="clue-src">Phone</span> &ldquo;It&rsquo;s Sam. Calling about my labs.&rdquo;', fact:'Goes by: Sam', src:'the phone call' },
+    { text:'<span class="clue-src">Phone</span> He spelled the last name: W-H-I-T-A-K-E-R.', fact:'Last name: Whitaker', src:'the spelling' },
     { text:'<span class="clue-src">Phone</span> Date of birth: 03/15/1990.', fact:'DOB: 03/15/1990', src:'the date of birth' },
     { text:'<span class="clue-src">End of call</span> That&rsquo;s everything he gave you.', fact:null, src:'the end of the call' },
   ],
   verdict(picked, target){
-    if(picked.twin) return { cls:'wrong', kicker:'Right person, empty chart',
-      title:'That&rsquo;s Sam, but it&rsquo;s an empty second chart.',
-      body:'The front desk searched last Tuesday, missed his old record, and created a fresh one. You just picked it: no labs, no allergies, no history. Everything he&rsquo;s calling about lives on the other chart. And yes: the other one was Sam too.' };
+    if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
+      title:'You found the right Sam.',
+      body:'Sam Whitaker, born March 15, 1990. Textbook elimination. One problem: the chart you just matched has more than one Sam inside it. Keep scrolling.' };
+    if(picked.twin) return { cls:'wrong', kicker:'Close. Very close to home.',
+      title:'That&rsquo;s his father.',
+      body:'Also Sam Whitaker, also a patient here, born in 1962. Same name at the same front desk for thirty years. Busy humans skim past the birth date every day, and now you know how it feels.' };
     return { cls:'wrong', kicker:'Wrong person',
       title:`That&rsquo;s ${picked.name}. A different human.`,
-      body:'The system said Sam Whitaker, born March 15, 1990. Close, but this is somebody else&rsquo;s chart, and that&rsquo;s a whole other incident report.' };
+      body:'The caller said Sam Whitaker, born March 15, 1990. Close, but this is somebody else&rsquo;s chart, and that&rsquo;s a whole other incident report.' };
   },
   twist:{
     type:'twins',
-    title:'Both of them were Sam.',
-    lede:'Same person, two charts, one clinic. Last Tuesday the front desk searched, the old record didn&rsquo;t surface (wearing a hat, same human), and the system did what systems do: it created him again. Now his history is split between two charts that will never meet on their own.',
-    labels:{ good:'His original chart &middot; the history lives here', bad:'Created last Tuesday &middot; nearly empty' },
-    after:'This is how fragmentation starts: not with a dramatic error, but with one failed lookup on a busy morning. Rhapsody Identity catches the match the search missed, links the two charts into one person, and keeps the history whole.',
+    title:'Two Sams. One clinic. One tangled chart.',
+    lede:'His father is a patient at the same clinic: same name, same address. For years the front desk grabbed whichever Sam came up first, so the son&rsquo;s chart now carries his dad&rsquo;s knee replacement, a statin he&rsquo;s never taken, and a decade of visits that aren&rsquo;t his.',
+    labels:{ good:'Your patient &middot; Sam, born 1990', bad:'His father &middot; Sam, born 1962' },
+    after:'Untangling that by hand means guessing which history belongs to whom. Rhapsody Identity keeps every source record linked and traceable, so each fact in a chart points back to the system, and the person, it came from.',
   },
 },
 ];
@@ -907,7 +908,7 @@ const CASES = [
 /* ============================================================
    State, rotation, and flow
    ============================================================ */
-// Sam opens the deck: a fast, guaranteed miss makes the point quickest.
+// Sam opens the deck: a fast case whose win still stings makes the point quickest.
 CASES.unshift(CASES.pop());
 
 const $ = (id) => document.getElementById(id);
@@ -932,7 +933,7 @@ function clues(){ return cur().clues; }
 /* ---------- intro ---------- */
 function renderIntro(){
   $('missionK').textContent = 'Your mission';
-  $('missionP1').textContent = cur().mission;
+  $('missionP1').innerHTML = cur().mission;
   const picks = cards().filter(c=>!c.target && !c.twin && !c.fragment).slice(0,5);
   const previewCards = [cards().find(c=>c.target), ...picks].slice(0,6);
   $('introPreview').innerHTML = previewCards.map(c =>
@@ -985,9 +986,10 @@ function updateHud(){
   $('standCount').textContent = standing;
   $('lockBtn').disabled = standing !== 1;
   $('lockBtn').textContent = standing === 1 ? 'Lock in your match' : `Lock in your match (${standing} left)`;
-  const twins = cards().filter(c=>c.twin).map(c=>c.id);
+  const twinCards = cards().filter(c=>c.twin);
   const standingIds = cards().filter(c=>!state.down.has(c.id)).map(c=>c.id);
-  const twinStalemate = twins.length === 2 && standingIds.length === 2 && standingIds.every(id=>twins.includes(id));
+  const twinStalemate = twinCards.length === 2 && twinCards[0].dob === twinCards[1].dob
+    && standingIds.length === 2 && standingIds.every(id=>twinCards.some(c=>c.id===id));
   const outOfClues = standingIds.length === 2 && state.clue === clues().length - 1;
   $('pickNudge').hidden = !(twinStalemate || outOfClues);
 }
@@ -1081,10 +1083,7 @@ $('lockBtn').addEventListener('click', () => {
   const picked = cards().find(c => !state.down.has(c.id));
   if(!picked) return;
   const ms = Date.now() - state.startedAt;
-  let target = cards().find(c => c.target);
-  // Rigged case (Sam): whichever twin they pick turns out to be the empty
-  // chart; the "real" record is always the other one.
-  if(cur().rig && picked.twin) target = cards().find(c => c.twin && c.id !== picked.id);
+  const target = cards().find(c => c.target);
   state.revealTarget = target;
   const v = cur().verdict(picked, target);
   state.result = { ms, found: picked.id === target.id, coin: !!cur().coin };
