@@ -621,7 +621,7 @@ const CASES = [
       why:'First initial only; no birth date captured',
       fragment:'This was also Jayme: her urgent-care intake. The kiosk stored a first initial and never captured a birth date, so nothing in the referral could confirm her.' },
     { id:4,  name:'Jayme Reyes', dob:'04/12/1998', src:'Patient portal signup', mrn:'PP-75810',
-      ring:'r-orange', av:{...JAYME, hair:'#8A5033', style:'pigtails', shirt:'#FA7E2E'},
+      ring:'r-orange', av:{...JAYME, hair:'#4A2F22', style:'pigtails', shirt:'#FA7E2E'},
       why:'Maiden name, plus a birth-year typo',
       fragment:'This was also Jayme: her patient portal account. She signed up under her maiden name before the wedding, and a one-keystroke typo made her ten years younger.' },
     { id:5,  name:'Amy Callahan', dob:'04/22/1988', src:'Radiology PACS', mrn:'RAD-11938',
@@ -661,7 +661,7 @@ const CASES = [
   twist:{
     type:'fragments',
     title:'Jayme was on the board four times.',
-    lede:'The referral was right. The other systems weren&rsquo;t. Every record you ruled out with perfectly good logic was also her. Different hair, different glasses, different decade: look again, they&rsquo;re all her. Even the beauty mark matches.',
+    lede:'The referral was right. The other systems weren&rsquo;t. Every record you ruled out with perfectly good logic was also her. Different hair, different glasses, different decade: look again. Same face, same person, four records.',
     golden:{ name:'Jayme Reyes-Calloway', sub:'DOB 04/12/1988 &middot; EUID 000042117', linked:'4 of 4' },
   },
 },
@@ -778,7 +778,7 @@ const CASES = [
   twist:{
     type:'fragments',
     title:'Bill was on the board four times.',
-    lede:'William. Bill. Wm. Achebe, Cross, Achebe-Cross. One driver&rsquo;s license, four spellings, forty years of photos: heavier, slimmer, gray, not gray. All the same man. Check the beauty mark.',
+    lede:'William. Bill. Wm. Achebe, Cross, Achebe-Cross. One driver&rsquo;s license, four spellings, forty years of photos: heavier, slimmer, gray, not gray. Look again: it&rsquo;s the same face every time.',
     golden:{ name:'William Achebe-Cross', sub:'DOB 10/08/1961 &middot; EUID 000067403', linked:'4 of 4' },
   },
 },
@@ -874,10 +874,18 @@ function renderIntro(){
 }
 
 /* ---------- board ---------- */
+function shuffled(list){
+  const a = [...list];
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 function buildBoard(){
   const board = $('board');
   board.innerHTML = '';
-  cards().forEach(c => {
+  shuffled(cards()).forEach(c => {
     const slot = document.createElement('div');
     slot.className = 'slot';
     slot.innerHTML = `
