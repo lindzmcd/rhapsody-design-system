@@ -189,6 +189,10 @@ p{max-width:66ch;}
 .verdict .k{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;margin-bottom:10px;}
 .verdict.match .k{color:var(--teal);} .verdict.fragment .k{color:var(--lblue);} .verdict.wrong .k{color:var(--orange);}
 .verdict p{color:#EAF3FD;font-size:16px;}
+.playnotes{list-style:none;margin-top:18px;border-top:1px solid rgba(180,216,255,.16);padding-top:14px;display:flex;flex-direction:column;gap:8px;}
+.playnotes .pk{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--lblue);margin-bottom:2px;}
+.playnotes li{font-size:14px;color:var(--lblue);line-height:1.55;max-width:66ch;}
+.playnotes li::before{content:'\25B8\00A0\00A0';color:var(--teal);}
 .compare{display:flex;gap:26px;align-items:stretch;justify-content:center;flex-wrap:wrap;margin:26px 0 8px;}
 .compare .col{text-align:center;}
 .compare .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lblue);margin-bottom:10px;}
@@ -393,6 +397,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
     <div class="k" id="verdictKicker"></div>
     <h2 id="verdictTitle"></h2>
     <p id="verdictBody"></p>
+    <ul class="playnotes" id="playNotes" hidden></ul>
     <div class="compare" id="compareRow">
       <div class="col">
         <div class="lbl">Your match</div>
@@ -641,11 +646,12 @@ const CASES = [
     { id:12, name:'Renee Jaymes', dob:'05/17/1986', src:'Referral fax', mrn:'FAX-61203',
       ring:'r-purple', av:{skin:'#D99C6B', hair:'#4A2C1D', style:'waves', shirt:'#23C5BF'} },
   ],
+  pron:{s:'she', o:'her'},
   clues:[
-    { text:'<span class="clue-src">Phone</span> It sounded like she said &ldquo;Amy.&rdquo;', fact:'Sounds like: Amy' },
-    { text:'<span class="clue-src">Fax</span> First initial: J.', fact:'First initial: J' },
-    { text:'<span class="clue-src">Insurance card</span> Date of birth: 04/12/1988.', fact:'DOB: 04/12/1988' },
-    { text:'<span class="clue-src">Referral letter</span> Jayme Reyes-Calloway. That&rsquo;s everything that came in.', fact:'Name on referral: Jayme Reyes-Calloway' },
+    { text:'<span class="clue-src">Phone</span> It sounded like she said &ldquo;Amy.&rdquo;', fact:'Sounds like: Amy', src:'the phone call' },
+    { text:'<span class="clue-src">Fax</span> First initial: J.', fact:'First initial: J', src:'the fax' },
+    { text:'<span class="clue-src">Insurance card</span> Date of birth: 04/12/1988.', fact:'DOB: 04/12/1988', src:'the insurance card' },
+    { text:'<span class="clue-src">Referral letter</span> Jayme Reyes-Calloway. That&rsquo;s everything that came in.', fact:'Name on referral: Jayme Reyes-Calloway', src:'the referral letter' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
@@ -696,11 +702,12 @@ const CASES = [
     { id:12, name:'Anh Nguyen', dob:'09/09/1982', src:'UrgentCare One kiosk', mrn:'UC1-77019',
       ring:'r-purple', av:{skin:'#8C5A34', hair:'#120D09', style:'bob', shirt:'#23C5BF'} },
   ],
+  pron:{s:'he', o:'him'},
   clues:[
-    { text:'<span class="clue-src">Front desk</span> &ldquo;This is Alex.&rdquo;', fact:'Goes by: Alex' },
-    { text:'<span class="clue-src">Check-in tablet</span> Date of birth: 06/02/1975.', fact:'DOB: 06/02/1975' },
-    { text:'<span class="clue-src">Insurance card</span> NGUYEN.', fact:'Last name: Nguyen' },
-    { text:'<span class="clue-src">Referral</span> Alex Nguyen, cardiology follow-up. That&rsquo;s everything that came in.', fact:'Name on referral: Alex Nguyen' },
+    { text:'<span class="clue-src">Front desk</span> &ldquo;This is Alex.&rdquo;', fact:'Goes by: Alex', src:'the front desk' },
+    { text:'<span class="clue-src">Check-in tablet</span> Date of birth: 06/02/1975.', fact:'DOB: 06/02/1975', src:'the check-in tablet' },
+    { text:'<span class="clue-src">Insurance card</span> NGUYEN.', fact:'Last name: Nguyen', src:'the insurance card' },
+    { text:'<span class="clue-src">Referral</span> Alex Nguyen, cardiology follow-up. That&rsquo;s everything that came in.', fact:'Name on referral: Alex Nguyen', src:'the referral' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match&hellip; somehow',
@@ -758,11 +765,12 @@ const CASES = [
     { id:12, name:'Wilhelmina Ash', dob:'03/03/1962', src:'UrgentCare One kiosk', mrn:'UC1-90577',
       ring:'r-purple', av:{skin:'#A86A3D', hair:'#1C1410', style:'curly', shirt:'#0B2C47'} },
   ],
+  pron:{s:'he', o:'him'},
   clues:[
-    { text:'<span class="clue-src">Phone</span> &ldquo;It&rsquo;s Bill, about my refill.&rdquo;', fact:'Goes by: Bill' },
-    { text:'<span class="clue-src">License on file</span> First name: WILLIAM.', fact:'License: William' },
-    { text:'<span class="clue-src">License, line two</span> ACHEBE-CROSS.', fact:'License: Achebe-Cross' },
-    { text:'<span class="clue-src">Date of birth</span> 10/08/1961. That&rsquo;s everything that came in.', fact:'DOB: 10/08/1961' },
+    { text:'<span class="clue-src">Phone</span> &ldquo;It&rsquo;s Bill, about my refill.&rdquo;', fact:'Goes by: Bill', src:'the phone call' },
+    { text:'<span class="clue-src">License on file</span> First name: WILLIAM.', fact:'License: William', src:'the license' },
+    { text:'<span class="clue-src">License, line two</span> ACHEBE-CROSS.', fact:'License: Achebe-Cross', src:'the second line of the license' },
+    { text:'<span class="clue-src">Date of birth</span> 10/08/1961. That&rsquo;s everything that came in.', fact:'DOB: 10/08/1961', src:'the date of birth' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
@@ -813,11 +821,12 @@ const CASES = [
     { id:12, name:'Tam Whitaker', dob:'03/15/1985', src:'UrgentCare One kiosk', mrn:'UC1-15037',
       ring:'r-purple', av:{skin:'#E8B488', hair:'#171310', style:'ponytail', shirt:'#7340E4'} },
   ],
+  pron:{s:'he', o:'him'},
   clues:[
-    { text:'<span class="clue-src">Phone</span> &ldquo;Sam Whitaker, calling about my labs.&rdquo;', fact:'Name: Sam Whitaker' },
-    { text:'<span class="clue-src">Phone</span> He spelled it: W-H-I-T-A-K-E-R.', fact:'Spelled: Whitaker' },
-    { text:'<span class="clue-src">Phone</span> Date of birth: 03/15/1990.', fact:'DOB: 03/15/1990' },
-    { text:'<span class="clue-src">End of call</span> That&rsquo;s everything he gave you.', fact:null },
+    { text:'<span class="clue-src">Phone</span> &ldquo;Sam Whitaker, calling about my labs.&rdquo;', fact:'Name: Sam Whitaker', src:'the phone call' },
+    { text:'<span class="clue-src">Phone</span> He spelled it: W-H-I-T-A-K-E-R.', fact:'Spelled: Whitaker', src:'the spelling' },
+    { text:'<span class="clue-src">Phone</span> Date of birth: 03/15/1990.', fact:'DOB: 03/15/1990', src:'the date of birth' },
+    { text:'<span class="clue-src">End of call</span> That&rsquo;s everything he gave you.', fact:null, src:'the end of the call' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Right chart&hellip; by luck',
@@ -844,7 +853,7 @@ const CASES = [
    State, rotation, and flow
    ============================================================ */
 const $ = (id) => document.getElementById(id);
-const state = { caseIdx:0, clue:0, down:new Set(), startedAt:0, result:null };
+const state = { caseIdx:0, clue:0, down:new Set(), startedAt:0, result:null, history:[] };
 
 function pickCase(){
   const forced = parseInt(new URLSearchParams(location.search).get('case'), 10);
@@ -908,8 +917,10 @@ $('board').addEventListener('click', e => {
   const btn = e.target.closest('.record');
   if(!btn) return;
   const id = +btn.dataset.id;
-  if(state.down.has(id)){ state.down.delete(id); btn.classList.remove('down'); btn.setAttribute('aria-pressed','false'); }
-  else { state.down.add(id); btn.classList.add('down'); btn.setAttribute('aria-pressed','true'); }
+  const goingDown = !state.down.has(id);
+  if(goingDown){ state.down.add(id); btn.classList.add('down'); btn.setAttribute('aria-pressed','true'); }
+  else { state.down.delete(id); btn.classList.remove('down'); btn.setAttribute('aria-pressed','false'); }
+  state.history.push({ id, down: goingDown, clue: state.clue });
   updateHud();
 });
 function updateHud(){
@@ -937,7 +948,7 @@ $('nextClueBtn').addEventListener('click', () => {
 
 /* ---------- play ---------- */
 function startGame(){
-  state.clue = 0; state.down = new Set(); state.result = null;
+  state.clue = 0; state.down = new Set(); state.result = null; state.history = [];
   buildBoard(); renderClue(); updateHud();
   show('screen-game');
   window.scrollTo({top:0, behavior:'auto'});
@@ -949,6 +960,57 @@ function bigCard(c, extra){
     <span class="nm">${c.name}</span>
     <span class="sub">DOB ${c.dob}<br>${c.src}${c.twin ? ' &middot; ' + c.mrn : ''}</span>
   </div>`;
+}
+
+/* ---------- play-by-play quips ---------- */
+function srcName(clueIdx){
+  const c = clues()[Math.min(clueIdx, clues().length - 1)];
+  return c.src || 'a clue';
+}
+function buildQuips(picked, target){
+  const quips = [];
+  const hist = state.history;
+  const byId = {};
+  hist.forEach(h => { (byId[h.id] = byId[h.id] || []).push(h); });
+  const pron = cur().pron;
+  const first = target.name.split(' ')[0];
+  const lastEvent = id => { const evs = byId[id]; return evs ? evs[evs.length-1] : null; };
+  const endedDown = id => { const e = lastEvent(id); return e && e.down; };
+
+  // 1. What happened to the intended record along the way.
+  const targetDownEv = (byId[target.id]||[]).find(h=>h.down);
+  if(picked.id === target.id && targetDownEv){
+    quips.push(`At one point you had ${first} face-down on the table. You changed your mind. Real systems don&rsquo;t get second thoughts.`);
+  } else if(picked.id !== target.id && targetDownEv && targetDownEv.clue <= 1){
+    quips.push(`You flipped ${first} down right after ${srcName(targetDownEv.clue)} and never looked back. That was ${pron.o}.`);
+  }
+  // 2. The decoy they held on to the longest.
+  const decoys = cards().filter(c => !c.target && !c.fragment && !c.twin && endedDown(c.id));
+  let hold = null;
+  decoys.forEach(c => {
+    const ev = lastEvent(c.id);
+    if(ev.clue >= 2 && (!hold || ev.clue > hold.ev.clue)) hold = {c, ev};
+  });
+  if(hold){
+    const sameDob = hold.c.dob === target.dob;
+    quips.push(`You kept ${hold.c.name} standing until ${srcName(hold.ev.clue)} settled it. Real systems keep ${sameDob ? 'records like that forever: close name, same birthday, no tiebreaker' : 'records like that forever: close name, close birthday, no tiebreaker'}.`);
+  }
+  // 3. The same-person record they ruled out earliest, with total confidence.
+  const frags = cards().filter(c => c.fragment && endedDown(c.id));
+  let early = null;
+  frags.forEach(c => {
+    const ev = (byId[c.id]||[]).find(h=>h.down);
+    if(ev && ev.clue <= 1 && (!early || ev.clue < early.ev.clue)) early = {c, ev};
+  });
+  if(early){
+    quips.push(`You ruled out ${early.c.name} right after ${srcName(early.ev.clue)}. Perfectly logical. It was ${pron.o} the whole time.`);
+  }
+  // 4. Second-guessing.
+  const undos = hist.filter(h => !h.down).length;
+  if(undos >= 2){
+    quips.push(`You changed your mind ${undos} times. A busy front desk gets one guess and no undo button.`);
+  }
+  return quips.slice(0, 3);
 }
 
 /* ---------- reveal ---------- */
@@ -965,6 +1027,12 @@ $('lockBtn').addEventListener('click', () => {
   $('verdictKicker').innerHTML = v.kicker;
   $('verdictTitle').innerHTML = v.title;
   $('verdictBody').innerHTML = v.body;
+  const quips = buildQuips(picked, target);
+  const notes = $('playNotes');
+  notes.hidden = quips.length === 0;
+  notes.innerHTML = quips.length
+    ? `<div class="pk">Your play-by-play</div>` + quips.map(q=>`<li>${q}</li>`).join('')
+    : '';
   $('pickedCard').innerHTML = bigCard(picked);
   $('targetCard').innerHTML = bigCard(target);
 
