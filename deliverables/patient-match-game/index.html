@@ -127,6 +127,11 @@ p{max-width:66ch;}
   font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--teal);
   border:1px solid rgba(35,197,191,.45);border-radius:999px;padding:3px 11px;white-space:nowrap;
 }
+.clue-src{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--navy);background:var(--teal);border-radius:6px;padding:2px 9px;margin-right:10px;
+  position:relative;top:-2px;white-space:nowrap;
+}
 .hud-actions{display:flex;flex-direction:column;gap:10px;justify-content:center;align-items:flex-end;}
 .standing{font-family:var(--mono);font-size:12px;color:var(--lblue);letter-spacing:.06em;white-space:nowrap;}
 .standing b{color:#fff;font-weight:500;}
@@ -338,7 +343,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 <section class="screen active" id="screen-intro" aria-labelledby="introTitle">
   <div class="eyebrow">A Rhapsody Identity game</div>
   <h1 id="introTitle">The Patient Matching Game</h1>
-  <p class="lede">One patient. One clean referral. Twelve records. Flip down everyone who doesn&rsquo;t fit, and try not to mix up two humans while you&rsquo;re at it.</p>
+  <p class="lede">One patient. Twelve records. The clues arrive the way they do in real life: over the phone, by fax, off a card. Flip down everyone who doesn&rsquo;t fit, and try not to mix up two humans while you&rsquo;re at it.</p>
 
   <div class="intro-grid">
     <div>
@@ -349,7 +354,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
         <div class="rotate-note" id="rotateNote"></div>
       </div>
       <ol class="steps">
-        <li><span class="n">1</span><span>Read the clue. Each one is a fact straight from the paperwork, so trust it.</span></li>
+        <li><span class="n">1</span><span>Read the clue. It&rsquo;s exactly what came in, nothing more. How to interpret it is your call.</span></li>
         <li><span class="n">2</span><span>Tap records to flip them down. Tap again to un-flip if you get cold feet.</span></li>
         <li><span class="n">3</span><span>Down to one card? Lock in your match and face the reveal.</span></li>
       </ol>
@@ -602,7 +607,7 @@ const CASES = [
 /* ---------- Case: Jayme — typos, transpositions, a maiden name ---------- */
 {
   key:'jayme',
-  mission:'Jayme called to reschedule a follow-up. You have her referral: full name and date of birth, spelled correctly, verified twice. This should take about a minute.',
+  mission:'Someone called to reschedule a follow-up. The phone connection was what it was, the fax is doing its best, and twelve records are on the board. Piece together who she is from what actually comes in.',
   cards:[
     { id:1,  name:'Jayme Reyes-Calloway', dob:'04/12/1988', src:'Lakeside Family Medicine', mrn:'LFM-30291',
       ring:'r-teal',  av:{...JAYME, hair:'#3B2A21', style:'long', attire:'collar', shirt:'#0B2C47'}, target:true,
@@ -623,8 +628,8 @@ const CASES = [
       ring:'r-blue',  av:{skin:'#F2C9A4', hair:'#B0552E', style:'bob',   shirt:'#1A81F4'} },
     { id:6,  name:'Jamie Curran', dob:'04/12/1985', src:'Billing system', mrn:'BIL-55217',
       ring:'r-teal',  av:{skin:'#EDBE9A', hair:'#5B4632', style:'curly', shirt:'#0B2C47'} },
-    { id:7,  name:'James Rios', dob:'07/30/1979', src:'Mercy Point EHR', mrn:'MP-20488',
-      ring:'r-purple', av:{skin:'#B57B4F', hair:'#241B14', style:'buzz', mouth:'flat', shirt:'#23C5BF'} },
+    { id:7,  name:'Mimi Calloway', dob:'04/12/1988', src:'Mercy Point EHR', mrn:'MP-20488',
+      ring:'r-purple', av:{skin:'#B57B4F', hair:'#241B14', style:'pigtails', shirt:'#23C5BF'} },
     { id:8,  name:'Aimee Reyes', dob:'09/03/1992', src:'Lab results feed', mrn:'LAB-73301',
       ring:'r-orange', av:{skin:'#8C5A34', hair:'#120D09', style:'curly', shirt:'#B4D8FF'} },
     { id:9,  name:'Gemma Colwell', dob:'04/12/1988', src:'Pharmacy system', mrn:'RX-90142',
@@ -637,10 +642,10 @@ const CASES = [
       ring:'r-purple', av:{skin:'#D99C6B', hair:'#4A2C1D', style:'waves', shirt:'#23C5BF'} },
   ],
   clues:[
-    { text:'The referral says her first name is Jayme. J-A-Y-M-E. Written right there in the notes.', fact:'First name: Jayme' },
-    { text:'Date of birth: April 12, 1988. Straight off her insurance card.', fact:'DOB: 04/12/1988' },
-    { text:'Last name: Reyes-Calloway. With the hyphen. It&rsquo;s official.', fact:'Last name: Reyes-Calloway' },
-    { text:'That&rsquo;s the whole referral: Jayme Reyes-Calloway, born April 12, 1988. Plenty to go on. Rule out everyone who doesn&rsquo;t fit, then lock in your match.', fact:null },
+    { text:'<span class="clue-src">Phone</span> It sounded like she said &ldquo;Amy.&rdquo;', fact:'Sounds like: Amy' },
+    { text:'<span class="clue-src">Fax</span> First initial: J.', fact:'First initial: J' },
+    { text:'<span class="clue-src">Insurance card</span> Date of birth: 04/12/1988.', fact:'DOB: 04/12/1988' },
+    { text:'<span class="clue-src">Referral letter</span> Jayme Reyes-Calloway. That&rsquo;s everything that came in.', fact:'Name on referral: Jayme Reyes-Calloway' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
@@ -664,7 +669,7 @@ const CASES = [
 {
   key:'alex',
   coin:true,
-  mission:'Alex checked in this morning for a cardiology follow-up. His referral has his full name and date of birth, confirmed against his insurance card at the front desk. Verified twice. Easy.',
+  mission:'A man checked in this morning for a cardiology follow-up. You get what the front desk gets: what he says, what his card says, what the referral says. Twelve records are on the board.',
   cards:[
     { id:1,  name:'Alex Nguyen', dob:'06/02/1975', src:'Harborview Cardiology', mrn:'HC-51120',
       ring:'r-teal',  av:{skin:'#E8B488', hair:'#171310', style:'short', attire:'collar', shirt:'#0B2C47'}, target:true, twin:'good' },
@@ -692,10 +697,10 @@ const CASES = [
       ring:'r-purple', av:{skin:'#8C5A34', hair:'#120D09', style:'bob', shirt:'#23C5BF'} },
   ],
   clues:[
-    { text:'The referral says his first name is Alex. Not Alexis, not Alexandra, not Lex. Alex.', fact:'First name: Alex' },
-    { text:'Date of birth: June 2, 1975. Confirmed at check-in this morning.', fact:'DOB: 06/02/1975' },
-    { text:'Last name: Nguyen. Double-checked against his insurance card.', fact:'Last name: Nguyen' },
-    { text:'That&rsquo;s the whole referral: Alex Nguyen, born June 2, 1975, here for a cardiology follow-up. Everything verified. This one should be easy.', fact:null },
+    { text:'<span class="clue-src">Front desk</span> &ldquo;This is Alex.&rdquo;', fact:'Goes by: Alex' },
+    { text:'<span class="clue-src">Check-in tablet</span> Date of birth: 06/02/1975.', fact:'DOB: 06/02/1975' },
+    { text:'<span class="clue-src">Insurance card</span> NGUYEN.', fact:'Last name: Nguyen' },
+    { text:'<span class="clue-src">Referral</span> Alex Nguyen, cardiology follow-up. That&rsquo;s everything that came in.', fact:'Name on referral: Alex Nguyen' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match&hellip; somehow',
@@ -719,7 +724,7 @@ const CASES = [
 /* ---------- Case: Bill — nicknames, abbreviations, a dropped hyphen ---------- */
 {
   key:'bill',
-  mission:'William is on the phone about a medication refill. His chart note has his full legal name and date of birth, copied straight from his driver&rsquo;s license. Verified twice. Quick one.',
+  mission:'A man is on the phone about a medication refill. What he calls himself and what his license says are two different documents. Match what you hear against what&rsquo;s on file.',
   cards:[
     { id:1,  name:'William Achebe-Cross', dob:'10/08/1961', src:'Northside Internal Medicine', mrn:'NIM-40733',
       ring:'r-teal',  av:{...BILL, hair:'#241B14', style:'short', gray:true, glasses:true, attire:'collar', shirt:'#0B2C47'}, target:true,
@@ -754,10 +759,10 @@ const CASES = [
       ring:'r-purple', av:{skin:'#A86A3D', hair:'#1C1410', style:'curly', shirt:'#0B2C47'} },
   ],
   clues:[
-    { text:'The chart note says his first name is William. Full legal name, right off the license.', fact:'First name: William' },
-    { text:'Date of birth: October 8, 1961. Four digits on the year, like civilization intended.', fact:'DOB: 10/08/1961' },
-    { text:'Last name: Achebe-Cross. Hyphenated. Both halves matter.', fact:'Last name: Achebe-Cross' },
-    { text:'That&rsquo;s everything: William Achebe-Cross, born October 8, 1961, calling about a refill. Rule out everyone who doesn&rsquo;t fit, then lock in your match.', fact:null },
+    { text:'<span class="clue-src">Phone</span> &ldquo;It&rsquo;s Bill, about my refill.&rdquo;', fact:'Goes by: Bill' },
+    { text:'<span class="clue-src">License on file</span> First name: WILLIAM.', fact:'License: William' },
+    { text:'<span class="clue-src">License, line two</span> ACHEBE-CROSS.', fact:'License: Achebe-Cross' },
+    { text:'<span class="clue-src">Date of birth</span> 10/08/1961. That&rsquo;s everything that came in.', fact:'DOB: 10/08/1961' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
@@ -781,7 +786,7 @@ const CASES = [
 {
   key:'sam',
   coin:true,
-  mission:'Sam is calling about his lab results. He&rsquo;s an existing patient at your own clinic, so his name and date of birth are right there in the system. Verified twice. What could go wrong?',
+  mission:'A patient of your own clinic is calling about his lab results. He&rsquo;s right there in the system. What could go wrong?',
   cards:[
     { id:1,  name:'Sam Whitaker', dob:'03/15/1990', src:'Riverbend Primary Care', mrn:'RB-10476',
       ring:'r-teal',  av:{...SAM, hair:'#2B211A', style:'waves', build:.95, shirt:'#23C5BF'}, target:true, twin:'good' },
@@ -809,10 +814,10 @@ const CASES = [
       ring:'r-purple', av:{skin:'#E8B488', hair:'#171310', style:'ponytail', shirt:'#7340E4'} },
   ],
   clues:[
-    { text:'His first name is Sam. Short and sweet. It&rsquo;s on every form he&rsquo;s ever filled out.', fact:'First name: Sam' },
-    { text:'Date of birth: March 15, 1990. He said it twice, slowly, like people do.', fact:'DOB: 03/15/1990' },
-    { text:'Last name: Whitaker. W-H-I-T-A-K-E-R.', fact:'Last name: Whitaker' },
-    { text:'That&rsquo;s everything: Sam Whitaker, born March 15, 1990, calling about his labs. He&rsquo;s in your own system. This should be the easy one.', fact:null },
+    { text:'<span class="clue-src">Phone</span> &ldquo;Sam Whitaker, calling about my labs.&rdquo;', fact:'Name: Sam Whitaker' },
+    { text:'<span class="clue-src">Phone</span> He spelled it: W-H-I-T-A-K-E-R.', fact:'Spelled: Whitaker' },
+    { text:'<span class="clue-src">Phone</span> Date of birth: 03/15/1990.', fact:'DOB: 03/15/1990' },
+    { text:'<span class="clue-src">End of call</span> That&rsquo;s everything he gave you.', fact:null },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Right chart&hellip; by luck',
