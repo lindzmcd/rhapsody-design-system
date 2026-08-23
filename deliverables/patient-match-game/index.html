@@ -382,7 +382,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 <section class="screen active" id="screen-intro" aria-labelledby="introTitle">
   <div class="eyebrow">A Rhapsody Identity game</div>
   <h1 id="introTitle">The Patient Matching Game</h1>
-  <p class="lede">One patient. Twelve records. The clues arrive the way they do in real life: over the phone, by fax, off a card. Flip down everyone who doesn&rsquo;t fit, and try not to mix up two humans while you&rsquo;re at it.</p>
+  <p class="lede">It plays like the classic face-flipping board game, but with worse data and higher stakes. One patient, twelve records, and clues that arrive the way they do in real life: over the phone, by fax, off a card.</p>
 
   <div class="intro-grid">
     <div>
@@ -888,7 +888,7 @@ const CASES = [
   ],
   verdict(picked, target){
     if(picked.twin) return { cls:'wrong', kicker:'Right person, empty chart',
-      title:'That&rsquo;s Sam, but it&rsquo;s an empty, duplicate record.',
+      title:'That&rsquo;s Sam, but it&rsquo;s an empty second chart.',
       body:'The front desk searched last Tuesday, missed his old record, and created a fresh one. You just picked it: no labs, no allergies, no history. Everything he&rsquo;s calling about lives on the other chart. And yes: the other one was Sam too.' };
     return { cls:'wrong', kicker:'Wrong person',
       title:`That&rsquo;s ${picked.name}. A different human.`,
