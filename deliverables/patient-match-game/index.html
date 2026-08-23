@@ -117,6 +117,11 @@ p{max-width:66ch;}
 .clue-dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.22);transition:background .2s;}
 .clue-dots span.on{background:var(--teal);}
 #clueText{font-size:clamp(15px,2vw,18px);font-weight:400;color:#fff;max-width:64ch;min-height:2.4em;}
+.facts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;min-height:26px;}
+.fact{
+  font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--teal);
+  border:1px solid rgba(35,197,191,.45);border-radius:999px;padding:3px 11px;white-space:nowrap;
+}
 .hud-actions{display:flex;flex-direction:column;gap:10px;justify-content:center;align-items:flex-end;}
 .standing{font-family:var(--mono);font-size:12px;color:var(--lblue);letter-spacing:.06em;white-space:nowrap;}
 .standing b{color:#fff;font-weight:500;}
@@ -201,6 +206,11 @@ p{max-width:66ch;}
 .fragcard .ring{width:52px;height:52px;margin:0 auto 6px;}
 .fragcard .nm{font-size:12px;font-weight:500;line-height:1.3;}
 .fragcard .sub{font-family:var(--mono);font-size:9.5px;color:var(--dgray);margin-top:3px;line-height:1.45;}
+.fragcard .why{
+  font-size:10.5px;line-height:1.4;color:#B5551A;margin-top:8px;padding-top:7px;
+  border-top:1px dashed var(--lgray);
+}
+.fragcard.is-target .why{color:#0E7A76;}
 .flow-arrow{color:var(--teal);flex:none;}
 .golden{
   background:var(--card);border-radius:16px;padding:22px 22px 18px;color:var(--navy);width:min(300px,86vw);
@@ -221,6 +231,17 @@ p{max-width:66ch;}
 .golden li{display:flex;justify-content:space-between;gap:10px;}
 .golden li span:first-child{color:var(--dgray);}
 
+/* Cost of a missed match */
+.cost{margin-top:52px;}
+.cost .lede{margin-bottom:24px;}
+.costgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.costcard{
+  background:var(--navy-panel);border:1px solid rgba(180,216,255,.14);border-radius:14px;
+  border-left:4px solid var(--orange);padding:18px 20px 16px;
+}
+.costcard h3{font-size:15px;color:#fff;}
+.costcard p{font-size:13.5px;color:var(--lblue);line-height:1.55;margin:0;}
+
 /* Pitch */
 .pitch{margin-top:52px;background:var(--navy-panel);border:1px solid rgba(180,216,255,.18);border-radius:20px;padding:40px 40px 36px;}
 .pitch .lede{margin-bottom:26px;}
@@ -238,7 +259,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
   .board{grid-template-columns:repeat(3,1fr);}
   .intro-grid{grid-template-columns:1fr;}
   .intro-preview{max-width:420px;}
-  .pillars{grid-template-columns:1fr;}
+  .pillars,.costgrid{grid-template-columns:1fr;}
   .frag-flow{grid-template-columns:1fr;justify-items:center;}
   .flow-arrow{transform:rotate(90deg);}
 }
@@ -280,17 +301,17 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 <section class="screen active" id="screen-intro" aria-labelledby="introTitle">
   <div class="eyebrow">A Rhapsody Identity game</div>
   <h1 id="introTitle">The Patient Matching Game</h1>
-  <p class="lede">Twelve patient records. Five smudged clues. One person to find. Flip down everyone who doesn&rsquo;t fit, and try not to mix up two humans while you&rsquo;re at it.</p>
+  <p class="lede">Twelve patient records. One clean referral. One person to find. Flip down everyone who doesn&rsquo;t fit, and try not to mix up two humans while you&rsquo;re at it.</p>
 
   <div class="intro-grid">
     <div>
       <div class="mission">
         <div class="k">Your mission</div>
-        <p>Jayme called to reschedule a follow-up. Easy, right? Except five different systems have five different opinions about who Jayme is.</p>
-        <p>Work the clues, rule out the records that don&rsquo;t fit, and lock in your match when one card is left standing. Then we&rsquo;ll see if you found the right person.</p>
+        <p>Jayme called to reschedule a follow-up. You have her referral: full name and date of birth, spelled correctly, verified twice. This should take about a minute.</p>
+        <p>Work the clues, rule out the records that don&rsquo;t fit, and lock in your match when one card is left standing. Then we&rsquo;ll see how it went.</p>
       </div>
       <ol class="steps">
-        <li><span class="n">1</span><span>Read the clue. It came from a fax, a phone call, or a kiosk, so bring your imagination.</span></li>
+        <li><span class="n">1</span><span>Read the clue. Each one is a fact straight from her referral, so trust it.</span></li>
         <li><span class="n">2</span><span>Tap records to flip them down. Tap again to un-flip if you get cold feet.</span></li>
         <li><span class="n">3</span><span>Down to one card? Lock in your match and face the reveal.</span></li>
       </ol>
@@ -309,6 +330,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
         <div class="clue-dots" id="clueDots"></div>
       </div>
       <p id="clueText" aria-live="polite"></p>
+      <div class="facts" id="factChips" aria-label="Facts from the referral so far"></div>
     </div>
     <div class="hud-actions">
       <span class="standing" aria-live="polite"><b id="standCount">12</b> records standing</span>
@@ -343,7 +365,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
   <div class="twist">
     <div class="eyebrow">The part we didn&rsquo;t tell you</div>
     <h2>Jayme was on the board four times.</h2>
-    <p class="lede">Four systems, four spellings, one human. Every one of those fragments is a gap in her care: a missed allergy here, a repeat scan there, a bill sent to a stranger.</p>
+    <p class="lede">The referral was right. The other systems weren&rsquo;t. Every record you ruled out with perfectly good logic was also her, and here&rsquo;s why none of them matched.</p>
 
     <div class="frag-flow">
       <div class="frag-stack" id="fragStack"></div>
@@ -369,9 +391,33 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
     </div>
   </div>
 
+  <div class="cost">
+    <div class="eyebrow">What a missed match costs</div>
+    <h2>Missing a match isn&rsquo;t losing a game.</h2>
+    <p class="lede">Every unlinked record is a version of Jayme that somebody is treating, billing, or reporting on without the full story.</p>
+    <div class="costgrid">
+      <div class="costcard">
+        <h3>Care decisions with half the chart</h3>
+        <p>The ER treats her without the allergy and medication history her family practice has had for years.</p>
+      </div>
+      <div class="costcard">
+        <h3>Tests she already had</h3>
+        <p>A scan gets reordered because the first result lives under a record nobody can see.</p>
+      </div>
+      <div class="costcard">
+        <h3>Results and bills that miss her</h3>
+        <p>Statements and follow-ups go to an account she stopped using before the wedding.</p>
+      </div>
+      <div class="costcard">
+        <h3>Reports you can&rsquo;t stand behind</h3>
+        <p>Quality measures and compliance reporting are only as trustworthy as the identity data underneath them.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="pitch">
     <div class="eyebrow">Rhapsody Identity</div>
-    <h2>Person matching doesn&rsquo;t have to be a game.</h2>
+    <h2>Person matching shouldn&rsquo;t be a game.</h2>
     <p class="lede">Rhapsody Identity is the EMPI that gives you accurate, complete, and consistent identity data to enable person-centered care. You get a 360&deg; view of every person across disparate systems, with complete data history and full transparency, traceability, and compliance.</p>
     <div class="pillars">
       <div class="pillar">
@@ -469,13 +515,20 @@ const JAYME = { skin:'#C98A5E', hair:'#3B2A21' };
 
 const CARDS = [
   { id:1,  name:'Jayme Reyes-Calloway', dob:'04/12/1988', src:'Lakeside Family Medicine', mrn:'LFM-30291',
-    ring:'r-teal',  av:{...JAYME, style:'long',  shirt:'#23C5BF'}, target:true, fragment:'Her current primary care record. The real thing.' },
+    ring:'r-teal',  av:{...JAYME, style:'long',  shirt:'#23C5BF'}, target:true,
+    why:'The record you were sent to find' },
   { id:2,  name:'Jaimie Rayes Calloway', dob:'12/04/1988', src:'St. Aldous Emergency Dept', mrn:'ED-88172',
-    ring:'r-blue',  av:{...JAYME, style:'bun',   shirt:'#1A81F4'}, fragment:'Her ER visit. Registration transposed the birth date and spelled her name by ear.' },
+    ring:'r-blue',  av:{...JAYME, style:'bun',   shirt:'#1A81F4'},
+    why:'Birth month and day transposed; name spelled by ear',
+    fragment:'This was also Jayme: her ER visit at St. Aldous. Registration typed her birth month and day in the wrong order and spelled her name by ear, so the referral told you to rule her out.' },
   { id:3,  name:'J. Calloway', dob:'&mdash;&mdash;/&mdash;&mdash;/&mdash;&mdash;', src:'UrgentCare One kiosk', mrn:'UC1-4402',
-    ring:'r-purple', av:{...JAYME, style:'ponytail', shirt:'#7340E4'}, fragment:'Her urgent-care intake. The kiosk gave up on the birth date entirely.' },
+    ring:'r-purple', av:{...JAYME, style:'ponytail', shirt:'#7340E4'},
+    why:'First initial only; no birth date captured',
+    fragment:'This was also Jayme: her urgent-care intake. The kiosk stored a first initial and never captured a birth date, so nothing in the referral could confirm her.' },
   { id:4,  name:'Jayme Reyes', dob:'04/12/1998', src:'Patient portal signup', mrn:'PP-75810',
-    ring:'r-orange', av:{...JAYME, style:'long', glasses:true, shirt:'#FA7E2E'}, fragment:'Her portal signup. One keystroke made her ten years younger.' },
+    ring:'r-orange', av:{...JAYME, style:'long', glasses:true, shirt:'#FA7E2E'},
+    why:'Maiden name, plus a birth-year typo',
+    fragment:'This was also Jayme: her patient portal account. She signed up under her maiden name before the wedding, and a one-keystroke typo made her ten years younger.' },
   { id:5,  name:'Amy Callahan', dob:'04/22/1988', src:'Radiology PACS', mrn:'RAD-11938',
     ring:'r-blue',  av:{skin:'#F2C9A4', hair:'#B0552E', style:'bob',   shirt:'#1A81F4'} },
   { id:6,  name:'Jamie Curran', dob:'04/12/1985', src:'Billing system', mrn:'BIL-55217',
@@ -495,11 +548,14 @@ const CARDS = [
 ];
 
 const CLUES = [
-  'The first name starts with a J. Probably a J. It came in on a fax, and the fax had opinions.',
-  'Say it out loud: it sounds a lot like &ldquo;Amy.&rdquo; The front desk took it over the phone.',
-  'Date of birth: April 12, 1988. Although one system swears it&rsquo;s December 4, and another says 1998. Pick your favorite.',
-  'The last name involves Reyes, Calloway, or both. The hyphen comes and goes depending on the software.',
-  'Insurance says this patient was seen at four different places last year. Which is impossible. Unless&hellip;',
+  { text:'The referral says her first name is Jayme. J-A-Y-M-E. Written right there in the notes.',
+    fact:'First name: Jayme' },
+  { text:'Date of birth: April 12, 1988. Straight off her insurance card.',
+    fact:'DOB: 04/12/1988' },
+  { text:'Last name: Reyes-Calloway. With the hyphen. It&rsquo;s official.',
+    fact:'Last name: Reyes-Calloway' },
+  { text:'That&rsquo;s the whole referral: Jayme Reyes-Calloway, born April 12, 1988. Plenty to go on. Rule out everyone who doesn&rsquo;t fit, then lock in your match.',
+    fact:null },
 ];
 
 const $ = (id) => document.getElementById(id);
@@ -548,13 +604,14 @@ function updateHud(){
 /* ---------- clues ---------- */
 function renderClue(){
   $('clueCount').textContent = `Clue ${state.clue+1} of ${CLUES.length}`;
-  $('clueText').innerHTML = CLUES[state.clue];
+  $('clueText').innerHTML = CLUES[state.clue].text;
+  const facts = CLUES.slice(0, state.clue+1).map(c=>c.fact).filter(Boolean);
+  $('factChips').innerHTML = facts.map(f=>`<span class="fact">&#10003; ${f}</span>`).join('');
   const dots = $('clueDots');
   dots.innerHTML = CLUES.map((_,i)=>`<span class="${i<=state.clue?'on':''}"></span>`).join('');
   const last = state.clue === CLUES.length-1;
   $('nextClueBtn').disabled = last;
-  $('nextClueBtn').textContent = last ? 'That&rsquo;s every clue' : 'Next clue';
-  if(last) $('nextClueBtn').innerHTML = 'That&rsquo;s every clue';
+  $('nextClueBtn').innerHTML = last ? 'No more clues' : 'Next clue';
 }
 $('nextClueBtn').addEventListener('click', () => {
   if(state.clue < CLUES.length-1){ state.clue++; renderClue(); }
@@ -578,18 +635,18 @@ $('lockBtn').addEventListener('click', () => {
   if(picked.id === target.id){
     box.classList.add('match');
     kicker = 'Correct match';
-    title = 'You found her.';
-    body = 'Jayme Reyes-Calloway, Lakeside Family Medicine. Her real, current record. It took five clues, eleven eliminations, and honestly a little luck. Nice work, human matching algorithm.';
+    title = 'You found her. The referral was right.';
+    body = 'Jayme Reyes-Calloway, born April 12, 1988, Lakeside Family Medicine. Every fact checked out, and careful elimination got you here. Before you celebrate: keep scrolling. Three of the records you just ruled out have something to tell you.';
   } else if(picked.fragment){
     box.classList.add('fragment');
-    kicker = 'Sort of a match';
-    title = 'That&rsquo;s her&hellip; and also not her record.';
-    body = `You matched a real fragment of Jayme. ${picked.fragment} Same person, a quarter of her story. In real life, the care team working from this record wouldn&rsquo;t see the rest of it.`;
+    kicker = 'Good instinct, wrong record';
+    title = 'That&rsquo;s her&hellip; and you couldn&rsquo;t have known.';
+    body = `The referral said to rule this record out. It didn&rsquo;t fit the name or the birth date you were given. And yet: ${picked.fragment} You trusted a hunch. A care team can&rsquo;t.`;
   } else {
     box.classList.add('wrong');
     kicker = 'Wrong person';
     title = `That&rsquo;s ${picked.name}. A different human.`;
-    body = 'They looked the part, and the clues were mush. That&rsquo;s exactly how wrong-person mix-ups happen in the real world: two records that look alike, and a busy human forced to guess.';
+    body = 'The referral said Jayme Reyes-Calloway, born April 12, 1988. Similar name, similar birthday, different person. In the real world this is a wrong-patient event, and it starts exactly like this.';
   }
   $('verdictKicker').textContent = kicker;
   $('verdictTitle').innerHTML = title;
@@ -598,11 +655,12 @@ $('lockBtn').addEventListener('click', () => {
   $('targetCard').innerHTML = bigCard(target);
 
   const frag = $('fragStack');
-  frag.innerHTML = CARDS.filter(c=>c.fragment).map(c => `
-    <div class="fragcard">
+  frag.innerHTML = CARDS.filter(c=>c.fragment || c.target).map(c => `
+    <div class="fragcard${c.target ? ' is-target' : ''}">
       <span class="ring ${c.ring}">${avatar(c.av)}</span>
       <div class="nm">${c.name}</div>
       <div class="sub">DOB ${c.dob}<br>${c.src}</div>
+      <div class="why">${c.why}</div>
     </div>`).join('');
   $('goldenAvatar').innerHTML = avatar(JAYME.style ? JAYME : {...JAYME, style:'long', shirt:'#23C5BF'});
 
