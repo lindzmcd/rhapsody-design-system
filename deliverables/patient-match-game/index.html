@@ -221,7 +221,7 @@ p{max-width:66ch;}
 .fragcard .nm{font-size:12px;font-weight:500;line-height:1.3;}
 .fragcard .sub{font-family:var(--mono);font-size:9.5px;color:var(--dgray);margin-top:3px;line-height:1.45;}
 .fragcard .why{
-  font-size:10.5px;line-height:1.4;color:#B5551A;margin-top:8px;padding-top:7px;
+  font-size:10.5px;line-height:1.4;color:#12558F;margin-top:8px;padding-top:7px;
   border-top:1px dashed var(--lgray);
 }
 .fragcard.is-target .why{color:#0E7A76;}
@@ -249,8 +249,8 @@ p{max-width:66ch;}
 .twins{display:flex;gap:26px;justify-content:center;align-items:stretch;flex-wrap:wrap;margin:26px 0 12px;}
 .twins .col{text-align:center;max-width:230px;}
 .twins .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
-.twins .lbl.good{color:var(--teal);} .twins .lbl.bad{color:var(--orange);}
-.twins .bigcard.warn{box-shadow:0 0 0 3px var(--orange),0 12px 30px rgba(5,15,25,.5);}
+.twins .lbl.good{color:var(--teal);} .twins .lbl.bad{color:var(--lblue);}
+.twins .bigcard.warn{box-shadow:0 0 0 3px var(--blue),0 12px 30px rgba(5,15,25,.5);}
 .twins .bigcard.good{box-shadow:0 0 0 3px var(--teal),0 12px 30px rgba(5,15,25,.5);}
 
 /* Results: timer + stats */
@@ -305,6 +305,36 @@ p{max-width:66ch;}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
 
 footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216,255,.55);line-height:1.7;max-width:70ch;}
+
+/* Request-a-demo modal */
+.modal-backdrop{
+  position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;
+  background:rgba(5,15,25,.72);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+}
+.modal-backdrop[hidden]{display:none;}
+.modal{
+  position:relative;background:var(--navy-panel);border:1px solid rgba(180,216,255,.25);border-radius:20px;
+  padding:34px 34px 28px;width:min(460px,94vw);max-height:90vh;overflow-y:auto;
+  box-shadow:0 30px 80px rgba(5,15,25,.7);
+}
+.modal h2{margin-bottom:8px;}
+.modal .m-sub{font-size:14.5px;color:var(--lblue);margin-bottom:22px;line-height:1.6;}
+.modal-close{
+  position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);
+  background:transparent;color:#fff;font-size:20px;line-height:1;cursor:pointer;
+}
+.modal-close:hover{border-color:#fff;}
+.modal label{display:block;margin-bottom:14px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);}
+.modal input{
+  display:block;width:100%;margin-top:6px;padding:11px 14px;border-radius:10px;
+  background:rgba(8,33,56,.75);border:1px solid rgba(180,216,255,.3);color:#fff;
+  font-family:var(--sans);font-size:15px;
+}
+.modal input:focus-visible{outline:2px solid var(--teal);outline-offset:1px;}
+.modal .btn{margin-top:8px;width:100%;justify-content:center;}
+.modal .m-note{font-family:var(--mono);font-size:10.5px;color:rgba(180,216,255,.6);margin-top:14px;line-height:1.6;}
+#demoThanks h3{color:var(--teal);font-size:20px;margin-bottom:8px;}
+#demoThanks p{font-size:15px;color:#EAF3FD;}
 
 @media(max-width:900px){
   .board{grid-template-columns:repeat(3,1fr);}
@@ -383,7 +413,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
       </div>
       <p id="clueText" aria-live="polite"></p>
       <div class="facts" id="factChips" aria-label="Facts from the paperwork so far"></div>
-      <p class="pick-nudge" id="pickNudge" hidden>Both remaining records fit everything you have, and no more clues are coming. Pick one and lock it in.</p>
+      <p class="pick-nudge" id="pickNudge" hidden>Two records left and no more clues coming. If both still look possible, that&rsquo;s the game working: pick one and lock it in.</p>
     </div>
     <div class="hud-actions">
       <span class="standing" aria-live="polite"><b id="standCount">12</b> records standing</span>
@@ -448,7 +478,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 
     <div class="cost">
       <div class="eyebrow">What a missed match costs</div>
-      <h2>Missing a match isn&rsquo;t losing a game.</h2>
+      <h2>Missing a match is more serious than losing a game.</h2>
       <p class="lede">Every unlinked record is a version of a real person that somebody is treating, billing, or reporting on without the full story.</p>
       <div class="costgrid">
         <div class="costcard">
@@ -473,7 +503,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
     <div class="pitch">
       <div class="eyebrow">Rhapsody Identity</div>
       <h2>Person matching shouldn&rsquo;t be a game.</h2>
-      <p class="lede">Rhapsody Identity is the EMPI that gives you accurate, complete, and consistent identity data to enable person-centered care. You get a 360&deg; view of every person across disparate systems, with complete data history and full transparency, traceability, and compliance.</p>
+      <p class="lede">Rhapsody Identity is the EMPI that gives you accurate, complete, and consistent identity data to enable person-centered care.</p>
       <div class="pillars">
         <div class="pillar">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
@@ -505,6 +535,27 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
   </footer>
 </section>
 
+</div>
+
+<!-- Request-a-demo modal -->
+<div class="modal-backdrop" id="demoModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+    <button class="modal-close" id="demoClose" aria-label="Close">&times;</button>
+    <div class="eyebrow">Rhapsody Identity</div>
+    <h2 id="demoTitle">Request a demo</h2>
+    <p class="m-sub">Tell us where to reach you and we&rsquo;ll walk you through Rhapsody Identity with your scenarios, not fictional ones.</p>
+    <form id="demoForm">
+      <label>Name<input type="text" id="dfName" required autocomplete="name"></label>
+      <label>Work email<input type="email" id="dfEmail" required autocomplete="email"></label>
+      <label>Organization<input type="text" id="dfOrg" autocomplete="organization"></label>
+      <button class="btn primary" type="submit">Send request</button>
+      <p class="m-note">Concept prototype: requests are saved with this page for the Rhapsody team, not routed to a CRM yet.</p>
+    </form>
+    <div id="demoThanks" hidden>
+      <h3>Request received</h3>
+      <p id="thanksMsg"></p>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -648,9 +699,9 @@ const CASES = [
       ring:'r-teal',  av:{skin:'#F6D7B8', hair:'#E9B64C', style:'waves', shirt:'#7340E4'} },
     { id:10, name:'Maya Jerez', dob:'01/15/1990', src:'Telehealth app', mrn:'TH-33069',
       ring:'r-blue',  av:{skin:'#A86A3D', hair:'#1C1410', style:'bob',  shirt:'#FA7E2E'} },
-    { id:11, name:'Jay Cole', dob:'11/02/1984', src:'Legacy EHR archive', mrn:'OLD-04117',
-      ring:'r-orange', av:{skin:'#F1C6A0', hair:'#6E6E72', style:'short', gray:true, mouth:'flat', shirt:'#0B2C47'} },
-    { id:12, name:'Renee Jaymes', dob:'05/17/1986', src:'Referral fax', mrn:'FAX-61203',
+    { id:11, name:'Mamie Cole', dob:'11/02/1984', src:'Legacy EHR archive', mrn:'OLD-04117',
+      ring:'r-orange', av:{skin:'#F1C6A0', hair:'#9BA1A8', style:'bun', glasses:true, mouth:'flat', shirt:'#0B2C47'} },
+    { id:12, name:'Renee Calloway', dob:'05/17/1986', src:'Referral fax', mrn:'FAX-61203',
       ring:'r-purple', av:{skin:'#D99C6B', hair:'#4A2C1D', style:'waves', shirt:'#23C5BF'} },
   ],
   pron:{s:'she', o:'her'},
@@ -663,7 +714,7 @@ const CASES = [
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
       title:'You found her. The referral was right.',
-      body:'Jayme Reyes-Calloway, born April 12, 1988, Lakeside Family Medicine. Every fact checked out, and careful elimination got you here. Before you celebrate: keep scrolling. Three of the records you just ruled out have something to tell you.' };
+      body:'Jayme Reyes-Calloway, Lakeside Family Medicine. Every fact checked out. Now keep scrolling: three records you just ruled out have something to tell you.' };
     if(picked.fragment) return { cls:'fragment', kicker:'Good instinct, wrong record',
       title:'That&rsquo;s her&hellip; and you couldn&rsquo;t have known.',
       body:`The referral said to rule this record out. It didn&rsquo;t fit the name or the birth date you were given. And yet: ${picked.fragment} You trusted a hunch. A care team can&rsquo;t.` };
@@ -684,7 +735,7 @@ const CASES = [
   coin:true,
   mission:'Someone checked in this morning for a follow-up. You get what the front desk gets: what they say, what their card says, what the referral says. Twelve records are on the board.',
   cards:[
-    { id:1,  name:'Alexis Nguyen', dob:'06/02/1975', src:'Mercy Point EHR', mrn:'MP-51120',
+    { id:1,  name:'Alexandra Nguyen', dob:'06/02/1975', src:'Mercy Point EHR', mrn:'MP-51120',
       ring:'r-teal',  av:{skin:'#E8B488', hair:'#171310', style:'bob', attire:'collar', shirt:'#0B2C47'}, target:true, twin:'good' },
     { id:2,  name:'Alex Nguyen', dob:'06/02/1975', src:'Mercy Point EHR', mrn:'MP-22841',
       ring:'r-blue',  av:{skin:'#C98A5E', hair:'#2B211A', style:'buzz', beard:true, glasses:true, build:1.08, shirt:'#1A81F4'}, twin:'bad' },
@@ -704,7 +755,7 @@ const CASES = [
       ring:'r-blue',  av:{skin:'#C98A5E', hair:'#3B2A21', style:'long', shirt:'#1A81F4'} },
     { id:10, name:'Lex Nguyen', dob:'07/02/1975', src:'Legacy EHR archive', mrn:'OLD-95511',
       ring:'r-teal',  av:{skin:'#A86A3D', hair:'#171310', style:'curly', beard:true, shirt:'#0B2C47'} },
-    { id:11, name:'Alexandra Win', dob:'06/02/1971', src:'Patient portal signup', mrn:'PP-30268',
+    { id:11, name:'Alondra Wynn', dob:'06/02/1971', src:'Patient portal signup', mrn:'PP-30268',
       ring:'r-orange', av:{skin:'#F1C6A0', hair:'#B0552E', style:'ponytail', shirt:'#FA7E2E'} },
     { id:12, name:'Anh Nguyen', dob:'09/09/1982', src:'UrgentCare One kiosk', mrn:'UC1-77019',
       ring:'r-purple', av:{skin:'#8C5A34', hair:'#120D09', style:'bob', shirt:'#23C5BF'} },
@@ -718,20 +769,20 @@ const CASES = [
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match&hellip; somehow',
-      title:'You picked Alexis. That&rsquo;s her.',
-      body:'&ldquo;Alex&rdquo; is what she goes by. Alexis is what the system says. Nothing on the board told you which name the chart was under, and you guessed well. Systems facing this pair thousands of times a day don&rsquo;t get to be lucky.' };
+      title:'You picked Alexandra. That&rsquo;s her.',
+      body:'&ldquo;Alex&rdquo; is what she goes by. Alexandra is what the system says. Nothing on the board told you which name the chart was under, and you guessed well. Systems face this pair thousands of times a day, and they don&rsquo;t get to be lucky.' };
     if(picked.twin) return { cls:'wrong', kicker:'The other Alex',
       title:'Same birthday. Same last name. Different human.',
-      body:'The person at your desk is Alexis Nguyen: Alex to everyone who knows her, Alexis to the system. You just pulled up a stranger&rsquo;s chart instead. It was a coin flip, and you lost it. Merge these two records and it gets worse: she inherits his medications, allergies, and history.' };
+      body:'The person at your desk is Alexandra Nguyen: Alex to everyone who knows her, Alexandra to the system. You just pulled up a stranger&rsquo;s chart instead. Merge these two records and it gets worse: she inherits his medications, allergies, and history.' };
     return { cls:'wrong', kicker:'Wrong person',
       title:`That&rsquo;s ${picked.name}. A different human.`,
       body:'The card said Nguyen, born June 2, 1975. Close only counts in horseshoes, not in health records.' };
   },
   twist:{
     type:'twins',
-    title:'The right answer was Alexis.',
-    lede:'Two records, same birthday, same last name, same system. One says Alex, one says Alexis. The person checking in goes by Alex; her chart is under her legal name. Nothing on the board could tell you which was which, and the two are one careless merge away from becoming one record. That&rsquo;s called an overlay, and it&rsquo;s the most dangerous identity error in healthcare.',
-    labels:{ good:'Your patient &middot; legal name Alexis', bad:'A different person &middot; also goes by Alex' },
+    title:'The right answer was Alexandra.',
+    lede:'Two records, same birthday, same last name, same system. The person checking in goes by Alex; her chart is under her legal name. Nothing on the board could tell you which was which, and the two are one careless merge away from becoming one record. That&rsquo;s called an overlay, and it&rsquo;s the most dangerous identity error in healthcare.',
+    labels:{ good:'Your patient &middot; legal name Alexandra', bad:'A different person &middot; also goes by Alex' },
     after:'A match engine that guesses is a coin flip at scale. Rhapsody Identity scores every match, links what belongs together, keeps apart what doesn&rsquo;t, and flags a pair like this for human review with the evidence attached.',
   },
 },
@@ -755,11 +806,11 @@ const CASES = [
       ring:'r-orange', av:{...BILL, hair:'#120D09', style:'buzz', beard:true, beardColor:'#9BA1A8', attire:'hoodie', shirt:'#FA7E2E'},
       why:'The 8 picked up an extra 1',
       fragment:'This was also Bill: his imaging record. The day field caught an extra keystroke on the way in, and 8 became 18.' },
-    { id:5,  name:'Bill Cross', dob:'10/08/1961', src:'Harborview Cardiology', mrn:'HC-77209',
+    { id:5,  name:'William Achebe-Cross', dob:'10/08/1961', src:'Harborview Cardiology', mrn:'HC-77209',
       ring:'r-blue',  av:{skin:'#F1C6A0', hair:'#4A2C1D', style:'short', shirt:'#0B2C47'} },
-    { id:6,  name:'Wanda Achebe', dob:'10/08/1961', src:'Lab results feed', mrn:'LAB-88264',
-      ring:'r-teal',  av:{skin:'#8C5A34', hair:'#120D09', style:'bob', shirt:'#23C5BF'} },
-    { id:7,  name:'Bill Acheson', dob:'02/11/1958', src:'Pharmacy system', mrn:'RX-51196',
+    { id:6,  name:'William Cross', dob:'10/08/1961', src:'Lab results feed', mrn:'LAB-88264',
+      ring:'r-teal',  av:{skin:'#8C5A34', hair:'#120D09', style:'waves', beard:true, shirt:'#23C5BF'} },
+    { id:7,  name:'Will Achebe', dob:'02/11/1958', src:'Pharmacy system', mrn:'RX-51196',
       ring:'r-orange', av:{skin:'#F2C9A4', hair:'#9BA1A8', style:'short', gray:true, mouth:'flat', shirt:'#FA7E2E'} },
     { id:8,  name:'Willa Crossley', dob:'04/30/1975', src:'Telehealth app', mrn:'TH-62050',
       ring:'r-purple', av:{skin:'#D99C6B', hair:'#3B2A21', style:'long', shirt:'#7340E4'} },
@@ -837,8 +888,8 @@ const CASES = [
   ],
   verdict(picked, target){
     if(picked.twin) return { cls:'wrong', kicker:'Right person, empty chart',
-      title:'That&rsquo;s Sam. It&rsquo;s also the chart from last Tuesday.',
-      body:'The front desk searched, missed his old record, and created a fresh one. You just picked it: nearly empty. No labs, no allergies, no history. Everything he&rsquo;s calling about lives on the other chart. And before you ask: yes, the other one was Sam too.' };
+      title:'That&rsquo;s Sam, but it&rsquo;s an empty, duplicate record.',
+      body:'The front desk searched last Tuesday, missed his old record, and created a fresh one. You just picked it: no labs, no allergies, no history. Everything he&rsquo;s calling about lives on the other chart. And yes: the other one was Sam too.' };
     return { cls:'wrong', kicker:'Wrong person',
       title:`That&rsquo;s ${picked.name}. A different human.`,
       body:'The system said Sam Whitaker, born March 15, 1990. Close, but this is somebody else&rsquo;s chart, and that&rsquo;s a whole other incident report.' };
@@ -846,7 +897,7 @@ const CASES = [
   twist:{
     type:'twins',
     title:'Both of them were Sam.',
-    lede:'Same person, two charts, one clinic. Last Tuesday the front desk searched, the old record didn&rsquo;t surface (new haircut, new hat, same human), and the system did what systems do: it created him again. Now his history is split between two charts that will never meet on their own.',
+    lede:'Same person, two charts, one clinic. Last Tuesday the front desk searched, the old record didn&rsquo;t surface (wearing a hat, same human), and the system did what systems do: it created him again. Now his history is split between two charts that will never meet on their own.',
     labels:{ good:'His original chart &middot; the history lives here', bad:'Created last Tuesday &middot; nearly empty' },
     after:'This is how fragmentation starts: not with a dramatic error, but with one failed lookup on a busy morning. Rhapsody Identity catches the match the search missed, links the two charts into one person, and keeps the history whole.',
   },
@@ -856,6 +907,9 @@ const CASES = [
 /* ============================================================
    State, rotation, and flow
    ============================================================ */
+// Sam opens the deck: a fast, guaranteed miss makes the point quickest.
+CASES.unshift(CASES.pop());
+
 const $ = (id) => document.getElementById(id);
 const state = { caseIdx:0, clue:0, down:new Set(), startedAt:0, result:null, history:[] };
 
@@ -933,14 +987,15 @@ function updateHud(){
   $('lockBtn').textContent = standing === 1 ? 'Lock in your match' : `Lock in your match (${standing} left)`;
   const twins = cards().filter(c=>c.twin).map(c=>c.id);
   const standingIds = cards().filter(c=>!state.down.has(c.id)).map(c=>c.id);
-  const forcedChoice = twins.length === 2 && standingIds.length === 2 && standingIds.every(id=>twins.includes(id));
-  $('pickNudge').hidden = !forcedChoice;
+  const twinStalemate = twins.length === 2 && standingIds.length === 2 && standingIds.every(id=>twins.includes(id));
+  const outOfClues = standingIds.length === 2 && state.clue === clues().length - 1;
+  $('pickNudge').hidden = !(twinStalemate || outOfClues);
 }
 
 /* ---------- clues ---------- */
 function renderClue(){
   $('caseTag').textContent = `Case ${state.caseIdx+1} of ${CASES.length}`;
-  $('clueCount').textContent = `Clue ${state.clue+1} of ${clues().length}`;
+  $('clueCount').textContent = `Clue ${state.clue+1}`;
   $('clueText').innerHTML = clues()[state.clue].text;
   const facts = clues().slice(0, state.clue+1).map(c=>c.fact).filter(Boolean);
   $('factChips').innerHTML = facts.map(f=>`<span class="fact">&#10003; ${f}</span>`).join('');
@@ -950,7 +1005,7 @@ function renderClue(){
   $('nextClueBtn').innerHTML = last ? 'No more clues' : 'Next clue';
 }
 $('nextClueBtn').addEventListener('click', () => {
-  if(state.clue < clues().length-1){ state.clue++; renderClue(); }
+  if(state.clue < clues().length-1){ state.clue++; renderClue(); updateHud(); }
 });
 
 /* ---------- play ---------- */
@@ -999,8 +1054,9 @@ function buildQuips(picked, target){
     if(ev.clue >= 2 && (!hold || ev.clue > hold.ev.clue)) hold = {c, ev};
   });
   if(hold){
-    const sameDob = hold.c.dob === target.dob;
-    quips.push(`You held on to ${hold.c.name} until ${srcName(hold.ev.clue)}. Real systems hold on forever: close name, ${sameDob ? 'same' : 'close'} birthday, no tiebreaker.`);
+    quips.push(hold.ev.clue === clues().length - 1
+      ? `You held on to ${hold.c.name} all the way to the end. Real systems do that too: records like that just sit there, unresolved.`
+      : `You let go of ${hold.c.name} only when ${srcName(hold.ev.clue)} came in. Real systems often never get a clue that good.`);
   }
   // 3. The same-person record they ruled out earliest, with total confidence.
   const frags = cards().filter(c => c.fragment && endedDown(c.id));
@@ -1120,7 +1176,7 @@ function fmt(ms){
 async function showFinal(){
   const r = state.result;
   $('yourTime').textContent = fmt(r.ms);
-  $('timeCap').innerHTML = `Case ${state.caseIdx+1}: <b>${r.found ? 'you matched the intended record' : 'you missed the intended record'}</b>. In production, nobody tells you which one it was.`;
+  $('timeCap').innerHTML = `This case: <b>${r.found ? 'you matched the intended record' : 'you missed the intended record'}</b>. In the real world, nobody tells you which one it was.`;
 
   const perMatch = r.ms / 1000;
   const hoursPerDay = perMatch * 200 / 3600;
@@ -1137,6 +1193,7 @@ async function showFinal(){
   $('caseProgress').textContent = done ? 'All 4 cases played' : `You’ve played ${played.length} of ${CASES.length} cases`;
   $('allPlayed').hidden = !done;
   $('demoCta').textContent = done ? 'Request a demo' : 'Explore Rhapsody Identity';
+  $('demoCta').dataset.mode = done ? 'demo' : 'link';
   $('replayBtn').textContent = done ? 'Play again from the top' : 'Play the next case';
 
   const entry = { n:1, totalMs:r.ms, found:r.found?1:0, coinN:r.coin?1:0, coinWon:(r.coin&&r.found)?1:0 };
@@ -1201,6 +1258,63 @@ function renderStats({scope, stats}){
     ? 'Tallied across everyone who&rsquo;s played this page and could save to it. No names, no identifiers: just times and outcomes.'
     : 'Tallied on this device. When this page runs as a shared artifact with save access, plays are pooled across everyone.') + coinNote;
 }
+
+/* ---------- request-a-demo modal ---------- */
+const demoModal = $('demoModal');
+function openDemoModal(){
+  $('demoForm').hidden = false;
+  $('demoThanks').hidden = true;
+  $('demoForm').reset();
+  demoModal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  $('dfName').focus();
+}
+function closeDemoModal(){
+  demoModal.hidden = true;
+  document.body.style.overflow = '';
+  $('demoCta').focus();
+}
+$('demoCta').addEventListener('click', e => {
+  if($('demoCta').dataset.mode === 'demo'){ e.preventDefault(); openDemoModal(); }
+});
+$('demoClose').addEventListener('click', closeDemoModal);
+demoModal.addEventListener('click', e => { if(e.target === demoModal) closeDemoModal(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape' && !demoModal.hidden) closeDemoModal(); });
+$('demoForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const entry = {
+    name: $('dfName').value.trim(),
+    email: $('dfEmail').value.trim(),
+    org: $('dfOrg').value.trim(),
+    at: new Date().toISOString(),
+  };
+  try{
+    const l = JSON.parse(localStorage.getItem('pmg-demo-requests')) || [];
+    l.push(entry); localStorage.setItem('pmg-demo-requests', JSON.stringify(l));
+  }catch(err){}
+  let scope = 'device';
+  try{
+    if(window.claude && claude.use){
+      const artifact = await claude.use('artifact');
+      if(artifact){
+        let existing = [];
+        try{
+          const res = await fetch('data/demo-requests-v1.json', {cache:'no-store'});
+          if(res.ok) existing = await res.json();
+        }catch(err){}
+        existing.push(entry);
+        await artifact.publish({'data/demo-requests-v1.json': JSON.stringify(existing)});
+        scope = 'shared';
+      }
+    }
+  }catch(err){}
+  const first = entry.name.split(' ')[0] || 'there';
+  $('thanksMsg').textContent = scope === 'shared'
+    ? `Thanks, ${first}. Your request is saved with this page and the Rhapsody team will follow up.`
+    : `Thanks, ${first}. Prototype mode: your request is saved on this device only, so mention it to your Rhapsody contact directly.`;
+  $('demoForm').hidden = true;
+  $('demoThanks').hidden = false;
+});
 
 /* ---------- flow ---------- */
 function show(id){
