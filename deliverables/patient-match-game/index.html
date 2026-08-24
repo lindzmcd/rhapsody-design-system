@@ -673,7 +673,8 @@ const CASES = [
 /* ---------- Case: Jayme — typos, transpositions, a maiden name ---------- */
 {
   key:'jayme',
-  mission:'Someone called to reschedule a follow-up. The phone connection was what it was, the fax is doing its best, and nine records are on the board. Piece together who she is from what actually comes in.',
+  setting:'At the regional health information exchange',
+  mission:'A referral just landed at the exchange: one patient, with records from every corner of the region. The phone connection was what it was, the fax is doing its best. Piece together who she is from what actually comes in.',
   cards:[
     { id:1,  name:'Jayme Reyes-Calloway', dob:'04/12/1988', src:'Lakeside Family Medicine', mrn:'LFM-30291',
       ring:'r-teal',  av:{...JAYME, hair:'#3B2A21', style:'long', attire:'collar', shirt:'#0B2C47'}, target:true,
@@ -730,41 +731,43 @@ const CASES = [
 {
   key:'alex',
   coin:true,
-  mission:'Someone checked in this morning for a follow-up. You get what the front desk gets: what they say, what their card says, what the referral says. Nine records are on the board.',
+  setting:'At a health plan',
+  idLabel:'ID',
+  mission:'A member is on the line about a prior authorization. You get what member services gets: what they say, what their card says, what the request says. Nine records are on the board.',
   cards:[
-    { id:1,  name:'Alexandra Nguyen', dob:'06/02/1975', src:'Mercy Point EHR', mrn:'MP-51120',
+    { id:1,  name:'Alexandra Nguyen', dob:'06/02/1975', src:'Enrollment system', mrn:'MEM-51120',
       ring:'r-teal',  av:{skin:'#E8B488', hair:'#171310', style:'bob', attire:'collar', shirt:'#0B2C47'}, target:true, twin:'good' },
-    { id:2,  name:'Alex Nguyen', dob:'06/02/1975', src:'Mercy Point EHR', mrn:'MP-22841',
+    { id:2,  name:'Alex Nguyen', dob:'06/02/1975', src:'Enrollment system', mrn:'MEM-22841',
       ring:'r-blue',  av:{skin:'#C98A5E', hair:'#2B211A', style:'buzz', beard:true, glasses:true, build:1.08, shirt:'#1A81F4'}, twin:'bad' },
-    { id:3,  name:'Lexi Nguyen', dob:'08/14/1979', src:'Lab results feed', mrn:'LAB-40917',
+    { id:3,  name:'Lexi Nguyen', dob:'08/14/1979', src:'Claims warehouse', mrn:'CLM-40917',
       ring:'r-purple', av:{skin:'#F2C9A4', hair:'#4A2C1D', style:'long', shirt:'#7340E4'} },
-    { id:4,  name:'Alex Tran', dob:'06/02/1975', src:'Pharmacy system', mrn:'RX-33582',
+    { id:4,  name:'Alex Tran', dob:'06/02/1975', src:'Pharmacy benefits', mrn:'PBM-33582',
       ring:'r-orange', av:{skin:'#EDBE9A', hair:'#120D09', style:'waves', shirt:'#FA7E2E'} },
-    { id:5,  name:'Alan Nguyen', dob:'02/06/1975', src:'Billing system', mrn:'BIL-77140',
+    { id:5,  name:'Alan Nguyen', dob:'02/06/1975', src:'Broker portal', mrn:'BRK-77140',
       ring:'r-blue',  av:{skin:'#D99C6B', hair:'#241B14', style:'curly', mouth:'flat', shirt:'#0B2C47'} },
-    { id:6,  name:'Alex Ngo', dob:'06/02/1985', src:'Radiology PACS', mrn:'RAD-28806',
+    { id:6,  name:'Alex Ngo', dob:'06/02/1985', src:'Prior-auth queue', mrn:'PA-28806',
       ring:'r-orange', av:{skin:'#F6D7B8', hair:'#5B4632', style:'short', glasses:true, shirt:'#23C5BF'} },
-    { id:7,  name:'Alexa Nunez', dob:'06/12/1975', src:'Referral fax', mrn:'FAX-18754',
+    { id:7,  name:'Alexa Nunez', dob:'06/12/1975', src:'Care management', mrn:'CM-18754',
       ring:'r-blue',  av:{skin:'#C98A5E', hair:'#3B2A21', style:'long', shirt:'#1A81F4'} },
-    { id:8,  name:'Lex Nguyen', dob:'07/02/1975', src:'Legacy EHR archive', mrn:'OLD-95511',
+    { id:8,  name:'Lex Nguyen', dob:'07/02/1975', src:'Legacy plan archive', mrn:'OLD-95511',
       ring:'r-teal',  av:{skin:'#A86A3D', hair:'#171310', style:'curly', beard:true, shirt:'#0B2C47'} },
-    { id:9,  name:'Anh Nguyen', dob:'09/09/1982', src:'UrgentCare One kiosk', mrn:'UC1-77019',
+    { id:9,  name:'Anh Nguyen', dob:'09/09/1982', src:'Member portal signup', mrn:'PRT-77019',
       ring:'r-purple', av:{skin:'#8C5A34', hair:'#120D09', style:'bob', shirt:'#23C5BF'} },
   ],
   pron:{s:'she', o:'her'},
   clues:[
-    { text:'<span class="clue-src">Front desk</span> &ldquo;This is Alex.&rdquo;', fact:'Goes by: Alex', src:'the front desk' },
-    { text:'<span class="clue-src">Check-in tablet</span> Date of birth: 06/02/1975.', fact:'DOB: 06/02/1975', src:'the check-in tablet' },
-    { text:'<span class="clue-src">Insurance card</span> NGUYEN.', fact:'Last name: Nguyen', src:'the insurance card' },
-    { text:'<span class="clue-src">Referral</span> A. Nguyen, follow-up. That&rsquo;s everything that came in.', fact:'Referral: A. Nguyen', src:'the referral' },
+    { text:'<span class="clue-src">Member services line</span> &ldquo;This is Alex.&rdquo;', fact:'Goes by: Alex', src:'the phone call' },
+    { text:'<span class="clue-src">ID card on file</span> Date of birth: 06/02/1975.', fact:'DOB: 06/02/1975', src:'the ID card' },
+    { text:'<span class="clue-src">ID card, line two</span> NGUYEN.', fact:'Last name: Nguyen', src:'the ID card' },
+    { text:'<span class="clue-src">Prior-auth request</span> A. Nguyen. That&rsquo;s everything that came in.', fact:'Request: A. Nguyen', src:'the prior-auth request' },
   ],
   verdict(picked, target){
     if(picked.id === target.id) return { cls:'match', kicker:'Correct match&hellip; somehow',
       title:'You picked Alexandra. That&rsquo;s her.',
-      body:'&ldquo;Alex&rdquo; is what she goes by. Alexandra is what the system says. Nothing on the board told you which name the chart was under, and you guessed well. Systems face this pair thousands of times a day, and they don&rsquo;t get to be lucky.' };
+      body:'&ldquo;Alex&rdquo; is what she goes by. Alexandra is what the enrollment file says. Nothing on the board told you which record was hers, and you guessed well. Systems face this pair thousands of times a day, and they don&rsquo;t get to be lucky.' };
     if(picked.twin) return { cls:'wrong', kicker:'The other Alex',
       title:'Same birthday. Same last name. Different human.',
-      body:'The person at your desk is Alexandra Nguyen: Alex to everyone who knows her, Alexandra to the system. You just pulled up a stranger&rsquo;s chart instead. Merge these two records and it gets worse: she inherits his medications, allergies, and history.' };
+      body:'The member on the line is Alexandra Nguyen: Alex to everyone who knows her, Alexandra to the plan. You just opened a stranger&rsquo;s file instead. Merge these two records and it gets worse: she inherits his claims, his medications, his history.' };
     return { cls:'wrong', kicker:'Wrong person',
       title:`That&rsquo;s ${picked.name}. A different human.`,
       body:'The card said Nguyen, born June 2, 1975. Close only counts in horseshoes, not in health records.' };
@@ -772,15 +775,16 @@ const CASES = [
   twist:{
     type:'twins',
     title:'One goes by Alex. One is named Alex.',
-    lede:'Two records, same birthday, same last name, same system, and nothing on the board to tell you which chart belongs to the person at your desk. Records this close are one careless merge away from becoming one, and that&rsquo;s an overlay: the most dangerous identity error in healthcare.',
-    labels:{ good:'Your patient &middot; legal name Alexandra', bad:'A different person &middot; also goes by Alex' },
+    lede:'Two records, same birthday, same last name, same plan, and nothing on the board to tell you which one belongs to the member on the line. Records this close are one careless merge away from becoming one, and that&rsquo;s an overlay: the most dangerous identity error in healthcare.',
+    labels:{ good:'Your member &middot; legal name Alexandra', bad:'A different person &middot; also goes by Alex' },
     after:'A match engine that guesses is a coin flip at scale. Rhapsody Identity scores every match, links what belongs together, keeps apart what doesn&rsquo;t, and flags a pair like this for human review with the evidence attached.',
   },
 },
 /* ---------- Case: Bill — right name everywhere, birthday keyed wrong ---------- */
 {
   key:'bill',
-  mission:'A man is on the phone about a medication refill. He says Bill. His license says Bill. This one really should be easy.',
+  setting:'At a digital health platform',
+  mission:'A member of your virtual pharmacy program is on the phone about a refill. Your platform aggregates his records from clinics and systems across the country. He says Bill. His license says Bill. This one really should be easy.',
   cards:[
     { id:1,  name:'Bill Achebe-Cross', dob:'10/08/1961', src:'Northside Internal Medicine', mrn:'NIM-40733',
       ring:'r-teal',  av:{...BILL, hair:'#241B14', style:'short', gray:true, glasses:true, attire:'collar', shirt:'#0B2C47'}, target:true,
@@ -836,6 +840,7 @@ const CASES = [
 /* ---------- Case: Sam — one person, two charts in the same system ---------- */
 {
   key:'sam',
+  setting:'At a primary care clinic',
   mission:'A patient of your own clinic is calling about his lab results. He&rsquo;s right there in the system. What could go wrong?',
   cards:[
     { id:1,  name:'Sam Whitaker', dob:'03/15/1990', src:'Riverbend Primary Care', mrn:'RB-10476',
@@ -912,7 +917,7 @@ function clues(){ return cur().clues; }
 
 /* ---------- intro ---------- */
 function renderIntro(){
-  $('missionK').textContent = 'Your mission';
+  $('missionK').innerHTML = `Your mission &middot; ${cur().setting}`;
   $('missionP1').innerHTML = cur().mission;
   const picks = cards().filter(c=>!c.target && !c.twin && !c.fragment).slice(0,5);
   const previewCards = [cards().find(c=>c.target), ...picks].slice(0,6);
@@ -943,7 +948,7 @@ function buildBoard(){
           <span class="meta">
             <span class="row"><span>DOB</span><span><b>${c.dob}</b></span></span>
             <span class="row"><span>SRC</span><span>${c.src}</span></span>
-            <span class="row"><span>MRN</span><span>${c.mrn}</span></span>
+            <span class="row"><span>${cur().idLabel || 'MRN'}</span><span>${c.mrn}</span></span>
           </span>
         </span>
         <span class="face back"><span class="stamp">Ruled out</span></span>
