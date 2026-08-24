@@ -673,6 +673,7 @@ const CASES = [
 /* ---------- Case: Jayme — typos, transpositions, a maiden name ---------- */
 {
   key:'jayme',
+  aliases:['hie','exchange','public-health','publichealth'],
   setting:'At the regional health information exchange',
   mission:'A referral just landed at the exchange: one patient, with records from every corner of the region. The phone connection was what it was, the fax is doing its best. Piece together who she is from what actually comes in.',
   cards:[
@@ -730,6 +731,7 @@ const CASES = [
 /* ---------- Case: Alex — the chart says Alexis, the patient says Alex ---------- */
 {
   key:'alex',
+  aliases:['payer','payers','health-plan','healthplan','plan','alexandra'],
   coin:true,
   setting:'At a health plan',
   idLabel:'ID',
@@ -783,6 +785,7 @@ const CASES = [
 /* ---------- Case: Bill — right name everywhere, birthday keyed wrong ---------- */
 {
   key:'bill',
+  aliases:['healthtech','health-tech','digital-health','digitalhealth','vendor','tech'],
   setting:'At a digital health platform',
   mission:'A member of your virtual pharmacy program is on the phone about a refill. Your platform aggregates his records from clinics and systems across the country. He says Bill. His license says Bill. This one really should be easy.',
   cards:[
@@ -840,6 +843,7 @@ const CASES = [
 /* ---------- Case: Sam — one person, two charts in the same system ---------- */
 {
   key:'sam',
+  aliases:['provider','providers','health-system','healthsystem','clinic','hospital'],
   setting:'At a primary care clinic',
   mission:'A patient of your own clinic is calling about his lab results. He&rsquo;s right there in the system. What could go wrong?',
   cards:[
@@ -900,11 +904,23 @@ const $ = (id) => document.getElementById(id);
 const state = { caseIdx:0, clue:0, down:new Set(), startedAt:0, result:null, history:[] };
 
 function pickCase(){
-  const forced = parseInt(new URLSearchParams(location.search).get('case'), 10);
-  if(forced >= 1 && forced <= CASES.length) return forced - 1;
+  // Campaign deep links: ?segment=provider|hie|payer|healthtech (or a case
+  // name, or a legacy 1-4 number); #payer works where query strings don't.
+  const q = new URLSearchParams(location.search);
+  let want = (q.get('segment') || q.get('case') || '').toLowerCase();
+  if(!want && location.hash){
+    const h = location.hash.slice(1).toLowerCase();
+    want = h.startsWith('segment=') ? h.slice(8) : h;
+  }
+  if(want){
+    const num = parseInt(want, 10);
+    if(num >= 1 && num <= CASES.length) return num - 1;
+    const i = CASES.findIndex(c => c.key === want || (c.aliases || []).includes(want));
+    if(i >= 0) return i;
+  }
   let n;
   try{ n = parseInt(localStorage.getItem('pmg-next-case'), 10); }catch(e){}
-  if(!(n >= 0)) n = 0; // everyone starts with Jayme, then the deck plays in order
+  if(!(n >= 0)) n = 0;
   return n % CASES.length;
 }
 function advanceCase(){
