@@ -933,7 +933,7 @@ function clues(){ return cur().clues; }
 
 /* ---------- intro ---------- */
 function renderIntro(){
-  $('missionK').innerHTML = `Your mission &middot; ${cur().setting}`;
+  $('missionK').textContent = 'Your mission';
   $('missionP1').innerHTML = cur().mission;
   const picks = cards().filter(c=>!c.target && !c.twin && !c.fragment).slice(0,5);
   const previewCards = [cards().find(c=>c.target), ...picks].slice(0,6);
