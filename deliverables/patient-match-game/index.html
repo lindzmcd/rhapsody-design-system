@@ -385,7 +385,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 
 <!-- ================= INTRO ================= -->
 <section class="screen active" id="screen-intro" aria-labelledby="introTitle">
-  <div class="eyebrow">Rhapsody Game Room</div>
+  <div class="eyebrow">Arcade Rhapsody</div>
   <h1 id="introTitle">Who&rsquo;s the Right Patient?</h1>
   <p class="lede">It plays like the classic face-flipping board game, but with worse data and higher stakes. One patient needs you. Nine records could be them. Flip down the records that don&rsquo;t fit the clues until only one is left.</p>
 
@@ -710,7 +710,7 @@ const CASES = [
     { text:'<span class="clue-src">Referral letter</span> Jayme Reyes-Calloway. That&rsquo;s everything that came in.', fact:'Name on referral: Jayme Reyes-Calloway', src:'the referral letter' },
   ],
   verdict(picked, target){
-    if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
+    if(picked.id === target.id) return { cls:'match', kicker:'Magnifico!',
       title:'You found her. The referral was right.',
       body:'Jayme Reyes-Calloway, Lakeside Family Medicine. Every fact checked out. Now keep scrolling: three records you just ruled out have something to tell you.' };
     if(picked.fragment) return { cls:'fragment', kicker:'Good instinct, wrong record',
@@ -762,7 +762,7 @@ const CASES = [
     { text:'<span class="clue-src">Prior-auth request</span> A. Nguyen. That&rsquo;s everything that came in.', fact:'Request: A. Nguyen', src:'the prior-auth request' },
   ],
   verdict(picked, target){
-    if(picked.id === target.id) return { cls:'match', kicker:'Correct match&hellip; somehow',
+    if(picked.id === target.id) return { cls:'match', kicker:'Magnifico&hellip; somehow',
       title:'You picked Alexandra. That&rsquo;s her.',
       body:'&ldquo;Alex&rdquo; is what she goes by. Alexandra is what the enrollment file says. Nothing on the board told you which record was hers, and you guessed well. Systems face this pair thousands of times a day, and they don&rsquo;t get to be lucky.' };
     if(picked.twin) return { cls:'wrong', kicker:'The other Alex',
@@ -820,7 +820,7 @@ const CASES = [
     { text:'<span class="clue-src">End of call</span> That&rsquo;s everything that came in.', fact:null, src:'the end of the call' },
   ],
   verdict(picked, target){
-    if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
+    if(picked.id === target.id) return { cls:'match', kicker:'Magnifico!',
       title:'You found him. Right name, right birthday.',
       body:'Bill Achebe-Cross, born October 8, 1961, Northside Internal Medicine. Clean elimination, right answer. Before you celebrate: keep scrolling. Three of the records you ruled out want a word.' };
     if(picked.fragment) return { cls:'fragment', kicker:'Good instinct, wrong record',
@@ -870,7 +870,7 @@ const CASES = [
     { text:'<span class="clue-src">End of call</span> That&rsquo;s everything he gave you.', fact:null, src:'the end of the call' },
   ],
   verdict(picked, target){
-    if(picked.id === target.id) return { cls:'match', kicker:'Correct match',
+    if(picked.id === target.id) return { cls:'match', kicker:'Magnifico!',
       title:'You found the right Sam.',
       body:'Sam Whitaker, born March 15, 1990. Textbook elimination. One problem: the chart you just matched has more than one Sam inside it. Keep scrolling.' };
     if(picked.twin) return { cls:'wrong', kicker:'Close. Very close to home.',
