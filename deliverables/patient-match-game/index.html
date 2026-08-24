@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Patient Matching Game</title>
+<title>Find the Right Patient</title>
 <meta name="description" content="A Guess Who style game about fragmented patient identity, from Rhapsody.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -137,8 +137,8 @@ p{max-width:66ch;}
 .standing b{color:#fff;font-weight:500;}
 .hud-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
 
-/* Board */
-.board{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+/* Board: 9 records, 3x3 */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:880px;margin:0 auto;}
 .slot{perspective:900px;}
 .record{
   position:relative;width:100%;aspect-ratio:5/6;border:none;background:transparent;cursor:pointer;
@@ -337,7 +337,6 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 #demoThanks p{font-size:15px;color:#EAF3FD;}
 
 @media(max-width:900px){
-  .board{grid-template-columns:repeat(3,1fr);}
   .intro-grid{grid-template-columns:1fr;}
   .intro-preview{max-width:420px;}
   .pillars,.costgrid,.resgrid{grid-template-columns:1fr;}
@@ -346,12 +345,17 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 }
 @media(max-width:560px){
   .shell{padding:20px 16px 48px;}
-  .board{grid-template-columns:repeat(2,1fr);gap:10px;}
   .hud{grid-template-columns:1fr;position:static;}
   .hud-actions{align-items:flex-start;}
   .pitch{padding:28px 22px;}
-  .record .ring{width:62px;height:62px;}
-  .record .nm{font-size:12.5px;}
+  /* Compact rows: avatar left, name + record fields right */
+  .board{grid-template-columns:1fr;gap:10px;}
+  .record{aspect-ratio:auto;height:92px;}
+  .face{flex-direction:row;align-items:center;}
+  .face.front{padding:10px 14px;gap:13px;}
+  .record .ring{width:60px;height:60px;margin:0;}
+  .record .nm{flex:1;justify-content:flex-start;text-align:left;font-size:14.5px;padding:0;}
+  .record .meta{margin:0;width:46%;max-width:190px;border-top:none;padding:0;flex:none;}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;}
@@ -381,8 +385,8 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 <!-- ================= INTRO ================= -->
 <section class="screen active" id="screen-intro" aria-labelledby="introTitle">
   <div class="eyebrow">Rhapsody Arcade &middot; Vol. 1</div>
-  <h1 id="introTitle">The Patient Matching Game</h1>
-  <p class="lede">It plays like the classic face-flipping board game, but with worse data and higher stakes. One patient, twelve records, and clues that arrive the way they do in real life: over the phone, by fax, off a card.</p>
+  <h1 id="introTitle">Find the Right Patient</h1>
+  <p class="lede">It plays like the classic face-flipping board game, but with worse data and higher stakes. One patient needs you. Nine records could be them. Flip down the records that don&rsquo;t fit the clues until only one is left.</p>
 
   <div class="intro-grid">
     <div>
@@ -391,9 +395,9 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
         <p id="missionP1"></p>
       </div>
       <ol class="steps">
-        <li><span class="n">1</span><span>Read the clue. It&rsquo;s exactly what came in, nothing more. How to interpret it is your call.</span></li>
-        <li><span class="n">2</span><span>Tap records to flip them down. Tap again to un-flip if you get cold feet.</span></li>
-        <li><span class="n">3</span><span>Down to one card? Lock in your match and face the reveal.</span></li>
+        <li><span class="n">1</span><span>Read the clue. It&rsquo;s exactly what came in, from a phone call, a fax, a card. How to interpret it is your call.</span></li>
+        <li><span class="n">2</span><span>Tap any record that doesn&rsquo;t fit to flip it face-down. Tap again to bring it back.</span></li>
+        <li><span class="n">3</span><span>One record left? Lock it in and find out if it&rsquo;s the right person.</span></li>
       </ol>
       <button class="btn primary" id="startBtn">Deal the board</button>
     </div>
@@ -406,8 +410,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
   <div class="hud">
     <div>
       <div class="clue-label">
-        <span class="round-tag" id="caseTag">Case 1 of 4</span>
-        <span class="k" id="clueCount">Clue 1 of 4</span>
+        <span class="k" id="clueCount">Clue 1</span>
         <div class="clue-dots" id="clueDots"></div>
       </div>
       <p id="clueText" aria-live="polite"></p>
@@ -415,7 +418,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
       <p class="pick-nudge" id="pickNudge" hidden>Two records left and no more clues coming. If both still look possible, that&rsquo;s the game working: pick one and lock it in.</p>
     </div>
     <div class="hud-actions">
-      <span class="standing" aria-live="polite"><b id="standCount">12</b> records standing</span>
+      <span class="standing" aria-live="polite"><b id="standCount">9</b> records standing<span id="tapHint"> &middot; tap one to rule it out</span></span>
       <div class="hud-buttons">
         <button class="btn ghost" id="nextClueBtn">Next clue</button>
         <button class="btn lock" id="lockBtn" disabled>Lock in your match</button>
@@ -520,11 +523,10 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
           <p>Every match is scored, explained, and traceable, so your team can stand behind every link.</p>
         </div>
       </div>
-      <p class="lede" id="allPlayed" hidden>That&rsquo;s all four cases. You&rsquo;ve now seen every way identity data quietly breaks, and you had clues, a calm moment, and unlimited undos. See what matching looks like when it&rsquo;s engineered instead of guessed.</p>
       <div class="cta-row">
-        <a class="btn primary" id="demoCta" href="https://rhapsody.health" target="_blank" rel="noopener">Explore Rhapsody Identity</a>
-        <button class="btn ghost" id="replayBtn">Play the next case</button>
-        <span class="case-progress" id="caseProgress"></span>
+        <a class="btn primary" id="demoCta" data-mode="demo" href="https://rhapsody.health" target="_blank" rel="noopener">Request a demo</a>
+        <button class="btn ghost" id="replayBtn">Play another case</button>
+        <a class="linkish" href="https://rhapsody.health" target="_blank" rel="noopener">Explore Rhapsody Identity</a>
       </div>
     </div>
   </div>
@@ -669,7 +671,7 @@ const CASES = [
 /* ---------- Case: Jayme — typos, transpositions, a maiden name ---------- */
 {
   key:'jayme',
-  mission:'Someone called to reschedule a follow-up. The phone connection was what it was, the fax is doing its best, and twelve records are on the board. Piece together who she is from what actually comes in.',
+  mission:'Someone called to reschedule a follow-up. The phone connection was what it was, the fax is doing its best, and nine records are on the board. Piece together who she is from what actually comes in.',
   cards:[
     { id:1,  name:'Jayme Reyes-Calloway', dob:'04/12/1988', src:'Lakeside Family Medicine', mrn:'LFM-30291',
       ring:'r-teal',  av:{...JAYME, hair:'#3B2A21', style:'long', attire:'collar', shirt:'#0B2C47'}, target:true,
@@ -696,12 +698,6 @@ const CASES = [
       ring:'r-orange', av:{skin:'#8C5A34', hair:'#120D09', style:'curly', shirt:'#B4D8FF'} },
     { id:9,  name:'Gemma Colwell', dob:'04/12/1988', src:'Pharmacy system', mrn:'RX-90142',
       ring:'r-teal',  av:{skin:'#F6D7B8', hair:'#E9B64C', style:'waves', shirt:'#7340E4'} },
-    { id:10, name:'Maya Jerez', dob:'01/15/1990', src:'Telehealth app', mrn:'TH-33069',
-      ring:'r-blue',  av:{skin:'#A86A3D', hair:'#1C1410', style:'bob',  shirt:'#FA7E2E'} },
-    { id:11, name:'Mamie Cole', dob:'11/02/1984', src:'Legacy EHR archive', mrn:'OLD-04117',
-      ring:'r-orange', av:{skin:'#F1C6A0', hair:'#9BA1A8', style:'bun', glasses:true, mouth:'flat', shirt:'#0B2C47'} },
-    { id:12, name:'Renee Calloway', dob:'05/17/1986', src:'Referral fax', mrn:'FAX-61203',
-      ring:'r-purple', av:{skin:'#D99C6B', hair:'#4A2C1D', style:'waves', shirt:'#23C5BF'} },
   ],
   pron:{s:'she', o:'her'},
   clues:[
@@ -732,7 +728,7 @@ const CASES = [
 {
   key:'alex',
   coin:true,
-  mission:'Someone checked in this morning for a follow-up. You get what the front desk gets: what they say, what their card says, what the referral says. Twelve records are on the board.',
+  mission:'Someone checked in this morning for a follow-up. You get what the front desk gets: what they say, what their card says, what the referral says. Nine records are on the board.',
   cards:[
     { id:1,  name:'Alexandra Nguyen', dob:'06/02/1975', src:'Mercy Point EHR', mrn:'MP-51120',
       ring:'r-teal',  av:{skin:'#E8B488', hair:'#171310', style:'bob', attire:'collar', shirt:'#0B2C47'}, target:true, twin:'good' },
@@ -744,19 +740,13 @@ const CASES = [
       ring:'r-orange', av:{skin:'#EDBE9A', hair:'#120D09', style:'waves', shirt:'#FA7E2E'} },
     { id:5,  name:'Alan Nguyen', dob:'02/06/1975', src:'Billing system', mrn:'BIL-77140',
       ring:'r-blue',  av:{skin:'#D99C6B', hair:'#241B14', style:'curly', mouth:'flat', shirt:'#0B2C47'} },
-    { id:6,  name:'Sandra Nguyen', dob:'03/22/1968', src:'Telehealth app', mrn:'TH-90233',
-      ring:'r-teal',  av:{skin:'#B57B4F', hair:'#1C1410', style:'bun', shirt:'#B4D8FF'} },
-    { id:7,  name:'Alex Ngo', dob:'06/02/1985', src:'Radiology PACS', mrn:'RAD-28806',
+    { id:6,  name:'Alex Ngo', dob:'06/02/1985', src:'Radiology PACS', mrn:'RAD-28806',
       ring:'r-orange', av:{skin:'#F6D7B8', hair:'#5B4632', style:'short', glasses:true, shirt:'#23C5BF'} },
-    { id:8,  name:'Minh Nguyen', dob:'11/30/1975', src:'Mercy Point EHR', mrn:'MP-61452',
-      ring:'r-purple', av:{skin:'#E8B488', hair:'#6E6E72', style:'buzz', gray:true, mouth:'flat', shirt:'#7340E4'} },
-    { id:9,  name:'Alexa Nunez', dob:'06/12/1975', src:'Referral fax', mrn:'FAX-18754',
+    { id:7,  name:'Alexa Nunez', dob:'06/12/1975', src:'Referral fax', mrn:'FAX-18754',
       ring:'r-blue',  av:{skin:'#C98A5E', hair:'#3B2A21', style:'long', shirt:'#1A81F4'} },
-    { id:10, name:'Lex Nguyen', dob:'07/02/1975', src:'Legacy EHR archive', mrn:'OLD-95511',
+    { id:8,  name:'Lex Nguyen', dob:'07/02/1975', src:'Legacy EHR archive', mrn:'OLD-95511',
       ring:'r-teal',  av:{skin:'#A86A3D', hair:'#171310', style:'curly', beard:true, shirt:'#0B2C47'} },
-    { id:11, name:'Alondra Wynn', dob:'06/02/1971', src:'Patient portal signup', mrn:'PP-30268',
-      ring:'r-orange', av:{skin:'#F1C6A0', hair:'#B0552E', style:'ponytail', shirt:'#FA7E2E'} },
-    { id:12, name:'Anh Nguyen', dob:'09/09/1982', src:'UrgentCare One kiosk', mrn:'UC1-77019',
+    { id:9,  name:'Anh Nguyen', dob:'09/09/1982', src:'UrgentCare One kiosk', mrn:'UC1-77019',
       ring:'r-purple', av:{skin:'#8C5A34', hair:'#120D09', style:'bob', shirt:'#23C5BF'} },
   ],
   pron:{s:'she', o:'her'},
@@ -815,12 +805,6 @@ const CASES = [
       ring:'r-purple', av:{skin:'#D99C6B', hair:'#3B2A21', style:'long', shirt:'#7340E4'} },
     { id:9,  name:'Liam Cross', dob:'07/19/1964', src:'Referral fax', mrn:'FAX-20931',
       ring:'r-blue',  av:{skin:'#EDBE9A', hair:'#5B4632', style:'waves', beard:true, shirt:'#1A81F4'} },
-    { id:10, name:'Walter Cross', dob:'12/03/1955', src:'Mercy Point EHR', mrn:'MP-84420',
-      ring:'r-teal',  av:{skin:'#B57B4F', hair:'#6E6E72', style:'buzz', gray:true, mouth:'flat', shirt:'#B4D8FF'} },
-    { id:11, name:'Bea Crossman', dob:'09/27/1969', src:'Patient portal signup', mrn:'PP-44182',
-      ring:'r-orange', av:{skin:'#F6D7B8', hair:'#B0552E', style:'bun', glasses:true, shirt:'#23C5BF'} },
-    { id:12, name:'Billie Crosse', dob:'03/03/1962', src:'UrgentCare One kiosk', mrn:'UC1-90577',
-      ring:'r-purple', av:{skin:'#A86A3D', hair:'#1C1410', style:'curly', shirt:'#0B2C47'} },
   ],
   pron:{s:'he', o:'him'},
   clues:[
@@ -860,22 +844,16 @@ const CASES = [
       ring:'r-purple', av:{skin:'#F2C9A4', hair:'#B0552E', style:'long', shirt:'#7340E4'} },
     { id:4,  name:'Sam Whitfield', dob:'03/15/1990', src:'Pharmacy system', mrn:'RX-71066',
       ring:'r-orange', av:{skin:'#B57B4F', hair:'#120D09', style:'buzz', beard:true, shirt:'#FA7E2E'} },
-    { id:5,  name:'Pam Whitaker', dob:'08/21/1988', src:'Billing system', mrn:'BIL-93341',
-      ring:'r-blue',  av:{skin:'#F6D7B8', hair:'#E9B64C', style:'bob', shirt:'#1A81F4'} },
-    { id:6,  name:'Sam Wheatley', dob:'03/05/1990', src:'Lab results feed', mrn:'LAB-25708',
+    { id:5,  name:'Sam Wheatley', dob:'03/05/1990', src:'Lab results feed', mrn:'LAB-25708',
       ring:'r-teal',  av:{skin:'#D99C6B', hair:'#4A2C1D', style:'curly', shirt:'#0B2C47'} },
-    { id:7,  name:'Sammy Whitaker', dob:'06/28/2001', src:'Telehealth app', mrn:'TH-48812',
+    { id:6,  name:'Sammy Whitaker', dob:'06/28/2001', src:'Telehealth app', mrn:'TH-48812',
       ring:'r-orange', av:{skin:'#F1C6A0', hair:'#5B4632', style:'curly', shirt:'#B4D8FF'} },
-    { id:8,  name:'Stan Whitaker', dob:'03/15/1960', src:'Legacy EHR archive', mrn:'OLD-33625',
-      ring:'r-purple', av:{skin:'#EDBE9A', hair:'#9BA1A8', style:'short', gray:true, glasses:true, mouth:'flat', shirt:'#0B2C47'} },
-    { id:9,  name:'Sam Whittaker', dob:'03/15/1990', src:'Radiology PACS', mrn:'RAD-59117',
+    { id:7,  name:'Sam Whittaker', dob:'03/15/1990', src:'Radiology PACS', mrn:'RAD-59117',
       ring:'r-blue',  av:{skin:'#A86A3D', hair:'#1C1410', style:'waves', beard:true, shirt:'#23C5BF'} },
-    { id:10, name:'Sean Whitaker', dob:'07/15/1990', src:'Mercy Point EHR', mrn:'MP-61452',
+    { id:8,  name:'Sean Whitaker', dob:'07/15/1990', src:'Mercy Point EHR', mrn:'MP-61452',
       ring:'r-teal',  av:{skin:'#C98A5E', hair:'#241B14', style:'waves', shirt:'#1A81F4'} },
-    { id:11, name:'Sam Whitacre', dob:'08/02/1990', src:'Referral fax', mrn:'FAX-73359',
+    { id:9,  name:'Sam Whitacre', dob:'08/02/1990', src:'Referral fax', mrn:'FAX-73359',
       ring:'r-orange', av:{skin:'#8C5A34', hair:'#120D09', style:'short', beard:true, shirt:'#FA7E2E'} },
-    { id:12, name:'Tam Whitaker', dob:'03/15/1985', src:'UrgentCare One kiosk', mrn:'UC1-15037',
-      ring:'r-purple', av:{skin:'#E8B488', hair:'#171310', style:'ponytail', shirt:'#7340E4'} },
   ],
   pron:{s:'he', o:'him'},
   clues:[
@@ -984,6 +962,7 @@ $('board').addEventListener('click', e => {
 function updateHud(){
   const standing = cards().length - state.down.size;
   $('standCount').textContent = standing;
+  $('tapHint').hidden = state.history.length > 0;
   $('lockBtn').disabled = standing !== 1;
   $('lockBtn').textContent = standing === 1 ? 'Lock in your match' : `Lock in your match (${standing} left)`;
   const twinCards = cards().filter(c=>c.twin);
@@ -996,7 +975,6 @@ function updateHud(){
 
 /* ---------- clues ---------- */
 function renderClue(){
-  $('caseTag').textContent = `Case ${state.caseIdx+1} of ${CASES.length}`;
   $('clueCount').textContent = `Clue ${state.clue+1}`;
   $('clueText').innerHTML = clues()[state.clue].text;
   const facts = clues().slice(0, state.clue+1).map(c=>c.fact).filter(Boolean);
@@ -1087,10 +1065,6 @@ $('lockBtn').addEventListener('click', () => {
   state.revealTarget = target;
   const v = cur().verdict(picked, target);
   state.result = { ms, found: picked.id === target.id, coin: !!cur().coin };
-  try{
-    const p = JSON.parse(localStorage.getItem('pmg-played-v1')) || [];
-    if(!p.includes(cur().key)){ p.push(cur().key); localStorage.setItem('pmg-played-v1', JSON.stringify(p)); }
-  }catch(e){}
 
   const box = $('verdictBox');
   box.className = 'verdict ' + v.cls;
@@ -1184,16 +1158,6 @@ async function showFinal(){
     : `${Math.max(1, Math.round(hoursPerDay * 60))} minutes`;
   $('napkin').innerHTML =
     `Napkin math: say a team resolves just 200 uncertain matches a day by hand. At your pace, that&rsquo;s <b>${spent}</b> of skilled staff time, every day, spent playing this game. And the time is the cheap part: the expensive part is getting one wrong.`;
-
-  // Progress across the deck; stronger CTA once every case is played.
-  let played = [];
-  try{ played = JSON.parse(localStorage.getItem('pmg-played-v1')) || []; }catch(e){}
-  const done = played.length >= CASES.length;
-  $('caseProgress').textContent = done ? 'All 4 cases played' : `You’ve played ${played.length} of ${CASES.length} cases`;
-  $('allPlayed').hidden = !done;
-  $('demoCta').textContent = done ? 'Request a demo' : 'Explore Rhapsody Identity';
-  $('demoCta').dataset.mode = done ? 'demo' : 'link';
-  $('replayBtn').textContent = done ? 'Play again from the top' : 'Play the next case';
 
   const entry = { n:1, totalMs:r.ms, found:r.found?1:0, coinN:r.coin?1:0, coinWon:(r.coin&&r.found)?1:0 };
   const agg = await recordPlay(entry);
