@@ -72,6 +72,11 @@ p{max-width:66ch;}
 .btn.lock{background:var(--teal);color:var(--navy);}
 .btn.lock:hover:not(:disabled){background:#3BD6D0;transform:translateY(-1px);box-shadow:0 8px 24px rgba(35,197,191,.35);}
 .btn:disabled{opacity:.38;cursor:not-allowed;}
+.linkish, a.linkish:link, a.linkish:visited{
+  background:none;border:none;color:var(--lblue);font-family:var(--sans);font-size:14px;
+  cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+}
+.linkish:hover, a.linkish:hover{color:#fff;}
 
 /* Screens */
 .screen{display:none;}
@@ -346,8 +351,13 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 }
 @media(max-width:560px){
   .shell{padding:20px 16px 48px;}
-  .hud{grid-template-columns:1fr;position:static;}
-  .hud-actions{align-items:flex-start;}
+  .hud{grid-template-columns:1fr;position:static;padding:18px 18px;}
+  .standing{white-space:normal;line-height:1.5;}
+  .hud-actions{align-items:stretch;gap:8px;}
+  .hud-buttons{flex-direction:column;align-items:stretch;width:100%;}
+  .hud-buttons .btn{width:100%;justify-content:center;}
+  .compare{flex-direction:column;align-items:center;gap:14px;}
+  .compare .col{width:100%;display:flex;flex-direction:column;align-items:center;}
   .pitch{padding:28px 22px;}
   /* Compact rows: avatar left, name + record fields right */
   .board{grid-template-columns:1fr;gap:10px;}
@@ -463,7 +473,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
   <div id="finalBlock">
     <div class="results">
       <div class="eyebrow">One more thing</div>
-      <h2>We were timing you. Sorry.</h2>
+      <h2>We were timing you.</h2>
       <p class="lede">In the real world, this puzzle has a clock on it: a patient on the phone, a bed to assign, a med to give.</p>
       <div class="resgrid">
         <div class="rescard">
@@ -569,6 +579,14 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
    clothing) is free to change, like real photos years apart.
    ============================================================ */
 function avatar(o){
+  if(o.silhouette){
+    // "No photo on file" placeholder
+    return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="100" height="100" fill="#DDE4EB"/>
+      <circle cx="50" cy="40" r="16" fill="#9AA6B2"/>
+      <path d="M20 100 C24 76 36 68 50 68 C64 68 76 76 80 100 Z" fill="#9AA6B2"/>
+    </svg>`;
+  }
   const s = o.skin, h = o.hair, sh = o.shirt;
   const bw = o.build || 1; // face/body width: <1 slimmer, >1 fuller
   let hair = '';
@@ -844,13 +862,14 @@ const CASES = [
 {
   key:'sam',
   aliases:['provider','providers','health-system','healthsystem','clinic','hospital'],
+  coin:true,
   setting:'At a primary care clinic',
   mission:'A patient of your own clinic is calling about his lab results. He&rsquo;s right there in the system. What could go wrong?',
   cards:[
     { id:1,  name:'Sam Whitaker', dob:'03/15/1990', src:'Riverbend Primary Care', mrn:'RB-10476',
       ring:'r-teal',  av:{...SAM, hair:'#2B211A', style:'waves', build:.95, shirt:'#23C5BF'}, target:true, twin:'good' },
-    { id:2,  name:'Sam Whitaker', dob:'03/15/1962', src:'Riverbend Primary Care', mrn:'RB-00427',
-      ring:'r-blue',  av:{skin:'#EDBE9A', hair:'#6E6E72', style:'short', gray:true, glasses:true, mouth:'flat', shirt:'#1A81F4'}, twin:'bad' },
+    { id:2,  name:'Sam Whitaker', dob:'03/15/1990', src:'Riverbend Primary Care', mrn:'RB-00427',
+      ring:'r-blue',  av:{silhouette:true}, twin:'bad' },
     { id:3,  name:'Samantha Whitaker', dob:'03/15/1992', src:'Patient portal signup', mrn:'PP-61930',
       ring:'r-purple', av:{skin:'#F2C9A4', hair:'#B0552E', style:'long', shirt:'#7340E4'} },
     { id:4,  name:'Sam Whitfield', dob:'03/15/1990', src:'Pharmacy system', mrn:'RX-71066',
@@ -874,22 +893,22 @@ const CASES = [
     { text:'<span class="clue-src">End of call</span> That&rsquo;s everything he gave you.', fact:null, src:'the end of the call' },
   ],
   verdict(picked, target){
-    if(picked.id === target.id) return { cls:'match', kicker:'Magnifico!',
-      title:'You found the right Sam.',
-      body:'Sam Whitaker, born March 15, 1990. Textbook elimination. One problem: the chart you just matched has more than one Sam inside it. Keep scrolling.' };
-    if(picked.twin) return { cls:'wrong', kicker:'Close. Very close to home.',
-      title:'That&rsquo;s his father.',
-      body:'Also Sam Whitaker, also a patient here, born in 1962. Same name at the same front desk for thirty years. Busy humans skim past the birth date every day, and now you know how it feels.' };
+    if(picked.id === target.id) return { cls:'match', kicker:'A coin flip, and you won it',
+      title:'Two charts said Sam, born 1990. You picked his.',
+      body:'The other chart said exactly the same thing: same name, same birthday, same clinic. It isn&rsquo;t his. Keep scrolling to meet it.' };
+    if(picked.twin) return { cls:'wrong', kicker:'The overwritten chart',
+      title:'That chart says Sam. It used to say his father.',
+      body:'Last year a rushed phone-in update pasted the son&rsquo;s demographics over his father&rsquo;s chart: name, birthday, everything. The history inside still belongs to a man born in 1962, and you just read it as his son&rsquo;s.' };
     return { cls:'wrong', kicker:'Wrong person',
       title:`That&rsquo;s ${picked.name}. A different human.`,
       body:'The caller said Sam Whitaker, born March 15, 1990. Close, but this is somebody else&rsquo;s chart, and that&rsquo;s a whole other incident report.' };
   },
   twist:{
     type:'twins',
-    title:'Two Sams. One clinic. One tangled chart.',
-    lede:'His father is a patient at the same clinic: same name, same address. For years the front desk grabbed whichever Sam came up first, so the son&rsquo;s chart now carries his dad&rsquo;s knee replacement, a statin he&rsquo;s never taken, and a decade of visits that aren&rsquo;t his.',
-    labels:{ good:'Your patient &middot; Sam, born 1990', bad:'His father &middot; Sam, born 1962' },
-    after:'Untangling that by hand means guessing which history belongs to whom. Rhapsody Identity keeps every source record linked and traceable, so each fact in a chart points back to the system, and the person, it came from.',
+    title:'One of those charts was his father&rsquo;s.',
+    lede:'Father and son, same name, patients at the same clinic. During a rushed demographic update, the front desk opened the wrong Sam and saved the son&rsquo;s details over the father&rsquo;s chart. Now two charts claim to be Sam born in 1990: one is his, and one is a 62-year-old&rsquo;s history wearing his son&rsquo;s name. That&rsquo;s an overlay, and it really happens.',
+    labels:{ good:'His real chart &middot; RB-10476', bad:'His father&rsquo;s chart &middot; overwritten last year' },
+    after:'Fixing an overlay by hand means untangling two lives line by line. Rhapsody Identity flags an impossible pair like this, keeps every fact traceable to its source, and puts the father&rsquo;s history back where it belongs.',
   },
 },
 ];
@@ -1057,9 +1076,16 @@ function buildQuips(picked, target){
     if(ev.clue >= 2 && (!hold || ev.clue > hold.ev.clue)) hold = {c, ev};
   });
   if(hold){
-    quips.push(hold.ev.clue === clues().length - 1
-      ? `You held on to ${hold.c.name} all the way to the end. Real systems do that too: records like that just sit there, unresolved.`
-      : `You let go of ${hold.c.name} only when ${srcName(hold.ev.clue)} came in. Real systems often never get a clue that good.`);
+    const src = srcName(hold.ev.clue);
+    let line;
+    if(hold.ev.clue === clues().length - 1){
+      line = `You held on to ${hold.c.name} all the way to the end. Real systems do that too: records like that just sit there, unresolved.`;
+    } else if(src.includes('birth')){
+      line = `You let go of ${hold.c.name} only when the date of birth came in. It&rsquo;s the first thing anyone asks for, and it&rsquo;s also the field most often keyed wrong.`;
+    } else {
+      line = `You let go of ${hold.c.name} only when ${src} came in. Real systems often never get a clue that good.`;
+    }
+    quips.push(line);
   }
   // 3. The same-person record they ruled out earliest, with total confidence.
   const frags = cards().filter(c => c.fragment && endedDown(c.id));
@@ -1238,7 +1264,7 @@ function renderStats({scope, stats}){
   }
   $('statRows').innerHTML = rows.map(([k,v])=>`<li><span>${k}</span><span class="v">${v}</span></li>`).join('');
   const coinNote = stats.coinN > 1
-    ? ' The coin-flip case ends in two records that both fit the paperwork: if the win rate hovers around 50%, that&rsquo;s the point.'
+    ? ' Coin-flip cases end in two records that both fit the paperwork: if the win rate hovers around 50%, that&rsquo;s the point.'
     : '';
   $('scopeNote').innerHTML = (scope === 'shared'
     ? 'Tallied across everyone who&rsquo;s played this page and could save to it. No names, no identifiers: just times and outcomes.'
