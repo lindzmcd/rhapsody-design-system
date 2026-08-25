@@ -1,0 +1,168 @@
+/* ============================================================
+   Rhapsody — Gravity Forms "card" treatment for WordPress
+   Matches the approved demo-form design: white card, soft
+   shadow, blue top accent, centered heading, pill CTA.
+
+   HOW TO USE
+   1. In the block editor, select the OUTER form block (the one
+      with the "Form code snippet" / gravityform shortcode).
+   2. Sidebar > Advanced > Additional CSS class(es) > add:
+         rh-form-card
+   3. Paste this whole file into Appearance > Customize >
+      Additional CSS (or your child theme stylesheet).
+
+   Brand tokens (web): Rhapsody Blue #1A81F4, Navy #0B2C47,
+   Light Gray #D9DFE6, Dark Gray #7E858C, Poppins.
+   ============================================================ */
+
+/* ---- The card itself ---------------------------------------- */
+.rh-form-card{
+  position:relative;
+  max-width:720px;              /* widens the form — adjust to taste */
+  margin-left:auto;
+  margin-right:auto;
+  background:#fff;
+  border-radius:20px;
+  padding:48px 56px 40px;
+  box-shadow:
+    0 6px 16px rgba(11,44,71,.06),
+    0 24px 60px rgba(11,44,71,.14);
+  overflow:hidden;              /* keeps the blue bar inside the radius */
+}
+
+/* Blue accent bar across the top of the card */
+.rh-form-card::before{
+  content:"";
+  position:absolute;
+  top:0; left:14px; right:14px;
+  height:6px;
+  background:#1A81F4;
+  border-radius:0 0 4px 4px;
+}
+
+/* ---- Heading + blurb (the block's own header fields) -------- */
+.rh-form-card h1,
+.rh-form-card h2,
+.rh-form-card h3{
+  text-align:center;
+  color:#0B2C47;
+  font-family:'Poppins',Arial,sans-serif;
+  font-weight:500;
+  margin-bottom:8px;
+}
+.rh-form-card > p,
+.rh-form-card .blurb{
+  text-align:center;
+  color:#0B2C47;
+  margin-bottom:28px;
+}
+
+/* ---- Gravity Forms fields (2.5+ "gravity-theme" markup) ----- */
+.rh-form-card .gform_wrapper .gfield_label{
+  color:#0B2C47;
+  font-family:'Poppins',Arial,sans-serif;
+  font-weight:600;
+  font-size:15px;
+  margin-bottom:6px;
+}
+.rh-form-card .gform_wrapper .gfield_required{
+  color:#0B2C47;               /* keep the * navy like the mock */
+}
+
+.rh-form-card .gform_wrapper input[type="text"],
+.rh-form-card .gform_wrapper input[type="email"],
+.rh-form-card .gform_wrapper input[type="tel"],
+.rh-form-card .gform_wrapper input[type="url"],
+.rh-form-card .gform_wrapper input[type="number"],
+.rh-form-card .gform_wrapper select,
+.rh-form-card .gform_wrapper textarea{
+  width:100%;
+  padding:13px 16px;
+  font-family:'Poppins',Arial,sans-serif;
+  font-size:15px;
+  color:#0B2C47;
+  background:#fff;
+  border:1px solid #D9DFE6;
+  border-radius:8px;
+  box-shadow:none;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+.rh-form-card .gform_wrapper input::placeholder,
+.rh-form-card .gform_wrapper textarea::placeholder{
+  color:#7E858C;
+}
+.rh-form-card .gform_wrapper input:focus,
+.rh-form-card .gform_wrapper select:focus,
+.rh-form-card .gform_wrapper textarea:focus{
+  outline:none;
+  border-color:#1A81F4;
+  box-shadow:0 0 0 3px rgba(26,129,244,.15);
+}
+
+/* Space between rows */
+.rh-form-card .gform_wrapper .gform_fields{
+  grid-row-gap:22px;           /* GF 2.5+ uses CSS grid */
+}
+
+/* Helper / instruction text under a field (e.g. business email note) */
+.rh-form-card .gform_wrapper .gfield_description{
+  font-size:13px;
+  color:#C85A2E;               /* muted orange, matches the mock */
+  padding-top:6px;
+}
+/* Validation errors */
+.rh-form-card .gform_wrapper .gfield_validation_message,
+.rh-form-card .gform_wrapper .validation_message{
+  font-size:13px;
+  color:#C0392B;
+  background:transparent;
+  border:none;
+  padding:6px 0 0;
+}
+
+/* ---- Submit button: full-width blue pill -------------------- */
+.rh-form-card .gform_wrapper .gform_footer{
+  margin-top:10px;
+  padding:0;
+}
+.rh-form-card .gform_wrapper .gform_footer input[type="submit"],
+.rh-form-card .gform_wrapper .gform_footer .gform_button{
+  width:100%;
+  padding:15px 32px;
+  font-family:'Poppins',Arial,sans-serif;
+  font-size:17px;
+  font-weight:500;
+  color:#fff;
+  background:#1A81F4;
+  border:none;
+  border-radius:999px;         /* pill */
+  cursor:pointer;
+  transition:background .15s ease;
+}
+.rh-form-card .gform_wrapper .gform_footer input[type="submit"]:hover,
+.rh-form-card .gform_wrapper .gform_footer .gform_button:hover{
+  background:#0B2C47;
+}
+
+/* ---- Privacy footnote below the button ---------------------- */
+/* Works if the note is a GF HTML field, or a paragraph after the form */
+.rh-form-card .gform_wrapper .gfield_html,
+.rh-form-card .rh-form-footnote{
+  font-size:13px;
+  line-height:1.6;
+  text-align:center;
+  color:#0B2C47;
+}
+.rh-form-card .gform_wrapper .gfield_html a,
+.rh-form-card .rh-form-footnote a{
+  color:#1A81F4;
+  text-decoration:underline;
+}
+
+/* ---- Mobile -------------------------------------------------- */
+@media (max-width:680px){
+  .rh-form-card{
+    padding:32px 22px 28px;
+    border-radius:16px;
+  }
+}
