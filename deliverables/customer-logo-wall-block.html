@@ -1,0 +1,49 @@
+<!-- ============================================================
+  Rhapsody | Customer logo wall (bracket treatment)
+  Paste this entire block into a Custom HTML block in the CMS.
+
+  HOW TO EDIT
+  * Set a logo:     open the logo in the Media Library, copy its
+                    File URL, paste it into src="...". Put the
+                    customer's name in alt="...".
+  * Add a logo:     copy any one <li class="rh-lw__item">...</li>
+                    line and paste it anywhere inside the list.
+  * Remove a logo:  delete its <li>...</li> line.
+                    Bracket colors reassign themselves automatically
+                    (blue > teal > purple, repeating) so no two
+                    side-by-side logos ever match.
+  * Resize:         change the one --rh-arc value below. Every
+                    bracket in the wall shares that frame size and
+                    each logo auto-fits inside it, per brand
+                    guideline (logo height is capped at about
+                    two-thirds of the arc height).
+
+  LOGO FILE CHECKLIST (from the brand guide)
+  current official version / permission confirmed / high resolution /
+  transparent background (PNG or SVG, never a white box)
+============================================================= -->
+<div class="rh-lw">
+  <style>
+    .rh-lw{--rh-arc:120px;}
+    .rh-lw__list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:44px 30px;margin:0;padding:0;list-style:none;}
+    .rh-lw__item{list-style:none;margin:0;padding:0;flex:0 0 var(--rh-arc);width:var(--rh-arc);height:var(--rh-arc);display:flex;align-items:center;justify-content:center;background-repeat:no-repeat;background-position:center;background-size:contain;}
+    .rh-lw__item img{display:block;width:auto;height:auto;max-width:50%;max-height:42%;}
+    .rh-lw__item:nth-child(3n+1){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/></svg>");}
+    .rh-lw__item:nth-child(3n+2){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/></svg>");}
+    .rh-lw__item:nth-child(3n){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/></svg>");}
+    @media (max-width:640px){.rh-lw{--rh-arc:92px;}.rh-lw__list{gap:28px 18px;}}
+  </style>
+  <ul class="rh-lw__list">
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+    <li class="rh-lw__item"><img src="PASTE-LOGO-URL-HERE" alt="Customer name" loading="lazy"></li>
+  </ul>
+</div>
