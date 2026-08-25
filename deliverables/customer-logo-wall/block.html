@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer logo wall block</title>
+</head>
+<body style="margin:0;background:#fff;padding:40px 20px;">
+
+<!-- ============================================================
+     Rhapsody customer logo wall (bracket treatment)
+     Paste everything between CUT HERE markers into a Custom HTML
+     block on the website.
+
+     To change how many logos show: copy or delete whole
+     <li>...</li> lines. Bracket colors (blue / teal / purple)
+     cycle automatically, so no recoloring is needed.
+
+     For each logo: replace LOGO-URL with the image URL from the
+     media library (select the logo, copy its file URL) and write
+     the customer's name in the alt text. Use transparent-background
+     files per the brand guide.
+
+     To make the whole wall bigger or smaller, change the one
+     --rh-tile value.
+     ============================================================ -->
+
+<!-- ==================== CUT HERE (start) ==================== -->
+<div class="rh-logo-wall">
+  <ul>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+    <li><img src="LOGO-URL" alt="Customer name"></li>
+  </ul>
+</div>
+<style>
+.rh-logo-wall{--rh-tile:150px;}
+.rh-logo-wall ul{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:26px 34px;
+}
+.rh-logo-wall li{
+  width:var(--rh-tile);height:var(--rh-tile);flex:none;
+  display:flex;align-items:center;justify-content:center;
+  background-repeat:no-repeat;background-size:contain;background-position:center;
+}
+/* Logo sized to the arcs per the brand guide: never wider than the
+   gap between brackets, centered, nothing touching. */
+.rh-logo-wall li img{max-width:38%;max-height:42%;width:auto;height:auto;display:block;}
+/* Bracket arcs: fixed frame, round caps, one color per logo,
+   cycling blue -> teal -> purple so no two neighbors match. */
+.rh-logo-wall li:nth-child(3n+1){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M 27.1 17.2 A 40 40 0 0 0 27.1 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M 72.9 17.2 A 40 40 0 0 1 72.9 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");}
+.rh-logo-wall li:nth-child(3n+2){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M 27.1 17.2 A 40 40 0 0 0 27.1 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M 72.9 17.2 A 40 40 0 0 1 72.9 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");}
+.rh-logo-wall li:nth-child(3n){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M 27.1 17.2 A 40 40 0 0 0 27.1 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M 72.9 17.2 A 40 40 0 0 1 72.9 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");}
+@media (max-width:600px){
+  .rh-logo-wall{--rh-tile:104px;}
+  .rh-logo-wall ul{gap:12px 14px;}
+}
+</style>
+<!-- ==================== CUT HERE (end) ==================== -->
+
+<script>
+// Preview only (not part of the block): fill the LOGO-URL slots with a
+// gray placeholder wordmark so the file renders like the mock.
+const ph = "data:image/svg+xml," + encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'>" +
+  "<text x='60' y='26' text-anchor='middle' font-family='monospace' font-size='13' fill='#7E858C'>CUSTOMER</text>" +
+  "<text x='60' y='44' text-anchor='middle' font-family='monospace' font-size='13' fill='#7E858C'>LOGO</text></svg>");
+document.querySelectorAll('.rh-logo-wall img').forEach(img => { if(img.getAttribute('src') === 'LOGO-URL') img.src = ph; });
+</script>
+</body>
+</html>
