@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every integration standard. One modern engine. | Rhapsody</title>
+<meta name="description" content="Rhapsody gives your healthcare integration team one engine instead of a patchwork of tools. Best in KLAS for 17 consecutive years. Get a demo.">
+
+<!-- Fonts: Poppins (brand primary) + IBM Plex Mono (eyebrows / labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   Rhapsody demo landing page
+   Built from the approved revised mockup (Claude Design).
+   Tokens follow the Rhapsody design system (tokens.css).
+   NOTE: the site's CMS header and footer wrap this page —
+   this file is the page body only.
+   ============================================================ */
+:root{
+  --blue:#1A81F4;
+  --blue-hover:#0B6BD4;
+  --navy:#0B2C47;
+  --navy-deep:#071F33;
+  --navy-mid:#123C5E;
+  --lblue:#B4D8FF;
+  --teal:#23C5BF;
+  --purple:#7340E4;
+  --orange:#FA7E2E;
+  --dgray:#7E858C;
+  --lgray:#D9DFE6;
+  --grayblue:#E8EDF2;
+  --tile:#E9EEF4;
+  --error:#B3261E;
+  --mono:"IBM Plex Mono", monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Poppins',Arial,sans-serif;
+  font-weight:400;
+  color:var(--navy);
+  line-height:1.6;
+  background:#fff;
+}
+img{max-width:100%;display:block;}
+a{color:var(--blue);}
+
+.container{max-width:1160px;margin:0 auto;}
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:13px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--blue);
+}
+.eyebrow--light{color:var(--lblue);}
+
+/* Buttons / CTAs — pill shape per design system */
+.btn{
+  display:inline-block;
+  font-family:'Poppins',Arial,sans-serif;
+  font-size:17px;
+  font-weight:500;
+  color:#fff;
+  background:var(--blue);
+  border:none;
+  border-radius:999px;
+  padding:16px 34px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:background 0.15s ease;
+}
+.btn:hover{background:var(--blue-hover);color:#fff;}
+.btn:focus-visible{outline:3px solid var(--lblue);outline-offset:2px;}
+
+/* Checkmark bullet rows */
+.check-list{display:flex;flex-direction:column;gap:22px;max-width:560px;}
+.check-item{display:flex;gap:14px;align-items:flex-start;}
+.check-item .tick{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;flex:none;margin-top:3px;
+}
+.check-item .txt{font-size:17px;line-height:1.55;color:var(--navy);}
+.check-item strong{font-weight:500;color:var(--navy);}
+
+/* ============ Hero ============ */
+.hero{background:#fff;padding:104px 64px 88px;}
+.hero-grid{
+  display:grid;
+  grid-template-columns:600px 1fr;
+  gap:88px;
+  align-items:start;
+  max-width:1360px;
+  margin:0 auto;
+}
+.hero h1{
+  font-weight:400;
+  font-size:56px;
+  line-height:1.08;
+  letter-spacing:-0.015em;
+  margin:24px 0 20px;
+  max-width:580px;
+  text-wrap:balance;
+}
+.hero .sub{font-size:20px;line-height:1.6;color:var(--navy);margin:0 0 44px;max-width:500px;}
+
+.proof-bar{
+  border-top:1px solid var(--lgray);
+  border-bottom:1px solid var(--lgray);
+  padding:24px 0;
+  display:flex;gap:26px;align-items:center;
+  max-width:560px;margin-bottom:44px;
+}
+.proof-bar .badge{
+  width:64px;height:64px;border-radius:50%;
+  background:var(--tile);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;letter-spacing:0.08em;
+  color:var(--dgray);flex:none;
+}
+.proof-bar .lines{display:flex;flex-direction:column;gap:8px;}
+.proof-bar .headline{font-size:17px;font-weight:500;}
+.proof-bar .subline{font-size:14px;color:var(--navy);}
+.proof-bar .stats{display:flex;gap:22px;font-size:14px;color:var(--navy);flex-wrap:wrap;}
+.proof-bar .stats strong{font-weight:500;color:var(--navy);}
+
+/* Demo form card */
+.form-card{
+  border:1px solid var(--lgray);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 18px 40px rgba(11,44,71,0.08);
+}
+.form-card .top-rule{height:4px;background:var(--blue);}
+.form-card .inner{padding:40px 38px 36px;}
+.form-card h2{font-weight:400;font-size:28px;line-height:1.2;margin:0 0 10px;text-align:center;}
+.form-card .lede{font-size:15px;color:var(--navy);margin:0 0 32px;text-align:center;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px;}
+.form-card label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:500;}
+.form-card label.full{margin-bottom:16px;}
+.form-card label.email{margin-bottom:8px;}
+.form-card input{
+  font-family:'Poppins',Arial,sans-serif;
+  font-size:15px;
+  padding:12px 14px;
+  border:1px solid #A9B4C0;
+  border-radius:8px;
+  color:var(--navy);
+  outline:none;
+  width:100%;
+}
+.form-card input:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(26,129,244,0.28);
+}
+.form-card .hint{font-size:13px;color:var(--error);margin-bottom:20px;}
+.form-card .submit{width:100%;font-size:17px;padding:16px 24px;}
+.form-card .privacy{font-size:12.5px;line-height:1.6;color:var(--navy);margin:18px 0 0;text-align:center;}
+.form-card .privacy a{color:var(--blue);text-decoration:underline;}
+
+/* ============ Logo wall ============ */
+.logo-wall{background:#fff;padding:8px 64px 88px;}
+.logo-wall .lead{font-size:17px;font-weight:500;text-align:center;margin-bottom:40px;}
+.logo-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  row-gap:18px;column-gap:14px;
+}
+.logo-slot{position:relative;height:92px;display:flex;align-items:center;justify-content:center;}
+.logo-slot svg{position:absolute;inset:0;width:100%;height:100%;}
+.logo-slot .lab{
+  position:relative;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.06em;
+  color:var(--dgray);text-align:center;line-height:1.35;
+}
+/* Row 1: six slots; row 2: five slots centred in the gaps above */
+.logo-slot:nth-child(1){grid-column:1 / span 2;}
+.logo-slot:nth-child(2){grid-column:3 / span 2;}
+.logo-slot:nth-child(3){grid-column:5 / span 2;}
+.logo-slot:nth-child(4){grid-column:7 / span 2;}
+.logo-slot:nth-child(5){grid-column:9 / span 2;}
+.logo-slot:nth-child(6){grid-column:11 / span 2;}
+.logo-slot:nth-child(7){grid-column:2 / span 2;}
+.logo-slot:nth-child(8){grid-column:4 / span 2;}
+.logo-slot:nth-child(9){grid-column:6 / span 2;}
+.logo-slot:nth-child(10){grid-column:8 / span 2;}
+.logo-slot:nth-child(11){grid-column:10 / span 2;}
+
+/* ============ Problem section ============ */
+.problem{background:var(--grayblue);padding:76px 40px;}
+.problem h2{
+  font-weight:400;font-size:42px;line-height:1.18;
+  text-align:center;margin:0 0 44px;text-wrap:balance;
+}
+.diagram-card{background:#fff;border-radius:16px;padding:34px 28px 26px;margin-bottom:34px;overflow-x:auto;}
+.diagram{position:relative;width:1040px;height:240px;margin:0 auto;}
+.diagram > svg{position:absolute;left:0;top:0;}
+.node{position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.node .disc{
+  width:56px;height:56px;border-radius:50%;
+  background:#fff;box-shadow:0 3px 10px rgba(11,44,71,0.10);
+  color:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+}
+.node .disc svg{width:24px;height:24px;}
+.node .tag{font-family:var(--mono);font-size:12px;letter-spacing:0.08em;color:var(--navy);}
+.diagram-caption{font-size:15px;color:var(--navy);text-align:center;margin-top:14px;}
+
+/* Mobile variant of the diagram: vertical stack, one meandering connector */
+.diagram-mobile{display:none;position:relative;max-width:280px;margin:0 auto;}
+.diagram-mobile > svg{position:absolute;left:0;top:0;width:100%;height:100%;}
+.diagram-mobile .col{position:relative;display:flex;flex-direction:column;gap:44px;}
+.diagram-mobile .node{position:relative;}
+.diagram-mobile .node:nth-child(odd){align-self:flex-start;margin-left:24px;}
+.diagram-mobile .node:nth-child(even){align-self:flex-end;margin-right:24px;}
+
+.problem-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
+.problem-card{
+  background:#fff;border-radius:16px;padding:28px 30px;
+  display:flex;flex-direction:column;gap:16px;
+}
+.problem-card .chips{display:flex;gap:10px;}
+.problem-card .chip{
+  width:46px;height:46px;border-radius:10px;background:var(--tile);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;color:var(--navy);
+}
+.problem-card .chip--navy{background:var(--navy);color:#fff;}
+.problem-card .chip--blue{background:var(--blue);color:#fff;}
+.problem-card h3{font-weight:400;font-size:24px;line-height:1.25;margin:0;text-wrap:balance;}
+.problem-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:16px;color:var(--navy);}
+.problem-card li{display:flex;gap:10px;}
+.problem-card li::before{content:"•";color:var(--blue);}
+
+.problem-close{text-align:center;margin-top:52px;}
+.problem-close .wordmark{display:inline-block;width:340px;max-width:80vw;}
+.problem-close .line{font-weight:400;font-size:32px;margin-top:26px;}
+
+/* ============ Results ============ */
+.results{background:#fff;padding:76px 40px 0;}
+.results .head{text-align:center;margin-bottom:40px;}
+.results h2{font-weight:400;font-size:42px;margin:14px 0 0;text-wrap:balance;}
+.stat-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;margin-bottom:28px;}
+.stat-card{
+  background:#fff;border:1px solid var(--lgray);border-radius:16px;
+  padding:30px;display:flex;flex-direction:column;gap:14px;
+}
+.stat-card .num{display:flex;align-items:baseline;gap:10px;}
+.stat-card .num .big{font-size:52px;font-weight:400;line-height:1;}
+.stat-card .num .unit{font-size:17px;color:var(--navy);}
+.stat-card .desc{font-size:16px;line-height:1.55;color:var(--navy);flex:1 1 auto;}
+.stat-card .logo-line{
+  height:40px;display:flex;align-items:center;
+  font-family:var(--mono);font-size:11px;letter-spacing:0.06em;color:var(--dgray);
+}
+.big-quote{background:var(--grayblue);border-radius:16px;padding:34px 40px;}
+.big-quote .row{display:flex;gap:26px;align-items:flex-start;}
+.big-quote .mark{font-weight:400;font-size:132px;line-height:0.72;color:var(--blue);flex:none;}
+.big-quote blockquote{
+  margin:0 0 20px;font-weight:400;font-size:26px;line-height:1.4;
+  color:var(--blue);max-width:880px;
+}
+.big-quote .attr{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--navy);
+}
+.results .cta-row{text-align:center;margin:44px 0 0;}
+.results .rule{height:1px;background:var(--lgray);margin:64px 0 0;}
+
+/* ============ Account manager ============ */
+.account{background:#fff;padding:64px 40px 72px;}
+.account .inner{max-width:900px;margin:0 auto;text-align:center;}
+.account h2{font-weight:400;font-size:40px;line-height:1.2;margin:14px 0 16px;text-wrap:balance;}
+.account .lede{font-size:18px;line-height:1.6;color:var(--navy);margin:0 auto 34px;max-width:720px;text-wrap:balance;}
+.cert-row{display:flex;gap:40px;align-items:center;justify-content:center;margin-bottom:40px;flex-wrap:wrap;}
+.cert-row .cert{
+  height:56px;display:flex;align-items:center;
+  font-family:var(--mono);font-size:11px;letter-spacing:0.06em;color:var(--dgray);
+}
+.uptime-bar{
+  background:var(--navy);border-radius:14px;padding:26px 34px;
+  display:flex;align-items:center;gap:28px;text-align:left;
+}
+.uptime-bar .big{font-size:46px;font-weight:400;line-height:1;color:#fff;}
+.uptime-bar .div{width:1px;align-self:stretch;background:var(--teal);}
+.uptime-bar .l1{font-size:18px;color:#fff;}
+.uptime-bar .l2{font-size:15px;color:var(--lblue);margin-top:4px;}
+
+/* ============ Testimonials (navy) ============ */
+.testimonials{background:var(--navy);padding:76px 40px;}
+.testimonials .head{text-align:center;margin-bottom:44px;}
+.testimonials h2{font-weight:400;font-size:42px;margin:14px 0 12px;color:#fff;text-wrap:balance;}
+.testimonials .lede{font-size:18px;color:var(--lgray);margin:0 auto;max-width:640px;text-wrap:balance;}
+.t-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:stretch;}
+.t-card{
+  background:#fff;border-radius:16px;padding:34px 32px 30px;
+  display:flex;flex-direction:column;gap:22px;
+}
+.t-card .logo-line{
+  height:40px;display:flex;align-items:center;
+  font-family:var(--mono);font-size:11px;letter-spacing:0.06em;color:var(--dgray);
+}
+.t-card .story{font-size:16px;line-height:1.7;color:var(--navy);margin:0;}
+.t-card blockquote{
+  margin:0;padding-left:20px;border-left:3px solid var(--blue);
+  font-size:17px;line-height:1.6;font-weight:500;color:var(--navy);
+}
+.t-card .foot{margin-top:auto;padding-top:6px;display:flex;flex-direction:column;gap:16px;}
+.t-card .name{font-size:15px;font-weight:500;}
+.t-card .role{font-size:14px;color:var(--navy);margin-top:3px;}
+.t-card .meta{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border-top:1px solid var(--lgray);padding-top:16px;
+}
+.t-card .tag{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.1em;
+  color:#0F5FBD;background:#E7F1FE;border-radius:20px;padding:5px 11px;
+}
+.t-card .story-link{font-size:14px;font-weight:500;color:var(--blue);text-decoration:none;}
+.t-card .story-link:hover{text-decoration:underline;}
+
+.carousel-nav{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:40px;}
+.carousel-nav[hidden]{display:none;}
+.carousel-nav .arrow{
+  width:48px;height:48px;border-radius:999px;background:transparent;
+  border:1.5px solid var(--lblue);color:#fff;font-size:20px;cursor:pointer;
+}
+.carousel-nav .arrow:hover{background:var(--blue);border-color:var(--blue);}
+.carousel-nav .arrow:focus-visible{outline:3px solid var(--lblue);outline-offset:2px;}
+.carousel-nav .arrow[disabled]{opacity:0.35;cursor:default;}
+.carousel-nav .arrow[disabled]:hover{background:transparent;border-color:var(--lblue);}
+.carousel-nav .dots{display:flex;gap:12px;align-items:center;}
+.carousel-nav .dot{
+  width:44px;height:44px;border:none;background:transparent;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.carousel-nav .dot:focus-visible{outline:3px solid var(--lblue);}
+.carousel-nav .dot span{width:10px;height:10px;border-radius:50%;background:#5C7B96;display:block;}
+.carousel-nav .dot[aria-current="true"] span{background:#fff;}
+
+/* ============ Rhapsody Axon section ============ */
+.axon{background:var(--grayblue);padding:88px 64px;position:relative;overflow:hidden;}
+.axon .grid{
+  position:relative;z-index:1;max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;
+}
+.axon-visual{position:relative;padding-bottom:150px;}
+.builder-card{
+  width:520px;max-width:100%;
+  background:var(--navy);border-radius:14px;overflow:hidden;
+  box-shadow:0 20px 44px rgba(11,44,71,0.22);
+}
+.builder-card .bar{
+  padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.12);
+  font-family:var(--mono);font-size:12px;color:var(--lblue);
+}
+.builder-card .route{padding:24px 20px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+.builder-card .step{font-size:14px;color:#fff;background:var(--navy-mid);border-radius:8px;padding:12px 14px;}
+.builder-card .step--active{background:var(--blue);}
+.builder-card .arrow{color:var(--lblue);}
+.builder-card .preview{padding:0 20px 24px;}
+.builder-card .preview .lab{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.1em;
+  color:var(--lblue);margin-bottom:10px;
+}
+.builder-card .code{
+  background:var(--navy-deep);border-radius:8px;padding:16px 18px;
+  font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--lblue);
+}
+.suggest-card{
+  background:var(--navy-mid);border-radius:14px;padding:24px 26px;
+  box-shadow:0 24px 48px rgba(11,44,71,0.30);
+  width:470px;max-width:100%;
+  position:absolute;right:0;bottom:0;z-index:2;
+}
+.suggest-card .title{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.suggest-card .star{
+  width:26px;height:26px;border-radius:8px;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:13px;
+}
+.suggest-card .t{font-size:16px;font-weight:500;color:#fff;}
+.suggest-card .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;}
+.suggest-card .k{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.1em;
+  color:var(--lblue);margin-bottom:8px;
+}
+.suggest-card .v{font-size:15px;line-height:1.6;color:#fff;}
+.suggest-card .actions{display:flex;gap:12px;flex-wrap:wrap;}
+.suggest-card .approve{
+  font-family:'Poppins',Arial,sans-serif;font-size:14px;font-weight:500;color:#fff;
+  background:var(--blue);border:none;border-radius:999px;padding:11px 24px;cursor:pointer;
+}
+.suggest-card .approve:hover{background:var(--blue-hover);}
+.suggest-card .review{
+  font-family:'Poppins',Arial,sans-serif;font-size:14px;font-weight:500;color:#fff;
+  background:transparent;border:1.5px solid var(--lblue);border-radius:999px;
+  padding:11px 24px;cursor:pointer;
+}
+.suggest-card .review:hover{border-color:#fff;}
+.axon-copy h2{font-weight:400;font-size:40px;line-height:1.18;margin:16px 0 28px;text-wrap:balance;}
+
+/* ============ Closing CTA ============ */
+.teal-rule{height:3px;background:var(--teal);}
+.closing{background:#fff;padding:76px 40px 88px;}
+.closing .inner{max-width:820px;margin:0 auto;text-align:center;}
+.closing h2{font-weight:400;font-size:44px;line-height:1.15;margin:0 0 18px;text-wrap:balance;}
+.closing p{font-size:18px;line-height:1.6;color:var(--navy);margin:0 0 32px;text-wrap:balance;}
+
+/* ============ Responsive ============ */
+@media (max-width:1180px){
+  .hero{padding:72px 32px 64px;}
+  .hero-grid{grid-template-columns:1fr;gap:56px;max-width:640px;}
+  .form-card{max-width:560px;}
+  .axon .grid{grid-template-columns:1fr;gap:56px;max-width:640px;}
+}
+@media (max-width:900px){
+  .hero h1{font-size:42px;}
+  .problem h2,.results h2,.testimonials h2{font-size:34px;}
+  .account h2,.closing h2{font-size:32px;}
+  .stat-cards{grid-template-columns:1fr;}
+  .problem-cards{grid-template-columns:1fr;}
+  /* Carousel: one card per view below 900px (handled by JS via this flag) */
+  .t-cards{grid-template-columns:1fr;}
+  .t-card[data-offview="true"]{display:none;}
+  .logo-wall{padding:8px 24px 64px;}
+  .logo-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .logo-slot{width:140px;flex:none;}
+  .axon{padding:64px 24px;}
+  .axon-visual{padding-bottom:0;display:flex;flex-direction:column;gap:24px;}
+  .suggest-card{position:static;}
+  .big-quote .mark{display:none;}
+}
+@media (min-width:901px){
+  /* Desktop: all three cards in view; per-card paging flag doesn't apply */
+  .t-card[data-offview="true"]{display:flex;}
+}
+@media (max-width:768px){
+  /* Data-flow diagram rebuilds as a vertical stack — never scaled down */
+  .diagram,.diagram + .sr-note{display:none;}
+  .diagram-mobile{display:block;}
+  .hero{padding:56px 20px 48px;}
+  .problem,.results,.testimonials,.account,.closing,.axon{padding-left:20px;padding-right:20px;}
+  .form-row{grid-template-columns:1fr;}
+  .form-card .inner{padding:32px 24px 28px;}
+  .hero h1{font-size:36px;}
+  .proof-bar{flex-direction:column;align-items:flex-start;}
+  .uptime-bar{flex-direction:column;align-items:flex-start;gap:14px;}
+  .uptime-bar .div{display:none;}
+  .big-quote{padding:26px 24px;}
+  .big-quote blockquote{font-size:21px;}
+  .problem-close .line{font-size:24px;}
+}
+
+/* Visually hidden (screen-reader only) */
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Built for every standard — HL7, FHIR, DICOM &amp; more</p>
+      <h1>Every integration standard. One modern engine.</h1>
+      <p class="sub">Rhapsody gives your team one engine instead of a patchwork of tools.</p>
+
+      <div class="proof-bar">
+        <div class="badge" aria-hidden="true">KLAS</div>
+        <div class="lines">
+          <div class="headline">Best in KLAS, 17 consecutive years</div>
+          <div class="subline">Nearly 30 years serving healthcare integration</div>
+          <div class="stats">
+            <span><strong>1,900+</strong> teams</span>
+            <span><strong>32</strong> countries</span>
+            <span><strong>63</strong> NPS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-list">
+        <div class="check-item">
+          <span class="tick" aria-hidden="true">✓</span>
+          <span class="txt"><strong>No guesswork</strong> — every message handled the same way, not interpreted differently by every vendor.</span>
+        </div>
+        <div class="check-item">
+          <span class="tick" aria-hidden="true">✓</span>
+          <span class="txt"><strong>Point-and-click interfaces</strong> — build integrations visually, without hand-coding.</span>
+        </div>
+        <div class="check-item">
+          <span class="tick" aria-hidden="true">✓</span>
+          <span class="txt"><strong>Full message visibility</strong> — track and troubleshoot every transaction from one dashboard.</span>
+        </div>
+        <div class="check-item">
+          <span class="tick" aria-hidden="true">✓</span>
+          <span class="txt"><strong>Compliance, offloaded</strong> — automated controls, backed by support that knows the requirements.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card" id="demo">
+      <div class="top-rule" aria-hidden="true"></div>
+      <div class="inner">
+        <h2>Get a demo</h2>
+        <p class="lede">See how Rhapsody fits your integration environment.</p>
+        <!-- Wire action/handler to the marketing form endpoint (Pardot). -->
+        <form method="post" action="#">
+          <div class="form-row">
+            <label for="f-first">First name*
+              <input id="f-first" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required>
+            </label>
+            <label for="f-last">Last name*
+              <input id="f-last" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required>
+            </label>
+          </div>
+          <label class="full" for="f-org">Healthcare system or organization*
+            <input id="f-org" name="organization" type="text" placeholder="Healthcare system or organization" autocomplete="organization" required>
+          </label>
+          <label class="email" for="f-email">Business email*
+            <input id="f-email" name="email" type="email" placeholder="Business email address" autocomplete="email" required>
+          </label>
+          <p class="hint">Enter a work email address so we can route your demo.</p>
+          <button type="submit" class="btn submit">Request a demo</button>
+        </form>
+        <p class="privacy">Rhapsody is committed to protecting your privacy. From time to time, we would like to contact you about our products and services. By submitting this form you are agreeing to our <a href="#privacy">Privacy Policy</a> and you may unsubscribe at any time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOGO WALL ================= -->
+<!-- Eleven logos: six, then five centred in the gaps above. One arc size,
+     alternating blue / teal / purple, no two neighbours alike; drop each
+     customer logo in single-colour at 2/3 arc height. -->
+<section class="logo-wall">
+  <div class="container">
+    <p class="lead">Join 1,900+ companies already growing with Rhapsody</p>
+    <div class="logo-grid">
+      <!-- Replace each .lab span with the customer's single-colour logo image -->
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#23C5BF" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#23C5BF" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#23C5BF" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#23C5BF" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#23C5BF" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#23C5BF" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#7340E4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+      <div class="logo-slot"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 27.1 17.2 A 40 40 0 0 0 27.1 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/><path d="M 72.9 17.2 A 40 40 0 0 1 72.9 82.8" fill="none" stroke="#1A81F4" stroke-width="5" stroke-linecap="round"/></svg><span class="lab">CUSTOMER<br>LOGO</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="problem">
+  <div class="container">
+    <h2>You're integrating fast, but every standard speaks a different language</h2>
+
+    <div class="diagram-card">
+      <!-- Desktop diagram: wandering paths kept exactly as designed —
+           the point is that no consistent route exists. -->
+      <div class="diagram" role="img" aria-label="Diagram: data wandering between EHR, lab, pharmacy, billing, and vendor systems with no consistent path">
+        <svg width="1040" height="240" viewBox="0 0 1040 240" aria-hidden="true">
+          <path d="M 128 62 C 236 66 262 130 366 130" fill="none" stroke="#B4D8FF" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M 100 88 C 116 168 250 186 356 152" fill="none" stroke="#C4CDD6" stroke-width="2.4" stroke-dasharray="3 9" stroke-linecap="round"/>
+          <path d="M 422 122 C 520 96 566 60 646 60" fill="none" stroke="#B4D8FF" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M 570 158 C 570 116 562 96 596 78" fill="none" stroke="#C4CDD6" stroke-width="2.4" stroke-dasharray="3 9" stroke-linecap="round"/>
+          <path d="M 702 54 C 762 34 800 34 856 44" fill="none" stroke="#B4D8FF" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M 894 66 C 934 96 916 128 872 118" fill="none" stroke="#C4CDD6" stroke-width="2.4" stroke-dasharray="3 9" stroke-linecap="round"/>
+        </svg>
+        <div class="node" style="left:72px;top:34px">
+          <span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+          <span class="tag">EHR</span>
+        </div>
+        <div class="node" style="left:366px;top:102px">
+          <span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v5L5.2 17.8A2 2 0 0 0 7 21h10a2 2 0 0 0 1.8-3.2L14 8V3"/></svg></span>
+          <span class="tag">LAB</span>
+        </div>
+        <div class="node" style="left:542px;top:150px">
+          <span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 3.5 3.5 10.5a4.95 4.95 0 0 0 7 7l7-7a4.95 4.95 0 0 0-7-7Z"/><path d="M7 7l10 10"/></svg></span>
+          <span class="tag">PHARMACY</span>
+        </div>
+        <div class="node" style="left:646px;top:32px">
+          <span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M16.5 7.5A3.5 3.5 0 0 0 13 5h-2a3 3 0 0 0 0 6h2a3 3 0 0 1 0 6h-2a3.5 3.5 0 0 1-3.5-2.5"/></svg></span>
+          <span class="tag">BILLING</span>
+        </div>
+        <div class="node" style="left:856px;top:18px">
+          <span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="6" rx="1.5"/><rect x="3.5" y="14" width="17" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span>
+          <span class="tag">VENDOR</span>
+        </div>
+      </div>
+
+      <!-- Mobile diagram (below 768px): vertical stack, one meandering connector -->
+      <div class="diagram-mobile" aria-hidden="true">
+        <svg viewBox="0 0 280 560" preserveAspectRatio="none">
+          <path d="M 62 60 C 200 90 240 130 218 168 C 196 206 90 200 62 268 C 40 320 200 320 218 380 C 232 428 100 430 62 488"
+                fill="none" stroke="#B4D8FF" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="col">
+          <div class="node"><span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><span class="tag">EHR</span></div>
+          <div class="node"><span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v5L5.2 17.8A2 2 0 0 0 7 21h10a2 2 0 0 0 1.8-3.2L14 8V3"/></svg></span><span class="tag">LAB</span></div>
+          <div class="node"><span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 3.5 3.5 10.5a4.95 4.95 0 0 0 7 7l7-7a4.95 4.95 0 0 0-7-7Z"/><path d="M7 7l10 10"/></svg></span><span class="tag">PHARMACY</span></div>
+          <div class="node"><span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M16.5 7.5A3.5 3.5 0 0 0 13 5h-2a3 3 0 0 0 0 6h2a3 3 0 0 1 0 6h-2a3.5 3.5 0 0 1-3.5-2.5"/></svg></span><span class="tag">BILLING</span></div>
+          <div class="node"><span class="disc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="6" rx="1.5"/><rect x="3.5" y="14" width="17" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span><span class="tag">VENDOR</span></div>
+        </div>
+      </div>
+
+      <div class="diagram-caption">What's actually happening today: data moving between systems with no consistent path.</div>
+    </div>
+
+    <div class="problem-cards">
+      <div class="problem-card">
+        <div class="chips" aria-hidden="true">
+          <span class="chip">EOL</span>
+          <span class="chip">V2</span>
+        </div>
+        <h3>Your engine is reaching end of life</h3>
+        <ul>
+          <li>No one owns the standard anymore</li>
+          <li>Patchwork fixes bolted on over the years</li>
+          <li>Vendor support could disappear any day</li>
+        </ul>
+      </div>
+      <div class="problem-card">
+        <div class="chips" aria-hidden="true">
+          <span class="chip chip--navy">HL7</span>
+          <span class="chip chip--blue">FHIR</span>
+        </div>
+        <h3>You're juggling vendors who don't agree</h3>
+        <ul>
+          <li>Every connection is its own project</li>
+          <li>Manual reconciliation between systems</li>
+          <li>No single source of truth for what shipped</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="problem-close">
+      <img class="wordmark" src="data:image/png;base64,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" alt="Rhapsody" width="340">
+      <div class="line">One engine. Every standard. No guesswork.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="results">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow">Proven at scale</p>
+      <h2>Results customers report</h2>
+    </div>
+
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="num"><span class="big">193%</span><span class="unit">ROI</span></div>
+        <div class="desc">Achieved by modernizing integration strategy with Envoy iPaaS.</div>
+        <div class="logo-line">CUSTOMER LOGO</div>
+      </div>
+      <div class="stat-card">
+        <div class="num"><span class="big">30+</span><span class="unit">days saved</span></div>
+        <div class="desc">Interface build-to-production time, from 5–6 weeks to under 1 week.</div>
+        <div class="logo-line">CUSTOMER LOGO</div>
+      </div>
+      <div class="stat-card">
+        <div class="num"><span class="big">13M</span><span class="unit">messages/day</span></div>
+        <div class="desc">Across the 1,900+ organizations we support in 31 countries through our full roster of products.</div>
+        <div class="logo-line">CUSTOMER LOGO</div>
+      </div>
+    </div>
+
+    <div class="big-quote">
+      <div class="row">
+        <span class="mark" aria-hidden="true">&ldquo;</span>
+        <div>
+          <blockquote>&ldquo;We still have the same number of integration engineers, but they've expanded our role because we don't spend as much time on maintenance.&rdquo;</blockquote>
+          <div class="attr">Director of Integration, Health System Customer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="#demo">See what Rhapsody could do for your team — get a demo</a>
+    </div>
+    <div class="rule" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ================= ACCOUNT MANAGER ================= -->
+<section class="account">
+  <div class="inner">
+    <p class="eyebrow">What changes with Rhapsody</p>
+    <h2>Every account gets a dedicated account manager who knows your system</h2>
+    <p class="lede">They track protocol, security, and compliance changes before you have a reason to ask — so the answer is usually already waiting when you need one.</p>
+    <div class="cert-row">
+      <!-- Replace text with certification badge artwork when supplied -->
+      <div class="cert">SOC 2</div>
+      <div class="cert">HITRUST CSF</div>
+      <div class="cert">ISO 27001</div>
+    </div>
+    <div class="uptime-bar">
+      <div class="big">1,000+</div>
+      <div class="div" aria-hidden="true"></div>
+      <div>
+        <div class="l1">Consecutive days, zero unplanned outages</div>
+        <div class="l2">UnityPoint Health's Rhapsody environment</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow eyebrow--light">In their words</p>
+      <h2>Why integration teams choose Rhapsody</h2>
+      <p class="lede">Six teams, six different problems — the same shift from firefighting to fast.</p>
+    </div>
+
+    <div class="t-cards" id="t-cards">
+      <div class="t-card">
+        <div class="logo-line">CUSTOMER LOGO</div>
+        <p class="story">Geisinger's team suspected duplicate patient records but didn't realize the scale until Rhapsody EMPI ran automatic matching at an enterprise level. The result: a 90% reduction in cost to resolve eligible duplicates, freeing 5 FTEs for higher-value work.</p>
+        <blockquote>&ldquo;We were amazed how many possible duplicates there were… our data wasn't as clean as we thought.&rdquo;</blockquote>
+        <div class="foot">
+          <div>
+            <div class="name">Kim Chaundy</div>
+            <div class="role">VP of Applications and Interoperability</div>
+          </div>
+          <div class="meta">
+            <span class="tag">ACUTE CARE</span>
+            <a class="story-link" href="#story">Read the story →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card">
+        <div class="logo-line">CUSTOMER LOGO</div>
+        <p class="story">Interfaces used to take 16–20 hours to build. By bringing in developers without deep programming experience and relying on embedded annotations and monitor alerts, OU Health cut build time to about 8 hours — while now sending 1.1 million messages daily.</p>
+        <blockquote>&ldquo;Embedded annotations and monitor alerts let a leaner team run interfaces we never could have supported before.&rdquo;</blockquote>
+        <div class="foot">
+          <div>
+            <div class="name">Russell Cleary</div>
+            <div class="role">Director of Integration</div>
+          </div>
+          <div class="meta">
+            <span class="tag">ACUTE CARE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card">
+        <div class="logo-line">CUSTOMER LOGO</div>
+        <p class="story">Homegrown integrations averaged three months per client and needed daily babysitting after launch. Training developers on Rhapsody standardized how interfaces are built and updated across every client at once, cutting onboarding to about a week.</p>
+        <blockquote>&ldquo;Standardizing on Rhapsody is the reason we can onboard a new client in about a week instead of three months.&rdquo;</blockquote>
+        <div class="foot">
+          <div>
+            <div class="name">Chris Burch</div>
+            <div class="role">Senior Director of Information Systems</div>
+          </div>
+          <div class="meta">
+            <span class="tag">HEALTH TECH</span>
+            <a class="story-link" href="#story">Read the story →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards 4–6 slot in here using the same .t-card markup.
+           The carousel below picks them up automatically. -->
+    </div>
+
+    <div class="carousel-nav" id="t-nav" hidden>
+      <button class="arrow" type="button" data-dir="-1" aria-label="Previous testimonials">←</button>
+      <div class="dots" role="tablist" aria-label="Testimonial pages"></div>
+      <button class="arrow" type="button" data-dir="1" aria-label="Next testimonials">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RHAPSODY AXON ================= -->
+<section class="axon">
+  <div class="grid">
+    <div class="axon-visual">
+      <div class="builder-card" role="img" aria-label="Rhapsody interface builder showing an ADT_A08 route: HTTP Server to JS Filter to HTTP Sender, with a live message preview">
+        <div class="bar">Interface Builder — ADT_A08 Route</div>
+        <div class="route">
+          <span class="step">HTTP Server</span>
+          <span class="arrow" aria-hidden="true">→</span>
+          <span class="step step--active">JS Filter</span>
+          <span class="arrow" aria-hidden="true">→</span>
+          <span class="step">HTTP Sender</span>
+        </div>
+        <div class="preview">
+          <div class="lab">LIVE MESSAGE PREVIEW</div>
+          <div class="code">{ "resourceType": "Patient",<br>&nbsp;&nbsp;"id": "48213",<br>&nbsp;&nbsp;"identifier": [ "MRN-88213" ] }</div>
+        </div>
+      </div>
+
+      <div class="suggest-card">
+        <div class="title">
+          <span class="star" aria-hidden="true">★</span>
+          <span class="t">Rhapsody Axon — suggested fix</span>
+        </div>
+        <div class="cols">
+          <div>
+            <div class="k">FOUND</div>
+            <div class="v">Malformed segment on the ADT_A08 route from the Epic feed.</div>
+          </div>
+          <div>
+            <div class="k">SUGGESTED</div>
+            <div class="v">Correct the mapping and re-route to downstream systems.</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="approve" type="button">Approve</button>
+          <button class="review" type="button">Review details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="axon-copy">
+      <p class="eyebrow">Rhapsody Axon<sup>&trade;</sup> — built to get out of your way</p>
+      <h2>Less building. Less checking. Fewer surprises.</h2>
+      <div class="check-list">
+        <div class="check-item">
+          <span class="tick" aria-hidden="true">✓</span>
+          <span class="txt"><strong>Point-and-click interface building</strong> — no scripting required to wire a new integration route.</span>
+        </div>
+        <div class="check-item">
+          <span class="tick" aria-hidden="true">✓</span>
+          <span class="txt"><strong>Rhapsody Axon suggests, you decide</strong> — it drafts the next fix and the plan, a human confirms before anything changes.</span>
+        </div>
+        <!-- Third benefit pending the EMPI decision (see design review notes).
+             When copy lands, add another .check-item here. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING CTA ================= -->
+<div class="teal-rule" aria-hidden="true"></div>
+<section class="closing">
+  <div class="inner">
+    <h2>Built to get the details right, every single time.</h2>
+    <p>One engine, every standard, and a team that knows your environment before you have to explain it.</p>
+    <a class="btn" href="#demo">See what Rhapsody could do for your team</a>
+  </div>
+</section>
+
+<script>
+/* Testimonial carousel.
+   Desktop (>900px): three cards per page. Mobile (≤900px): one per page.
+   Controls stay hidden until there is more than one page, so the section
+   works as a static grid with only the three launch cards. */
+(function () {
+  var wrap = document.getElementById('t-cards');
+  var nav = document.getElementById('t-nav');
+  var dotsBox = nav.querySelector('.dots');
+  var cards = [];
+  var page = 0;
+
+  function perView() {
+    return window.matchMedia('(max-width: 900px)').matches ? 1 : 3;
+  }
+  function pageCount() {
+    return Math.ceil(cards.length / perView());
+  }
+  function render() {
+    cards = Array.prototype.slice.call(wrap.querySelectorAll('.t-card'));
+    var pages = pageCount();
+    if (page >= pages) page = pages - 1;
+    var start = page * perView();
+    cards.forEach(function (card, i) {
+      var off = i < start || i >= start + perView();
+      card.setAttribute('data-offview', off ? 'true' : 'false');
+      if (perView() > 1) card.style.display = off ? 'none' : '';
+      else card.style.display = '';
+    });
+    nav.hidden = pages <= 1;
+    dotsBox.innerHTML = '';
+    for (var p = 0; p < pages; p++) {
+      var b = document.createElement('button');
+      b.className = 'dot';
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-label', 'Testimonials page ' + (p + 1) + ' of ' + pages);
+      b.setAttribute('aria-current', p === page ? 'true' : 'false');
+      b.appendChild(document.createElement('span'));
+      (function (target) {
+        b.addEventListener('click', function () { page = target; render(); });
+      })(p);
+      dotsBox.appendChild(b);
+    }
+    nav.querySelectorAll('.arrow').forEach(function (a) {
+      var dir = parseInt(a.getAttribute('data-dir'), 10);
+      a.disabled = (page + dir < 0) || (page + dir >= pages);
+    });
+  }
+  nav.querySelectorAll('.arrow').forEach(function (a) {
+    a.addEventListener('click', function () {
+      page += parseInt(a.getAttribute('data-dir'), 10);
+      render();
+    });
+  });
+  window.addEventListener('resize', render);
+  render();
+})();
+</script>
+
+</body>
+</html>
