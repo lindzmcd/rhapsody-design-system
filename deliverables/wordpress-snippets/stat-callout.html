@@ -1,0 +1,56 @@
+<!-- Rhapsody stat callout — self-contained snippet for a WordPress Custom HTML block.
+     Paste the whole file (markup + style) into one Custom HTML block.
+     Edit only the three text bits: the number, the bold label, the light-blue source line.
+     Brand: Navy #0B2C47 ground, light blue #B4D8FF dark-ground accent, Poppins. -->
+
+<div class="rh-stat-callout">
+	<div class="rh-stat-callout__number">1,000+</div>
+	<div class="rh-stat-callout__divider"></div>
+	<div class="rh-stat-callout__text">
+		<p class="rh-stat-callout__label">Consecutive days, zero unplanned outages</p>
+		<p class="rh-stat-callout__source">UnityPoint Health&rsquo;s Rhapsody environment</p>
+	</div>
+</div>
+
+<style>
+.rh-stat-callout{
+	display:flex;
+	align-items:center;
+	gap:32px;
+	background:#0B2C47;
+	border-radius:16px;
+	padding:28px 40px;
+	font-family:'Poppins',Arial,sans-serif;
+}
+.rh-stat-callout__number{
+	font-size:52px;
+	font-weight:500;
+	color:#ffffff;
+	line-height:1;
+	white-space:nowrap;
+}
+.rh-stat-callout__divider{
+	width:2px;
+	align-self:stretch;
+	background:#B4D8FF;
+	opacity:.55;
+	border-radius:1px;
+}
+p.rh-stat-callout__label{
+	margin:0;
+	color:#ffffff;
+	font-size:18px;
+	font-weight:500;
+	line-height:1.4;
+}
+p.rh-stat-callout__source{
+	margin:6px 0 0;
+	color:#B4D8FF;
+	font-size:15px;
+	line-height:1.4;
+}
+@media (max-width:600px){
+	.rh-stat-callout{flex-direction:column;align-items:flex-start;gap:14px;padding:24px;}
+	.rh-stat-callout__divider{width:48px;height:2px;align-self:auto;}
+}
+</style>
