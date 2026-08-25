@@ -1,0 +1,74 @@
+<!-- Rhapsody stat card row — self-contained snippet for a WordPress Custom HTML block.
+     Paste the whole file (markup + style) into one Custom HTML block.
+     Each .rh-stat-card div is one card: edit the stat, the unit <span>, and the body.
+     Add/remove cards freely; update repeat(3,1fr) to the card count.
+     Swap the CUSTOMER LOGO placeholder for an <img> (max-height ~28px) when available.
+     Brand: white cards, Light Gray #D9DFE6 border, Navy #0B2C47 text, Poppins + Plex Mono. -->
+
+<div class="rh-stat-cards">
+
+	<div class="rh-stat-card">
+		<div class="rh-stat-card__stat">193% <span>ROI</span></div>
+		<p class="rh-stat-card__body">Achieved by modernizing integration strategy with Envoy iPaaS.</p>
+		<div class="rh-stat-card__logo">CUSTOMER LOGO</div>
+	</div>
+
+	<div class="rh-stat-card">
+		<div class="rh-stat-card__stat">30+ <span>days saved</span></div>
+		<p class="rh-stat-card__body">Interface build-to-production time, from 5&ndash;6 weeks to under 1 week.</p>
+		<div class="rh-stat-card__logo">CUSTOMER LOGO</div>
+	</div>
+
+	<div class="rh-stat-card">
+		<div class="rh-stat-card__stat">13M <span>messages/day</span></div>
+		<p class="rh-stat-card__body">Across the 1,900+ organizations we support in 31 countries through our full roster of products.</p>
+		<div class="rh-stat-card__logo">CUSTOMER LOGO</div>
+	</div>
+
+</div>
+
+<style>
+.rh-stat-cards{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:24px;
+	font-family:'Poppins',Arial,sans-serif;
+}
+.rh-stat-card{
+	display:flex;
+	flex-direction:column;
+	background:#ffffff;
+	border:1px solid #D9DFE6;
+	border-radius:16px;
+	padding:32px 30px 26px;
+}
+.rh-stat-card__stat{
+	color:#0B2C47;
+	font-size:46px;
+	font-weight:500;
+	line-height:1.1;
+	margin-bottom:14px;
+}
+.rh-stat-card__stat span{
+	font-size:19px;
+	font-weight:400;
+	margin-left:4px;
+}
+p.rh-stat-card__body{
+	margin:0;
+	color:#0B2C47;
+	font-size:16px;
+	line-height:1.55;
+}
+.rh-stat-card__logo{
+	margin-top:auto;           /* pins to card bottom so logos align across the row */
+	padding-top:28px;
+	font-family:'IBM Plex Mono',Consolas,monospace;
+	font-size:12px;
+	letter-spacing:0.12em;
+	color:#7E858C;
+}
+@media (max-width:820px){
+	.rh-stat-cards{grid-template-columns:1fr;}
+}
+</style>
