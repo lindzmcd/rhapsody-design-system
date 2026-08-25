@@ -45,6 +45,28 @@ SETUP (about 5 minutes)
    centers and sizes it. (Or place a paragraph block inside the card
    and give it the class rh-form-footnote.)
 
+HEADING-ONLY FIX (SHIPPED AUG 2026)
+If you only want to fix the block's header — left-align it, regular
+weight, smaller size — without the card treatment, this is the
+verified working rule (paste into Additional CSS; no block edits
+needed, the [gravityform] shortcode stays untouched):
+
+    *:has(> #form-snippet) h2.heading {
+        text-align: left;
+        align-self: flex-start;   /* undoes flex centering by the parent */
+        margin-left: 0;           /* undoes margin:auto centering */
+        margin-right: 0;
+        width: 100%;              /* lets text-align take effect */
+        font-weight: 400;
+        font-size: 32px;
+    }
+
+Why the extra lines: the theme centers this h2 as a BOX (flex parent /
+auto margins), so text-align alone does nothing. align-self + zeroed
+margins + full width cover all three centering mechanisms. #form-snippet
+is the HTML anchor on the form container; :has() finds its shared
+wrapper and scopes the fix to that one heading.
+
 WIDTH NOTES
 - The card is capped at 720px and centered (max-width in the first
   rule — adjust to taste).
