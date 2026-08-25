@@ -1,0 +1,60 @@
+<!-- Rhapsody quote card — self-contained snippet for a WordPress Custom HTML block.
+     Paste the whole file (markup + style) into one Custom HTML block.
+     Edit the quote text (keep the curly-quote entities) and the attribution line;
+     attribution auto-uppercases via CSS. Delete the __mark div to drop the quote mark.
+     Brand: gray-blue #E8EDF2 ground, Rhapsody Blue #1A81F4 quote, Poppins + Plex Mono. -->
+
+<div class="rh-quote-card">
+	<div class="rh-quote-card__mark"><span></span><span></span></div>
+	<div class="rh-quote-card__content">
+		<p class="rh-quote-card__text">&ldquo;We still have the same number of integration engineers, but they've expanded our role because we don't spend as much time on maintenance.&rdquo;</p>
+		<p class="rh-quote-card__attr">Director of Integration, Health System Customer</p>
+	</div>
+</div>
+
+<style>
+.rh-quote-card{
+	display:flex;
+	align-items:flex-start;
+	gap:28px;
+	background:#E8EDF2;
+	border-radius:16px;
+	padding:40px 48px 34px;
+	font-family:'Poppins',Arial,sans-serif;
+}
+/* The slanted double quote mark */
+.rh-quote-card__mark{
+	display:flex;
+	gap:7px;
+	flex:none;
+	padding-top:6px;
+}
+.rh-quote-card__mark span{
+	display:block;
+	width:12px;
+	height:30px;
+	background:#1A81F4;
+	transform:skewX(-14deg);
+	border-radius:2px;
+}
+p.rh-quote-card__text{
+	margin:0 0 16px;
+	color:#1A81F4;
+	font-size:24px;
+	font-weight:400;
+	line-height:1.5;
+	max-width:60ch;
+}
+p.rh-quote-card__attr{
+	margin:0;
+	font-family:'IBM Plex Mono',Consolas,monospace;
+	font-size:12px;
+	letter-spacing:0.12em;
+	text-transform:uppercase;
+	color:#5A6572;
+}
+@media (max-width:600px){
+	.rh-quote-card{flex-direction:column;gap:16px;padding:28px 24px;}
+	p.rh-quote-card__text{font-size:20px;}
+}
+</style>
