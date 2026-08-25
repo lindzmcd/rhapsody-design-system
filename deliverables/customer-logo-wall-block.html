@@ -38,13 +38,14 @@
 ============================================================= -->
 <div class="rh-lw">
   <style>
-    .rh-lw{--rh-arc:120px;--rh-max-row:6;--rh-gap-x:30px;--rh-gap-y:44px;--rh-logo-w:50%;--rh-logo-h:42%;}
-    .rh-lw__list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:var(--rh-gap-y) var(--rh-gap-x);margin:0 auto;padding:0;list-style:none;max-width:calc(var(--rh-max-row)*var(--rh-arc) + (var(--rh-max-row) - 1)*var(--rh-gap-x));}
-    .rh-lw__item{list-style:none;margin:0;padding:0;flex:none;width:min(var(--rh-arc),calc((100% - (var(--rh-max-row) - 1)*var(--rh-gap-x))/var(--rh-max-row)));aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background-repeat:no-repeat;background-position:center;background-size:contain;}
-    .rh-lw__item img{display:block;width:auto;height:auto;max-width:var(--rh-logo-w);max-height:var(--rh-logo-h);}
-    .rh-lw__item:nth-child(3n+1){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/></svg>");}
-    .rh-lw__item:nth-child(3n+2){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/></svg>");}
-    .rh-lw__item:nth-child(3n){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/></svg>");}
+    .rh-lw{--rh-arc:120px;--rh-max-row:6;--rh-gap-x:30px;--rh-gap-y:44px;--rh-logo-w:50%;--rh-logo-h:42%;display:flex;justify-content:center;}
+    .rh-lw ul.rh-lw__list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:var(--rh-gap-y) var(--rh-gap-x);width:100%;margin:0 auto;padding:0;list-style:none;box-sizing:border-box;max-width:calc(var(--rh-max-row)*var(--rh-arc) + (var(--rh-max-row) - 1)*var(--rh-gap-x));}
+    .rh-lw li.rh-lw__item{list-style:none;margin:0;padding:0;flex:none;width:min(var(--rh-arc),calc((100% - (var(--rh-max-row) - 1)*var(--rh-gap-x))/var(--rh-max-row)));aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background-repeat:no-repeat;background-position:center;background-size:contain;}
+    .rh-lw li.rh-lw__item::before,.rh-lw li.rh-lw__item::marker{content:none;}
+    .rh-lw .rh-lw__item img{display:block;width:auto;height:auto;max-width:var(--rh-logo-w);max-height:var(--rh-logo-h);margin:0;padding:0;border:none;box-shadow:none;}
+    .rh-lw li.rh-lw__item:nth-child(3n+1){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%231A81F4' stroke-width='5' stroke-linecap='round'/></svg>");}
+    .rh-lw li.rh-lw__item:nth-child(3n+2){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%2323C5BF' stroke-width='5' stroke-linecap='round'/></svg>");}
+    .rh-lw li.rh-lw__item:nth-child(3n){background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M27.1 17.2A40 40 0 0 0 27.1 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/><path d='M72.9 17.2A40 40 0 0 1 72.9 82.8' fill='none' stroke='%237340E4' stroke-width='5' stroke-linecap='round'/></svg>");}
     @media (max-width:640px){.rh-lw{--rh-arc:92px;--rh-max-row:3;--rh-gap-x:18px;--rh-gap-y:28px;}}
   </style>
   <ul class="rh-lw__list">
