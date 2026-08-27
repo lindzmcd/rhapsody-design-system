@@ -413,11 +413,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 
   <div class="intro-grid">
     <div>
-      <div class="mission">
-        <div class="k" id="missionK">Your mission</div>
-        <p id="missionP1"></p>
-      </div>
-      <button class="btn primary" id="letsPlayBtn" style="margin-top:26px;">Let&rsquo;s play</button>
+      <button class="btn primary" id="letsPlayBtn" style="margin-top:14px;">Let&rsquo;s play</button>
       <p class="intro-note">From <b>Rhapsody Identity</b>: software that healthcare organizations use to match every medical record to the right person across all their systems. You&rsquo;re about to feel why that&rsquo;s hard.</p>
     </div>
     <div class="intro-preview" id="introPreview" aria-hidden="true"></div>
@@ -426,14 +422,21 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
 
 <!-- ================= RULES ================= -->
 <section class="screen" id="screen-rules" aria-labelledby="rulesTitle">
-  <div class="eyebrow">How to play</div>
+  <div class="eyebrow">Your mission</div>
   <h2 id="rulesTitle" style="font-size:clamp(28px,4vw,40px);">Flip down everyone who isn&rsquo;t your patient.</h2>
+  <div class="mission" style="max-width:600px;margin-bottom:8px;">
+    <div class="k" id="missionK">The case</div>
+    <p id="missionP1"></p>
+  </div>
   <ol class="steps">
     <li><span class="n">1</span><span>Read the clue. It&rsquo;s exactly what came in, from a phone call, a fax, a card. How to interpret it is your call.</span></li>
     <li><span class="n">2</span><span>Tap any record that doesn&rsquo;t fit to flip it face-down. Tap again to bring it back.</span></li>
     <li><span class="n">3</span><span>One record left? Lock it in and find out if it&rsquo;s the right person.</span></li>
   </ol>
-  <button class="btn primary" id="startBtn">Deal the board</button>
+  <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
+    <button class="btn primary" id="startBtn">Deal the board</button>
+    <button class="linkish" id="backBtn">Back</button>
+  </div>
 </section>
 
 <!-- ================= GAME ================= -->
@@ -971,7 +974,7 @@ function clues(){ return cur().clues; }
 
 /* ---------- intro ---------- */
 function renderIntro(){
-  $('missionK').textContent = 'Your mission';
+  $('missionK').textContent = 'The case';
   $('missionP1').innerHTML = cur().mission;
   const picks = cards().filter(c=>!c.target && !c.twin && !c.fragment).slice(0,5);
   const previewCards = [cards().find(c=>c.target), ...picks].slice(0,6);
@@ -1356,6 +1359,7 @@ function show(id){
   $(id).classList.add('active');
 }
 $('letsPlayBtn').addEventListener('click', () => { show('screen-rules'); window.scrollTo({top:0, behavior:'auto'}); });
+$('backBtn').addEventListener('click', () => { show('screen-intro'); window.scrollTo({top:0, behavior:'auto'}); });
 $('startBtn').addEventListener('click', startGame);
 $('replayBtn').addEventListener('click', () => {
   advanceCase();
