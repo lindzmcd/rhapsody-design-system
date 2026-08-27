@@ -448,7 +448,7 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
       </div>
       <p id="clueText" aria-live="polite"></p>
       <div class="facts" id="factChips" aria-label="Facts from the paperwork so far"></div>
-      <p class="pick-nudge" id="pickNudge" hidden>Two records left and no more clues coming. If both still look possible, that&rsquo;s the game working: pick one and lock it in.</p>
+      <p class="pick-nudge" id="pickNudge" hidden>Two records left and no more clues coming. If both still look possible, that&rsquo;s the game working. Tap the one you&rsquo;d rule out: whoever is left standing is your match.</p>
     </div>
     <div class="hud-actions">
       <span class="standing" aria-live="polite"><b id="standCount">9</b> records standing<span id="tapHint"> &middot; tap one to rule it out</span></span>
@@ -1027,7 +1027,12 @@ function updateHud(){
   $('standCount').textContent = standing;
   $('tapHint').hidden = state.history.length > 0;
   $('lockBtn').disabled = standing !== 1;
-  $('lockBtn').textContent = standing === 1 ? 'Lock in your match' : `Lock in your match (${standing} left)`;
+  if(standing === 1){
+    const survivor = cards().find(c => !state.down.has(c.id));
+    $('lockBtn').textContent = `Lock in ${survivor.name}`;
+  } else {
+    $('lockBtn').textContent = `Lock in your match (${standing} left)`;
+  }
   const twinCards = cards().filter(c=>c.twin);
   const standingIds = cards().filter(c=>!state.down.has(c.id)).map(c=>c.id);
   const twinStalemate = twinCards.length === 2 && twinCards[0].dob === twinCards[1].dob
