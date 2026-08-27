@@ -199,9 +199,14 @@ p{max-width:66ch;}
 .playnotes .pk{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--lblue);margin-bottom:2px;}
 .playnotes li{font-size:14px;color:var(--lblue);line-height:1.55;max-width:66ch;}
 .playnotes li::before{content:'\25B8\00A0\00A0';color:var(--teal);}
-.compare{display:flex;gap:26px;align-items:stretch;justify-content:center;flex-wrap:wrap;margin:26px 0 8px;}
-.compare .col{text-align:center;}
-.compare .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lblue);margin-bottom:10px;}
+.compare{display:flex;gap:26px;align-items:flex-start;justify-content:center;flex-wrap:wrap;margin:26px 0 8px;}
+.compare .col{text-align:center;width:190px;}
+.compare .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lblue);
+  max-width:190px;margin:0 auto 10px;line-height:1.35;
+  min-height:2.7em;display:flex;align-items:flex-end;justify-content:center;
+}
+.compare .vs{align-self:flex-start;margin-top:118px;}
 .bigcard{
   width:190px;background:var(--card);border-radius:14px;padding:18px 12px 14px;color:var(--navy);
   display:flex;flex-direction:column;align-items:center;box-shadow:0 12px 30px rgba(5,15,25,.5);
@@ -232,6 +237,11 @@ p{max-width:66ch;}
 }
 .fragcard.is-target .why{color:#0E7A76;}
 .flow-arrow{color:var(--teal);flex:none;}
+.flow-with{display:flex;flex-direction:column;align-items:center;gap:7px;flex:none;}
+.flow-with span{
+  font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal);text-align:center;line-height:1.6;max-width:120px;
+}
 .golden{
   background:var(--card);border-radius:16px;padding:22px 22px 18px;color:var(--navy);width:min(300px,86vw);
   box-shadow:0 0 0 3px var(--teal),0 16px 40px rgba(5,15,25,.55);
@@ -358,6 +368,8 @@ footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:rgba(180,216
   .hud-buttons .btn{width:100%;justify-content:center;}
   .compare{flex-direction:column;align-items:center;gap:14px;}
   .compare .col{width:100%;display:flex;flex-direction:column;align-items:center;}
+  .compare .lbl{min-height:0;}
+  .compare .vs{align-self:center;margin-top:0;}
   .pitch{padding:28px 22px;}
   /* Compact rows: avatar left, name + record fields right */
   .board{grid-template-columns:1fr;gap:10px;}
@@ -1154,9 +1166,12 @@ function renderTwist(){
             <div class="why">${c.why}</div>
           </div>`).join('')}
         </div>
-        <svg class="flow-arrow" width="54" height="24" viewBox="0 0 54 24" aria-hidden="true">
-          <path d="M2 12 H44 M36 4 l10 8 -10 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <div class="flow-with">
+          <svg class="flow-arrow" width="54" height="24" viewBox="0 0 54 24" aria-hidden="true">
+            <path d="M2 12 H44 M36 4 l10 8 -10 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>with Rhapsody Identity</span>
+        </div>
         <div class="golden" id="goldenCard">
           <span class="chip">&#10003;&nbsp;Resolved &middot; one person, one record</span>
           <div class="top">
