@@ -30,20 +30,25 @@
 </ul>
 
 <h3>The icon tile</h3>
-<p>Feature and benefit icons sit in a 44&times;44 rounded-square tile, 11px corner radius, light gray-box background (<code>#E9EEF4</code>). The icon renders at 22&times;22 inside the tile, centered, in Rhapsody blue (<code>#1A81F4</code>) on light grounds, with about 16px below the tile before the heading. Icons use the <strong>blue family only, navy, Rhapsody blue, or light blue</strong>, chosen for contrast on the ground (light blue or white on dark grounds); <strong>never teal or orange</strong>.</p>
+<p><strong>Feature and benefit icons always sit in the approved 44&times;44 rounded-square tile</strong> with an 11px corner radius. The icon renders at 22&times;22, centered. Use exactly one of the two treatments below; do not invent alternate tile colors or use uncontained icons for features/benefits.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:12px 0;max-width:620px;">
-  <div style="border:1px solid var(--lgray);border-radius:12px;padding:24px;">
-    <span style="width:44px;height:44px;border-radius:11px;background:#E9EEF4;display:inline-flex;align-items:center;justify-content:center;color:var(--blue);flex:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg></span>
-    <div style="font-weight:500;font-size:16px;color:var(--navy);margin-top:16px;">Built-in security</div>
-    <p style="font-weight:400;font-size:13px;color:var(--dgray);margin:6px 0 0;max-width:none;">Feature card on a light, neutral ground: blue icon.</p>
+  <div style="border:1px solid var(--lgray);border-radius:12px;padding:24px;background:#fff;">
+    <span style="width:44px;height:44px;border-radius:11px;background:#E9EEF4;display:inline-flex;align-items:center;justify-content:center;color:#1A81F4;flex:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+    <div style="font-weight:500;font-size:16px;color:var(--navy);margin-top:16px;">Light-background tile</div>
+    <p style="font-size:13px;color:var(--dgray);margin:6px 0 0;max-width:none;">Tile #E9EEF4 · icon Rhapsody Blue #1A81F4.</p>
   </div>
-  <div style="border:1px solid var(--lgray);border-radius:12px;padding:24px;">
-    <span style="width:44px;height:44px;border-radius:11px;background:#E9EEF4;display:inline-flex;align-items:center;justify-content:center;color:var(--navy);flex:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><path d="M18 8.5a6 6 0 0 0-12 0c0 6.5-2.5 7.5-2.5 7.5h17S18 15 18 8.5"/><path d="M10.4 19.5a1.8 1.8 0 0 0 3.2 0"/></svg></span>
-    <div style="font-weight:500;font-size:16px;color:var(--navy);margin-top:16px;">Automated monitoring</div>
-    <p style="font-weight:400;font-size:13px;color:var(--dgray);margin:6px 0 0;max-width:none;">Blue family only (here navy).</p>
+  <div style="border-radius:12px;padding:24px;background:var(--navy);">
+    <span style="width:44px;height:44px;border-radius:11px;background:rgba(255,255,255,0.10);display:inline-flex;align-items:center;justify-content:center;color:#B4D8FF;flex:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><path d="M18 8.5a6 6 0 0 0-12 0c0 6.5-2.5 7.5-2.5 7.5h17S18 15 18 8.5"/><path d="M10.4 19.5a1.8 1.8 0 0 0 3.2 0"/></svg></span>
+    <div style="font-weight:500;font-size:16px;color:#fff;margin-top:16px;">Dark-background tile</div>
+    <p style="font-size:13px;color:#B4D8FF;margin:6px 0 0;max-width:none;">Tile white at 10% opacity · icon Light Blue #B4D8FF.</p>
   </div>
 </div>
-
+<ul>
+  <li>Use the light treatment on white, light gray, and gray-blue surfaces.</li>
+  <li>Use the dark treatment on Rhapsody Navy and other approved dark surfaces.</li>
+  <li>Icons remain in the blue family only; never teal, purple, or orange.</li>
+  <li>Functional marks such as checks/crosses remain the exception below.</li>
+</ul>
 <h3>Functional marks</h3>
 <p>Yes/no indicators in comparison tables are the exception to the tile treatment: a check in Rhapsody blue (<code>#1A81F4</code>) and a cross in muted gray (<code>#7E858C</code>), both at stroke-width 3 for weight. These are UI marks, not decorative icons, and don&rsquo;t sit in tiles.</p>
 <div style="display:flex;gap:34px;align-items:center;margin:12px 0 16px;">
@@ -58,6 +63,6 @@
   <li>No drop shadows or gradients on icons.</li>
   <li>No emoji as icons.</li>
 </ul>
-<p class="caption">Legacy two-color icons in the <a href="https://rhapsodyhealth.sharepoint.com/Shared%20Documents/Forms/AllItems.aspx?id=%2FShared%20Documents%2FMarketing%2FPrivate%2FGraphic%20Design%2F%5FRhapsody%20Brand%20Package%2F2026%5FBrand%2FIcon-Library">Rhapsody icon library</a> are for existing assets only; new work uses the outline family above.</p>
+<p class="caption">Legacy two-color icons in the Rhapsody icon library (available on request from Rhapsody) are for existing assets only; new work uses the outline family above.</p>
 </div>
 </body></html>

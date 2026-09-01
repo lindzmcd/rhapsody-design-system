@@ -4,6 +4,12 @@
   "startingPoints": [],
   "cards": [
     {
+      "path": "components/brand-expression.html",
+      "group": "1 · Foundations",
+      "subtitle": "Visual principles, AI direction, and decision hierarchy",
+      "name": "Brand expression"
+    },
+    {
       "path": "components/colors.html",
       "group": "1 · Foundations",
       "subtitle": "Palette, text color, accessibility, blue on navy, text on teal",
@@ -116,6 +122,12 @@
       "group": "5 · Iconography",
       "subtitle": "Reference set, drawing spec, icon tile, functional marks",
       "name": "Icon library"
+    },
+    {
+      "path": "components/illustration.html",
+      "group": "6 · Imagery",
+      "subtitle": "Retired illustration style, preferred replacements",
+      "name": "Illustration"
     },
     {
       "path": "components/photography.html",
