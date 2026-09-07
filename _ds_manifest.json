@@ -142,6 +142,12 @@
       "name": "Display ads"
     },
     {
+      "path": "components/powerpoint-template.html",
+      "group": "7 · Patterns",
+      "name": "PowerPoint deck template",
+      "subtitle": "Official 2026 slide deck — downloadable master (.pptx)"
+    },
+    {
       "path": "components/email-signature.html",
       "group": "7 · Patterns",
       "subtitle": "Employee signature: wordmark, teal divider, name lockup, certifications",
