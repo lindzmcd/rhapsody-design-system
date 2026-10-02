@@ -1,0 +1,137 @@
+<!-- @dsCard group="7 · Patterns" name="Framework diagrams" subtitle="System & architecture diagrams: box tiers, mono labels, color-coded maturity connectors" width="960" height="1760" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Framework diagrams</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  /* Framework-diagram vocabulary — built from existing tokens */
+  .fw-zonelabel{font-weight:600;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;color:var(--blue);}
+  .fw-grouplabel{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--dgray);}
+  .fw-mono{font-family:var(--mono);font-size:12px;color:var(--dgray);}
+  /* Box tiers. Signature corner: squared top, rounded bottom. */
+  .fw-box{border-radius:2px 2px 12px 12px;padding:16px 18px;}
+  .fw-system{background:var(--navy);color:#fff;}
+  .fw-system .t{font-weight:500;font-size:17px;color:#fff;margin:0;}
+  .fw-system .s{font-size:13px;color:var(--lblue);margin:3px 0 0;}
+  .fw-cap{background:var(--blue);color:#fff;border-radius:2px 2px 9px 9px;padding:12px 14px;}
+  .fw-cap .t{font-weight:500;font-size:14px;color:#fff;margin:0;}
+  .fw-cap .s{font-size:12px;color:#E8F1FE;margin:3px 0 0;line-height:1.4;}
+  .fw-dev{background:transparent;border:1.5px dashed rgba(255,255,255,0.55);border-radius:2px 2px 9px 9px;padding:12px 14px;position:relative;}
+  .fw-dev .t{font-weight:500;font-size:14px;color:#fff;margin:0;}
+  .fw-dev .s{font-size:12px;color:var(--lblue);margin:3px 0 0;line-height:1.4;}
+  .fw-context{background:#fff;border:1px solid var(--lgray);border-radius:2px 2px 12px 12px;padding:16px 18px;}
+  .fw-context .t{font-weight:500;font-size:15px;color:var(--navy);margin:0;}
+  .fw-context .s{font-size:13px;color:var(--dgray);margin:3px 0 0;line-height:1.45;}
+  .fw-pill{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.06em;padding:2px 9px;border-radius:999px;background:var(--orange);color:#fff;text-transform:uppercase;line-height:1.6;white-space:nowrap;}
+  /* Connector legend line samples */
+  .fw-legend{display:flex;flex-direction:column;gap:12px;margin:14px 0;}
+  .fw-legrow{display:flex;align-items:center;gap:14px;}
+  .fw-line{flex:none;width:58px;height:0;border-top-width:3px;}
+  .fw-line.blue{border-top:3px solid var(--blue);}
+  .fw-line.teal{border-top:3px solid var(--teal);}
+  .fw-line.dash{border-top:3px dashed var(--orange);}
+  .fw-legrow .lab{font-size:14px;color:var(--navy);}
+  .fw-legrow .lab b{font-weight:500;}
+</style>
+</head><body>
+<div class="wrap">
+<h2>Framework diagrams</h2>
+<p>The house style for system, architecture, and framework diagrams&mdash;how the pieces fit and flow. It is calm and engineered: neutral boxes set the context, one navy node holds the system in focus, blue cards name what it does, and <strong>the connector colors carry the meaning</strong>. Structure does the explaining, so the diagram reads at a glance without a wall of labels.</p>
+
+<div class="principle">
+  <div class="k">The idea</div>
+  <p>Say it with hierarchy and color, not density. Context lives in quiet white boxes; the system in focus is navy with its capabilities as blue cards inside it; every connector&rsquo;s color encodes its maturity or governance and is explained in a legend. Orange is held back for one job only: what&rsquo;s in development.</p>
+</div>
+
+<h3>The canonical example</h3>
+<p>The style was established with the Rhapsody Guardian framework below. Treat it as the reference for spacing, tiers, and the color-coded connector legend.</p>
+<div style="border:1px solid var(--lgray);border-radius:16px;background:linear-gradient(180deg,#fbfcfd,#f4f7fa);padding:20px;margin:16px 0;">
+  <img src="../assets/figures/framework-guardian-example.png" alt="Rhapsody Guardian framework diagram: callers on the left flow through a navy Guardian control plane (blue capability cards plus a dashed in-dev AI traffic controls node) into the integration solution and systems of record, with a color-coded connector legend." style="width:100%;display:block;border-radius:8px;">
+</div>
+<p class="caption">Rhapsody Guardian, one control plane for every caller. Neutral boxes for callers and systems of record, a navy hero node for Guardian, blue capability cards, a dashed in-development node, and blue / teal / orange connectors keyed to a legend.</p>
+
+<h3>Box tiers</h3>
+<p>Four box tiers carry the whole system. Keep each tier to its role so the hierarchy stays legible. All frames use the signature corner&mdash;<strong>squared top, rounded bottom</strong> (see Corners &amp; shape).</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:16px 0;">
+  <div>
+    <div class="fw-context">
+      <p class="t">Context box</p>
+      <p class="s">White, light-gray border. Actors and adjacent systems: callers, external services, systems of record.</p>
+    </div>
+    <p class="caption" style="margin:8px 0 0;">Neutral. Sets the scene around the system.</p>
+  </div>
+  <div>
+    <div class="fw-box fw-system">
+      <p class="t">System node</p>
+      <p class="s">The system in focus</p>
+    </div>
+    <p class="caption" style="margin:8px 0 0;">Navy, white type. One per diagram&mdash;the hero.</p>
+  </div>
+  <div>
+    <div class="fw-cap">
+      <p class="t">Capability card</p>
+      <p class="s">Nests inside the navy node; names one capability.</p>
+    </div>
+    <p class="caption" style="margin:8px 0 0;">Rhapsody Blue, white type. Grouped inside the system.</p>
+  </div>
+  <div>
+    <div class="fw-box fw-system" style="padding-top:14px;">
+      <div class="fw-dev">
+        <span class="fw-pill">1.4 · Dev</span>
+        <p class="t" style="margin-top:8px;">In-development node</p>
+        <p class="s">Dashed border, inside the system.</p>
+      </div>
+    </div>
+    <p class="caption" style="margin:8px 0 0;">Dashed outline + orange status pill. Not yet shipped.</p>
+  </div>
+</div>
+
+<h3>Labels &amp; type</h3>
+<ul>
+  <li><strong>Zone label</strong> &mdash; the big container (e.g. a customer environment): <span class="fw-zonelabel">Customer environment</span> in Rhapsody Blue, uppercase.</li>
+  <li><strong>Group label</strong> &mdash; a region or column of the diagram: <span class="fw-grouplabel">Systems of record</span> in IBM&nbsp;Plex&nbsp;Mono, uppercase, gray.</li>
+  <li><strong>Technical lists</strong> &mdash; platforms, protocols, endpoints: <span class="fw-mono">AWS · Azure · Google Cloud · self-managed</span> in mono, gray.</li>
+  <li><strong>Node title</strong> in Poppins Medium; <strong>node subtitle / body</strong> in Poppins Regular. On navy, subtitles use light blue; on blue cards, near-white.</li>
+</ul>
+
+<h3>Connectors &amp; the legend</h3>
+<p>Connectors are where this style does its real work: <strong>the line&rsquo;s color and style encode its status</strong>, and a legend always spells the code out. This is the Pathways principle (see Foundations) applied to maturity and governance&mdash;hold each meaning to one color across the whole diagram.</p>
+<div class="fw-legend">
+  <div class="fw-legrow"><span class="fw-line blue"></span><span class="lab"><b>Blue, solid</b> &mdash; shipped today / current product path</span></div>
+  <div class="fw-legrow"><span class="fw-line teal"></span><span class="lab"><b>Teal, solid</b> &mdash; existing adjacent messaging, not governed by the system (e.g. direct HL7v2)</span></div>
+  <div class="fw-legrow"><span class="fw-line dash"></span><span class="lab"><b>Orange, dashed</b> &mdash; committed for a coming release or in active development</span></div>
+</div>
+<ul>
+  <li><strong>Always include the legend</strong>, even for three lines. The color is meaningless without it.</li>
+  <li><strong>Blue is the default</strong> current-state connector; <strong>teal</strong> marks a parallel path that runs outside the system; <strong>orange dashed</strong> is the only in-development cue.</li>
+  <li>Arrowheads match the line color. Keep lines orthogonal (right-angle turns), not free curves.</li>
+</ul>
+
+<h3>Status badges</h3>
+<p>An orange pill marks anything not yet shipped, both on the node and, where useful, in the legend: <span class="fw-pill">1.4 · Dev</span> &nbsp;<span class="fw-pill">Roadmap</span>. Mono, uppercase, used sparingly&mdash;one or two per diagram. It is the same orange as the dashed connector, so the in-development story reads consistently.</p>
+
+<div class="principle">
+  <div class="k">Rules</div>
+  <p>Navy for the one system in focus, blue for its capabilities, white for context, teal for ungoverned adjacent paths, and orange&mdash;dashed lines, dashed node borders, and status pills&mdash;reserved strictly for what&rsquo;s in development. Keep to these plus the legend and the diagram stays on-brand and unambiguous. Generous spacing; squared-top, rounded-bottom frames throughout.</p>
+</div>
+
+<div class="compare">
+  <div class="card do"><div class="head">Do</div><div class="body"><ul>
+    <li>Give the diagram one navy hero node; nest its capabilities as blue cards.</li>
+    <li>Encode connector status by color and always show the legend.</li>
+    <li>Reserve orange (dashed lines, dashed borders, status pills) for in-development only.</li>
+    <li>Label zones in blue, regions and tech lists in mono gray.</li>
+    <li>Use squared-top / rounded-bottom frames and keep lines orthogonal.</li>
+  </ul></div></div>
+  <div class="card dont"><div class="head">Don&rsquo;t</div><div class="body"><ul>
+    <li>Color connectors decoratively or drop the legend.</li>
+    <li>Use orange for anything already shipped, or purple/orange as general box fills.</li>
+    <li>Make two boxes compete as the hero, or fill context boxes with navy.</li>
+    <li>Exceed the tier vocabulary with custom box styles, gradients, or shadows.</li>
+    <li>Crowd the diagram&mdash;if it won&rsquo;t fit, simplify the system, not the spacing.</li>
+  </ul></div></div>
+</div>
+</div>
+</body></html>
