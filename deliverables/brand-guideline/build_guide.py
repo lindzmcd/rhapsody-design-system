@@ -2,7 +2,7 @@ import re, os, json, base64, sys
 
 REPO="/home/user/rhapsody-design-system"
 SCR="/tmp/claude-0/-home-user-rhapsody-design-system/47735526-4992-5771-a7d6-e16dade8eb40/scratchpad"
-DATE="August 2026"
+DATE="October 2026"
 
 MIME={".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",
       ".woff2":"font/woff2",".ttf":"font/ttf"}
@@ -13,12 +13,9 @@ def datauri(path):
     return f"data:{MIME.get(ext,'application/octet-stream')};base64,"+base64.b64encode(b).decode()
 
 # ---- fonts.css from downloaded latin woff2 ----
-flist=json.load(open(f"{SCR}/fonts/list.json"))
-font_faces=[]
-for fam,w,st,fn in flist:
-    uri=datauri(f"{SCR}/{fn}")
-    font_faces.append(f"@font-face{{font-family:{fam};font-style:{st};font-weight:{w};font-display:swap;src:url({uri}) format('woff2');}}")
-fonts_css="\n".join(font_faces)
+_prev=open(f"{REPO}/deliverables/brand-guideline/Rhapsody-Brand-Guideline.html",encoding="utf-8").read()
+fonts_css="\n".join(re.findall(r"@font-face\{.*?\}", _prev, re.S))
+assert fonts_css.count("@font-face")>=4, "font extraction failed"
 
 # ---- tokens.css with assets -> data URIs ----
 tokens=open(f"{REPO}/tokens.css").read()
@@ -175,5 +172,5 @@ art=f"""<style>
 {toc_html}
 {''.join(sections)}
 </div>"""
-open(f"{SCR}/artifact-body.html","w",encoding="utf-8").write(art)
+import os as _os; _os.makedirs(SCR, exist_ok=True); open(f"{SCR}/artifact-body.html","w",encoding="utf-8").write(art)
 print("wrote artifact body", f"{len(art.encode())/1024/1024:.2f} MB")

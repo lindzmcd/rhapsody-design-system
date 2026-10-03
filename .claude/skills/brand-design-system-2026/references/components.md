@@ -67,8 +67,8 @@ Types shown: bar, line, stacked bar, donut.
 thin brackets frame the set. Keep partner logos monochrome/neutral where possible so they sit evenly.
 
 **Quotes & testimonials.** Quote card, testimonial, and customer-quote card variants. Large quote in
-Poppins; attribution via the name lockup (name, title, company). On navy, Plexus is the appropriate
-backing device for a testimonial. Keep quotes to 1–2 sentences.
+Poppins; attribution via the name lockup (name, title, company). On navy, the Aurora glow is the
+appropriate backing device for a testimonial. Keep quotes to 1–2 sentences.
 
 **Stats.** Number-led stat cards — large numeral (Poppins Medium), short descriptor beneath. Numbers
 only in the big slot; keep descriptors short. Group in rows; align baselines.
@@ -97,9 +97,10 @@ random scatter, or graduated sizing.
 transparent SVG + 2× PNG. Use as-is, flipped, or rotated 90°. Never hand-build or restyle. Anchor +
 companion colors are fixed by the background; the anchor is never the background hue.
 
-**Light devices.** Aurora (teal-led wash), Aurora ribbon (motion/large scale), Burst (purple-led rays,
-breakthrough), Plexus (blue-led network, connectivity). **Navy grounds only.** Glow = teal/blue/purple,
-never orange, ≤3 colors. Offset into open space; copy on the calm side. Approved masters, not effects.
+**Light devices.** Aurora is the one light device: the soft wash (teal-led, everyday) and the Aurora
+ribbon (motion/large scale). Burst and Plexus are retired (Oct 2026) — use Aurora in their place.
+**Navy grounds only.** Glow = teal/blue/purple, never orange, ≤3 colors. Offset into open space; copy
+on the calm side. Approved masters, not effects.
 
 ## Iconography
 
@@ -131,7 +132,7 @@ Deliverable package (HTML + IT/employee setup) lives in `deliverables/signature-
 **Social posts.** 1:1 square posts plus a quote banner. One device per post (dots or a light device).
 Logo present; copy short and legible; keep blue backgrounds readable (bump type weight/size, not clutter).
 
-**Product launch announcement.** Launch unit: product name, **Burst** glow on navy, one CTA. Use for a
+**Product launch announcement.** Launch unit: product name, **Aurora** glow on navy, one CTA. Use for a
 breakthrough/announcement moment.
 
 **Name lockup.** Attribution block: name, title, company. Rules for logo vs. written company name, and

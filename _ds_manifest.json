@@ -114,7 +114,7 @@
     {
       "path": "components/light-devices.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Aurora, Aurora ribbon, Burst, Plexus",
+      "subtitle": "Aurora soft wash & Aurora ribbon",
       "name": "Light devices"
     },
     {
@@ -146,6 +146,12 @@
       "group": "7 · Patterns",
       "name": "PowerPoint deck template",
       "subtitle": "Official 2026 slide deck — downloadable master (.pptx)"
+    },
+    {
+      "path": "components/frameworks.html",
+      "group": "7 · Patterns",
+      "subtitle": "System & architecture diagrams: box tiers, mono labels, color-coded maturity connectors",
+      "name": "Framework diagrams"
     },
     {
       "path": "components/email-signature.html",
@@ -180,7 +186,7 @@
     {
       "path": "components/product-launch.html",
       "group": "7 · Patterns",
-      "subtitle": "Launch unit: product name, Burst glow, one CTA",
+      "subtitle": "Launch unit: product name, Aurora glow, one CTA",
       "name": "Product launch announcement"
     },
     {
