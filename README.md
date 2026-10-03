@@ -10,7 +10,8 @@ It is a code version of the approved *Rhapsody Brand VisID Guide*
 Latest guide update folded in: light blue refreshed to `#B4D8FF`; all headings set in
 Poppins Regular (400); logo is navy-bar + blue wordmark on light and blue-bar + white
 wordmark on dark (`logo-inv`); the graduated dot field is retired (uniform scattered field
-only); light devices are Aurora, Aurora ribbon, Burst, and Plexus (Pulse retired); and the
+only); the light device is Aurora, in two registers (soft wash and ribbon); Burst and Plexus
+retired (Oct 2026), Pulse retired earlier; and the
 Color card adds contrast pairings, per-color caveats, and a "text on teal" rule.
 
 ## Structure
@@ -44,7 +45,7 @@ to build the Design System pane, grouping cards by `group`. Every component link
 | Foundations | `components/pathways.html` | Build (blue) vs Automate (teal) color coding + wayfinding directive |
 | Brand | `components/logo.html` | Primary, variations, monogram, clear space, product & co-brand lockups, restrictions |
 | Graphic devices | `components/dots.html` | Graduated field, scattered field, dot-row accent |
-| Graphic devices | `components/light-devices.html` | Pulse, Aurora, Burst glows + rules |
+| Graphic devices | `components/light-devices.html` | Aurora glow (soft wash + ribbon) + rules |
 | Iconography | `components/icons.html` | Reference set, drawing spec, icon tile, functional marks |
 | Imagery | `components/photography.html` | Photo direction + portrait treatments |
 | Components | `components/buttons.html` | Pill buttons, primary/secondary, text links + CTA arrow |

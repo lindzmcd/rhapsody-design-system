@@ -1,6 +1,6 @@
 ---
 name: brand-design-system-2026
-description: "The Rhapsody visual design system — the 2026 code-based brand identity (Rhapsody Brand VisID Guide, September 2026). Load this whenever you DESIGN or PRODUCE a visual Rhapsody asset: web/landing pages, HTML mockups, heroes, email templates and signatures, social graphics, display/banner ads, slide/PowerPoint visuals, charts and data viz, icons, or any layout that must look on-brand. Also load when applying Rhapsody colors, typography, the logo, the dots device, the light devices (Aurora, Burst, Plexus), portrait treatments, or component styling, and when someone says 'make this on-brand,' 'use the design system,' 'use Rhapsody colors/fonts,' 'brand this layout,' 'build a landing page,' 'design an ad,' or wants to sync the design system in Claude Design (design-sync). This governs VISUAL output; for voice, copywriting, and product-naming/trademark rules use rhapsody-brand alongside it. When in doubt on anything visual and Rhapsody, use this skill."
+description: "The Rhapsody visual design system — the 2026 code-based brand identity (Rhapsody Brand VisID Guide, September 2026). Load this whenever you DESIGN or PRODUCE a visual Rhapsody asset: web/landing pages, HTML mockups, heroes, email templates and signatures, social graphics, display/banner ads, slide/PowerPoint visuals, charts and data viz, icons, or any layout that must look on-brand. Also load when applying Rhapsody colors, typography, the logo, the dots device, the Aurora light device (glow), portrait treatments, or component styling, and when someone says 'make this on-brand,' 'use the design system,' 'use Rhapsody colors/fonts,' 'brand this layout,' 'build a landing page,' 'design an ad,' or wants to sync the design system in Claude Design (design-sync). This governs VISUAL output; for voice, copywriting, and product-naming/trademark rules use rhapsody-brand alongside it. When in doubt on anything visual and Rhapsody, use this skill."
 ---
 
 # Rhapsody Brand Design System 2026
@@ -195,23 +195,25 @@ stacked with heavy photography treatments.
 - Dots belong on blue or navy grounds (or as the multicolor field) — not scattered on plain white as
   filler.
 
-### Light devices (navy grounds only)
-Four soft light-based devices carry atmosphere for photo-free digital moments (heroes, social, slides):
+### Aurora light device (navy grounds only)
+Aurora is the one soft light-based device; it carries atmosphere for photo-free digital moments
+(heroes, social, slides). It has two registers:
 
-| Device | Meaning | Color lead |
+| Register | Meaning | Color lead |
 |---|---|---|
-| **Aurora** | A soft blended wash — harmony across the system | Teal-led |
-| **Aurora ribbon** | A flowing band of light — motion & large-scale (video, animated headers, big heroes) | Runs through all three |
-| **Burst** | Soft rays from a core, fading out — breakthrough moments | Purple-led |
-| **Plexus** | A connected network of points — connectivity/interoperability moments (testimonials, platform sections) | Blue-led |
+| **Aurora** (soft wash) | A soft blended wash — harmony across the system; the everyday register | Teal-led |
+| **Aurora ribbon** | A flowing band of light — motion & large-scale (video, animated headers, big heroes) | Runs through teal/blue/purple |
 
-Light-device rules:
+> **Burst and Plexus are retired (Oct 2026).** The light-device family is Aurora only. Anywhere Burst
+> or Plexus once appeared (product launch, social quote banner), use the Aurora glow.
+
+Aurora rules:
 - **Navy ground only.** Never on blue, white, or photography. On those, use dots or photography.
-- **Glows use teal, blue, and purple only — never orange.** Keep each glow within three colors and
-  within its recommended lead.
+- **The glow uses teal, blue, and purple only — never orange.** Keep each glow within three colors;
+  Aurora is teal-led.
 - **Offset the glow into open space** so copy sits on the calm side, never on the brightest point.
-- Reserve **Plexus** for connection moments and the **Aurora ribbon** for motion/large scale; use the
-  plain **Aurora** wash for everyday layouts where text sits close.
+- Reserve the **Aurora ribbon** for motion/large scale; use the plain **Aurora** wash for everyday
+  layouts where text sits close.
 - These are approved masters, not effects you build.
 
 ---
@@ -284,7 +286,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - **Tertiary tightened**: Purple and Orange are accents / emphasis / data-viz only.
 - **"Text on teal" removed** — omit it.
 - **Graduated dot grid retired** → uniform scattered field only. Multicolor dots are approved.
-- **Light devices** are Aurora, Aurora ribbon, Burst, Plexus (Pulse retired).
+- **Light device** is Aurora only — the soft wash and the Aurora ribbon (Burst and Plexus retired Oct 2026; Pulse earlier).
 - **Icons** → single outline family (stroke-only, 1.7 weight, `currentColor`, 44px gray tile).
 - **Portraits** → thin ring / arc / card / editorial split (thick color ring retired).
 - **Illustration** legacy styles retired.

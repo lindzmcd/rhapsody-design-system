@@ -127,9 +127,7 @@ a{color:var(--blue);}
 .logo-blw{background-image:url(assets/logo-blueline.png);}   /* blue wordmark + white line, dark bg (large only) */
 
 .dupimg0{background-image:url(assets/dupimg0.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:360/360;display:block;}
-.dupimg1{background-image:url(assets/dupimg1.png);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:600/600;display:block;}
 .dupimg2{background-image:url(assets/dupimg2.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:600/600;display:block;}
-.dupimg3{background-image:url(assets/dupimg3.png);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:300/300;display:block;}
 
 /* Pass/fail annotation badges (documentation chrome, not brand palette) */
 .pfbadge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;padding:2px 8px;border-radius:999px;letter-spacing:.03em;color:#fff;line-height:1.5;white-space:nowrap;}
