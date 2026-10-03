@@ -24,6 +24,17 @@ missing from the manifest). Full parity re-push of all 28 cards + tokens.css +
 regenerated manifest fixed it. When editing groups, always re-push BOTH the
 HTML files and the manifest together.
 
+## Sync 2026-10-03 — teal ruling + Aurora-only
+Parity push of all 32 cards + tokens.css (teal immutability ruling in
+colors/buttons/corrections/tokens; Aurora-only light-device retirement in
+device-overview/light-devices/product-launch/social). Deleted the remote
+orphans assets/dupimg1.png and dupimg3.png (removed from git by the
+Aurora commit; no card or tokens.css references remain). No manifest
+pushed, per the 09-07 rule below — sentinel re-armed so the app recompiles
+cards[] and templates[] from the files. Remote uploads/ still holds the
+GUI-uploaded Burst/Plexus masters; left alone (not git-managed) — tell the
+app owner they can tidy them from the GUI if wanted.
+
 ## Gotcha fixed 2026-09-07 — templates gallery wiped
 The "Choose a template" gallery (Email signature + Axon Connect pitch deck)
 went empty because a hand-uploaded `_ds_manifest.json` carried `"templates": []`,
