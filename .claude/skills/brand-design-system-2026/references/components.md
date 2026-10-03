@@ -25,7 +25,9 @@ Restraint is the house style — clean, confident, few colors, lots of air.
 
 **Color.** See SKILL.md §1. Default hierarchy White/Navy + Rhapsody Blue + one optional accent; ≤3
 brand colors. Tertiary (purple/orange) restricted to accent/emphasis/data-viz. No text on teal. No
-custom gradients. Blue-on-navy for large elements only.
+custom gradients. Blue-on-navy for large elements only. Teal is immutable (#23C5BF, never darkened
+for contrast): teal type on navy only; on light grounds teal is accent-only (tick / accent line /
+seam) beside navy text — see the card's "Teal in small applications" section.
 
 **Typography.** See SKILL.md §2. Poppins Regular body/headings, Medium hero; IBM Plex Mono eyebrows
 only. Two-tone (white + light blue) headline on navy. `strong` = Medium. Shorten copy rather than

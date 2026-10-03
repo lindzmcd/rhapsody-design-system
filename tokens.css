@@ -10,7 +10,7 @@
   --navy:#0B2C47;      /* Rhapsody Navy  */
   /* Secondary */
   --lblue:#B4D8FF;     /* Light blue (dark-ground accent) */
-  --teal:#23C5BF;      /* Teal           */
+  --teal:#23C5BF;      /* Teal — immutable, never darkened for contrast; type on navy only, accent-only on light */
   /* Tertiary accents (sparingly) */
   --purple:#7340E4;
   --orange:#FA7E2E;

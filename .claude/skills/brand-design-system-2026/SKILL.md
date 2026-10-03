@@ -106,6 +106,14 @@ element, and they are approved masters — not gradients you build.
 - Maintain readable contrast; favor the approved pairings (white on navy/blue, navy on white/gray-blue).
 - **Do not set text on teal.** Even though black on teal passes contrast, it isn't visually right —
   omit it. (This supersedes any older "text on teal" allowance.)
+- **Teal is immutable (Oct 2026).** One teal, `#23C5BF` — never darken, tint, or theme-convert it to
+  pass a contrast check; a "fixed" teal is an off-brand color. Teal reads 6.7:1 on navy (passes at any
+  size) and 2.1:1 on white (fails at any size), so the ground decides the role: **teal type (eyebrows,
+  labels, actionlinks, small icons) sits on navy only.** On white or gray-blue, teal never sets type —
+  the automation cue is an accent (the module accent line, the teal seam, or the **teal tick**: a
+  16×3px teal bar before a navy mono label), links stay Rhapsody Blue, and meaningful teal graphics
+  get direct navy labels. If a teal application fails contrast, change the ground or the role — never
+  the hex. The teal-filled pill is retired (its label sat on teal).
 - Rhapsody Blue on navy is fine for **large** elements and accents, not for long body copy.
 
 **Charts / data viz color order** (same order is used for pathways):
@@ -302,6 +310,8 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 □ Navy is #0B2C47; Rhapsody Blue is #1A81F4; light blue is #B4D8FF
 □ Poppins Regular for body/headings, Medium for hero; IBM Plex Mono for eyebrows only
 □ No text set on teal
+□ Teal is #23C5BF everywhere — nothing darkened to pass contrast; teal type on navy only; on light
+  grounds teal appears only as an accent (tick / accent line / seam) beside navy text
 □ Two-tone headline on navy = white + light blue
 □ If it didn't fit, the copy was shortened — the type was not crushed
 □ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark; RHAPSODY all caps; clear space kept
