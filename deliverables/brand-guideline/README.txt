@@ -1,5 +1,6 @@
 RHAPSODY — BRAND & DESIGN GUIDELINE (external partner package)
 ==============================================================
+Version: October 2026
 
 WHAT'S HERE
   Rhapsody-Brand-Guideline.html  Open in any web browser. Fully self-contained
@@ -19,8 +20,13 @@ HOW TO USE
      guide says it's allowed.
   3. Fonts: Poppins (headlines/body) and IBM Plex Mono (eyebrows/labels) —
      both free from Google Fonts.
-  4. Anything not included here (product logos, the full icon library, light
-     device masters) lives in Rhapsody's internal library — request it from
-     your Rhapsody contact.
+  4. Anything not included here (product logos, the full icon library, the
+     Aurora light-device masters) lives in Rhapsody's internal library —
+     request it from your Rhapsody contact.
+
+NOTE (Oct 2026): The light-device family is now Aurora only — the soft wash
+  and the Aurora ribbon. The earlier Burst and Plexus glows are retired; use
+  the Aurora glow in their place. See the guideline's "Light devices" and
+  "Quick corrections log" sections.
 
 Questions or approvals: your Rhapsody marketing contact.
