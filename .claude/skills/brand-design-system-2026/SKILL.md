@@ -46,6 +46,12 @@ the `:root` variables from `assets/tokens.css` into your file. Logo art is bundl
 **A full component-by-component catalog lives in `references/components.md`.** Read it when you need
 the exact treatment for a specific component or pattern (email, social, hero, tables, quotes, etc.).
 
+**Website work: also read `../../../references/web-style.md`** (repo root `references/web-style.md`)
+— the record of web usage patterns decided for the October 2026 Solutions redesign: page template
+anatomy, hero tiers and the trust ticker, the clickable-affordance rule, the product-media showcase
+pattern, FAQ placement, the CTA dot field, SEO working practice, and web claims guardrails. Follow
+it for any rhapsody.health page so patterns stay consistent.
+
 ## Syncing to Claude Design (`/design-sync`)
 
 The design system is pushed to the **Rhapsody Design System** project in Claude Design with the
