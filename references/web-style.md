@@ -91,8 +91,16 @@ Anything clickable has a **border + arrow**; labels and tags have **neither**. C
 - **Pathway colors are fixed system-wide: Build = Rhapsody Blue, Automate = teal.** A third-party
   or neutral column (e.g. "the connector approach") gets a **gray** tick — pathway colors belong
   to our two paths. Every path label gets a tick; none renders colorless.
-- The canonical framework visual is the **Build + Automate architecture diagram** (asset #1,
-  Claude Design master): primary home on the Infrastructure overview POV, reused on Integration.
+- The canonical framework visual is the **Build + Automate architecture framework** (asset #1),
+  built as **responsive HTML native to the page** (ruling Oct 2026, wireframes v115): centered
+  in/out chip lanes ("Your systems and partners" / "Out to every destination"), a navy layer panel
+  with Govern · Connect · Trust compartments, a "Speaks" standards strip (FHIR first), and the
+  Axon + Envoy automation band. The compartments carry the three words only; the solutions tiles
+  below do the explaining, so the two sections never duplicate copy. The Build/Automate echo is
+  carried by the blue tick on the layer label and the teal tick on the automation band, no explicit
+  pathway labels. Primary home on the Infrastructure overview POV, reused on Integration (one
+  component, two placements). The Claude Design image master remains the source for non-web uses:
+  decks, PDFs, social.
 - **Pathway colors appear only in the POV section.** Product/umbrella sections never reuse the
   blue/teal split: the Integration umbrella presents its three solutions (Rhapsody, Corepoint,
   Envoy) as equal cards all in the build treatment, with the chooser carried by kicker labels
@@ -128,6 +136,11 @@ Anything clickable has a **border + arrow**; labels and tags have **neither**. C
   affordance rule); aggregate claims with no story behind them stay static.
 
 ## 9. Product media: the showcase pattern
+
+**Frameworks are page content, not pictures.** Concept and architecture diagrams embed as native,
+responsive HTML: real text that is crawlable, accessible, and reflows at every width. The framed
+screenshot treatment (chrome bar) is reserved for what genuinely is a screen or artifact — product
+UI, demo video, an audit record, a sample deliverable — where the frame is honest.
 
 **Product UI is never shown smaller than full content width.** No screenshot/demo grids, no card
 insets. The pattern: one full-width media frame with a **segmented toggle** above it (joined
@@ -187,4 +200,4 @@ Guardian request path.
 ---
 
 *Maintained alongside the design system. When a web ruling changes, update this file and the
-corrections log in the same commit. Last updated: October 2026 (solutions wireframes v106).*
+corrections log in the same commit. Last updated: October 2026 (solutions wireframes v115).*
