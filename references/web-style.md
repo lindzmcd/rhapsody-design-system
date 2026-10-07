@@ -93,6 +93,12 @@ Anything clickable has a **border + arrow**; labels and tags have **neither**. C
   to our two paths. Every path label gets a tick; none renders colorless.
 - The canonical framework visual is the **Build + Automate architecture diagram** (asset #1,
   Claude Design master): primary home on the Infrastructure overview POV, reused on Integration.
+- **Pathway colors appear only in the POV section.** Product/umbrella sections never reuse the
+  blue/teal split: the Integration umbrella presents its three solutions (Rhapsody, Corepoint,
+  Envoy) as equal cards all in the build treatment, with the chooser carried by kicker labels
+  ("build with your developers / configure with your team / managed for your team") and the
+  showcase toggle. Image Director is a secondary "also need image routing?" add-on strip, not a
+  fourth focal point.
 
 ## 7. Dots and the CTA band
 
@@ -178,4 +184,4 @@ Guardian request path.
 ---
 
 *Maintained alongside the design system. When a web ruling changes, update this file and the
-corrections log in the same commit. Last updated: October 2026 (solutions wireframes v103).*
+corrections log in the same commit. Last updated: October 2026 (solutions wireframes v104).*
