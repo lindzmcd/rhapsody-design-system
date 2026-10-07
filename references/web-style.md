@@ -96,9 +96,10 @@ Anything clickable has a **border + arrow**; labels and tags have **neither**. C
 - **Pathway colors appear only in the POV section.** Product/umbrella sections never reuse the
   blue/teal split: the Integration umbrella presents its three solutions (Rhapsody, Corepoint,
   Envoy) as equal cards all in the build treatment, with the chooser carried by kicker labels
-  ("build with your developers / configure with your team / managed for your team") and the
-  showcase toggle. Image Director is a secondary "also need image routing?" add-on strip, not a
-  fourth focal point.
+  ("build with your developers / configure with your team / managed for your team"), neutral
+  you-build / we-build group labels over the cards (navy mono with a hairline, never pathway
+  colors), and the showcase toggle. Image Director is a secondary "also need image routing?"
+  add-on strip, not a fourth focal point.
 
 ## 7. Dots and the CTA band
 
@@ -123,6 +124,8 @@ Anything clickable has a **border + arrow**; labels and tags have **neither**. C
 - Stats are plain-language outcomes, verified against a source, or they don't ship. Analyst
   economic-impact stats carry generic attribution only ("per an independent economic impact
   study") — the firm is never named.
+- **Proof chips that name a customer link to that customer's story** (blue text + arrow, per the
+  affordance rule); aggregate claims with no story behind them stay static.
 
 ## 9. Product media: the showcase pattern
 
@@ -184,4 +187,4 @@ Guardian request path.
 ---
 
 *Maintained alongside the design system. When a web ruling changes, update this file and the
-corrections log in the same commit. Last updated: October 2026 (solutions wireframes v104).*
+corrections log in the same commit. Last updated: October 2026 (solutions wireframes v106).*
