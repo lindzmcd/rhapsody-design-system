@@ -9,10 +9,12 @@ It is a code version of the approved *Rhapsody Brand VisID Guide*
 
 Latest guide update folded in: light blue refreshed to `#B4D8FF`; all headings set in
 Poppins Regular (400); logo is navy-bar + blue wordmark on light and blue-bar + white
-wordmark on dark (`logo-inv`); the graduated dot field is retired (uniform scattered field
-only); the light device is Aurora, in two registers (soft wash and ribbon); Burst and Plexus
-retired (Oct 2026), Pulse retired earlier; and the
-Color card adds contrast pairings, per-color caveats, and a "text on teal" rule.
+wordmark on dark (`logo-inv`); the scattered/structured dot field is retired and replaced by the
+**Fluid dot pattern** (a half-tone grid, dense-to-sparse, with a two-tone color-territory split);
+the light device is **Aurora only** — one glow, soft to flowing, movement allowed (Burst, Plexus,
+and the separate Aurora ribbon retired Oct 2026; Pulse earlier); Rhapsody Blue carries a print
+spec (CMYK 100 50 0 0); and the Color card adds contrast pairings, per-color caveats, and a
+"text on teal" rule.
 
 ## Structure
 
@@ -44,8 +46,8 @@ to build the Design System pane, grouping cards by `group`. Every component link
 | Foundations | `components/spacing.html` | Clear margin, teal separator, module accent line |
 | Foundations | `components/pathways.html` | Build (blue) vs Automate (teal) color coding + wayfinding directive |
 | Brand | `components/logo.html` | Primary, variations, monogram, clear space, product & co-brand lockups, restrictions |
-| Graphic devices | `components/dots.html` | Graduated field, scattered field, dot-row accent |
-| Graphic devices | `components/light-devices.html` | Aurora glow (soft wash + ribbon) + rules |
+| Graphic devices | `components/dots.html` | Dots overview, fluid pattern vs big dot, dot colors |
+| Graphic devices | `components/light-devices.html` | Aurora glow (one device, movement allowed) + rules |
 | Iconography | `components/icons.html` | Reference set, drawing spec, icon tile, functional marks |
 | Imagery | `components/photography.html` | Photo direction + portrait treatments |
 | Components | `components/buttons.html` | Pill buttons, primary/secondary, text links + CTA arrow |

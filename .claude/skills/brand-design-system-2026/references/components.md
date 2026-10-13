@@ -9,7 +9,7 @@ reusable classes; otherwise use these specs. All items link `tokens.css` and pul
 - Foundations: Brand expression · Color · Typography · Layout & spacing · Pathways · Corners & shape
 - Brand: Logo & wordmark
 - Components: Buttons · Charts · Partner logos · Quotes · Stats · Tables · Dot accents
-- Graphic devices: Devices at a glance · Dots · Scattered dot field · Big dot · Light devices
+- Graphic devices: Devices at a glance · Dots · Fluid dot pattern · Big dot · Light devices
 - Iconography: Icon library
 - Imagery: Illustration · Photography & portraits
 - Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · PowerPoint
@@ -86,10 +86,10 @@ without a full field.
 **Devices at a glance.** The master overview: each device, its meaning, its color lead, and when to
 use it. Consult it to choose between dots and a light device — and remember, only one per layout.
 
-**Dots overview.** What the dots mean, dot field vs. big dot, and approved backgrounds/dot colors.
+**Dots overview.** What the dots mean, fluid pattern vs. big dot, and approved backgrounds/dot colors.
 Structured field only (graduated grid retired). White-on-blue and multicolor are both on-brand.
 
-**Scattered dot field.** The uniform field — equal-size dots, densest at an edge, thinning inward.
+**Fluid dot pattern.** A half-tone dot grid — identical dots that gather into a dense core and dissolve fluidly outward; registers white-on-navy, white-on-blue, dots-on-white, multicolor-on-navy, plus a two-tone color-territory split. Replaces the retired scattered field.
 Structured dispersion with defined anchors. Do: keep density purposeful and directional. Don't:
 random scatter, or graduated sizing.
 
@@ -97,8 +97,7 @@ random scatter, or graduated sizing.
 transparent SVG + 2× PNG. Use as-is, flipped, or rotated 90°. Never hand-build or restyle. Anchor +
 companion colors are fixed by the background; the anchor is never the background hue.
 
-**Light devices.** Aurora is the one light device: the soft wash (teal-led, everyday) and the Aurora
-ribbon (motion/large scale). Burst and Plexus are retired (Oct 2026) — use Aurora in their place.
+**Light devices.** Aurora is the one light device — a single glow with range, soft wash to flowing, that allows movement (navy only, teal-led). Burst, Plexus, and the separate Aurora ribbon are retired (Oct 2026).
 **Navy grounds only.** Glow = teal/blue/purple, never orange, ≤3 colors. Offset into open space; copy
 on the calm side. Approved masters, not effects.
 

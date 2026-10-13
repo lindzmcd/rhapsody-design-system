@@ -102,7 +102,7 @@ per layout**, and reaching three is not a goal.
 exceptional emphasis, and **data visualization**. Never use either as a general section color,
 headline color, CTA color, background theme, pathway color, or decorative fill. They do **not** count
 as a freely available third color — use them only where a rule explicitly authorizes them (e.g. the
-multicolor dot field, chart series).
+multicolor fluid dot pattern, chart series).
 
 **No custom gradients.** Flat brand colors only. The light devices (Section 5) are the only glow/blend
 element, and they are approved masters — not gradients you build.
@@ -202,36 +202,35 @@ Rules:
 stacked with heavy photography treatments.
 
 ### Dots (primary device)
-- **Structured only.** Use the **uniform scattered field** — equal-size dots, densest at one edge and
-  thinning inward. Never a random scatter. **The size-graduated grid is retired.**
-- Two registers are equally on-brand: **white dots on Rhapsody Blue**, and the **multicolor field**.
-  (An earlier draft wrongly called multicolor off-brand — it is approved.)
-- **Big dot**: a closed, approved family (one per background/placement/format, plus three variants),
-  shipped as transparent SVG + 2× PNG. Use one **as-is, flipped, or rotated 90°** — never hand-build
-  or restyle it. Anchor color and companions are set by the background and are not interchangeable;
-  the anchor is never the background hue.
-- Dots belong on blue or navy grounds (or as the multicolor field) — not scattered on plain white as
-  filler.
+- **Fluid dot pattern** (the primary dot composition). A **half-tone dot grid** — identical dots on
+  one grid that gather into a dense core at an edge/corner and **dissolve fluidly outward** (dense to
+  sparse). Registers: **white on navy**, **white on Rhapsody Blue**, **dots on white**, and the
+  **multicolor field** (blue/light-blue/teal/purple/white + up to 3 orange). It also carries a
+  **color-territory split** — a two-tone diagonal that divides a composition instead of a hard color
+  block. It replaces the earlier scattered/structured dot field (retired Oct 2026). Use an approved
+  master **as-is, flipped, or rotated 90°**; never hand-build or recolor.
+- **Big dot**: a closed, approved family — one dominant cropped circle (anchor), optionally with
+  companions. Use one **as-is, flipped, or rotated 90°** — never hand-build or restyle it. Anchor
+  color and companions are set by the background; the anchor is never the background hue.
+- One dot device per layout; dots belong on blue or navy grounds, or dots-on-white / the multicolor
+  field — not scattered on plain white as filler.
 
 ### Aurora light device (navy grounds only)
-Aurora is the one soft light-based device; it carries atmosphere for photo-free digital moments
-(heroes, social, slides). It has two registers:
+Aurora is the **one** light device, and it carries atmosphere for photo-free digital moments (heroes,
+social, slides, video). It is a single device with range — from a calm **soft wash** to a **flowing**
+form — and **Aurora allows movement**, so the same device covers still and moving work. (There is no
+separate "Aurora ribbon" register anymore; the flowing form is part of Aurora.)
 
-| Register | Meaning | Color lead |
-|---|---|---|
-| **Aurora** (soft wash) | A soft blended wash — harmony across the system; the everyday register | Teal-led |
-| **Aurora ribbon** | A flowing band of light — motion & large-scale (video, animated headers, big heroes) | Runs through teal/blue/purple |
-
-> **Burst and Plexus are retired (Oct 2026).** The light-device family is Aurora only. Anywhere Burst
-> or Plexus once appeared (product launch, social quote banner), use the Aurora glow.
+> **Burst, Plexus, and the separate Aurora ribbon are retired (Oct 2026).** The light device is Aurora
+> only. Anywhere Burst or Plexus once appeared (product launch, social quote banner), use Aurora.
 
 Aurora rules:
 - **Navy ground only.** Never on blue, white, or photography. On those, use dots or photography.
 - **The glow uses teal, blue, and purple only — never orange.** Keep each glow within three colors;
   Aurora is teal-led.
 - **Offset the glow into open space** so copy sits on the calm side, never on the brightest point.
-- Reserve the **Aurora ribbon** for motion/large scale; use the plain **Aurora** wash for everyday
-  layouts where text sits close.
+- Lean into the **flowing** form for motion/video/large backdrops; keep to the calmer **wash** for
+  everyday layouts where text sits close.
 - These are approved masters, not effects you build.
 
 ---
@@ -275,7 +274,7 @@ Each item below is a card in the design system. For the exact treatment of any o
 **Brand** — Logo & wordmark
 **Components** — Buttons & CTAs · Charts & graphs · Partner logos (brackets) · Quotes & testimonials ·
 Stats · Tables · Dot accents
-**Graphic devices** — Devices at a glance · Dots overview · Scattered dot field · Big dot · Light devices
+**Graphic devices** — Devices at a glance · Dots overview · Fluid dot pattern · Big dot · Light devices
 **Iconography** — Icon library
 **Imagery** — Illustration · Photography & portraits
 **Patterns** — Hero · Email template · Email signature · Social posts · Product launch announcement ·
@@ -303,8 +302,8 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - **Light blue refreshed to `#B4D8FF`.**
 - **Tertiary tightened**: Purple and Orange are accents / emphasis / data-viz only.
 - **"Text on teal" removed** — omit it.
-- **Graduated dot grid retired** → uniform scattered field only. Multicolor dots are approved.
-- **Light device** is Aurora only — the soft wash and the Aurora ribbon (Burst and Plexus retired Oct 2026; Pulse earlier).
+- **Scattered dot field retired** → the **Fluid dot pattern** (half-tone grid, dense-to-sparse, + color-territory split). Multicolor dots are approved.
+- **Light device** is Aurora only — one glow, soft to flowing, movement allowed (Burst, Plexus, and the separate Aurora ribbon retired Oct 2026; Pulse earlier).
 - **Icons** → single outline family (stroke-only, 1.7 weight, `currentColor`, 44px gray tile).
 - **Portraits** → thin ring / arc / card / editorial split (thick color ring retired).
 - **Illustration** legacy styles retired.
@@ -330,7 +329,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 □ Logo not recolored, stretched, rotated, shadowed, or overlaid
 □ Corners: squared top, rounded bottom on modules; pills reserved for CTAs
 □ Exactly one graphic device in the layout (dots OR a light device — never both)
-□ Dots are the uniform scattered field (not graduated, not random); big dot used as-is/flipped/90°
+□ Dots are the fluid dot pattern (approved master, not hand-built); big dot used as-is/flipped/90°
 □ Light devices on navy only; glow is teal/blue/purple (never orange); offset into open space
 □ Icons: single outline family, 1.7 weight, currentColor, 44px gray tile
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur

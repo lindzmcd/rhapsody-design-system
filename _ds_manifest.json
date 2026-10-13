@@ -102,8 +102,8 @@
     {
       "path": "components/dot-field.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Structured dispersion, anchors, rules, do & don't",
-      "name": "Scattered dot field"
+      "subtitle": "Half-tone dot grid, fluid density gradient, registers & color-territory split",
+      "name": "Fluid dot pattern"
     },
     {
       "path": "components/big-dot.html",
@@ -114,7 +114,7 @@
     {
       "path": "components/light-devices.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Aurora soft wash & Aurora ribbon",
+      "subtitle": "One Aurora glow — soft to flowing, movement allowed; navy only",
       "name": "Light devices"
     },
     {
