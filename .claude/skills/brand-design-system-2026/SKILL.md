@@ -90,6 +90,10 @@ Tokens (from `tokens.css` — these exact hex values are the standard):
 | `--grayblue` | `#E8EDF2` | Neutral | Section background fill |
 | `--tile` | `#E9EEF4` | Neutral | Icon-tile background |
 
+**Print color.** HEX/RGB are for digital. For **print**, Rhapsody Blue is **CMYK 100 50 0 0** — set the
+swatch explicitly (`C100 M50 Y0 K0`); don't let the layout program auto-convert the hex, which comes
+out muddy. Other colors use their CMYK/Pantone equivalents in print.
+
 **Default palette hierarchy.** Most layouts should be **White or Navy + Rhapsody Blue**, with **one**
 optional secondary accent (Light Blue or Teal) only when needed. **No more than three brand colors
 per layout**, and reaching three is not a goal.

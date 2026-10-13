@@ -12,10 +12,10 @@ def datauri(path):
     b=open(path,"rb").read()
     return f"data:{MIME.get(ext,'application/octet-stream')};base64,"+base64.b64encode(b).decode()
 
-# ---- fonts.css from downloaded latin woff2 ----
-_prev=open(f"{REPO}/deliverables/brand-guideline/Rhapsody-Brand-Guideline.html",encoding="utf-8").read()
-fonts_css="\n".join(re.findall(r"@font-face\{.*?\}", _prev, re.S))
-assert fonts_css.count("@font-face")>=4, "font extraction failed"
+# ---- fonts: read the committed, self-contained @font-face CSS (embedded woff2 data URIs)
+# Kept as its own file so the build never depends on the prior (and thus corruptible) HTML output.
+fonts_css=open(f"{REPO}/deliverables/brand-guideline/fonts.css",encoding="utf-8").read()
+assert fonts_css.count("@font-face")>=4, "fonts.css missing @font-face blocks"
 
 # ---- tokens.css with assets -> data URIs ----
 tokens=open(f"{REPO}/tokens.css").read()
