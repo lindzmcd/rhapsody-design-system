@@ -124,7 +124,7 @@ element, and they are approved masters — not gradients you build.
   16×3px teal bar before a navy mono label), links stay Rhapsody Blue, and meaningful teal graphics
   get direct navy labels. If a teal application fails contrast, change the ground or the role — never
   the hex. The teal-filled pill is retired (its label sat on teal).
-- Rhapsody Blue on navy is fine for **large** elements and accents, not for long body copy.
+- On navy, **default to light blue for text** (headlines, body, the two-tone highlight). Rhapsody Blue on navy is for **large graphics** (bars, blocks, big dots), not type; a designer may override for a specific case.
 
 **Charts / data viz color order** (same order is used for pathways):
 Navy → Rhapsody Blue → Teal → Purple → Orange → Light blue, then neutrals. Keep series minimal;
