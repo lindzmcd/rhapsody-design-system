@@ -136,9 +136,15 @@
       "name": "Photography & portraits"
     },
     {
+      "path": "components/hero-badge.html",
+      "group": "7 · Patterns",
+      "subtitle": "Website hero badges: navy disc, thick brand ring, radiating dot halo — photo or illustration fill",
+      "name": "Hero badge graphics"
+    },
+    {
       "path": "components/display-ads.html",
       "group": "7 · Patterns",
-      "subtitle": "Blue-first display template — logo-led, few large words, one action; every IAB placement",
+      "subtitle": "Blue-first display ad — logo-led, few large words, one action (one in-context example)",
       "name": "Display ads"
     },
     {
