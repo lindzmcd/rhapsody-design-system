@@ -148,12 +148,6 @@
       "subtitle": "Official 2026 slide deck — downloadable master (.pptx)"
     },
     {
-      "path": "components/frameworks.html",
-      "group": "7 · Patterns",
-      "subtitle": "System & architecture diagrams: box tiers, mono labels, color-coded maturity connectors",
-      "name": "Framework diagrams"
-    },
-    {
       "path": "components/email-signature.html",
       "group": "7 · Patterns",
       "subtitle": "Employee signature: wordmark, teal divider, name lockup, certifications",
