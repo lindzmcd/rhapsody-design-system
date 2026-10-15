@@ -205,10 +205,9 @@ stacked with heavy photography treatments.
 - **Fluid dot pattern** (the primary dot composition). A **half-tone dot grid** — identical dots on
   one grid that gather into a dense core at an edge/corner and **dissolve fluidly outward** (dense to
   sparse). Registers: **white on navy**, **white on Rhapsody Blue**, **dots on white**, and the
-  **multicolor field** (blue/light-blue/teal/purple/white + up to 3 orange). It also carries a
-  **color-territory split** — a two-tone diagonal that divides a composition instead of a hard color
-  block. It replaces the earlier scattered/structured dot field (retired Oct 2026). Use an approved
-  master **as-is, flipped, or rotated 90°**; never hand-build or recolor.
+  **multicolor field** (blue/light-blue/teal/purple/white + up to 3 orange). It replaces the earlier
+  scattered/structured dot field (retired Oct 2026). Use an approved master **as-is, flipped, or
+  rotated 90°**; never hand-build or recolor.
 - **Big dot**: a closed, approved family — one dominant cropped circle (anchor), optionally with
   companions. Use one **as-is, flipped, or rotated 90°** — never hand-build or restyle it. Anchor
   color and companions are set by the background; the anchor is never the background hue.
@@ -302,7 +301,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - **Light blue refreshed to `#B4D8FF`.**
 - **Tertiary tightened**: Purple and Orange are accents / emphasis / data-viz only.
 - **"Text on teal" removed** — omit it.
-- **Scattered dot field retired** → the **Fluid dot pattern** (half-tone grid, dense-to-sparse, + color-territory split). Multicolor dots are approved.
+- **Scattered dot field retired** → the **Fluid dot pattern** (half-tone grid, dense-to-sparse). Multicolor dots are approved.
 - **Light device** is Aurora only — one glow, soft to flowing, movement allowed (Burst, Plexus, and the separate Aurora ribbon retired Oct 2026; Pulse earlier).
 - **Icons** → single outline family (stroke-only, 1.7 weight, `currentColor`, 44px gray tile).
 - **Portraits** → thin ring / arc / card / editorial split (thick color ring retired).

@@ -102,7 +102,7 @@
     {
       "path": "components/dot-field.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Half-tone dot grid, fluid density gradient, registers & color-territory split",
+      "subtitle": "Half-tone dot grid, fluid density gradient, one register per background",
       "name": "Fluid dot pattern"
     },
     {

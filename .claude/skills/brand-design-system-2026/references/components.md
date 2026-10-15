@@ -89,7 +89,7 @@ use it. Consult it to choose between dots and a light device — and remember, o
 **Dots overview.** What the dots mean, fluid pattern vs. big dot, and approved backgrounds/dot colors.
 Structured field only (graduated grid retired). White-on-blue and multicolor are both on-brand.
 
-**Fluid dot pattern.** A half-tone dot grid — identical dots that gather into a dense core and dissolve fluidly outward; registers white-on-navy, white-on-blue, dots-on-white, multicolor-on-navy, plus a two-tone color-territory split. Replaces the retired scattered field.
+**Fluid dot pattern.** A half-tone dot grid — identical dots that gather into a dense core and dissolve fluidly outward; registers white-on-navy, white-on-blue, dots-on-white, multicolor-on-navy. Replaces the retired scattered field.
 Structured dispersion with defined anchors. Do: keep density purposeful and directional. Don't:
 random scatter, or graduated sizing.
 
