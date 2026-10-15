@@ -208,9 +208,12 @@ stacked with heavy photography treatments.
   **multicolor field** (blue/light-blue/teal/purple/white + up to 3 orange). It replaces the earlier
   scattered/structured dot field (retired Oct 2026). Use an approved master **as-is, flipped, or
   rotated 90°**; never hand-build or recolor.
-- **Big dot**: a closed, approved family — one dominant cropped circle (anchor), optionally with
-  companions. Use one **as-is, flipped, or rotated 90°** — never hand-build or restyle it. Anchor
-  color and companions are set by the background; the anchor is never the background hue.
+- **Big dot ecosystem**: a closed, approved set — one dominant cropped circle (anchor) with 2–4
+  companions, one set per ground (navy, blue, white) in three crops each. Use one **as-is, flipped,
+  or rotated 90°** — never hand-build or restyle it. Anchor is never the background hue: navy ground →
+  blue anchor (white/light-blue/teal companions); blue ground → navy/white/light-blue anchor
+  (white/navy/light-blue/teal/purple companions); white ground → navy/blue anchor
+  (blue/light-blue/teal/navy/purple companions). Purple/orange never on the anchor.
 - One dot device per layout; dots belong on blue or navy grounds, or dots-on-white / the multicolor
   field — not scattered on plain white as filler.
 
@@ -273,7 +276,7 @@ Each item below is a card in the design system. For the exact treatment of any o
 **Brand** — Logo & wordmark
 **Components** — Buttons & CTAs · Charts & graphs · Partner logos (brackets) · Quotes & testimonials ·
 Stats · Tables · Dot accents
-**Graphic devices** — Devices at a glance · Dots overview · Fluid dot pattern · Big dot · Light devices
+**Graphic devices** — Devices at a glance · Fluid dot pattern · Big dot · Light devices
 **Iconography** — Icon library
 **Imagery** — Illustration · Photography & portraits
 **Patterns** — Hero · Email template · Email signature · Social posts · Product launch announcement ·

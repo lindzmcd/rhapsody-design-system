@@ -94,12 +94,6 @@
       "name": "Devices at a glance"
     },
     {
-      "path": "components/dots.html",
-      "group": "4 · Graphic devices",
-      "subtitle": "What the dots mean, field vs big dot, backgrounds & dot colors",
-      "name": "Dots overview"
-    },
-    {
       "path": "components/dot-field.html",
       "group": "4 · Graphic devices",
       "subtitle": "Half-tone dot grid, fluid density gradient, one register per background",
@@ -108,7 +102,7 @@
     {
       "path": "components/big-dot.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Cropped anchor + companions, three variants, what the parts mean",
+      "subtitle": "The big-dot ecosystem: anchor + companions, one set per ground, three crops each",
       "name": "Big dot"
     },
     {
