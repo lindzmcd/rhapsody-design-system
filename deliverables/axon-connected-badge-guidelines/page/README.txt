@@ -28,6 +28,10 @@ hero-playbook-card.svg
     The same card as flat vector art, for decks and PDFs. Text is outlined,
     so copy changes mean regenerating the file.
 
+Axon-Connected-Badge-Page-Copy.docx
+    All the copy from both pages, as a Word file for review. Exported from
+    the review doc, so the doc stays the master: edit there, re-export here.
+
 Before launch
 -------------
 
