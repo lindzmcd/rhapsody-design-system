@@ -37,8 +37,8 @@ Before launch
 
 1. Badges are inlined as SVG data URIs. Point them at hosted files on
    rhapsody.health so Rhapsody can update or retire a badge everywhere.
-2. Every badge should link to the vendor's Directory listing. Confirm those
-   listings have stable public URLs.
+2. The badge is a plain image, not a link. A vendor's Playbook page is
+   visible only to them, so there is nothing public to point it at.
 3. The request form has no handler. Point it at the partner team.
 4. Fonts load from Google Fonts here. Use the site's own font loading.
 5. The page URL above is proposed, not confirmed.

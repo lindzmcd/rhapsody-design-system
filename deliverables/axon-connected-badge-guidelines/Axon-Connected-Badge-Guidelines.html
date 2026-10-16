@@ -104,6 +104,7 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
 .quote{font-size:17px;padding:14px 0;border-top:1px solid var(--line)}
 .quote:first-of-type{border-top:0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px}
+.steps.steps3{grid-template-columns:repeat(3,1fr)}
 .steps div{border-top:3px solid var(--blue);padding-top:12px;font-size:14.5px}
 .steps b{display:block;font-weight:500;font-size:15px;margin-bottom:4px}
 </style></head>
@@ -130,9 +131,9 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
     <div class="two">
       <div><h3>The badge shows</h3>
         <ul class="tx">
-          <li>The vendor has published an integration playbook in Rhapsody Axon™ Broadcast.</li>
-          <li>Health systems can ask Axon how to connect to that vendor and get answers from the playbook.</li>
-          <li>The playbook is visible to the organizations the vendor chose.</li>
+          <li>The vendor has published an integration Playbook in Rhapsody Axon™ Broadcast.</li>
+          <li>Health systems can ask Axon how to connect to that vendor and get answers from the Playbook.</li>
+          <li>The Playbook is visible to the organizations the vendor chose.</li>
         </ul></div>
       <div><h3>The badge does not show</h3>
         <ul class="tx no">
@@ -142,11 +143,10 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
         </ul></div>
     </div>
     <h3 style="margin-top:36px">Conditions of use</h3>
-    <div class="steps">
-      <div><b>Published</b>The vendor has a live playbook in Axon Broadcast.</div>
-      <div><b>Current</b>Specs and contacts in the playbook are kept up to date.</div>
-      <div><b>Linked</b>The badge links to the vendor's playbook page.</div>
-      <div><b>Taken down if unpublished</b>Remove the badge as soon as the playbook is no longer live.</div>
+    <div class="steps steps3">
+      <div><b>Published</b>The vendor has a live Playbook in Axon Broadcast.</div>
+      <div><b>Current</b>Specs and contacts in the Playbook are kept up to date.</div>
+      <div><b>Taken down if unpublished</b>Remove the badge as soon as the Playbook is no longer live.</div>
     </div>
     
     <div class="pg">02</div>
@@ -194,7 +194,7 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
 
 <!-- 6 PLACEMENT -->
 <section class="s">
-  <div class="l"><h2>Where to place it</h2><p class="k">Placement and linking</p><p>Put the badge where health systems already evaluate you, and link it to your playbook.</p></div>
+  <div class="l"><h2>Where to place it</h2><p class="k">Placement</p><p>Put the badge where health systems already evaluate you.</p></div>
   <div class="r">
     <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:34px">
       <table class="pl">
@@ -206,13 +206,11 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
         <tr><td>Decks and sales sheets</td><td>White Bar or White Circle on dark slides</td></tr>
       </table>
       <div>
-        <h3>Link and alt text</h3>
-        <p style="font-size:14px;color:#4A5E70;margin-bottom:12px">Link the badge to your playbook page in the Directory. Use "Axon Connected badge" as the alt text.</p>
-        <pre class="code">&lt;a href="https://rhapsody.health/directory/your-company"&gt;
-  &lt;img src="axon-connected-blue-bar.svg"
-       alt="Axon Connected badge"
-       width="160"&gt;
-&lt;/a&gt;</pre>
+        <h3>Adding it to your site</h3>
+        <p style="font-size:14px;color:#4A5E70;margin-bottom:12px">Place the badge as a plain image and use "Axon Connected badge" as the alt text. Do not make it a link: your Playbook page is visible only to you.</p>
+        <pre class="code">&lt;img src="axon-connected-blue-bar.svg"
+     alt="Axon Connected badge"
+     width="160"&gt;</pre>
         
       </div>
     </div>
@@ -263,8 +261,8 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
       <div><b>Place text or graphics over it</b><span>Keep the clear space free.</span></div>
       <div><b>Animate it</b><span>Do not spin, pulse, fade or bounce it.</span></div>
       <div><b>Imply certification or endorsement</b><span>See page 9 for approved wording.</span></div>
-      <div><b>Keep it up after unpublishing</b><span>Remove it if your playbook is no longer live.</span></div>
-      <div><b>Use it for other products</b><span>It covers the playbook it links to, nothing else.</span></div>
+      <div><b>Keep it up after unpublishing</b><span>Remove it if your Playbook is no longer live.</span></div>
+      <div><b>Use it for other products</b><span>It covers the Playbook it was issued for, nothing else.</span></div>
     </div>
     
     <div class="pg">08</div>
@@ -273,13 +271,13 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
 
 <!-- 10 CLAIMS -->
 <section class="s">
-  <div class="l"><h2>Claims and naming</h2><p class="k">What you can say</p><p>The badge says a playbook is published. Keep the words around it just as specific.</p></div>
+  <div class="l"><h2>Claims and naming</h2><p class="k">What you can say</p><p>The badge says a Playbook is published. Keep the words around it just as specific.</p></div>
   <div class="r">
     <div class="say">
       <div class="card"><h3>Approved wording</h3>
-        <div class="quote">“Our integration playbook is published in Rhapsody Axon™ Broadcast.”</div>
+        <div class="quote">“Our integration Playbook is published in Rhapsody Axon™ Broadcast.”</div>
         <div class="quote">“Health systems can ask Axon how to connect with us.”</div>
-        <div class="quote">“Find our playbook in the Directory.”</div></div>
+        <div class="quote">“Find our Playbook in the Directory.”</div></div>
       <div class="card g"><h3>Do not say</h3>
         <div class="quote" style="border-color:#D3DBE4">“Rhapsody certified” or “Rhapsody approved”</div>
         <div class="quote" style="border-color:#D3DBE4">“Validated by Axon”</div>
@@ -296,13 +294,13 @@ pre.code{background:var(--navy);color:#DCE8F3;font-family:var(--mono);font-size:
 
 <!-- 11 FILES AND APPROVAL -->
 <section class="s">
-  <div class="l"><h2>Files and approval</h2><p class="k">Getting the badge</p><p>Vendors request the kit, Rhapsody confirms the playbook, and the files arrive by email.</p></div>
+  <div class="l"><h2>Files and approval</h2><p class="k">Getting the badge</p><p>Vendors request the kit, Rhapsody confirms the Playbook, and the files arrive by email.</p></div>
   <div class="r">
     <div class="steps" style="margin-top:0">
-      <div><b>Request</b>Vendor submits company, work email and playbook link.</div>
-      <div><b>Confirm</b>Rhapsody checks the playbook is published.</div>
+      <div><b>Request</b>Vendor submits company name and work email.</div>
+      <div><b>Confirm</b>Rhapsody checks the Playbook is published.</div>
       <div><b>Receive</b>Kit arrives with files and these guidelines.</div>
-      <div><b>Maintain</b>Vendor keeps the playbook current and removes the badge if it is unpublished.</div>
+      <div><b>Maintain</b>Vendor keeps the Playbook current and removes the badge if it is unpublished.</div>
     </div>
     <div class="two" style="margin-top:34px">
       <div><h3>In the kit</h3>
