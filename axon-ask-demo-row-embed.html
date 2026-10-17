@@ -93,6 +93,20 @@
     width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
     cursor: pointer; flex-shrink: 0; }
   .axask .axask-send svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2; }
+  @media (max-width: 860px) {
+    .axask .axask-window { border-radius: 16px; }
+    .axask .axask-lead { font-size: 20px; }
+    .axask .axask-sub { font-size: 16px; }
+    .axask .axask-topbar { padding: 14px 16px; }
+    .axask .axask-tbl b { font-size: 16px; }
+    .axask .axask-tbr { font-size: 10px; letter-spacing: .1em; }
+    .axask .axask-messages { padding: 18px 14px 14px; gap: 16px; min-height: 0; }
+    .axask .axask-msg { gap: 8px; }
+    .axask .axask-avatar, .axask .axask-avatar-bot svg { width: 26px; height: 26px; }
+    .axask .axask-bubble { max-width: calc(100% - 34px); padding: 12px 14px; font-size: 15px; }
+    .axask .axask-input-bar { padding: 12px 14px; gap: 10px; }
+    .axask .axask-input { font-size: 16px; min-width: 0; padding: 10px 12px; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .axask .axask-chip, .axask .axask-chip::before { transition: none; }
     .axask .axask-chip:hover { transform: none; }
@@ -163,6 +177,9 @@
       a: "Static routing works well for simple, small-scale setups where visual clarity matters: you just drag and drop route connections. Dynamic routing becomes the better choice when you have many connected routes, need to move messages between lockers, or want to change destinations at runtime based on message content." }
   ];
   var busy = false;
+  if (window.matchMedia && window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('axaskInput').placeholder = 'Ask Axon anything…';
+  }
   window.axaskSetPrompt = function (i) {
     if (busy) return;
     busy = true;
