@@ -1,0 +1,190 @@
+<!-- ============================================================
+     Axon Ask — demo row (EMBEDDABLE SNIPPET)
+     Everything under the separator in the Ask section: kicker,
+     lead, prompt chips, Try Axon pill on the left; the chat
+     window (Rhapsody Axon header + Agent active) on the right.
+     Made for a light/white section ground. Self-contained; all
+     styles scoped under .axask, keyframes prefixed axask-.
+     REPLACES the earlier blue-panel Ask widget block — remove
+     that block when pasting this one (same element ids).
+     ============================================================ -->
+<div class="axask">
+<style>
+  .axask, .axask * { box-sizing: border-box; margin: 0; padding: 0; }
+  .axask { font-family: 'Poppins', Arial, sans-serif; display: grid;
+    grid-template-columns: minmax(0,.9fr) minmax(0,1.5fr); gap: 56px;
+    align-items: center; max-width: 1100px; margin: 0 auto; }
+  @media (max-width: 860px) { .axask { grid-template-columns: 1fr; gap: 32px; } }
+
+  .axask .axask-kick { font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+    color: #1A81F4 !important; margin: 0 0 14px; }
+  .axask .axask-lead { font-size: 22px; font-weight: 500; line-height: 1.35;
+    color: #0B2C47 !important; margin: 0 0 14px; }
+  .axask .axask-sub { font-size: 17px; font-weight: 300; color: #43566B !important;
+    line-height: 1.6; margin: 0; }
+  .axask .axask-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .axask .axask-chip { display: inline-flex; align-items: center; gap: 10px;
+    background: #E8EDF2; border: 0; border-radius: 12px; padding: 11px 18px;
+    font-size: 15px; font-weight: 400; color: #2B3F55 !important; cursor: pointer;
+    font-family: inherit;
+    transition: background .2s, color .2s, box-shadow .2s,
+      transform .25s cubic-bezier(.34,1.56,.64,1); }
+  .axask .axask-chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%;
+    flex: none; background: #B4D8FF;
+    transition: background .2s, transform .25s cubic-bezier(.34,1.56,.64,1); }
+  .axask .axask-chip:hover { background: #DEE9F4; transform: translateY(-1px); }
+  .axask .axask-chip.axask-active { background: #0B2C47; color: #fff !important;
+    font-weight: 500; box-shadow: 0 4px 14px rgba(5,25,50,.2); }
+  .axask .axask-chip.axask-active::before { background: #23C5BF; transform: scale(1.3); }
+  .axask .axask-cta-row { margin-top: 32px; }
+  .axask .axask-cta { display: inline-block; background: #1A81F4; color: #fff !important;
+    border: none; border-radius: 999px; padding: 14px 32px; font-family: inherit;
+    font-size: 16px; font-weight: 500; cursor: pointer; text-decoration: none;
+    transition: opacity .2s; }
+  .axask .axask-cta:hover { opacity: .9; }
+
+  .axask .axask-window { background: #0B2C47; border-radius: 0 0 16px 16px; overflow: hidden;
+    box-shadow: 0 14px 40px rgba(11,44,71,.18); display: flex; flex-direction: column; }
+  .axask .axask-topbar { padding: 18px 22px; display: flex; align-items: center;
+    justify-content: space-between; gap: 12px; border-bottom: 1px solid rgba(180,216,255,.12); }
+  .axask .axask-tbl { display: flex; align-items: center; gap: 12px; }
+  .axask .axask-tbl svg { width: 24px; height: 24px; overflow: visible; flex: none; display: block; }
+  .axask .axask-tbl b { font-weight: 500; font-size: 17px; color: #fff !important; }
+  .axask .axask-tbr { display: flex; align-items: center; gap: 8px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px;
+    letter-spacing: .14em; text-transform: uppercase; color: #B4D8FF !important; }
+  .axask .axask-tbr i { width: 7px; height: 7px; border-radius: 50%; background: #23C5BF;
+    animation: axask-pulse 2.6s ease-in-out infinite; }
+  @keyframes axask-pulse { 0%,100% { opacity: .35; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.35); } }
+  .axask .axask-messages { flex: 1; padding: 26px 22px 18px; display: flex;
+    flex-direction: column; gap: 20px; min-height: 260px; }
+  .axask .axask-msg { display: flex; gap: 12px; align-items: flex-start; }
+  .axask .axask-msg.axask-user { flex-direction: row-reverse; }
+  .axask .axask-avatar { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; }
+  .axask .axask-avatar-bot { background: transparent; overflow: visible; }
+  .axask .axask-avatar-bot svg { width: 30px; height: 30px; overflow: visible; display: block; }
+  .axask .axask-avatar-user { background: rgba(255,255,255,.14); color: #C9DAEA !important; }
+  .axask .axask-bubble { max-width: 83%; border-radius: 14px; padding: 14px 18px;
+    font-size: 15.5px; font-weight: 300; line-height: 1.6; }
+  .axask .axask-bubble-bot { background: rgba(180,216,255,.13); color: #E7EEF6 !important;
+    border-top-left-radius: 3px; }
+  .axask .axask-bubble-user { background: #1A81F4; color: #fff !important;
+    border-top-right-radius: 3px; }
+  .axask .axask-typing { display: flex; gap: 5px; align-items: center; padding: 16px 18px;
+    background: rgba(180,216,255,.13); border-radius: 14px; border-top-left-radius: 3px; width: 58px; }
+  .axask .axask-typing span { width: 5px; height: 5px; background: rgba(255,255,255,.45);
+    border-radius: 50%; animation: axask-typing 1.2s infinite; }
+  .axask .axask-typing span:nth-child(2) { animation-delay: .2s; }
+  .axask .axask-typing span:nth-child(3) { animation-delay: .4s; }
+  @keyframes axask-typing { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+  .axask .axask-input-bar { padding: 14px 18px; border-top: 1px solid rgba(180,216,255,.12);
+    display: flex; align-items: center; gap: 12px; }
+  .axask .axask-input { flex: 1; background: rgba(255,255,255,.07);
+    border: 1px solid rgba(180,216,255,.2); border-radius: 9px; padding: 11px 14px;
+    font-family: inherit; font-size: 15px; font-weight: 300; color: #fff !important;
+    -webkit-text-fill-color: #fff; outline: none; }
+  .axask .axask-input::placeholder { color: rgba(214,230,244,.35); }
+  .axask .axask-input:focus { border-color: rgba(180,216,255,.5); }
+  .axask .axask-send { background: #1A81F4; border: none; border-radius: 9px;
+    width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; flex-shrink: 0; }
+  .axask .axask-send svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2; }
+  @media (prefers-reduced-motion: reduce) {
+    .axask .axask-chip, .axask .axask-chip::before { transition: none; }
+    .axask .axask-chip:hover { transform: none; }
+    .axask .axask-typing span, .axask .axask-tbr i { animation: none; }
+  }
+</style>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <clipPath id="axask-head"><circle cx="32" cy="40" r="20.7"/></clipPath>
+  </defs></svg>
+
+  <div class="axask-left">
+    <p class="axask-kick">Real questions. Real answers.</p>
+    <p class="axask-lead">See what teams ask Axon every day</p>
+    <p class="axask-sub">Actual queries from customers using Axon in production. Click any prompt to preview it.</p>
+    <div class="axask-chips" id="axaskChips">
+      <button class="axask-chip axask-active" onclick="axaskSetPrompt(0)">Message transformation</button>
+      <button class="axask-chip" onclick="axaskSetPrompt(1)">FHIR integration</button>
+      <button class="axask-chip" onclick="axaskSetPrompt(2)">Interface management</button>
+      <button class="axask-chip" onclick="axaskSetPrompt(3)">Logs &amp; diagnostics</button>
+      <button class="axask-chip" onclick="axaskSetPrompt(4)">Routing strategy</button>
+    </div>
+    <div class="axask-cta-row">
+      <a class="axask-cta" href="https://chat.axon.rhapsody.health/" target="_blank" rel="noopener">Try Axon</a>
+    </div>
+  </div>
+
+  <div class="axask-window">
+    <div class="axask-topbar">
+      <span class="axask-tbl"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="40" r="19" fill="#fff"/><path clip-path="url(#axask-head)" d="M8 14 H56 V34.2 H8 Z" fill="#B4D8FF"/><rect x="43.9" y="17" width="2.6" height="13" rx="1.3" fill="#B4D8FF" transform="rotate(28 45.2 23.5)"/><circle cx="50" cy="15.6" r="3.4" fill="#23C5BF"/><circle cx="25.8" cy="43" r="3.6" fill="#0B2C47"/><circle cx="38.2" cy="43" r="3.6" fill="#0B2C47"/></svg><b>Rhapsody Axon</b></span>
+      <span class="axask-tbr"><i></i>Agent active</span>
+    </div>
+    <div class="axask-messages" id="axaskMessages">
+      <div class="axask-msg axask-user">
+        <div class="axask-avatar axask-avatar-user">You</div>
+        <div class="axask-bubble axask-bubble-user" id="axaskUserBubble">
+          How can I convert an SIU message to an ORM message?
+        </div>
+      </div>
+      <div class="axask-msg">
+        <div class="axask-avatar axask-avatar-bot" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="40" r="19" fill="#fff"/><path clip-path="url(#axask-head)" d="M8 14 H56 V34.2 H8 Z" fill="#B4D8FF"/><rect x="43.9" y="17" width="2.6" height="13" rx="1.3" fill="#B4D8FF" transform="rotate(28 45.2 23.5)"/><circle cx="50" cy="15.6" r="3.4" fill="#23C5BF"/><circle cx="25.8" cy="43" r="3.6" fill="#0B2C47"/><circle cx="38.2" cy="43" r="3.6" fill="#0B2C47"/></svg></div>
+        <div class="axask-bubble axask-bubble-bot" id="axaskBotBubble">
+          SIU and ORM serve different purposes. SIU handles scheduling events while ORM manages clinical orders. Converting between them requires mapping segments like SCH to ORC/OBR and updating MSH-9 to reflect the new message type. Not all fields map directly, so some ORM fields will need defaults or derived values based on your business logic.
+        </div>
+      </div>
+    </div>
+    <div class="axask-input-bar">
+      <input class="axask-input" id="axaskInput" type="text" placeholder="Ask Axon anything about your integration…">
+      <button class="axask-send" onclick="window.open('https://chat.axon.rhapsody.health/','_blank')" title="Try Axon">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+
+<script>
+(function () {
+  var AVATAR = '<svg viewBox="0 0 64 64"><circle cx="32" cy="40" r="19" fill="#fff"/><path clip-path="url(#axask-head)" d="M8 14 H56 V34.2 H8 Z" fill="#B4D8FF"/><rect x="43.9" y="17" width="2.6" height="13" rx="1.3" fill="#B4D8FF" transform="rotate(28 45.2 23.5)"/><circle cx="50" cy="15.6" r="3.4" fill="#23C5BF"/><circle cx="25.8" cy="43" r="3.6" fill="#0B2C47"/><circle cx="38.2" cy="43" r="3.6" fill="#0B2C47"/></svg>';
+  var prompts = [
+    { q: "How can I convert an SIU message to an ORM message?",
+      a: "SIU and ORM serve different purposes. SIU handles scheduling events while ORM manages clinical orders. Converting between them requires mapping segments like SCH to ORC/OBR and updating MSH-9 to reflect the new message type. Not all fields map directly, so some ORM fields will need defaults or derived values based on your business logic." },
+    { q: "How do I create a FHIR call within an action list?",
+      a: "To make a FHIR call, you'll want to use an HTTP Client communication point configured in Output or Out-In mode, targeting your FHIR server endpoint. Set the Content-Type header to application/fhir+json, configure the HTTP method, and use a JavaScript filter to construct the FHIR payload before it hits the communication point." },
+    { q: "How do I create a rule to automatically restart interfaces?",
+      a: "Interfaces that stop in error require a manual restart. Automatic restart rules aren't available out of the box. The recommended approach is to configure startup states on each communication point to control behavior after an engine restart, and set up watchlist notifications so your team is alerted immediately when something stops unexpectedly." },
+    { q: "What are uploaded logs and how are they used?",
+      a: "Uploaded logs refer to the system state archive you generate when raising a support request. It's a ZIP file containing engine logs, configuration details, and system diagnostics, created from the Management Console under System State > Export Tools. Before uploading, make sure your logs don't contain any patient health information." },
+    { q: "Why should I use dynamic routing vs static routing?",
+      a: "Static routing works well for simple, small-scale setups where visual clarity matters: you just drag and drop route connections. Dynamic routing becomes the better choice when you have many connected routes, need to move messages between lockers, or want to change destinations at runtime based on message content." }
+  ];
+  var busy = false;
+  window.axaskSetPrompt = function (i) {
+    if (busy) return;
+    busy = true;
+    document.querySelectorAll('#axaskChips .axask-chip').forEach(function (c, idx) {
+      c.classList.toggle('axask-active', idx === i);
+    });
+    document.getElementById('axaskUserBubble').textContent = prompts[i].q;
+    var botBubble = document.getElementById('axaskBotBubble');
+    var msgs = document.getElementById('axaskMessages');
+    botBubble.parentElement.style.display = 'none';
+    var typingRow = document.createElement('div');
+    typingRow.className = 'axask-msg';
+    typingRow.innerHTML = '<div class="axask-avatar axask-avatar-bot" aria-hidden="true">' + AVATAR + '</div>'
+                        + '<div class="axask-typing"><span></span><span></span><span></span></div>';
+    msgs.appendChild(typingRow);
+    setTimeout(function () {
+      typingRow.remove();
+      botBubble.textContent = prompts[i].a;
+      botBubble.parentElement.style.display = '';
+      busy = false;
+    }, 900);
+  };
+})();
+</script>
+</div>
+<!-- ================= end Axon Ask demo row ================= -->
