@@ -188,6 +188,12 @@
       "group": "8 · Reference",
       "subtitle": "Retired elements, and direction confirmed",
       "name": "Quick corrections log"
+    },
+    {
+      "path": "components/web-pages.html",
+      "group": "8 · Web",
+      "subtitle": "Decisions from the refreshed homepage & solutions pages — section grounds, eyebrows, cards, stat rows, emphasis bands",
+      "name": "Web pages (page system)"
     }
   ],
   "templates": [],
