@@ -1,4 +1,4 @@
-<!-- @dsCard group="8 · Web" name="Web pages (page system)" subtitle="Decisions from the refreshed homepage & solutions pages — section grounds, eyebrows, cards, stat rows, emphasis bands" width="960" height="3680" -->
+<!-- @dsCard group="9 · Web" name="Web pages (page system)" subtitle="Decisions from the refreshed homepage & solutions pages — section grounds, eyebrows, cards, stat rows, emphasis bands" width="960" height="3680" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Web pages</title>
@@ -10,7 +10,7 @@
   .web-eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.17em;text-transform:uppercase;color:var(--blue);}
   .grounds{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0;}
   .ground{border-radius:10px;overflow:hidden;border:1px solid var(--lgray);}
-  .ground .sw{height:62px;}
+  .ground .gsw{height:62px;}
   .ground .meta{padding:8px 11px;} .ground .nm{font-weight:500;font-size:12.5px;color:var(--navy);} .ground .hx{font-size:11px;color:var(--dgray);}
   .demo{border:1px solid var(--lgray);border-radius:14px;overflow:hidden;margin:14px 0;}
   .pill{display:inline-flex;align-items:center;height:44px;border-radius:999px;font-weight:500;font-size:15px;padding:0 26px;}
@@ -35,11 +35,11 @@
 <h3>Section grounds &amp; rhythm</h3>
 <p>Pages are built from full-width bands that alternate ground color for rhythm. Content bands alternate <strong>white</strong> and <strong>light gray-blue</strong>; <strong>Rhapsody blue</strong> and <strong>navy</strong> bands are reserved for emphasis (promo, CTA, product/mascot moments). The hero is a <strong>navy gradient</strong>.</p>
 <div class="grounds">
-  <div class="ground"><div class="sw" style="background:linear-gradient(135deg,#0B2C47,#123a5c 60%,#15516a);"></div><div class="meta"><div class="nm">Hero</div><div class="hx">Navy gradient</div></div></div>
-  <div class="ground"><div class="sw" style="background:#fff;"></div><div class="meta"><div class="nm">Content A</div><div class="hx">White</div></div></div>
-  <div class="ground"><div class="sw" style="background:var(--grayblue);"></div><div class="meta"><div class="nm">Content B</div><div class="hx">Gray-blue #E8EDF2</div></div></div>
-  <div class="ground"><div class="sw" style="background:var(--blue);"></div><div class="meta"><div class="nm">Emphasis</div><div class="hx">Rhapsody blue #1A81F4</div></div></div>
-  <div class="ground"><div class="sw" style="background:var(--navy);"></div><div class="meta"><div class="nm">Feature</div><div class="hx">Navy #0B2C47</div></div></div>
+  <div class="ground"><div class="gsw" style="background:linear-gradient(135deg,#0B2C47,#123a5c 60%,#15516a);"></div><div class="meta"><div class="nm">Hero</div><div class="hx">Navy gradient</div></div></div>
+  <div class="ground"><div class="gsw" style="background:#fff;"></div><div class="meta"><div class="nm">Content A</div><div class="hx">White</div></div></div>
+  <div class="ground"><div class="gsw" style="background:var(--grayblue);"></div><div class="meta"><div class="nm">Content B</div><div class="hx">Gray-blue #E8EDF2</div></div></div>
+  <div class="ground"><div class="gsw" style="background:var(--blue);"></div><div class="meta"><div class="nm">Emphasis</div><div class="hx">Rhapsody blue #1A81F4</div></div></div>
+  <div class="ground"><div class="gsw" style="background:var(--navy);"></div><div class="meta"><div class="nm">Feature</div><div class="hx">Navy #0B2C47</div></div></div>
 </div>
 
 <h3>Eyebrow &amp; headline</h3>
@@ -127,7 +127,7 @@
 
 <h3>Devices on the web</h3>
 <ul>
-  <li><strong>Hero constellation.</strong> The homepage hero uses a loose <strong>scattered dot constellation</strong> (white dots + a few teal, with a faint dotted orbit) around the <strong>Teddie Mercury</strong> mascot, on the navy gradient. <strong>Open question to settle before site-wide rollout:</strong> this constellation is distinct from the retired scattered dot field and from the current <strong>fluid dot pattern</strong> / <strong>big-dot ecosystem</strong>. We should either adopt it as an approved &ldquo;hero constellation&rdquo; device or align web heroes to the fluid pattern. Flagging for a decision.</li>
+  <li><strong>Homepage-hero constellation (that use only).</strong> The homepage hero uses a loose <strong>scattered dot constellation</strong> (white dots + a few teal, with a faint dotted orbit) around the <strong>Teddie Mercury</strong> mascot, on the navy gradient. <strong>This is reserved for the homepage hero and nowhere else.</strong> It is not a general device: every other page uses the approved <strong>fluid dot pattern</strong>, <strong>big-dot ecosystem</strong>, or <strong>Aurora</strong>, never a loose dot scatter.</li>
   <li><strong>Mascot + glow.</strong> Teddie appears on navy feature bands over a soft Aurora glow (teal&rarr;blue, fading to transparent, no hard edge).</li>
   <li><strong>Hero badges.</strong> Product and market-segment tiles use the <strong>hero badge graphics</strong> (navy disc, thick blue ring, dot halo, photo or illustration) &mdash; see that card.</li>
   <li><strong>Photography heroes.</strong> Solutions heroes are a full-bleed photo with a navy scrim graded across the type side (left), the two-tone headline overlaid.</li>

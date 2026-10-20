@@ -64,7 +64,12 @@ sections=[]
 for c in cards:
     p=os.path.join(REPO,c["path"])
     raw=open(p,encoding="utf-8").read()
+    # include any <style> blocks from the card's <head> (dropped otherwise);
+    # card style classes are uniquely prefixed to avoid collisions across sections.
+    head=raw[:raw.index("<body>")]
+    styles="".join(re.findall(r"<style>.*?</style>", head, re.S))
     body=raw[raw.index("<body>")+6: raw.index("</body>")]
+    body=styles+body
     body=embed_assets(body)
     body=delink_sp(body)
     sid=slug(c["name"])
