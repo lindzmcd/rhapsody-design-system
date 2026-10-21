@@ -1,4 +1,4 @@
-<!-- @dsCard group="3 · Components" name="Charts & graphs" subtitle="Bar, line, stacked bar, donut, color order + rules" width="960" height="1320" -->
+<!-- @dsCard group="3 · Components" name="Charts & graphs" subtitle="Bar, line, stacked bar, donut + color rules" width="960" height="1320" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Charts and graphs</title>
@@ -10,7 +10,7 @@
 <h2>Charts and graphs</h2>
 <p>Data visuals follow the same rules as everything else: brand colors, generous space, and no decoration. Lead with the point.</p>
 <h3>Charts and graphs</h3>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:12px 0;">
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:12px 0;">
   <div><div style="border:1px solid var(--lgray);border-radius:10px;overflow:hidden;"><svg viewBox="0 0 460 300" style="width:100%;height:auto;display:block;background:#fff;" xmlns="http://www.w3.org/2000/svg">
     <text x="24" y="30" font-size="15" font-weight="500" fill="#0B2C47" font-family='Poppins,Arial,sans-serif'>Interfaces shipped per quarter</text>
     <circle cx="70" cy="48" r="4.5" fill="#1A81F4"/>
@@ -129,18 +129,8 @@
     <text x="230" y="184" text-anchor="middle" font-size="32" font-weight="500" fill="#0B2C47" font-family='Poppins,Arial,sans-serif'>62%</text>
   </svg></div><p class="caption" style="margin:6px 0 0;">Donut: segments in order (blue, teal, purple, orange, light blue, navy); gray for the remainder; key number in the center.</p></div>
 </div>
-<h3>Chart color order</h3>
-<p>Assign chart colors in the fixed order below so every chart reads as one system, adding only as many as the data needs. This data-series order matches the same color order as Pathways to promote design system consistency.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;">
-  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#1A81F4;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">1 &middot; Blue</div></div>
-  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#23C5BF;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">2 &middot; Teal</div></div>
-  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#7340E4;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">3 &middot; Purple</div></div>
-  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#FA7E2E;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">4 &middot; Orange</div></div>
-  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#B4D8FF;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">5 &middot; Light blue</div></div>
-  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#0B2C47;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">6 &middot; Navy</div></div>
-  <div style="text-align:center;"><div style="width:60px;height:40px;border-radius:8px;background:#D9DFE6;"></div><div class="caption" style="margin:6px 0 0;font-size:11px;">Gray &middot; remainder</div></div>
-</div>
 <h4>Color rules in charts</h4>
+<p>Assign chart colors in the <strong>system color order</strong> (blue, teal, purple, orange, light blue, navy; gray for the remainder) &mdash; defined in <strong>Color palette &rarr; Color order &amp; pathways</strong> &mdash; adding only as many as the data needs.</p>
 <ul>
   <li><strong>Two series: Rhapsody Blue + navy,</strong> the cleanest, highest-contrast pairing. Use it whenever a chart compares just two things.</li>
   <li><strong>Three or more: follow the order</strong> blue, teal, purple, orange, light blue, navy, adding a color only when the data needs distinguishing.</li>

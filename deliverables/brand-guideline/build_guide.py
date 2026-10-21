@@ -60,19 +60,33 @@ sp_re=re.compile(r'<a href="https://rhapsodyhealth\.sharepoint\.com/[^"]*">([^<]
 def delink_sp(html):
     return sp_re.sub(lambda m: SP_MAP.get(m.group(1), m.group(1)), html)
 
+def scope_css(css, sid):
+    # Scope a card's <style> rules to its section so card classes (e.g. a
+    # generic .chip) never leak and collide with other cards or the shared
+    # tokens. Card style blocks are flat (no @media/@keyframes), so a simple
+    # per-rule selector prefix is sufficient.
+    css=re.sub(r"/\*.*?\*/","",css,flags=re.S)
+    def repl(m):
+        sels,decls=m.group(1).strip(),m.group(2)
+        if not sels: return m.group(0)
+        pref=", ".join(f"#{sid} {s.strip()}" for s in sels.split(",") if s.strip())
+        return pref+"{"+decls+"}"
+    return re.sub(r"([^{}]+)\{([^{}]*)\}", repl, css)
+
 sections=[]
 for c in cards:
     p=os.path.join(REPO,c["path"])
     raw=open(p,encoding="utf-8").read()
-    # include any <style> blocks from the card's <head> (dropped otherwise);
-    # card style classes are uniquely prefixed to avoid collisions across sections.
+    sid=slug(c["name"])
+    # include the card's <head> <style> blocks (dropped otherwise), scoped to
+    # this section so card classes can't collide across the single-page guide.
     head=raw[:raw.index("<body>")]
-    styles="".join(re.findall(r"<style>.*?</style>", head, re.S))
+    raw_styles="".join(re.findall(r"<style>(.*?)</style>", head, re.S))
+    styles=f"<style>{scope_css(raw_styles, sid)}</style>" if raw_styles.strip() else ""
     body=raw[raw.index("<body>")+6: raw.index("</body>")]
     body=styles+body
     body=embed_assets(body)
     body=delink_sp(body)
-    sid=slug(c["name"])
     sections.append(f'<section class="ds-section" id="{sid}" data-group="{c["group"]}">\n{body}\n</section>')
 
 # ---- TOC ----
