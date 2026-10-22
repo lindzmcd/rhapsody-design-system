@@ -126,6 +126,32 @@ body{{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,
 .toc-sub{{display:block;font-size:12px;color:var(--dgray);font-weight:400;}}
 .ds-section{{background:#fff;margin:0;border-bottom:14px solid #eef2f6;}}
 .ds-section .wrap{{max-width:none;padding:34px 60px 46px;}}
+.ds-section code{{overflow-wrap:anywhere;}}
+.ds-section img{{max-width:100%;height:auto;}}
+.ds-section .m-only{{display:none;}}
+/* Mobile: card markup uses inline grids sized for a 1000px page, so the
+   overrides below need !important to win over the inline styles. */
+@media (max-width:700px){{
+  .cover{{padding:44px 20px 40px;}}
+  .cover img.mark{{width:150px;margin-bottom:28px;}}
+  .cover h1{{font-size:30px;}}
+  .cover .sub{{font-size:15px;margin-bottom:20px;}}
+  .cover .meta{{font-size:11px;letter-spacing:.1em;}}
+  .intro,.toc{{padding:24px 16px;}}
+  .ds-section{{border-bottom-width:10px;}}
+  .ds-section .wrap{{padding:26px 16px 34px;}}
+  .ds-section h2{{font-size:23px;}}
+  .ds-section p,.ds-section li{{font-size:14.5px;}}
+  .ds-section .principle{{padding:18px;}}
+  .ds-section .principle p{{font-size:15px;}}
+  .ds-section [style*="grid-template-columns"]{{grid-template-columns:minmax(0,1fr) !important;max-width:none !important;}}
+  .ds-section .swatches{{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}
+  .ds-section [style*="flex-wrap:nowrap"]{{flex-wrap:wrap !important;}}
+  .ds-section table{{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}}
+  .ds-section .comp-bar{{flex-direction:column;height:auto !important;}}
+  .ds-section .m-only{{display:inline;}}
+  .ds-section .comp-bar>div{{flex:none !important;padding:9px 12px;justify-content:flex-start !important;}}
+}}
 @media print{{
   body{{background:#fff;}}
   .doc{{max-width:none;}}
@@ -149,9 +175,9 @@ cover=f"""
 intro=f"""
 <div class="intro">
   <h2>How to use this guide</h2>
-  <p>This is Rhapsody's visual system: logo, color, type, graphic devices (the dots and light glows), photography, buttons, and the common layout patterns — with the rules and correct examples for each. Work from these pages when producing anything that carries the Rhapsody brand.</p>
-  <p>Every example here is live HTML rendered from the real design tokens, so colors, type, and spacing are exact. Use the Contents below to jump to a section.</p>
-  <div class="note"><strong>Master art is included with this package.</strong> The approved logos, monograms, big-dot and scattered-dot device files are provided as separate SVG/PNG files in the accompanying <code>rhapsody-brand-assets</code> folder — use those masters as-is (never rebuild or restyle them). Anything not in the asset folder is available on request from your Rhapsody contact.</div>
+  <p>This is the Rhapsody visual system: logo, color, type, graphic devices (the dots and the Aurora glow), photography, components, and web page patterns, with the rules and correct examples for each. Work from these pages when producing anything that carries the Rhapsody brand.</p>
+  <p>Start with <strong>Brand expression</strong>: its decision hierarchy and pre-ship checklist apply to every asset. Every example here is live HTML rendered from the real design tokens, so colors, type, and spacing are exact. Use the Contents below to jump to a section.</p>
+  <div class="note"><strong>Master art is included with this package.</strong> The approved logos, monograms, big-dot and fluid-dot-pattern device files are provided as separate SVG/PNG files in the accompanying <code>rhapsody-brand-assets</code> folder — use those masters as-is (never rebuild or restyle them). Anything not in the asset folder is available on request from your Rhapsody contact.</div>
 </div>
 """
 

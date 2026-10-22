@@ -6,7 +6,7 @@
     {
       "path": "components/brand-expression.html",
       "group": "1 · Foundations",
-      "subtitle": "Visual principles, AI direction, and decision hierarchy",
+      "subtitle": "Visual principles, decision hierarchy, naming, and pre-ship checklist",
       "name": "Brand expression"
     },
     {
@@ -156,7 +156,7 @@
     {
       "path": "components/corrections.html",
       "group": "8 · Reference",
-      "subtitle": "Retired elements, and direction confirmed",
+      "subtitle": "Retired elements and dated changelog",
       "name": "Quick corrections log"
     },
     {

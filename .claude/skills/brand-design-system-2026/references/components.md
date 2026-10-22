@@ -25,12 +25,12 @@ Restraint is the house style — clean, confident, few colors, lots of air.
 
 **Color.** See SKILL.md §1. Default hierarchy White/Navy + Rhapsody Blue + one optional accent; ≤3
 brand colors. Tertiary (purple/orange) restricted to accent/emphasis/data-viz. No text on teal. No
-custom gradients. Blue-on-navy for large elements only. Teal is immutable (#23C5BF, never darkened
+custom gradients (except Aurora, the web navy hero gradient, photo scrims). Rhapsody Blue on navy only for display type 24px+ and large graphics; light blue for smaller text. Teal is immutable (#23C5BF, never darkened
 for contrast): teal type on navy only; on light grounds teal is accent-only (tick / accent line /
 seam) beside navy text — see the card's "Teal in small applications" section.
 
 **Typography.** See SKILL.md §2. Poppins Regular body/headings, Medium hero; IBM Plex Mono eyebrows
-only. Two-tone (white + light blue) headline on navy. `strong` = Medium. Shorten copy rather than
+only. Two-tone headline: one Rhapsody Blue phrase, navy or white grounds only. `strong` = Medium. Shorten copy rather than
 crush type. Date and name lockups use the mono for the small label line.
 
 **Layout & spacing.** Keep a **clear margin** of ~6–7% of the shorter side around a composition. The
@@ -58,8 +58,8 @@ recolor, rotate, or overlay.
 **Secondary** = outline (blue or navy stroke) on light, or white/blue outline on dark. **Text link +
 arrow** for tertiary actions (label + "→"). One primary action per view. Verb-led labels.
 
-**Charts & graphs.** Flat, no gradients, minimal gridlines. Series color order: navy → Rhapsody Blue →
-teal → purple → orange → light blue, then neutrals. This is the one place purple/orange appear freely.
+**Charts & graphs.** Flat, no gradients, minimal gridlines. Series color order: Rhapsody Blue → teal →
+purple → orange → light blue → navy, gray for the remainder; two series = Rhapsody Blue + navy.
 Same order feeds pathways. Label directly where possible; keep to as few series as the story needs.
 Types shown: bar, line, stacked bar, donut.
 
@@ -110,13 +110,13 @@ no shadows/outlines/effects. Two-color line icons and icon-on-circle art are ret
 photography, product/interface imagery, diagrams, data viz, or the abstract devices instead.
 
 **Photography & portraits.** Bright, natural-lit, tech-forward, faces-forward, inclusive. Avoid
-tech-noir, blur, harsh flare, backs-to-camera, staged/stiff poses. Portrait treatments: thin ring, arc
-accent, rounded-rectangle card, editorial split — brand-colored, never a thick ring or white outline.
+tech-noir, blur, harsh flare, backs-to-camera, staged/stiff poses. Portrait treatments: brand ring (navy band +
+blue edge) by default, thin ring for small avatars, arc accent, rounded-rectangle card, editorial split.
 
 ## Patterns
 
-**Hero.** Three registers: **light** (white ground, navy/blue type), **dark** (navy ground, white +
-light-blue two-tone headline, optional light device), and **photography** (image with copy on the calm
+**Hero.** Three registers: **light** (white ground, navy/blue type), **dark** (navy ground, white headline
+with an optional Rhapsody Blue two-tone phrase, optional light device), and **photography** (image with copy on the calm
 side). Structure: eyebrow (mono) → headline → subhead → single CTA. Keep one graphic device.
 
 **Email template.** Header banner options: Aurora glow, big dot, or photo. Teal seam under the header.

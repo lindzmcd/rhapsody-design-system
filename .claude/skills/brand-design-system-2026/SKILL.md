@@ -80,7 +80,7 @@ Tokens (from `tokens.css` — these exact hex values are the standard):
 |---|---|---|---|
 | `--blue` | `#1A81F4` | Primary | Rhapsody Blue — the dominant brand color: panels, CTAs, links, brand moments |
 | `--navy` | `#0B2C47` | Primary | Rhapsody Navy — page/section grounds, dark headers, the only ground for light devices |
-| `--lblue` | `#B4D8FF` | Secondary | Light blue — accent on dark grounds, second tone in two-tone headlines |
+| `--lblue` | `#B4D8FF` | Secondary | Light blue — text and small accents on navy (under 24px) |
 | `--teal` | `#23C5BF` | Secondary | Teal — separator seam, "automate" pathway, one optional accent |
 | `--purple` | `#7340E4` | Tertiary | Accent only |
 | `--orange` | `#FA7E2E` | Tertiary | Accent only |
@@ -104,13 +104,18 @@ headline color, CTA color, background theme, pathway color, or decorative fill. 
 as a freely available third color — use them only where a rule explicitly authorizes them (e.g. the
 multicolor fluid dot pattern, chart series).
 
-**No custom gradients.** Flat brand colors only. The light devices (Section 5) are the only glow/blend
-element, and they are approved masters — not gradients you build.
+**No custom gradients.** Flat brand colors only. Three sanctioned exceptions, no others: the Aurora
+glow (Section 5, approved masters), the subtle navy hero gradient on web heroes, and a navy scrim
+graded across the type side of a photo for legibility.
+
+**Functional (status) colors** — UI state only (status tags, validation, pass/fail), never decoration:
+success `#1E9E63`, warning `#FA7E2E` (navy text), error `#D64545`.
 
 **Text color**
 - Navy (`--navy`) or black ink on white/light grounds; Rhapsody Blue for links and small emphasis.
-- White on navy, blue, teal, purple, or orange grounds.
-- On navy, a white + **light-blue** two-tone headline is the signature treatment.
+- White on navy or Rhapsody Blue grounds. **Never set text on teal, purple, or orange grounds.**
+- Two-tone headline: one phrase in **Rhapsody Blue**, on **navy or white grounds only** — never on a
+  Rhapsody Blue ground (set those headlines in one color).
 
 **Accessibility & pairings**
 - Maintain readable contrast; favor the approved pairings (white on navy/blue, navy on white/gray-blue).
@@ -124,11 +129,15 @@ element, and they are approved masters — not gradients you build.
   16×3px teal bar before a navy mono label), links stay Rhapsody Blue, and meaningful teal graphics
   get direct navy labels. If a teal application fails contrast, change the ground or the role — never
   the hex. The teal-filled pill is retired (its label sat on teal).
-- On navy, **default to light blue for text** (headlines, body, the two-tone highlight). Rhapsody Blue on navy is for **large graphics** (bars, blocks, big dots), not type; a designer may override for a specific case.
+- On navy the two blues split by size: **Rhapsody Blue for display type 24px and up** (two-tone highlight, stat numerals, large quotes) and large graphics; **light blue for all smaller text** (body, captions, labels, eyebrows, small icons). White stays the base text color on navy.
 
-**Charts / data viz color order** (same order is used for pathways):
-Navy → Rhapsody Blue → Teal → Purple → Orange → Light blue, then neutrals. Keep series minimal;
-this is the one place Purple and Orange appear freely.
+**Color order** (one order, shared by charts and pathways):
+Rhapsody Blue → Teal → Purple → Orange → Light blue → Navy; gray `#D9DFE6` for the remainder.
+**Two-series charts: Rhapsody Blue + navy.** Add colors only as the data needs; charts and the dot
+devices are exempt from the three-color rule.
+
+**Color in composition** (indicative): neutral ground ~60%, Rhapsody Blue ~25%, secondary ~10%,
+tertiary under 5% (most layouts none).
 
 ---
 
@@ -140,19 +149,23 @@ this is the one place Purple and Orange appear freely.
 - **IBM Plex Mono** (`--mono`, 400/500) for **eyebrows** and technical annotations only — the small
   uppercase, letter-spaced label above a headline. It is an accent typeface, never body copy.
 
-Type scale (from `tokens.css`):
+Brand type scale (the `tokens.css` heading sizes are documentation chrome, not this scale):
 
-| Style | Weight | Size |
-|---|---|---|
-| H1 / hero | Poppins Medium (500) | 38px |
-| H2 | Poppins Regular (400) | 27px |
-| H3 | Poppins Regular (400), blue | 18px |
-| H4 / label | Poppins Regular (400), uppercase, tracked, gray | 13px |
-| Body (`p`) | Poppins Regular (400) | 15px |
-| Eyebrow | IBM Plex Mono Medium (500), uppercase, `0.17em` tracking, blue | 12px |
+| Style | Weight | Brand scale | Live website |
+|---|---|---|---|
+| Hero / H1 | Poppins Medium (500), 110% leading | 60px | 48px |
+| H2 | Poppins Regular (400), 120% | 40px | 24px |
+| H3 | Poppins Regular (400), 120% | 20px | — |
+| Body (P1) | Poppins Regular (400), 150% | 16px | 16px |
+| Caption (P2) | Poppins Regular (400), 140–150% | 12px | — |
+| Eyebrow | IBM Plex Mono Medium (500), uppercase, +0.16em | 12–13px | — |
+
+Floors (web): body 16px, supporting text 14px, captions and labels 12px, legal 11px only where
+unavoidable. Copy caps: hero headline ≤40 characters, supporting line ≤110, quote ≤60, testimonial
+≤120. Sentence case everywhere except the mono eyebrow.
 
 Rules that matter:
-- **Two-tone headline**: on navy, lead white and finish the key phrase in **light blue** (`--lblue`).
+- **Two-tone headline**: color one phrase in **Rhapsody Blue**; the rest stays white (navy ground) or navy (white ground). Navy or white grounds only; one highlight per headline, used sparingly.
 - **`strong` is Medium (500)**, not bold — emphasis stays quiet.
 - **If content doesn't fit, change the copy — don't crush the type.** Never tighten tracking/leading
   or shrink below the minimums to force a fit. Rewrite shorter instead.
@@ -255,9 +268,11 @@ Aurora rules:
   over purely clinical/healthcare scenes.
 - **Avoid** dark "tech-noir" imagery, blur, harsh flare, backs-to-camera, tight huddles turned away,
   staged handshakes, and generic stock.
-- **Portrait treatments** (modern set — the thick color ring is retired): **thin ring**, **arc
-  accent**, **rounded-rectangle card**, or **editorial split**. Rings/arcs use brand colors (blue,
-  teal, orange, purple) — never a thick ring, never white or thin white outlines.
+- **Portrait treatments**: the **brand ring** (bold navy band + Rhapsody-Blue outer edge, the
+  website-hero weight) is the default at feature scale; small avatars (≈96px and under — name lockups,
+  quote cards) use a **thin ring** (2–3px Rhapsody Blue, no navy band). Also **arc accent**,
+  **rounded-rectangle card**, **editorial split**. Accent edges use primary/secondary colors only —
+  never purple or orange, never white outlines. The legacy thick single-color rings are retired.
 
 ## 8. Illustration
 
@@ -307,7 +322,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - **Scattered dot field retired** → the **Fluid dot pattern** (half-tone grid, dense-to-sparse). Multicolor dots are approved.
 - **Light device** is Aurora only — one glow, soft to flowing, movement allowed (Burst, Plexus, and the separate Aurora ribbon retired Oct 2026; Pulse earlier).
 - **Icons** → single outline family (stroke-only, 1.7 weight, `currentColor`, 44px gray tile).
-- **Portraits** → thin ring / arc / card / editorial split (thick color ring retired).
+- **Portraits** → brand ring (default) / thin ring (small avatars) / arc / card / editorial split; legacy thick single-color rings retired.
 - **Illustration** legacy styles retired.
 - New sections added: **Brand Expression** and **Illustration**.
 - Rule: **if copy doesn't fit, shorten the copy — don't crush the type.**
@@ -319,24 +334,25 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 ```
 □ Ground + primary is White/Navy + Rhapsody Blue; ≤ 3 brand colors; three is not a target
 □ Purple/Orange only as accent, emphasis, or data viz — never section/headline/CTA/background
-□ No custom gradients (light devices are the only glow, and they're approved masters)
+□ No custom gradients (only Aurora masters, the web navy hero gradient, and photo scrims)
 □ Navy is #0B2C47; Rhapsody Blue is #1A81F4; light blue is #B4D8FF
 □ Poppins Regular for body/headings, Medium for hero; IBM Plex Mono for eyebrows only
 □ No text set on teal
 □ Teal is #23C5BF everywhere — nothing darkened to pass contrast; teal type on navy only; on light
   grounds teal appears only as an accent (tick / accent line / seam) beside navy text
-□ Two-tone headline on navy = white + light blue
+□ Two-tone headline = one Rhapsody Blue phrase, on navy or white only; Rhapsody Blue type on navy only at 24px+
 □ If it didn't fit, the copy was shortened — the type was not crushed
 □ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark; RHAPSODY all caps; clear space kept
 □ Logo not recolored, stretched, rotated, shadowed, or overlaid
 □ Corners: squared top, rounded bottom on modules; pills reserved for CTAs
-□ Exactly one graphic device in the layout (dots OR a light device — never both)
+□ One lead visual: one dot device OR Aurora OR a photo; the only pairing is a dot device + photo
 □ Dots are the fluid dot pattern (approved master, not hand-built); big dot used as-is/flipped/90°
 □ Light devices on navy only; glow is teal/blue/purple (never orange); offset into open space
 □ Icons: single outline family, 1.7 weight, currentColor, 44px gray tile
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur
-□ Portraits use thin ring / arc / card / editorial split — no thick ring
+□ Portraits: brand ring by default, thin ring for small avatars, or arc / card / editorial split
 □ No retired illustration styles
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)
-□ Company name is "Rhapsody," never "Rhapsody Health"
+□ Company name is "Rhapsody," never "Rhapsody Health," never possessive ("Rhapsody's")
+□ Body text ≥16px on web; nothing a reader needs below 12px
 ```
