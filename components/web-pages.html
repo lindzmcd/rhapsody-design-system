@@ -33,9 +33,9 @@
 <p>The refreshed <strong>homepage and solutions pages</strong> set the template for the whole site. They are built entirely from the existing brand system, Poppins headlines (Medium for the hero, Regular for sections), IBM&nbsp;Plex&nbsp;Mono eyebrows, Rhapsody-Blue pills, and the navy / white / blue / light-gray grounds, so rolling the style to every page is a matter of applying these <strong>page-level decisions</strong>, not new primitives. Capture notes below; see Colors, Typography, Buttons, and the device cards for the underlying rules.</p>
 
 <h3>Section grounds &amp; rhythm</h3>
-<p>Pages are built from full-width bands that alternate ground color for rhythm. Content bands alternate <strong>white</strong> and <strong>light gray-blue</strong>; <strong>Rhapsody blue</strong> and <strong>navy</strong> bands are reserved for emphasis (promo, CTA, product/mascot moments). The hero is a <strong>navy gradient</strong>.</p>
+<p>Pages are built from full-width bands that alternate ground color for rhythm. Content bands alternate <strong>white</strong> and <strong>light gray-blue</strong>; <strong>Rhapsody blue</strong> and <strong>navy</strong> bands are reserved for emphasis (promo, CTA, product/mascot moments). The hero is <strong>navy with the Aurora glow</strong> (the approved light device, not a hand-built gradient).</p>
 <div class="grounds">
-  <div class="ground"><div class="gsw" style="background:linear-gradient(135deg,#0B2C47,#123a5c 60%,#15516a);"></div><div class="meta"><div class="nm">Hero</div><div class="hx">Navy gradient</div></div></div>
+  <div class="ground"><div class="gsw" style="background:var(--navy) url(../assets/figures/aurora-soft.jpg) center/cover no-repeat;"></div><div class="meta"><div class="nm">Hero</div><div class="hx">Navy + Aurora</div></div></div>
   <div class="ground"><div class="gsw" style="background:#fff;"></div><div class="meta"><div class="nm">Content A</div><div class="hx">White</div></div></div>
   <div class="ground"><div class="gsw" style="background:var(--grayblue);"></div><div class="meta"><div class="nm">Content B</div><div class="hx">Gray-blue #E8EDF2</div></div></div>
   <div class="ground"><div class="gsw" style="background:var(--blue);"></div><div class="meta"><div class="nm">Emphasis</div><div class="hx">Rhapsody blue #1A81F4</div></div></div>
@@ -44,7 +44,7 @@
 
 <h3>Eyebrow &amp; headline</h3>
 <p>Every section opens the same way: a <strong>short blue accent rule</strong>, then a <strong>mono uppercase eyebrow</strong>, then a Poppins Regular headline (24px; only the hero H1 steps up to Medium, 48px) in <strong>sentence case</strong>, usually ending with a period. Headlines are often two-tone: one phrase in Rhapsody Blue, on navy or white grounds only (see Typography &rarr; Two-tone headline). Lowercase mono <em>group labels</em> (&ldquo;build the infrastructure,&rdquo; &ldquo;automate the work&rdquo;) sub-divide a section.</p>
-<div class="demo" style="background:linear-gradient(135deg,#0B2C47,#123a5c 55%,#15516a);padding:30px 32px;">
+<div class="demo" style="background:var(--navy) url(../assets/figures/aurora-soft.jpg) center/cover no-repeat;padding:30px 32px;">
   <div class="eyebrow-line"></div>
   <div class="web-eyebrow" style="color:#fff;">Agent-ready interoperability</div>
   <div style="font-family:Poppins;font-weight:500;font-size:40px;line-height:1.08;color:#fff;margin:12px 0 0;">Integrate. Govern.<br><span style="color:var(--blue);">Automate.</span></div>
@@ -127,7 +127,7 @@
 
 <h3>Devices on the web</h3>
 <ul>
-  <li><strong>Homepage-hero constellation (that use only).</strong> The homepage hero uses a loose <strong>scattered dot constellation</strong> (white dots + a few teal, with a faint dotted orbit) around the <strong>Teddie Mercury</strong> mascot, on the navy gradient. <strong>This is reserved for the homepage hero and nowhere else.</strong> It is not a general device: every other page uses the approved <strong>fluid dot pattern</strong>, <strong>big-dot ecosystem</strong>, or <strong>Aurora</strong>, never a loose dot scatter.</li>
+  <li><strong>Homepage-hero constellation (that use only).</strong> The homepage hero uses a loose <strong>scattered dot constellation</strong> (white dots + a few teal, with a faint dotted orbit) around the <strong>Teddie Mercury</strong> mascot, over the Aurora glow &mdash; the one place a dot scatter and Aurora appear together. <strong>This is reserved for the homepage hero and nowhere else.</strong> It is not a general device: every other page uses the approved <strong>fluid dot pattern</strong>, <strong>big-dot ecosystem</strong>, or <strong>Aurora</strong>, never a loose dot scatter.</li>
   <li><strong>Mascot + glow.</strong> Teddie appears on navy feature bands over a soft Aurora glow (teal&rarr;blue, fading to transparent, no hard edge).</li>
   <li><strong>Hero badges.</strong> Product and market-segment tiles use the <strong>hero badge graphics</strong> (a photo or illustration in a navy disc with the thick blue ring, on the fluid dot pattern) &mdash; see that card.</li>
   <li><strong>Photography heroes.</strong> Solutions heroes are a full-bleed photo with a navy scrim graded across the type side (left), the two-tone headline overlaid.</li>
@@ -140,7 +140,7 @@
   <div>
     <div class="web-eyebrow" style="color:var(--dgray);">Homepage</div>
     <ol style="font-size:13.5px;color:var(--navy);margin:8px 0 0 18px;">
-      <li>Navy-gradient hero: eyebrow, two-tone headline, pill, constellation + mascot</li>
+      <li>Navy Aurora hero: eyebrow, two-tone headline, pill, constellation + mascot</li>
       <li>Proof marquee (navy)</li>
       <li>Solutions: group labels + card grids (build / automate)</li>
       <li>Proof band (gray-blue): stat row + customer case</li>

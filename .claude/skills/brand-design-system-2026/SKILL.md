@@ -104,8 +104,8 @@ headline color, CTA color, background theme, pathway color, or decorative fill. 
 as a freely available third color — use them only where a rule explicitly authorizes them (e.g. the
 multicolor fluid dot pattern, chart series).
 
-**No custom gradients.** Flat brand colors only. Three sanctioned exceptions, no others: the Aurora
-glow (Section 5, approved masters), the subtle navy hero gradient on web heroes, and a navy scrim
+**No custom gradients.** Flat brand colors only. Two sanctioned exceptions, no others: the Aurora
+glow (Section 5, approved masters; also the web hero background), and a navy scrim
 graded across the type side of a photo for legibility.
 
 **Functional (status) colors** — UI state only (status tags, validation, pass/fail), never decoration:
@@ -334,7 +334,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 ```
 □ Ground + primary is White/Navy + Rhapsody Blue; ≤ 3 brand colors; three is not a target
 □ Purple/Orange only as accent, emphasis, or data viz — never section/headline/CTA/background
-□ No custom gradients (only Aurora masters, the web navy hero gradient, and photo scrims)
+□ No custom gradients (only Aurora masters, incl. the web hero, and photo scrims)
 □ Navy is #0B2C47; Rhapsody Blue is #1A81F4; light blue is #B4D8FF
 □ Poppins Regular for body/headings, Medium for hero; IBM Plex Mono for eyebrows only
 □ No text set on teal
