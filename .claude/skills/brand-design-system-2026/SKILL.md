@@ -109,7 +109,7 @@ glow (Section 5, approved masters; also the web hero background), and a navy scr
 graded across the type side of a photo for legibility.
 
 **Functional (status) colors** — UI state only (status tags, validation, pass/fail), never decoration:
-success `#1E9E63`, warning `#FA7E2E` (navy text), error `#D64545`.
+success `#157A4B` (white text), warning `#FA7E2E` (navy text), error `#C0392B` (white text) — all ≥4.5:1; always with a text label.
 
 **Text color**
 - Navy (`--navy`) or black ink on white/light grounds; Rhapsody Blue for links and small emphasis.
@@ -162,7 +162,10 @@ Brand type scale (the `tokens.css` heading sizes are documentation chrome, not t
 
 Floors (web): body 16px, supporting text 14px, captions and labels 12px, legal 11px only where
 unavoidable. Copy caps: hero headline ≤40 characters, supporting line ≤110, quote ≤60, testimonial
-≤120. Sentence case everywhere except the mono eyebrow.
+≤120. Sentence case everywhere except the mono eyebrow. **No end period on headlines** (or
+subheads, card titles, buttons, labels): one sentence, no period; two or more short sentences for
+impact ("Integrate. Govern. Automate."), a period after each. Questions keep "?", "!" only for
+confirmation moments, quotes keep their own punctuation, body copy punctuates normally.
 
 Rules that matter:
 - **Two-tone headline**: color one phrase — **light blue on navy, Rhapsody Blue on white**; the rest stays white (navy) or navy (white). Navy or white grounds only; one highlight per headline, used sparingly.
@@ -342,7 +345,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
   grounds teal appears only as an accent (tick / accent line / seam) beside navy text
 □ Two-tone headline = light blue on navy / Rhapsody Blue on white; never on a blue ground; no Rhapsody Blue text on navy
 □ If it didn't fit, the copy was shortened — the type was not crushed
-□ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark; RHAPSODY all caps; clear space kept
+□ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark (all-white on Rhapsody Blue); clear space = X (height of the R) on every side
 □ Logo not recolored, stretched, rotated, shadowed, or overlaid
 □ Corners: squared top, rounded bottom on modules; pills reserved for CTAs
 □ One lead visual: one dot device OR Aurora OR a photo; the only pairing is a dot device + photo
@@ -355,4 +358,5 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)
 □ Company name is "Rhapsody," never "Rhapsody Health," never possessive ("Rhapsody's")
 □ Body text ≥16px on web; nothing a reader needs below 12px
+□ No end period on one-sentence headlines; multi-sentence headlines punctuate every sentence
 ```
