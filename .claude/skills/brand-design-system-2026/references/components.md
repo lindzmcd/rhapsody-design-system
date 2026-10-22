@@ -25,12 +25,12 @@ Restraint is the house style — clean, confident, few colors, lots of air.
 
 **Color.** See SKILL.md §1. Default hierarchy White/Navy + Rhapsody Blue + one optional accent; ≤3
 brand colors. Tertiary (purple/orange) restricted to accent/emphasis/data-viz. No text on teal. No
-custom gradients (except the Aurora glow, which is also the web hero background, and photo scrims). Rhapsody Blue on navy only for display type 24px+ and large graphics; light blue for smaller text. Teal is immutable (#23C5BF, never darkened
+custom gradients (except the Aurora glow, which is also the web hero background, and photo scrims). On navy, text accents are light blue; Rhapsody Blue on navy is graphics and the pill only. Teal is immutable (#23C5BF, never darkened
 for contrast): teal type on navy only; on light grounds teal is accent-only (tick / accent line /
 seam) beside navy text — see the card's "Teal in small applications" section.
 
 **Typography.** See SKILL.md §2. Poppins Regular body/headings, Medium hero; IBM Plex Mono eyebrows
-only. Two-tone headline: one Rhapsody Blue phrase, navy or white grounds only. `strong` = Medium. Shorten copy rather than
+only. Two-tone headline: light blue on navy, Rhapsody Blue on white; never on a blue ground. `strong` = Medium. Shorten copy rather than
 crush type. Date and name lockups use the mono for the small label line.
 
 **Layout & spacing.** Keep a **clear margin** of ~6–7% of the shorter side around a composition. The
@@ -95,8 +95,8 @@ transparent SVG + 2× PNG. Use as-is, flipped, or rotated 90°. Never hand-build
 companion colors are fixed by the background; the anchor is never the background hue.
 
 **Light devices.** Aurora is the one light device — a single glow with range, soft wash to flowing, that allows movement (navy only, teal-led). Burst, Plexus, and the separate Aurora ribbon are retired (Oct 2026).
-**Navy grounds only.** Glow = teal/blue/purple, never orange, ≤3 colors. Offset into open space; copy
-on the calm side. Approved masters, not effects.
+**Navy grounds only.** Glow = teal/blue/purple, never orange, ≤3 colors. The soft wash may sit behind copy
+(website hero) if contrast holds. Approved masters, not effects.
 
 ## Iconography
 
@@ -116,7 +116,7 @@ blue edge) by default, thin ring for small avatars, arc accent, rounded-rectangl
 ## Patterns
 
 **Hero.** Three registers: **light** (white ground, navy/blue type), **dark** (navy ground, white headline
-with an optional Rhapsody Blue two-tone phrase, optional light device), and **photography** (image with copy on the calm
+with an optional light-blue two-tone phrase, optional light device), and **photography** (image with copy on the calm
 side). Structure: eyebrow (mono) → headline → subhead → single CTA. Keep one graphic device.
 
 **Email template.** Header banner options: Aurora glow, big dot, or photo. Teal seam under the header.

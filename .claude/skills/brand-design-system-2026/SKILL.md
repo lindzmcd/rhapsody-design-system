@@ -80,7 +80,7 @@ Tokens (from `tokens.css` — these exact hex values are the standard):
 |---|---|---|---|
 | `--blue` | `#1A81F4` | Primary | Rhapsody Blue — the dominant brand color: panels, CTAs, links, brand moments |
 | `--navy` | `#0B2C47` | Primary | Rhapsody Navy — page/section grounds, dark headers, the only ground for light devices |
-| `--lblue` | `#B4D8FF` | Secondary | Light blue — text and small accents on navy (under 24px) |
+| `--lblue` | `#B4D8FF` | Secondary | Light blue — the text accent on navy (two-tone highlight, stat numerals) |
 | `--teal` | `#23C5BF` | Secondary | Teal — separator seam, "automate" pathway, one optional accent |
 | `--purple` | `#7340E4` | Tertiary | Accent only |
 | `--orange` | `#FA7E2E` | Tertiary | Accent only |
@@ -114,8 +114,8 @@ success `#1E9E63`, warning `#FA7E2E` (navy text), error `#D64545`.
 **Text color**
 - Navy (`--navy`) or black ink on white/light grounds; Rhapsody Blue for links and small emphasis.
 - White on navy or Rhapsody Blue grounds. **Never set text on teal, purple, or orange grounds.**
-- Two-tone headline: one phrase in **Rhapsody Blue**, on **navy or white grounds only** — never on a
-  Rhapsody Blue ground (set those headlines in one color).
+- Two-tone headline: one phrase in **light blue on navy**, **Rhapsody Blue on white** (matches the
+  website). Navy or white grounds only — never on a Rhapsody Blue ground (set those in one color).
 
 **Accessibility & pairings**
 - Maintain readable contrast; favor the approved pairings (white on navy/blue, navy on white/gray-blue).
@@ -129,7 +129,7 @@ success `#1E9E63`, warning `#FA7E2E` (navy text), error `#D64545`.
   16×3px teal bar before a navy mono label), links stay Rhapsody Blue, and meaningful teal graphics
   get direct navy labels. If a teal application fails contrast, change the ground or the role — never
   the hex. The teal-filled pill is retired (its label sat on teal).
-- On navy the two blues split by size: **Rhapsody Blue for display type 24px and up** (two-tone highlight, stat numerals, large quotes) and large graphics; **light blue for all smaller text** (body, captions, labels, eyebrows, small icons). White stays the base text color on navy.
+- On navy, text is **white with light-blue accents at every size** (two-tone highlight, stat numerals, large quotes, labels). **Rhapsody Blue on navy is graphics only** — bars, blocks, big dots, the primary pill — never text.
 
 **Color order** (one order, shared by charts and pathways):
 Rhapsody Blue → Teal → Purple → Orange → Light blue → Navy; gray `#D9DFE6` for the remainder.
@@ -165,7 +165,7 @@ unavoidable. Copy caps: hero headline ≤40 characters, supporting line ≤110, 
 ≤120. Sentence case everywhere except the mono eyebrow.
 
 Rules that matter:
-- **Two-tone headline**: color one phrase in **Rhapsody Blue**; the rest stays white (navy ground) or navy (white ground). Navy or white grounds only; one highlight per headline, used sparingly.
+- **Two-tone headline**: color one phrase — **light blue on navy, Rhapsody Blue on white**; the rest stays white (navy) or navy (white). Navy or white grounds only; one highlight per headline, used sparingly.
 - **`strong` is Medium (500)**, not bold — emphasis stays quiet.
 - **If content doesn't fit, change the copy — don't crush the type.** Never tighten tracking/leading
   or shrink below the minimums to force a fit. Rewrite shorter instead.
@@ -243,7 +243,7 @@ Aurora rules:
 - **Navy ground only.** Never on blue, white, or photography. On those, use dots or photography.
 - **The glow uses teal, blue, and purple only — never orange.** Keep each glow within three colors;
   Aurora is teal-led.
-- **Offset the glow into open space** so copy sits on the calm side, never on the brightest point.
+- The **soft wash may sit behind copy** (as on the website hero) if white type holds contrast; keep the flowing form clear of copy.
 - Lean into the **flowing** form for motion/video/large backdrops; keep to the calmer **wash** for
   everyday layouts where text sits close.
 - These are approved masters, not effects you build.
@@ -340,7 +340,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 □ No text set on teal
 □ Teal is #23C5BF everywhere — nothing darkened to pass contrast; teal type on navy only; on light
   grounds teal appears only as an accent (tick / accent line / seam) beside navy text
-□ Two-tone headline = one Rhapsody Blue phrase, on navy or white only; Rhapsody Blue type on navy only at 24px+
+□ Two-tone headline = light blue on navy / Rhapsody Blue on white; never on a blue ground; no Rhapsody Blue text on navy
 □ If it didn't fit, the copy was shortened — the type was not crushed
 □ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark; RHAPSODY all caps; clear space kept
 □ Logo not recolored, stretched, rotated, shadowed, or overlaid
