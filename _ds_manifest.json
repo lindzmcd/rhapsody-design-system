@@ -46,6 +46,12 @@
       "name": "Logo & wordmark"
     },
     {
+      "path": "components/mascot.html",
+      "group": "2 · Brand",
+      "subtitle": "Draft: where Teddie appears, how he sits on the page, and where he never goes",
+      "name": "Mascot (Teddie Mercury)"
+    },
+    {
       "path": "components/buttons.html",
       "group": "3 · Components",
       "subtitle": "Pill buttons, primary/secondary, text links + arrow",

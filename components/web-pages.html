@@ -24,7 +24,7 @@
   .chip{display:inline-block;font-size:12px;color:#12558f;background:rgba(26,129,244,0.10);border-radius:6px;padding:3px 9px;margin:4px 4px 0 0;}
   .mlink{color:var(--blue);font-weight:500;font-size:14px;}
   .marquee{background:var(--navy);border-radius:10px;padding:13px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;overflow:hidden;}
-  .marquee .st{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#fff;white-space:nowrap;}
+  .marquee .st{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#B4D8FF;white-space:nowrap;}
   .mdot{display:inline-flex;gap:5px;}.mdot i{width:5px;height:5px;border-radius:50%;display:block;}
 </style>
 </head><body>
@@ -43,7 +43,7 @@
 </div>
 
 <h3>Eyebrow &amp; headline</h3>
-<p>Every section opens the same way: a <strong>short blue accent rule</strong>, then a <strong>mono uppercase eyebrow</strong>, then a Poppins Regular headline (24px; only the hero H1 steps up to Medium, 48px) in <strong>sentence case</strong>, with no end period unless it is a multi-sentence statement (see Typography &rarr; Headlines and copy length). Headlines are often two-tone: one phrase in Rhapsody Blue on white grounds, <strong>light blue</strong> on navy (see Typography &rarr; Two-tone headline). Lowercase mono <em>group labels</em> (&ldquo;build the infrastructure,&rdquo; &ldquo;automate the work&rdquo;) sub-divide a section.</p>
+<p>Every section opens the same way: a <strong>short blue accent rule</strong>, then a <strong>mono uppercase eyebrow</strong>, then a Poppins Regular headline (24px; only the hero H1 steps up to Medium, 48px) in <strong>sentence case</strong>, with no end period unless it is a multi-sentence statement (see Typography &rarr; Headlines and copy length). Headlines are often two-tone: one phrase in Rhapsody Blue on white grounds, <strong>light blue</strong> on navy (see Typography &rarr; Two-tone headline). Mono <em>group labels</em> (14px, all caps: &ldquo;build the infrastructure,&rdquo; &ldquo;automate the work&rdquo;) sub-divide a section.</p>
 <div class="demo" style="background:var(--navy) url(../assets/figures/aurora-soft.jpg) center/cover no-repeat;padding:30px 32px;">
   <div class="eyebrow-line"></div>
   <div class="web-eyebrow" style="color:#fff;">Agent-ready interoperability</div>
@@ -59,7 +59,7 @@
 </div>
 
 <h3>Stat rows</h3>
-<p>Proof numbers sit in a row, each with a <strong>thin blue rule above</strong>, a <strong>large Rhapsody-Blue numeral</strong>, and a navy label. Used in a white or gray-blue &ldquo;Proof&rdquo; band, and as the scrolling marquee below.</p>
+<p>Proof numbers sit in a row, each with a <strong>thin blue rule above</strong>, a <strong>large Rhapsody-Blue numeral</strong> (Poppins Medium 40px), and a navy label. Used in a white or gray-blue &ldquo;Proof&rdquo; band, and as the scrolling marquee below.</p>
 <div class="demo" style="background:var(--grayblue);padding:26px 32px;">
   <div class="eyebrow-line"></div><div class="web-eyebrow" style="margin-bottom:18px;">Proof</div>
   <div class="statrow">
@@ -69,7 +69,7 @@
     <div class="stat"><div class="rule"></div><div class="num">33+</div><div class="lab">Countries</div></div>
   </div>
 </div>
-<p class="caption" style="margin-top:-4px;"><strong>Proof marquee:</strong> a navy strip of mono uppercase stats scrolling horizontally, separated by small three-dot groups (teal / blue / light-blue).</p>
+<p class="caption" style="margin-top:-4px;"><strong>Proof marquee:</strong> a navy strip of light-blue mono uppercase stats (12px minimum) scrolling horizontally, separated by small three-dot groups (teal / blue / light-blue).</p>
 <div class="marquee">
   <span class="st">1,900+ healthcare organizations</span>
   <span class="mdot"><i style="background:var(--teal)"></i><i style="background:var(--blue)"></i><i style="background:var(--lblue)"></i></span>
@@ -81,7 +81,7 @@
 </div>
 
 <h3>Section cards</h3>
-<p>Solution, feature, and audience cards share one build: a <strong>blue accent line across the top</strong>, the standard <strong>icon tile</strong> (see Icon library) with a blue line icon (or a bare blue line icon in lighter feature rows), a navy title, body, an <strong>&ldquo;Explore&hellip; &rarr;&rdquo;</strong> text link, and optional product <strong>chips</strong>.</p>
+<p>Solution, feature, and audience cards share one build: a <strong>blue accent line across the top</strong>, the standard <strong>icon tile</strong> (see Icon library) with a blue line icon (or a bare blue line icon in lighter feature rows), a navy title (Poppins Medium 20px), body, an <strong>&ldquo;Explore&hellip; &rarr;&rdquo;</strong> text link, and optional product <strong>chips</strong>.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0;">
   <div class="wcard">
     <span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l2 2 3.5-4"/></svg></span>
@@ -128,7 +128,7 @@
 <h3>Devices on the web</h3>
 <ul>
   <li><strong>Homepage-hero constellation (that use only).</strong> The homepage hero uses a loose <strong>scattered dot constellation</strong> (white dots + a few teal, with a faint dotted orbit) around the <strong>Teddie Mercury</strong> mascot, over the Aurora glow &mdash; the one place a dot scatter and Aurora appear together. <strong>This is reserved for the homepage hero and nowhere else.</strong> It is not a general device: every other page uses the approved <strong>fluid dot pattern</strong>, <strong>big-dot ecosystem</strong>, or <strong>Aurora</strong>, never a loose dot scatter.</li>
-  <li><strong>Mascot + glow.</strong> Teddie appears on navy feature bands over a soft Aurora glow (teal&rarr;blue, fading to transparent, no hard edge).</li>
+  <li><strong>Mascot + glow.</strong> Teddie appears on navy feature bands over a soft Aurora glow (teal&rarr;blue, fading to transparent, no hard edge). See Mascot (Teddie Mercury).</li>
   <li><strong>Hero badges.</strong> Product and market-segment tiles use the <strong>hero badge graphics</strong> (a photo or illustration in a navy disc with the thick blue ring, on the fluid dot pattern) &mdash; see that card.</li>
   <li><strong>Photography heroes.</strong> Solutions heroes are a full-bleed photo with a navy scrim graded across the type side (left), the two-tone headline overlaid.</li>
   <li><strong>Icons.</strong> Blue line icons (1.7 stroke, rounded caps) in the standard icon tile for cards; white line-icon chains on emphasis bands. One device per section; dots and glows never combined.</li>

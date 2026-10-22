@@ -149,16 +149,20 @@ tertiary under 5% (most layouts none).
 - **IBM Plex Mono** (`--mono`, 400/500) for **eyebrows** and technical annotations only — the small
   uppercase, letter-spaced label above a headline. It is an accent typeface, never body copy.
 
-Brand type scale (the `tokens.css` heading sizes are documentation chrome, not this scale):
+Type scale — the live website values, the same at every screen width (the `tokens.css` heading
+sizes are documentation chrome, not this scale):
 
-| Style | Weight | Brand scale | Live website |
-|---|---|---|---|
-| Hero / H1 | Poppins Medium (500), 110% leading | 60px | 48px |
-| H2 | Poppins Regular (400), 120% | 40px | 24px |
-| H3 | Poppins Regular (400), 120% | 20px | — |
-| Body (P1) | Poppins Regular (400), 150% | 16px | 16px |
-| Caption (P2) | Poppins Regular (400), 140–150% | 12px | — |
-| Eyebrow | IBM Plex Mono Medium (500), uppercase, +0.16em | 12–13px | — |
+| Style | Spec |
+|---|---|
+| Hero / H1 | Poppins Medium (500), 48px / 60px line |
+| Stat number | Poppins Medium (500), 40px; Rhapsody Blue on light, light blue on navy |
+| H2 (section) | Poppins Regular (400), 24px / 30px |
+| Card title | Poppins Medium (500), 20px / 30px |
+| Body (P1) | Poppins Regular (400), 16px / 24px |
+| Supporting (P2) | Poppins Regular (400), 14px / 21px |
+| Caption | Poppins Regular (400), 12px minimum |
+| Eyebrow | IBM Plex Mono Medium (500), 13px, uppercase, 0.17em tracking (hero eyebrow and group labels: Regular 14px) |
+| Button | Poppins Medium (500), 15px in a 44px pill (compact: 14px, 40px) |
 
 Floors (web): body 16px, supporting text 14px, captions and labels 12px, legal 11px only where
 unavoidable. Copy caps: hero headline ≤40 characters, supporting line ≤110, quote ≤60, testimonial
@@ -247,6 +251,9 @@ Aurora rules:
 - **The glow uses teal, blue, and purple only — never orange.** Keep each glow within three colors;
   Aurora is teal-led.
 - The **soft wash may sit behind copy** (as on the website hero) if white type holds contrast; keep the flowing form clear of copy.
+- **Motion defaults (proposed):** 20–30s seamless loop (website hero: 26s); slow drift ≤10% of frame
+  width, scale 95–105%, ease-in-out sine; colors stay teal/blue/purple; opacity 80–100%, no flashing;
+  fade in 600–800ms; static soft-wash master for reduced motion; animate transform/opacity only.
 - Lean into the **flowing** form for motion/video/large backdrops; keep to the calmer **wash** for
   everyday layouts where text sits close.
 - These are approved masters, not effects you build.
@@ -330,6 +337,15 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - New sections added: **Brand Expression** and **Illustration**.
 - Rule: **if copy doesn't fit, shorten the copy — don't crush the type.**
 
+### Mascot — Teddie Mercury (draft)
+
+Use sparingly: the homepage hero (center of the constellation, over Aurora), Rhapsody Axon AI
+feature bands on navy (as the assistant's face, beside the content, never in the claim), and
+culture, event, and swag moments. Never in clinical, security, regulatory, executive, PR, analyst,
+proposal, customer-story, or technical content. Navy + soft Aurora only; one per page or asset; never
+with the fluid dot pattern or big dot; outside the logo's clear space and never in a lockup; master
+art only. Spelled "Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
+
 ---
 
 ## 11. Compliance self-check (run before delivering any visual asset)
@@ -355,6 +371,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur
 □ Portraits: brand ring by default, thin ring for small avatars, or arc / card / editorial split
 □ No retired illustration styles
+□ Teddie Mercury only where allowed (homepage hero, Axon AI band, culture/events); one per asset; never with dot devices
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)
 □ Company name is "Rhapsody," never "Rhapsody Health," never possessive ("Rhapsody's")
 □ Body text ≥16px on web; nothing a reader needs below 12px
