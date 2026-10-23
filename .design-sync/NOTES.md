@@ -86,3 +86,21 @@ both the folder and the registry. Decide before the next sync.
 `assets/qr/` and `tools/cards/` are print-production files for the business
 card (QR generator, CSV batch producer, PDF output). They are not design-system
 card assets, no card references them, and they stay out of the project.
+
+## Sync 2026-10-23 — Website feature image card + template
+Added `components/feature-image.html` (group "7 · Patterns", 30 cards) and the
+first template pushed from git: `templates/feature-image/` (`FeatureImage.dc.html`
+with a `@template name="Website Feature Image"` marker, `support.js` and
+`ds-base.js` copied verbatim from `templates/email-signature/`, a README, and a
+`.thumbnail`). The `.thumbnail` matches the app-captured ones: a 640×432 WebP of
+the template page, encoded through a Chromium canvas. Parity push of all cards +
+`tokens.css`. No manifest pushed (per the 09-07 rule); sentinel re-armed so the app
+recompiles `cards[]` and `templates[]`. No deletes.
+
+**Verify on next open:** the "Choose a template" gallery should list Website
+Feature Image alongside Email Signature Banner and Axon Connect Pitch Deck. If the
+entry is missing or broken, re-save it through the GUI "save as template" flow
+(the 10-23 business-card note explains why that flow is the safe fallback).
+
+`templates/feature-image/source/` (the HTML template, `render-feature.mjs`, and
+embedded local fonts) is code-production tooling and stays out of the project.
