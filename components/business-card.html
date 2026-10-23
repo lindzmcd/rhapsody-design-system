@@ -223,6 +223,26 @@ out to 0.136 in from the edge while the shorter name looked perfectly comfortabl
 back is set to wrap, so an overlong line pushes into the trim rather than reflowing where you can
 see it.</p>
 
+<h3>Producing cards for a team</h3>
+<p>Cards for many people are produced from a CSV, not by editing a layout per person.
+<code>tools/cards/make-cards.py</code> reads name, title, email, LinkedIn handle and phone, and
+writes one press-ready PDF per employee &mdash; front on page one, back on page two, at trim plus
+bleed. Each person&rsquo;s codes are regenerated from their own row during the run, so a printed email
+address and the code beside it cannot drift apart.</p>
+<pre style="background:#f5f7f9;border:1px solid var(--lgray);border-radius:12px;padding:16px 18px;font-family:var(--mono);font-size:12.5px;overflow-x:auto;margin:14px 0;">python3 make-cards.py employees.csv</pre>
+<ul>
+  <li><strong>The CSV takes the LinkedIn handle, not the URL.</strong> The run stops with an error if
+    it finds a full URL in that column, because the tracking parameters a profile link carries out of
+    the phone app would otherwise be printed into the code.</li>
+  <li><strong>Every code is reported with its printed module size</strong>, and anything under the
+    0.6&nbsp;mm floor is flagged inline and again by name in a summary at the end. The run finishes,
+    but it does not let the warning scroll past.</li>
+  <li><strong>Colour is the one step not to automate.</strong> The PDFs are RGB, because they come
+    out of a browser. Rhapsody Blue has to be CMYK 100 50 0 0 on press, so agree it as a named swatch
+    with the printer rather than letting a layout program convert the hex.</li>
+  <li>Full handoff notes are in <code>tools/cards/README.md</code>.</li>
+</ul>
+
 <h3>Print production</h3>
 <ul>
   <li><strong>Trim</strong> 3.5 &times; 2 in, <strong>bleed</strong> 0.125 in on all four sides, <strong>safe
