@@ -35,8 +35,9 @@
 .bc-who{flex:none;}
 .bc-name2{font-size:1.05em;font-weight:500;color:var(--navy);white-space:nowrap;}
 .bc-role2{font-size:.9em;color:var(--dgray);margin-top:.15em;white-space:nowrap;}
-.bc-contact{text-align:right;font-size:.95em;}
-.bc-mail{color:var(--navy);white-space:nowrap;}
+.bc-contact{text-align:right;font-size:.95em;line-height:1.25;}
+.bc-tel{color:var(--navy);white-space:nowrap;}
+.bc-mail{color:var(--navy);white-space:nowrap;margin-top:.1em;}
 .bc-web{color:var(--blue);font-weight:500;white-space:nowrap;margin-top:.15em;}
 
 .bc-pair{display:flex;gap:22px;flex-wrap:wrap;margin:14px 0 6px;}
@@ -102,6 +103,7 @@ around the white face are here so the cards read against the page &mdash; neithe
               <div class="bc-role2">Chief Executive Officer</div>
             </div>
             <div class="bc-contact">
+              <div class="bc-tel">+1 555 012 3456</div>
               <div class="bc-mail">Sagnik.Bhattacharya@rhapsody.health</div>
               <div class="bc-web">rhapsody.health &rarr;</div>
             </div>
@@ -149,6 +151,7 @@ around the white face are here so the cards read against the page &mdash; neithe
               <div class="bc-role2">Chief Marketing Officer</div>
             </div>
             <div class="bc-contact">
+              <div class="bc-tel">+1 555 012 7890</div>
               <div class="bc-mail">Michelle.Blackmer@rhapsody.health</div>
               <div class="bc-web">rhapsody.health &rarr;</div>
             </div>
@@ -183,9 +186,12 @@ around the white face are here so the cards read against the page &mdash; neithe
     people scan the one they actually want.</li>
   <li><strong>Labels.</strong> The teal tick &mdash; a short teal bar before a navy mono label &mdash; is how
     teal is allowed to appear on a light ground. The label is navy, never teal.</li>
-  <li><strong>Written fallback.</strong> The email address and <code>rhapsody.health &rarr;</code> stay in
-    type at the foot of the card for anyone who would rather type than scan, and so the card still
-    works in a photo, a scanner app, or a country where the QR lands on a blocked domain.</li>
+  <li><strong>The foot splits who from how.</strong> Identity on the left (name, then title), the
+    three ways to reach the person on the right (phone, email, then the website actionlink). Keeping
+    the contact methods in one stack is what lets a reader scan for the one they want.</li>
+  <li><strong>Written fallback.</strong> Phone, email and <code>rhapsody.health &rarr;</code> stay in
+    type for anyone who would rather type than scan, and so the card still works in a photo, a
+    scanner app, or a country where the QR lands on a blocked domain.</li>
   <li><strong>No logo.</strong> The front already carries it. Repeating the wordmark on the back is the
     most common way this card goes wrong.</li>
 </ul>
@@ -231,17 +237,39 @@ scanner apps &mdash; which is why the modules are tangent and why the radius is 
 
 <h3>Options</h3>
 <ul>
-  <li><strong>Phone number.</strong> Left off by default &mdash; the two codes cover how people actually
-    follow up. If a role needs it, it sits at the foot of the back, before the email.</li>
+  <li><strong>Phone number.</strong> Included. Drop the line for roles that would rather not print a
+    direct number; the layout closes up and the two codes still carry the card.</li>
   <li><strong>One code instead of two.</strong> A single vCard QR saves the whole contact in one scan
     but drops them nowhere &mdash; no profile to look at, no draft to send. Use it only for roles that
     hand out cards in volume at events.</li>
-  <li><strong>NFC tap.</strong> An embedded chip can carry the same vCard for tap-to-save. It roughly
-    doubles the unit cost and still needs the printed codes as a fallback, so treat it as an
-    executive or event-team upgrade rather than the standard card.</li>
   <li><strong>Rounded die-cut.</strong> A squared-top, rounded-bottom die would echo the system&rsquo;s corner
     rule in the physical object. It is a custom die and a longer lead time; the standard square cut
     is the default.</li>
+</ul>
+
+<h3>The NFC option</h3>
+<p>An NFC inlay is a paper-thin antenna laminated inside the card. Hold an unlocked phone against
+it and a notification opens whatever the tag points at, with no app and no camera. It is the one
+upgrade that makes a card feel genuinely modern, and it carries a constraint worth understanding
+before anyone orders a run.</p>
+<ul>
+  <li><strong>A tag holds one destination.</strong> This is the part that catches people out. NFC
+    cannot offer a choice, so it can't do what the two codes do. Pointing it at a vCard saves the
+    contact but shows them nothing; pointing it at LinkedIn drops the email. To match this card, the
+    tap needs a per-person profile page carrying both actions &mdash; which means that page has to
+    exist and be maintained. That is a web project, not a print decision, so settle it first.</li>
+  <li><strong>It does not replace the printed codes.</strong> Recent iPhones and most Android phones
+    read tags with the screen on and unlocked, but older handsets need the reader opened by hand, and
+    a tap that doesn't register fails silently with nothing on the card to fall back to. The QR codes
+    stay exactly as they are.</li>
+  <li><strong>Lock the tags before they go out.</strong> An unlocked NFC tag can be rewritten by
+    anyone holding a phone to it. Write-protect them as part of production and treat that as a
+    requirement, not a nicety.</li>
+  <li><strong>Production is a different supply chain.</strong> Not every card printer does NFC; it
+    needs an inlay-capable supplier, constrains the stock, and carries a higher unit cost and a
+    minimum order. Get a quote before committing &mdash; the economics usually decide this on their own.</li>
+  <li><strong>Where it earns its place.</strong> Executives and the event team, where the card is
+    handed over in volume and the tap is part of the impression. The standard card stays as drawn.</li>
 </ul>
 
 <div class="compare">
@@ -268,6 +296,8 @@ scanner apps &mdash; which is why the modules are tangent and why the radius is 
       &mdash; the codes shown here point at a placeholder path on purpose.</li>
     <li>Confirm each title against the directory; titles are never abbreviated to fit.</li>
     <li>Check the email in type matches the one encoded in the code.</li>
+    <li>Replace both placeholder phone numbers with real direct lines, in the same
+      <code>+1 555 012 3456</code> spacing, and confirm each person wants theirs printed.</li>
   </ul>
 </div>
 </div>
