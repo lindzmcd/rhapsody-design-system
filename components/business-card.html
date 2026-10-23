@@ -31,10 +31,7 @@
   font-family:var(--mono);font-size:.9em;font-weight:500;letter-spacing:.17em;
   text-transform:uppercase;color:var(--navy);}
 .qrlab i{width:1.6em;height:.3em;background:var(--teal);flex:none;}
-.bc-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:1.6em;}
-.bc-who{flex:none;}
-.bc-name2{font-size:1.05em;font-weight:500;color:var(--navy);white-space:nowrap;}
-.bc-role2{font-size:.9em;color:var(--dgray);margin-top:.15em;white-space:nowrap;}
+.bc-foot{display:flex;justify-content:flex-end;}
 .bc-contact{text-align:right;font-size:.95em;line-height:1.25;}
 .bc-tel{color:var(--navy);white-space:nowrap;}
 .bc-mail{color:var(--navy);white-space:nowrap;margin-top:.1em;}
@@ -98,10 +95,6 @@ around the white face are here so the cards read against the page &mdash; neithe
             <div class="bc-cue">Scan to connect</div>
           </div>
           <div class="bc-foot">
-            <div class="bc-who">
-              <div class="bc-name2">Sagnik Bhattacharya</div>
-              <div class="bc-role2">Chief Executive Officer</div>
-            </div>
             <div class="bc-contact">
               <div class="bc-tel">+1 555 012 3456</div>
               <div class="bc-mail">Sagnik.Bhattacharya@rhapsody.health</div>
@@ -146,10 +139,6 @@ around the white face are here so the cards read against the page &mdash; neithe
             <div class="bc-cue">Scan to connect</div>
           </div>
           <div class="bc-foot">
-            <div class="bc-who">
-              <div class="bc-name2">Michelle Blackmer</div>
-              <div class="bc-role2">Chief Marketing Officer</div>
-            </div>
             <div class="bc-contact">
               <div class="bc-tel">+1 555 012 7890</div>
               <div class="bc-mail">Michelle.Blackmer@rhapsody.health</div>
@@ -186,14 +175,16 @@ around the white face are here so the cards read against the page &mdash; neithe
     people scan the one they actually want.</li>
   <li><strong>Labels.</strong> The teal tick &mdash; a short teal bar before a navy mono label &mdash; is how
     teal is allowed to appear on a light ground. The label is navy, never teal.</li>
-  <li><strong>The foot splits who from how.</strong> Identity on the left (name, then title), the
-    three ways to reach the person on the right (phone, email, then the website actionlink). Keeping
-    the contact methods in one stack is what lets a reader scan for the one they want.</li>
+  <li><strong>One contact stack, right-aligned.</strong> Phone, then email, then the website
+    actionlink, set as a single block at the foot. Keeping the three in one stack is what lets a
+    reader find the one they want.</li>
   <li><strong>Written fallback.</strong> Phone, email and <code>rhapsody.health &rarr;</code> stay in
     type for anyone who would rather type than scan, and so the card still works in a photo, a
     scanner app, or a country where the QR lands on a blocked domain.</li>
-  <li><strong>No logo.</strong> The front already carries it. Repeating the wordmark on the back is the
-    most common way this card goes wrong.</li>
+  <li><strong>No logo, and no name.</strong> The front carries both. Repeating the wordmark on the
+    back is the most common way this card goes wrong, and repeating the name is what breaks it: a
+    long name beside a long email address will not fit the safe width, and the two run into the trim
+    edge. The back identifies the person through the email address and the codes.</li>
 </ul>
 
 <h3>The QR codes</h3>
@@ -219,6 +210,14 @@ around the white face are here so the cards read against the page &mdash; neithe
 resolutions from 600&nbsp;px down to 110&nbsp;px and with blur applied. The rounded codes read in
 every condition. Rounded modules with visible gaps between them did not &mdash; they fail on weaker
 scanner apps &mdash; which is why the modules are tangent and why the radius is not a style knob.</p>
+
+<h3>Safe area</h3>
+<p>Everything on both faces holds 0.229 in from trim, against a declared safe area of 0.22 in. That
+figure is worth re-measuring rather than trusting by eye whenever copy changes: an earlier draft of
+this card repeated the name on the back, and the longest name in the pair pushed the email address
+out to 0.136 in from the edge while the shorter name looked perfectly comfortable. Nothing on the
+back is set to wrap, so an overlong line pushes into the trim rather than reflowing where you can
+see it.</p>
 
 <h3>Print production</h3>
 <ul>
@@ -285,6 +284,7 @@ before anyone orders a run.</p>
     <li>Recolor a code to Rhapsody Blue, teal, or white-on-navy</li>
     <li>Drop a logo into the middle of a code, or crop its quiet zone</li>
     <li>Shrink a code below 0.85 in to win back space &mdash; cut copy instead</li>
+    <li>Add the name or title back to the QR face to fill the space</li>
     <li>Hand a printer a JPG or PNG of a code</li>
   </ul></div></div>
 </div>
