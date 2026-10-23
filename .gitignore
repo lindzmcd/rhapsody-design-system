@@ -1,3 +1,4 @@
 Rhapsody_Email_Signature.zip
 *.zip
 tools/cards/out/
+__pycache__/
