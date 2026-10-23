@@ -8,6 +8,12 @@ language without costing scan reliability.
 
     pip install segno
     python3 make-card-qr.py "Firstname Lastname" first.last@rhapsody.health linkedin-handle
+    python3 make-card-qr.py "Firstname Lastname" first.last@rhapsody.health linkedin-handle \
+        https://rhapsody.health/c/firstname-lastname
+
+The optional fourth argument is the profile-page URL used by the speaker card,
+whose single code and NFC tap both resolve to the same page. Keep that URL short:
+it shares the 0.85in tile with everything else, and a longer string costs modules.
 
 Module geometry was decode-tested with zxing-cpp (phone-grade) and OpenCV across
 resolutions and blur. RADIUS 0.50 keeps modules tangent: it scores full marks on
@@ -64,21 +70,32 @@ def render(data, path, width_in=0.85, square=False):
                        f'fill="none" stroke="{NAVY}" stroke-width="1"/>')
             out.append(f'<rect x="{X+2}" y="{Y+2}" width="3" height="3" rx="0.9"/>')
     open(path, "w").write("".join(out) + "</g></svg>")
-    print(f"  {path.split('/')[-1]:32s} v{qr.version} ECC-{err.upper()} "
-          f"{n}x{n}  {mm:.2f}mm/module at {width_in}in")
+    flag = "" if mm >= MIN_MODULE_MM else f"  <-- UNDER THE {MIN_MODULE_MM}mm FLOOR"
+    print(f"  {path.split('/')[-1]:38s} v{qr.version} ECC-{err.upper()} "
+          f"{n}x{n}  {mm:.2f}mm/module at {width_in}in{flag}")
+    if mm < MIN_MODULE_MM:
+        print(f"      The encoded string is {len(data)} characters, which needs {n}x{n} modules.")
+        print( "      Shorten it (a custom LinkedIn vanity URL is the usual culprit) or print this")
+        print( "      code larger. Do not ship it at this size without a scan test on the proof.")
 
 
-def make(slug, email, handle, outdir="."):
-    li = f"https://linkedin.com/in/{handle}"
-    for label, data in (("linkedin", li), ("email", f"mailto:{email}")):
-        render(data, f"{outdir}/{slug}-{label}.svg")
-        render(data, f"{outdir}/{slug}-{label}-square.svg", square=True)
+def make(slug, email, handle, profile=None, outdir="."):
+    targets = [("linkedin", f"https://linkedin.com/in/{handle}"),
+               ("email", f"mailto:{email}")]
+    if profile:
+        targets.append(("profile", profile))
+    for label, data in targets:
+        # the speaker card prints its single code larger than the two-code card does
+        w = 0.90 if label == "profile" else 0.85
+        render(data, f"{outdir}/{slug}-{label}.svg", width_in=w)
+        render(data, f"{outdir}/{slug}-{label}-square.svg", width_in=w, square=True)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) not in (4, 5):
         sys.exit(__doc__)
-    name, email, handle = sys.argv[1:]
+    name, email, handle = sys.argv[1:4]
+    profile = sys.argv[4] if len(sys.argv) == 5 else None
     slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
     print(f"{name} <{email}>  linkedin.com/in/{handle}")
-    make(slug, email, handle, outdir=os.path.dirname(os.path.abspath(__file__)))
+    make(slug, email, handle, profile, outdir=os.path.dirname(os.path.abspath(__file__)))
