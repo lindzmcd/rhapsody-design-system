@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Website Feature Image" description="1200×630 feature image for rhapsody.health pages (export at 2×): navy and Aurora glow, mono eyebrow, two-tone headline, line-art motif, and lockup, with editable copy." -->
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script src="./ds-base.js"></script>
+<style>
+  .fi-art{width:1200px;height:630px;background:#0B2C47;overflow:hidden;position:relative;font-family:'Poppins',Arial,sans-serif;flex:none;}
+  .fi-glow{position:absolute;right:-14%;top:-28%;width:760px;height:760px;filter:blur(70px);opacity:.5;
+    background:radial-gradient(closest-side at 42% 44%, rgba(35,197,191,.85), rgba(35,197,191,0) 72%),
+               radial-gradient(closest-side at 62% 54%, rgba(26,129,244,.9), rgba(26,129,244,0) 72%);}
+  .fi-wrap{position:absolute;inset:0;display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:36px;padding:0 90px;}
+  .fi-eyeb{font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:#23C5BF;margin:0 0 22px;}
+  .fi-h1{font-weight:500;color:#fff;margin:0;}
+  .fi-h1 .lb{color:#B4D8FF;}
+  .fi-mk{position:relative;display:flex;flex-direction:column;align-items:center;}
+  .fi-mk::before{content:"";position:absolute;width:470px;height:470px;left:50%;top:42%;transform:translate(-50%,-50%);border-radius:50%;
+    background:radial-gradient(circle,rgba(26,129,244,.3),rgba(26,129,244,0) 68%);}
+  .fi-mk svg{position:relative;width:300px;height:270px;overflow:visible;}
+  .fi-lock{position:relative;margin-top:14px;font-size:25px;font-weight:400;color:#fff;letter-spacing:-0.01em;text-align:center;}
+</style>
+</helmet>
+<div style="font-family:'Poppins',Arial,sans-serif;background:#F5F7F9;padding:44px 48px;min-height:100vh;box-sizing:border-box">
+<div style="max-width:1200px">
+<div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#1A81F4;margin-bottom:10px">Website feature image</div>
+<div style="font-weight:400;font-size:30px;line-height:1.15;color:#0B2C47">Feature image &middot; 1200 &times; 630</div>
+<p style="font-size:15px;line-height:1.5;color:#0B2C47;margin:12px 0 24px;max-width:72ch;text-wrap:pretty">Fill the four slots in the Tweaks panel, check the headline for a one-word last line, then capture the artboard at 2&times; (2400 &times; 1260 PNG). Everything else is the fixed system. To change the motif, ask Claude to redraw it using the motif vocabulary below.</p>
+
+<div class="fi-art">
+  <div class="fi-glow"></div>
+  <div class="fi-wrap">
+    <div>
+      <p class="fi-eyeb">{{ eyebrow }}</p>
+      <h1 class="fi-h1" style="font-size:{{ h1Size }};line-height:{{ h1Lh }}">{{ headlineText }}<sc-if value="{{ hasEmphasis }}" hint-placeholder-val="{{ true }}"> <span class="lb">{{ emphasisText }}</span></sc-if></h1>
+    </div>
+    <div class="fi-mk">
+      <svg viewBox="0 0 200 180" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#3D6587" stroke-width="3.5"><path d="M56 90h88"/></g>
+        <g stroke="#B4D8FF" stroke-width="3">
+          <rect x="16" y="72" width="40" height="36" rx="7"/>
+          <rect x="144" y="72" width="40" height="36" rx="7"/>
+        </g>
+        <circle cx="184" cy="66" r="10" fill="#23C5BF"/>
+        <path d="M179 66l3.6 3.6 6.4-7" stroke="#0B2C47" stroke-width="2.4"/>
+        <path d="M100 94v12" stroke="#3D6587" stroke-width="3.5"/>
+        <circle cx="100" cy="118" r="8" fill="#23C5BF"/>
+        <circle cx="100" cy="118" r="14.5" stroke="#23C5BF" stroke-width="2.4" opacity=".45"/>
+      </svg>
+      <span class="fi-lock">{{ lockupText }}</span>
+    </div>
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-top:28px">
+  <div style="background:#fff;border:1px solid #D9DFE6;border-radius:12px;padding:20px 24px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#1A81F4;margin-bottom:10px">The four slots</div>
+    <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.55;color:#0B2C47">
+      <li><strong>Eyebrow:</strong> section and page, &ldquo;Markets &middot; Payers&rdquo;. Times as 12 p.m. CT.</li>
+      <li><strong>Headline:</strong> the page H1, sentence case. The emphasis field turns light blue. One sentence takes no period; two or more short sentences take a period after each.</li>
+      <li><strong>Motif:</strong> line art from the vocabulary at right.</li>
+      <li><strong>Lockup:</strong> a short label, &ldquo;Rhapsody for payers&rdquo; or &ldquo;Rhapsody Axon&trade;&rdquo;.</li>
+    </ul>
+  </div>
+  <div style="background:#fff;border:1px solid #D9DFE6;border-radius:12px;padding:20px 24px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#1A81F4;margin-bottom:10px">Motif vocabulary</div>
+    <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.55;color:#0B2C47">
+      <li>viewBox 0 0 200 180; keep everything inside x 10&ndash;190, y 14&ndash;170.</li>
+      <li>Outlines #B4D8FF, stroke 3&ndash;3.4 (tiles rx 7&ndash;8).</li>
+      <li>Connectors #3D6587, stroke 3.5, drawn first so they sit behind the shapes.</li>
+      <li>Teal #23C5BF for the check badge and at most one other accent.</li>
+      <li>The grounded pulse: stem, dot r8, and ring r14.5 at 45% opacity.</li>
+      <li>Every line ends on a shape or passes fully behind one.</li>
+    </ul>
+  </div>
+</div>
+
+<div style="margin-top:16px;background:#0B2C47;border-radius:12px;padding:24px 28px;color:#fff">
+  <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#23C5BF;margin-bottom:10px">Before you ship</div>
+  <ul style="margin:0;padding-left:20px;font-size:14.5px;line-height:1.55">
+    <li>Poppins loaded (not Arial), and no line of the headline, eyebrow, or lockup is a single word.</li>
+    <li>Text stays in the left column and the motif in the right; nothing moves out of the layout.</li>
+    <li>Use only the three headline sizes in Setup; don&rsquo;t invent new ones.</li>
+    <li>Look at the motif up close for stray, floating, or overlapping lines.</li>
+    <li>Export PNG at 2&times; (2400 &times; 1260).</li>
+  </ul>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;headlineSize&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Default 48px&quot;,&quot;Slightly long 46px&quot;,&quot;Short stack 58px&quot;],&quot;default&quot;:&quot;Default 48px&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Setup&quot;},&quot;eyebrow&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Markets · Payers&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Copy&quot;},&quot;headline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Payer data that moves&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Copy&quot;},&quot;emphasis&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;at the speed of care&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Copy&quot;},&quot;lockup&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Rhapsody for payers&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Copy&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    // Glue the last two words with a non-breaking space so no line ends on a single word.
+    const glue = (s) => {
+      const t = (s || '').trim();
+      const i = t.lastIndexOf(' ');
+      return i > 0 ? t.slice(0, i) + ' ' + t.slice(i + 1) : t;
+    };
+    const sizes = {
+      'Default 48px': ['48px', '1.22'],
+      'Slightly long 46px': ['46px', '1.22'],
+      'Short stack 58px': ['58px', '1.14'],
+    };
+    const [h1Size, h1Lh] = sizes[this.props.headlineSize] || sizes['Default 48px'];
+    const emphasis = (this.props.emphasis ?? 'at the speed of care').trim();
+    const headline = (this.props.headline ?? 'Payer data that moves').trim();
+    return {
+      eyebrow: this.props.eyebrow || 'Markets · Payers',
+      headlineText: emphasis ? headline : glue(headline),
+      emphasisText: glue(emphasis),
+      hasEmphasis: emphasis.length > 0,
+      lockupText: glue(this.props.lockup || 'Rhapsody for payers'),
+      h1Size,
+      h1Lh,
+    };
+  }
+}
+</script>
+</body>
+</html>

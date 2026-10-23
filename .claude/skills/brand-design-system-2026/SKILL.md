@@ -35,7 +35,7 @@ assets/               Tightly-cropped logo/monogram rasters the cards reference 
 brand/                Full downloadable logo package (SVG + EPS vectors, 300/72 dpi PNG/JPG)
 components/           One HTML preview per component/pattern — each becomes a card in Claude Design
 downloads/            Ready-to-use masters (e.g. the 2026 PowerPoint template .pptx)
-templates/            Claude Design canvas templates (e.g. display-ads/DisplayAds.dc.html)
+templates/            Claude Design canvas templates (e.g. feature-image/FeatureImage.dc.html)
 deliverables/         Shareable, self-contained outputs (brand guideline HTML/PDF, signature package)
 ```
 

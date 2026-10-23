@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     RHAPSODY FEATURE IMAGE TEMPLATE · v1 (Oct 2026 relaunch system)
+     Canvas 1200×630 · export at 2× = 2400×1260 PNG.
+     Fill ONLY the four slots marked ✏️ — everything else is the system.
+     Full rules + QA checklist: see the Feature Image Spec page.
+     ============================================================ -->
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  /* ——— fixed system: do not edit below ——— */
+  body{margin:0;width:1200px;height:630px;background:#0B2C47;overflow:hidden;
+    font-family:'Poppins',Arial,sans-serif;position:relative;}
+  /* Aurora-style glow, always top-right, behind everything */
+  .glow{position:absolute;right:-14%;top:-28%;width:760px;height:760px;filter:blur(70px);opacity:.5;
+    background:radial-gradient(closest-side at 42% 44%, rgba(35,197,191,.85), rgba(35,197,191,0) 72%),
+               radial-gradient(closest-side at 62% 54%, rgba(26,129,244,.9), rgba(26,129,244,0) 72%);}
+  /* Two columns: text left, motif right. The 90px side padding and the
+     column gap ARE the safe margins — text can never overlap the motif
+     because they never share a column. Don't move content out of .wrap. */
+  .wrap{position:absolute;inset:0;display:grid;grid-template-columns:1.5fr 1fr;
+    align-items:center;gap:36px;padding:0 90px;}
+  .eyeb{font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:500;
+    letter-spacing:.17em;text-transform:uppercase;color:#23C5BF;margin:0 0 22px;}
+  h1{font-weight:500;font-size:48px;line-height:1.22;color:#fff;margin:0;}
+  h1 .lb{color:#B4D8FF;}
+  .mk{position:relative;display:flex;flex-direction:column;align-items:center;}
+  .mk::before{content:"";position:absolute;width:470px;height:470px;left:50%;top:42%;
+    transform:translate(-50%,-50%);border-radius:50%;
+    background:radial-gradient(circle,rgba(26,129,244,.3),rgba(26,129,244,0) 68%);}
+  .mk svg{position:relative;width:300px;height:270px;overflow:visible;}
+  .lock{position:relative;margin-top:14px;font-size:25px;font-weight:400;color:#fff;
+    letter-spacing:-0.01em;text-align:center;}
+  /* Long H1? Uncomment ONE of these rather than inventing new sizes:
+     h1{font-size:46px;}                                  (slightly long)
+     .wrap{grid-template-columns:1.55fr 1fr;}             (one stubborn line)
+     h1{font-size:58px;line-height:1.14;}                 (1–3 word stacks only) */
+</style></head>
+<body>
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <!-- ✏️ SLOT 1 · EYEBROW — mono kicker: "Markets · Payers", "Webinar · Nov 19 · 12 p.m. CT".
+           Styleguide time format: 12 p.m. CT (lowercase, periods, no :00).
+           If it wraps, break it yourself with <br> at the phrase boundary —
+           never let it strand one word. -->
+      <p class="eyeb">Section &middot; Page name</p>
+      <!-- ✏️ SLOT 2 · HEADLINE — the page's H1, sentence case. Wrap the second
+           sentence/phrase in <span class="lb">…</span> for light blue.
+           NO-ORPHAN RULE: the last line must hold ≥2 words. Glue the final
+           two words with &nbsp; (e.g. agentic&nbsp;era). Hyphenated words can
+           break at the hyphen — use the non-breaking hyphen &#8209; to stop it. -->
+      <h1>Headline first part. <span class="lb">Emphasis part, glued&nbsp;end.</span></h1>
+    </div>
+    <div class="mk">
+      <!-- ✏️ SLOT 3 · MOTIF — line illustration, viewBox 0 0 200 180. VOCABULARY:
+           · outlines: stroke #B4D8FF, width 3–3.4 (tiles rx7–8, 2.8–3 for glyphs inside)
+           · connectors: stroke #3D6587, width 3.5 — THIS GROUP IS FIRST so every
+             gray line paints BEHIND the shapes. Keep all connectors in it.
+           · teal #23C5BF: check badge (fill circle r10–11 + navy #0B2C47 check,
+             stroke 2.4–2.6) and ONE accent max
+           · grounded pulse signature: stem + dot r8 + ring r14.5 at opacity .45,
+             hanging from the artwork's base with a ~4-unit gap stem→dot
+           · keep everything inside x:10–190, y:14–170 (the viewBox's own padding)
+           · every line ends ON something (edge-to-edge) or passes fully behind -->
+      <svg viewBox="0 0 200 180" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- connectors FIRST = behind everything -->
+        <g stroke="#3D6587" stroke-width="3.5">
+          <path d="M56 90h88"/>
+        </g>
+        <!-- shapes -->
+        <g stroke="#B4D8FF" stroke-width="3">
+          <rect x="16" y="72" width="40" height="36" rx="7"/>
+          <rect x="144" y="72" width="40" height="36" rx="7"/>
+        </g>
+        <!-- teal badge -->
+        <circle cx="184" cy="66" r="10" fill="#23C5BF"/>
+        <path d="M179 66l3.6 3.6 6.4-7" stroke="#0B2C47" stroke-width="2.4"/>
+        <!-- grounded pulse -->
+        <path d="M100 94v12" stroke="#3D6587" stroke-width="3.5"/>
+        <circle cx="100" cy="118" r="8" fill="#23C5BF"/>
+        <circle cx="100" cy="118" r="14.5" stroke="#23C5BF" stroke-width="2.4" opacity=".45"/>
+      </svg>
+      <!-- ✏️ SLOT 4 · LOCKUP — short label: "Rhapsody for payers", "Rhapsody Axon™".
+           One line when it fits; if two, glue the pair you want together with
+           &nbsp; so neither line is a single word (it centers automatically). -->
+      <span class="lock">Rhapsody</span>
+    </div>
+  </div>
+</body></html>
