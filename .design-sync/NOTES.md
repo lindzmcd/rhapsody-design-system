@@ -59,3 +59,30 @@ device duplicates `components/gd-0-device-overview.html` … `gd-5-light-devices
 (superseded by `device-overview/photography/dots/dot-field/big-dot/light-devices`).
 They weren't in `cards[]`, but would have re-appeared as duplicate cards on the
 recompile, so they were deleted.
+
+## Sync 2026-10-23 — Business card pattern
+Added `components/business-card.html` (group "7 · Patterns"), bringing the
+pane to 29 cards. Parity re-push of all 29 cards + `tokens.css` rather than
+the single new file: uploads read from disk and never enter model context, so
+a full push costs nothing and closes the drift risk this file keeps recording.
+No manifest pushed (per the 09-07 rule); sentinel re-armed so the app
+recompiles `cards[]` and `templates[]`. No deletes — every remote card still
+exists locally, and `assets/dupimg0.jpg` (remote + local, referenced by
+`tokens.css`) was left alone.
+
+Pre-push check: remote `tokens.css` already carried the accessible status
+colors from c0a44f0, confirming remote was current before this run.
+
+### Finding — `templates/display-ads/` is local-only
+`templates/display-ads/` (`DisplayAds.dc.html`, `README.md`, `assets/`) is in
+git but NOT in the project, and unlike the two remote templates it has no
+`.thumbnail`. It was deliberately NOT pushed this run. Template folders pair
+with an app-compiled registry, and the 09-07 entry records how easily that
+gallery breaks; a hand-pushed folder with no thumbnail risks a broken entry.
+To publish it, use the Claude Design GUI "save as template" flow, which writes
+both the folder and the registry. Decide before the next sync.
+
+### Not synced, by design
+`assets/qr/` and `tools/cards/` are print-production files for the business
+card (QR generator, CSV batch producer, PDF output). They are not design-system
+card assets, no card references them, and they stay out of the project.
