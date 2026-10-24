@@ -2,15 +2,16 @@
 
 Animated GIF creative for the Healthcare IT Today header and sidebar placements,
 built to the 2026 design system (`brand-design-system-2026`) with copy per
-`rhapsody-brand`. Angle: the Rhapsody Axon™ agentic story, with Teddie Mercury as
-the face of the assistant.
+`rhapsody-brand`. Angle: the Rhapsody Axon agentic story.
+
+> ⚠️ **One blocker before these run: the lockup carries no ™.** See Open items.
 
 ## Files to send the publisher
 
 | Placement | File | Size | Weight |
 |---|---|---|---|
-| Header display ad | `rhapsody-hcitt-500x80.gif` | 500 × 80 | 92 KB |
-| Sidebar display ad | `rhapsody-hcitt-300x250.gif` | 300 × 250 | 178 KB |
+| Header display ad | `rhapsody-hcitt-500x80.gif` | 500 × 80 | 62 KB |
+| Sidebar display ad | `rhapsody-hcitt-300x250.gif` | 300 × 250 | 127 KB |
 
 **Click URL (both units):** `https://rhapsody.health/solutions/axon-ai-interoperability/`
 Append the tracking parameters before handoff. Healthcare IT Today accepts tracking links.
@@ -21,60 +22,70 @@ Append the tracking parameters before handoff. Healthcare IT Today accepts track
 |---|---|
 | `*-loop.gif` | Identical creative set to loop continuously instead of stopping |
 | `*-static.png` / `*-static.jpg` | Non-animated fallback, if a slot rejects GIF. Shows the closing frame |
+| `source/` | The Rhapsody Axon lockup as supplied, plus the name-only derivative the ads use |
+
+## The mark
+
+The **Rhapsody Axon lockup replaces the plain Rhapsody wordmark** on both units.
+Because the lockup carries the product name permanently, the name comes out of the
+copy, which is what buys the extra room.
+
+- Sidebar: lockup at 240px, so RHAPSODY inside it measures 151px, well over the
+  108px on-screen floor and noticeably larger than the 108px plain wordmark it replaced.
+- Header: lockup at 172px, which puts RHAPSODY at 108px, exactly the floor. That is
+  the smallest this lockup can legally go.
+- **The tagline is dropped.** "Your AI agent for integration." only clears the 13px
+  floor at a lockup width of about 272px, which is wider than the sidebar's 264px
+  content area. At the widths that fit it renders around 8–10px. The ads use the
+  name-only derivative in `source/axon-lockup-name-only.svg`.
+
+The supplied lockup's RHAPSODY is the genuine official wordmark: its path data is
+byte-identical to `brand/Rhapsody logo - blue-white/Rhapsody_logo_blue-white.svg`
+under a uniform `scale(4.2918)`, and its ink box is 232.22 × 24.00, aspect 9.6758,
+matching all three official vectors exactly. Nothing is stretched or recolored.
 
 ## Animation
 
-Three message beats, cross-faded, over a still Aurora soft wash on navy.
+Two message beats, cross-faded, over a still Aurora soft wash on navy.
 
 1. The problem, in the reader's words
-2. The category claim
-3. **Rhapsody Axon™** + the CTA, which is where the ad comes to rest
+2. The claim, which is where the ad comes to rest, with the CTA
 
-The Rhapsody logo, Teddie and the Rhapsody Blue CTA pill are on screen the whole
-time, so the ad is clickable and attributable at every moment of the loop.
-
-- **Loop:** 9.44s, played 3 times, then holds on the Rhapsody Axon™ + CTA frame.
-  Total motion ≈ 28s. The `-loop` files run continuously instead.
+- **Loop:** 6.76s, played 3 times, then holds on the claim frame. Total motion ≈ 20s.
+  The `-loop` files run continuously instead.
 - **Cross-fade:** 480ms, ease-in-out sine. No flashing, no strobing, no hard cuts.
-- Aurora is delivered as the **still** soft wash. It is the approved register for a
-  layout this small, and it keeps the files light. (A drifting Aurora re-encodes the
-  whole gradient on every frame and pushes the sidebar unit past 260 KB for motion
-  that is imperceptible at 300 × 250.)
-- Teddie is **static**. The mascot card allows animating him only from the approved
-  animation files, and the only art available here is a still.
+- Aurora is the **still** soft wash, the approved register at this size, and it keeps
+  the files light. Teddie is **static**; the mascot card permits animating him only
+  from the approved animation files, and only a still is available here.
 
 ## Copy
 
 **500 × 80 header**
 1. More interfaces. *Same team.*
-2. The first healthcare integration agent.
-3. **Rhapsody Axon™** · CTA: See how →
+2. Healthcare's first *integration agent.*
 
 **300 × 250 sidebar**
 1. Your interface queue keeps growing. *Your team hasn't.*
-2. The first healthcare integration agent.
-3. **Rhapsody Axon™** / Built into Rhapsody and Corepoint · CTA: See how it works →
+2. The first healthcare *integration agent.*
 
 Beat 1 leads with the reader's reality before any product mention, per the
-audience-first rule. *Italics* above mark the light-blue half of the two-tone headline.
+audience-first rule. *Italics* mark the light-blue half of the two-tone headline.
+The header says "Healthcare's first" rather than "The first healthcare" purely to
+break over two lines in the 159px the lockup leaves; the claim is the same.
 
-There is no eyebrow on either unit. The earlier `AGENT-READY` label was the website's
-"Agent-ready interoperability" eyebrow truncated to fit, and it read as a fragment.
-Teddie now holds that slot, which is a better use of it than a shortened label.
+No eyebrow on either unit, and no mono type anywhere now. "Axon" never appears alone
+in the copy because it never appears in the copy at all. The lockup carries the name,
+and it reads "RHAPSODY AXON", satisfying the rule that the mark never stands as "Axon".
 
-## Teddie Mercury placement
+## Teddie Mercury
 
-Per the mascot card, he is the friendly face of the Rhapsody Axon assistant, so this
-is the right asset for an Axon-led ad. The usage rules are met:
+**Sidebar only.** He sits bottom-right beside the CTA at 40px. The header cannot take
+him: the lockup, two lines of copy and a labelled pill already use the full 500px, and
+adding him drops the copy column to 126px, which is about 15 characters a line.
 
-- **Beside the copy, never in it.** Top-right on the sidebar, after the logo on the
-  header. He is not in a headline, a capability statement, or a product lockup.
-- **Subordinate to the message.** 50px on the sidebar, 32px on the header, against a
-  22–29px headline. He accents, he does not lead.
-- **Clear of the logo.** At least 20px of separation, against a required clear space of
-  X (the height of the R, ~16px at the delivered logo width). Not merged into a lockup.
-- **Navy ground, soft Aurora glow**, which the card names as his habitat on the website.
-- **No dot devices.** One Teddie per asset. Not recolored, re-posed or given props.
+Placement follows the mascot card: beside the copy and never in it, subordinate to the
+headline, clear of the mark, not merged into a lockup, on navy over a soft Aurora glow,
+no dot device, one per asset, not recolored or re-posed.
 
 ## Brand check
 
@@ -82,43 +93,44 @@ is the right asset for an Axon-led ad. The usage rules are met:
   one secondary accent. Navy-dominant. Teal `#23C5BF` appears only inside the Aurora
   glow and on Teddie's antenna, both of which carry their own sanctioned palettes.
 - Aurora on navy only; glow runs teal → blue → purple, never orange. One device per ad.
-- Poppins Regular for copy, Medium for the product name and the CTA. No mono type
-  remains now that the eyebrow is gone.
-- One-color white logo on the dark ground, 108px wide (the on-screen minimum), with
-  clear space ≥ the height of the R on every side.
-- Light blue 5.4–8.6:1, white 8.0–13.4:1, measured per pixel against the actual
+- Poppins Regular for copy, Medium for the CTA.
+- Light blue 5.4–9.2:1, white 8.0–13.5:1, measured per pixel against the actual
   rendered Aurora background rather than a flat navy assumption.
-- Rhapsody Axon™ carries the ™ on its first and most prominent use, and never
-  appears as "Axon" alone. No "integration engine", no em dashes, no end periods on
-  the single-sentence beats.
+- No "integration engine", no em dashes, no end periods on the single-sentence beats.
 - Copy was shortened to fit, never tracked or scaled down.
 
 ## Rebuilding
 
-Source and tooling live in the session scratchpad, not in this repo. To regenerate:
-`src/ad.html` renders any frame of either unit from `?unit=side|hdr&t=<ms>`, with
-`&teddie=0` for a mascot-free version and `&chip=1` for the header's arrow-chip CTA;
-`render.js` screenshots the frame plan with headless Chromium at 3x; `build_gif.py`
-downsamples, dithers the shared background once and composites crisp type over it.
+Source and tooling live in the session scratchpad, not in this repo. `src/ad.html`
+renders any frame of either unit from `?unit=side|hdr&t=<ms>`, with `&teddie=0` for a
+mascot-free version; `render.js` screenshots the frame plan with headless Chromium at
+3x; `build_gif.py` downsamples, dithers the shared background once and composites
+crisp type over it.
 
 ## Open items
 
+- **The lockup carries no ™, and nothing else in the ad does either.** The brand rule
+  is that ™ goes on the first and most prominent use of Rhapsody Axon in any asset.
+  Until the name was in the copy, the typeset "Rhapsody Axon™" satisfied that; now the
+  lockup is the only instance and it has no mark. A ™ cannot be added to a logo here,
+  so **request the Rhapsody Axon lockup with ™ from brand and swap it in.** Treat this
+  as required before the ads run, not as a nice-to-have.
+- **A one-colour white lockup would be more correct at these sizes.** The supplied file
+  is the blue-wordmark-plus-white-line variant, which the guide reserves for large
+  sizes on dark grounds; below that it calls for one-colour white. The header's
+  RHAPSODY sits exactly at the 108px floor, which is not "large". Recoloring the
+  supplied file is not allowed, so this needs the white lockup from brand.
+- **Teddie should be re-mastered from the isolated character file.** The only art in
+  this repo is the homepage hero still, where he sits at the centre of the dot
+  constellation. He was isolated from it losslessly by connected component, at native
+  resolution, with no redraw, recolor, re-pose or rescale and every constellation dot
+  dropped. That is still an extraction from a composite rather than the master.
 - **Teddie needs a brand sign-off for this placement.** The mascot card lists his
   approved homes as the homepage hero, Rhapsody Axon AI feature bands, and culture,
   event and swag moments. A paid display ad is none of those, though it is an Axon AI
-  message on navy over Aurora, which is the band case in all but placement. The brand
-  guide's rule is to leave him out unless the requester asks, and the requester asked.
-- **Teddie should be re-mastered from the isolated character file.** The only art in
-  this repo is `assets/figures/teddie-hero-frame.png`, the homepage hero still, where
-  he sits at the centre of the dot constellation. He was isolated from it losslessly by
-  connected component, at native resolution, with no redraw, recolor, re-pose or
-  rescale of the character itself, and every constellation dot dropped. That is still
-  an extraction from a composite rather than the master, so swap in the isolated file
-  from the brand package before these go out.
-- Healthcare IT Today publishes no maximum file weight for these slots. Both units
-  are under 200 KB, which clears the common 200 KB publisher cap. Confirm with the rep.
-- If the rep enforces the legacy 15-second animation cap, drop to 2 loops and
-  shorten the dwells; the timing constants are at the top of `src/ad.html`.
-- Aurora is rendered here as an in-system CSS wash, the same way the Light devices
-  card renders it in HTML. If brand would rather these ship against the official
-  AuroraGlow master art, swap the background plate and re-run the build.
+  message on navy over Aurora, which is the band case in all but placement.
+- Healthcare IT Today publishes no maximum file weight for these slots. Both units are
+  well under 200 KB. Confirm with the rep.
+- Aurora is rendered as an in-system CSS wash, the same way the Light devices card
+  renders it in HTML. If brand would rather these ship against the official AuroraGlow
+  master art, swap the background plate and re-run the build.
