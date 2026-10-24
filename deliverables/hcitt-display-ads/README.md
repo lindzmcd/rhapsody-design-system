@@ -55,8 +55,7 @@ Two message beats, cross-faded, over a still Aurora soft wash on navy.
   The `-loop` files run continuously instead.
 - **Cross-fade:** 480ms, ease-in-out sine. No flashing, no strobing, no hard cuts.
 - Aurora is the **still** soft wash, the approved register at this size, and it keeps
-  the files light. Teddie is **static**; the mascot card permits animating him only
-  from the approved animation files, and only a still is available here.
+  the files light. The Axon mark is **static**; only a still of it is available here.
 
 ## Copy
 
@@ -77,21 +76,29 @@ No eyebrow on either unit, and no mono type anywhere now. "Axon" never appears a
 in the copy because it never appears in the copy at all. The lockup carries the name,
 and it reads "RHAPSODY AXON", satisfying the rule that the mark never stands as "Axon".
 
-## Teddie Mercury
+## The Rhapsody Axon mark
 
-**Sidebar only.** He sits bottom-right beside the CTA at 40px. The header cannot take
-him: the lockup, two lines of copy and a labelled pill already use the full 500px, and
-adding him drops the copy column to 126px, which is about 15 characters a line.
+The robot character. **Sidebar only**, bottom-right beside the CTA at 40px. The header
+cannot take it: the lockup, two lines of copy and a labelled pill already use the full
+500px, and adding it drops the copy column to 126px, about 15 characters a line.
 
-Placement follows the mascot card: beside the copy and never in it, subordinate to the
-headline, clear of the mark, not merged into a lockup, on navy over a soft Aurora glow,
-no dot device, one per asset, not recolored or re-posed.
+It sits beside the copy and never in it, subordinate to the headline, clear of the
+lockup's clear space, not merged into the lockup, one per asset, not recolored,
+re-posed or cropped.
+
+> **Note on the source.** This character is **Rhapsody Axon**, not the Teddie Mercury
+> mascot. The repo currently mislabels it: the art lives at
+> `assets/figures/teddie-hero-frame.png` and the `components/mascot.html` card captions
+> that same image "Teddie at the center of the constellation". That card carries a
+> "Draft for review, confirm before treating these as final" banner, so the mislabel
+> looks like a drafting error. Worth fixing at the source, because anyone else building
+> from the design system will inherit it.
 
 ## Brand check
 
 - Ground navy `#0B2C47`, CTA pill Rhapsody Blue `#1A81F4`, light blue `#B4D8FF` as the
   one secondary accent. Navy-dominant. Teal `#23C5BF` appears only inside the Aurora
-  glow and on Teddie's antenna, both of which carry their own sanctioned palettes.
+  glow and on the Axon mark's antenna, both of which carry their own sanctioned palettes.
 - Aurora on navy only; glow runs teal → blue → purple, never orange. One device per ad.
 - Poppins Regular for copy, Medium for the CTA.
 - Light blue 5.4–9.2:1, white 8.0–13.5:1, measured per pixel against the actual
@@ -102,8 +109,8 @@ no dot device, one per asset, not recolored or re-posed.
 ## Rebuilding
 
 Source and tooling live in the session scratchpad, not in this repo. `src/ad.html`
-renders any frame of either unit from `?unit=side|hdr&t=<ms>`, with `&teddie=0` for a
-mascot-free version; `render.js` screenshots the frame plan with headless Chromium at
+renders any frame of either unit from `?unit=side|hdr&t=<ms>`, with `&mark=0` to drop
+the Axon mark; `render.js` screenshots the frame plan with headless Chromium at
 3x; `build_gif.py` downsamples, dithers the shared background once and composites
 crisp type over it.
 
@@ -120,15 +127,20 @@ crisp type over it.
   sizes on dark grounds; below that it calls for one-colour white. The header's
   RHAPSODY sits exactly at the 108px floor, which is not "large". Recoloring the
   supplied file is not allowed, so this needs the white lockup from brand.
-- **Teddie should be re-mastered from the isolated character file.** The only art in
-  this repo is the homepage hero still, where he sits at the centre of the dot
-  constellation. He was isolated from it losslessly by connected component, at native
-  resolution, with no redraw, recolor, re-pose or rescale and every constellation dot
-  dropped. That is still an extraction from a composite rather than the master.
-- **Teddie needs a brand sign-off for this placement.** The mascot card lists his
-  approved homes as the homepage hero, Rhapsody Axon AI feature bands, and culture,
-  event and swag moments. A paid display ad is none of those, though it is an Axon AI
-  message on navy over Aurora, which is the band case in all but placement.
+- **The Axon mark should be re-mastered from the isolated character file.** The only
+  art in this repo is the homepage hero still, where the mark sits at the centre of the
+  dot constellation. It was isolated from that losslessly by connected component, at
+  native resolution, with no redraw, recolor, re-pose or rescale, and every constellation
+  dot dropped. That is still an extraction from a composite rather than the master.
+- **Confirm the Axon mark may sit over Aurora here.** `references/web-style.md` §2 says
+  that on the Axon AI page "the animated Rhapsody Axon mark replaces the light device"
+  and that "one visual element per layout always holds". These ads carry both Aurora and
+  the mark. The homepage hero does combine them, which is where this still comes from, so
+  the "replaces" rule reads as specific to that page template. If it is meant to apply to
+  any Axon-led layout, the fix is to drop Aurora on the sidebar and let the mark carry the
+  frame.
+- **Fix the mislabelled mascot art in the design system.** See the note under The
+  Rhapsody Axon mark above.
 - Healthcare IT Today publishes no maximum file weight for these slots. Both units are
   well under 200 KB. Confirm with the rep.
 - Aurora is rendered as an in-system CSS wash, the same way the Light devices card
