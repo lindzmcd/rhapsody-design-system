@@ -104,3 +104,17 @@ entry is missing or broken, re-save it through the GUI "save as template" flow
 
 `templates/feature-image/source/` (the HTML template, `render-feature.mjs`, and
 embedded local fonts) is code-production tooling and stays out of the project.
+
+## Sync 2026-10-26 — feature image examples, mascot correction
+Feature image card: shipped guide image (`feature-image-guide.webp`) and a
+webpage example rebuilt from the template (`feature-image-integration.png`)
+replace the payers and platform examples. Mascot card corrected (the homepage
+robot is the Rhapsody Axon mark, not Teddie) and its art
+(`teddie-hero-frame.png`) removed. Deleted the three retired images remotely.
+
+**Finding — the in-Claude design system is a stale snapshot.** Claude Design moved
+into Claude; the migrated "Rhapsody Design System - Master" artifact
+(claude.ai/artifact/HZExMiNnfussfoDeDHnMB2) is a frozen 2026-10-13 copy, private to
+its owner, and its Design System page shows no templates at all. DesignSync only
+updates this standalone project, which closes 2026-12-14. Updating the in-Claude
+system needs the Artifact tool, not DesignSync.

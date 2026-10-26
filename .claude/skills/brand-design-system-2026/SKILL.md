@@ -339,12 +339,15 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 
 ### Mascot — Teddie Mercury (draft)
 
-Use sparingly: the homepage hero (center of the constellation, over Aurora), Rhapsody Axon AI
-feature bands on navy (as the assistant's face, beside the content, never in the claim), and
-culture, event, and swag moments. Never in clinical, security, regulatory, executive, PR, analyst,
-proposal, customer-story, or technical content. Navy + soft Aurora only; one per page or asset; never
-with the fluid dot pattern or big dot; outside the logo's clear space and never in a lockup; master
-art only. Spelled "Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
+Use sparingly, for culture, event, and swag moments only (SKO, customer events and the Connect
+Developer Conference, merchandise, sales incentives). Never in product, web, technical, clinical,
+security, regulatory, executive, PR, analyst, proposal, or customer-story content, and never beside a
+product claim or lockup. One per asset; he counts as the layout's one graphic device (no dots or
+Aurora with him); outside the logo's clear space and never in a lockup; master art only. Spelled
+"Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
+
+**Not the Rhapsody Axon mark:** the robot character in the homepage hero and on the Rhapsody Axon AI
+feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
 
 ---
 
@@ -371,7 +374,7 @@ art only. Spelled "Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur
 □ Portraits: brand ring by default, thin ring for small avatars, or arc / card / editorial split
 □ No retired illustration styles
-□ Teddie Mercury only where allowed (homepage hero, Axon AI band, culture/events); one per asset; never with dot devices
+□ Teddie Mercury only for culture, event, and swag moments; one per asset; never with dots or Aurora; the website robot is the Rhapsody Axon mark, not Teddie
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)
 □ Company name is "Rhapsody," never "Rhapsody Health," never possessive ("Rhapsody's")
 □ Body text ≥16px on web; nothing a reader needs below 12px
