@@ -125,3 +125,13 @@ matched local by name (30 cards + `templates/feature-image/`). Parity push of al
 30 cards, `tokens.css`, and the feature-image template folder, fenced by the
 sentinel before and after. No manifest, no deletes. This updates the standalone
 project only; see the 10-26 finding above about the in-Claude copy.
+
+## 2026-10-26 — Pitch deck template removed (owner request)
+Removed the pitch deck template from the gallery at the owner's request. It had
+been renamed in the GUI minutes earlier from `templates/axon-connect-pitch-deck/`
+to `templates/axon-broadcast-pitch-deck/` ("Axon Broadcast Pitch Deck"); the owner
+confirmed removing the renamed folder. All 6 files deleted, sentinel re-armed.
+Gallery now: Email Signature Banner, Website Feature Image. The original upload
+`uploads/Rhapsody Axon Connect Pitch Deck.dc.html` was kept as a fallback. The
+template was never in git, so the uploads copy is the only remaining source.
+Lesson: re-list right before a delete; GUI renames move template folders.
