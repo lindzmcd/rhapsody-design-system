@@ -1,0 +1,66 @@
+<!-- @dsCard group="7 · Patterns" name="Website feature image" subtitle="Brand in context: the 1200×630 feature image for rhapsody.health pages, four slots on a fixed system" width="960" height="1700" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website feature image</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+</head><body>
+<div class="wrap">
+<h2>Website feature image</h2>
+<p>Every rhapsody.health page gets one feature image: the page-header graphic and the image that shows when the page is shared. It is a <strong>fixed system with four slots</strong>, at <strong>1200 &times; 630</strong>, exported at 2&times; (2400 &times; 1260 PNG). Fill the slots; leave everything else alone.</p>
+
+<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin:16px 0 4px;">
+  <figure style="margin:0;"><img src="../assets/figures/feature-image-guide.webp" alt="Guide feature image: Guide · Integration TCO eyebrow, headline 'The total cost of ownership of healthcare integrations' with 'healthcare integrations' in light blue, a calculator motif with Build, Buy, and Run label tiles, and the lockup 'Rhapsody guides'" style="width:100%;height:auto;display:block;border-radius:10px;"><figcaption class="caption" style="margin:6px 0 0;">A guide: a one-sentence headline with no end period, emphasis in light blue, and mono label tiles (Build, Buy, Run) inside the motif.</figcaption></figure>
+  <figure style="margin:0;"><img src="../assets/figures/feature-image-integration.png" alt="Webpage feature image: Rhapsody Integration eyebrow, headline 'Connect every system. Build it your way, or let us run it.' with the second sentence in light blue, a hub motif of a center tile with four connected circles and two teal accents, and the lockup 'Rhapsody · Corepoint · Envoy'" style="width:100%;height:auto;display:block;border-radius:10px;"><figcaption class="caption" style="margin:6px 0 0;">A webpage: a two-sentence headline takes a period after each sentence, with the second sentence in light blue, and the lockup names the products, separated by small teal dots.</figcaption></figure>
+</div>
+
+<h3>The fixed system</h3>
+<ul>
+  <li><strong>Ground:</strong> navy with the Aurora glow, always top right, behind everything.</li>
+  <li><strong>Layout:</strong> two columns, text left (1.5 parts) and motif right (1 part), with 90px side padding and a 36px gap. The columns are the safe margin, so text never overlaps the motif.</li>
+  <li><strong>Type:</strong> the IBM Plex Mono eyebrow in teal (teal type is approved on navy) and the Poppins Medium headline in white with a light-blue emphasis.</li>
+</ul>
+
+<h3>The four slots</h3>
+<ol style="margin:0 0 16px 22px;">
+  <li><strong>Eyebrow.</strong> Section and page, for example &ldquo;Markets &middot; Payers&rdquo; or &ldquo;Webinar &middot; Nov 19 &middot; 12 p.m. CT&rdquo;. IBM Plex Mono Medium 17px, all caps, 0.17em tracking. If it wraps, break it at a phrase boundary.</li>
+  <li><strong>Headline.</strong> The page H1 in sentence case, Poppins Medium 48px. The second phrase goes light blue. Follow Typography &rarr; Headlines: one sentence, no period; two or more short sentences, a period after each. Only three sizes: 48px by default, 46px when slightly long, 58px for one-to-three-word stacks.</li>
+  <li><strong>Motif.</strong> A line illustration drawn in the motif vocabulary below, specific to the page.</li>
+  <li><strong>Lockup.</strong> A short label centered under the motif, Poppins Regular 25px: &ldquo;Rhapsody for payers&rdquo; or &ldquo;Rhapsody Axon&trade;&rdquo;.</li>
+</ol>
+
+<h3>Motif vocabulary</h3>
+<ul>
+  <li><strong>Canvas:</strong> viewBox 0 0 200 180; keep everything inside x 10&ndash;190, y 14&ndash;170.</li>
+  <li><strong>Outlines:</strong> light blue #B4D8FF, stroke 3&ndash;3.4; tiles rounded at rx 7&ndash;8.</li>
+  <li><strong>Connectors:</strong> #3D6587, stroke 3.5, drawn first so every connector sits behind the shapes. This muted navy-blue is a motif-only line tone, not a palette color.</li>
+  <li><strong>Teal #23C5BF:</strong> the check badge (a filled circle with a navy check) and at most one other accent.</li>
+  <li><strong>The grounded pulse</strong> is the signature: a stem, a teal dot (r8), and a ring (r14.5) at 45% opacity, hanging from the base of the art.</li>
+  <li><strong>Clean joins:</strong> every line ends on a shape or passes fully behind one; nothing floats.</li>
+  <li><strong>Text chips</strong> (sparingly): short IBM Plex Mono labels in #B4D8FF inside small tiles, such as EHR, FHIR, or Build, Buy, Run.</li>
+  <li><strong>No third-party marks:</strong> never redraw another company&rsquo;s logo or badge (KLAS, AWS). Use only official, cleared artwork, on a white card if the ground is dark.</li>
+</ul>
+
+<div class="principle"><div class="k">No orphan words</div><p>No line of the headline, eyebrow, or lockup may be a single word. Glue the last two words with a non-breaking space, and use a non-breaking hyphen to stop a hyphenated word splitting.</p></div>
+
+<h3>How to make one</h3>
+<ul>
+  <li><strong>In Claude Design:</strong> use the <strong>Website Feature Image</strong> template (<code>templates/feature-image/FeatureImage.dc.html</code> in the design system), fill the four slots, and capture the artboard at 2&times;. The template glues the last two words automatically.</li>
+  <li><strong>In code:</strong> copy <code>templates/feature-image/source/feature-image-template.html</code>, fill the four marked slots, and run <code>render-feature.mjs</code>. It checks that Poppins loaded and that no line ends on a single word, then writes the 2&times; PNG and a close-up crop of the motif to inspect before shipping.</li>
+</ul>
+
+<div class="compare">
+  <div class="card do"><div class="head">Do</div><div class="body"><ul>
+    <li>Fill only the four slots; keep the ground, glow, grid, and type as they are.</li>
+    <li>Draw a page-specific motif in the vocabulary, and check it up close.</li>
+    <li>Use one of the three headline sizes and glue the last two words.</li>
+  </ul></div></div>
+  <div class="card dont"><div class="head">Don&rsquo;t</div><div class="body"><ul>
+    <li>Move text into the motif column, add another glow, or change the grid.</li>
+    <li>Invent headline sizes, or let a line end on a single word.</li>
+    <li>Add photography, dot devices, or Teddie; the motif is the one visual.</li>
+  </ul></div></div>
+</div>
+</div>
+</body></html>

@@ -131,8 +131,8 @@ a{color:var(--blue);}
 
 /* Pass/fail annotation badges (documentation chrome, not brand palette) */
 .pfbadge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;padding:2px 8px;border-radius:999px;letter-spacing:.03em;color:#fff;line-height:1.5;white-space:nowrap;}
-.pfbadge.pass{background:#1E9E63;}
-.pfbadge.fail{background:#D64545;}
+.pfbadge.pass{background:#157A4B;}
+.pfbadge.fail{background:#C0392B;}
 
 @media(max-width:680px){
   .compare,.tworeg{grid-template-columns:1fr;}

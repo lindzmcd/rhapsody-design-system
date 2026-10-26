@@ -9,7 +9,7 @@ reusable classes; otherwise use these specs. All items link `tokens.css` and pul
 - Foundations: Brand expression · Color · Typography · Layout & spacing · Pathways · Corners & shape
 - Brand: Logo & wordmark
 - Components: Buttons · Charts · Partner logos · Quotes · Stats · Tables · Dot accents
-- Graphic devices: Devices at a glance · Dots · Scattered dot field · Big dot · Light devices
+- Graphic devices: Devices at a glance · Dots · Fluid dot pattern · Big dot · Light devices
 - Iconography: Icon library
 - Imagery: Illustration · Photography & portraits
 - Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · PowerPoint
@@ -25,12 +25,12 @@ Restraint is the house style — clean, confident, few colors, lots of air.
 
 **Color.** See SKILL.md §1. Default hierarchy White/Navy + Rhapsody Blue + one optional accent; ≤3
 brand colors. Tertiary (purple/orange) restricted to accent/emphasis/data-viz. No text on teal. No
-custom gradients. Blue-on-navy for large elements only. Teal is immutable (#23C5BF, never darkened
+custom gradients (except the Aurora glow, which is also the web hero background, and photo scrims). On navy, text accents are light blue; Rhapsody Blue on navy is graphics and the pill only. Teal is immutable (#23C5BF, never darkened
 for contrast): teal type on navy only; on light grounds teal is accent-only (tick / accent line /
 seam) beside navy text — see the card's "Teal in small applications" section.
 
 **Typography.** See SKILL.md §2. Poppins Regular body/headings, Medium hero; IBM Plex Mono eyebrows
-only. Two-tone (white + light blue) headline on navy. `strong` = Medium. Shorten copy rather than
+only. Two-tone headline: light blue on navy, Rhapsody Blue on white; never on a blue ground. `strong` = Medium. Shorten copy rather than
 crush type. Date and name lockups use the mono for the small label line.
 
 **Layout & spacing.** Keep a **clear margin** of ~6–7% of the shorter side around a composition. The
@@ -58,10 +58,18 @@ recolor, rotate, or overlay.
 **Secondary** = outline (blue or navy stroke) on light, or white/blue outline on dark. **Text link +
 arrow** for tertiary actions (label + "→"). One primary action per view. Verb-led labels.
 
-**Charts & graphs.** Flat, no gradients, minimal gridlines. Series color order: navy → Rhapsody Blue →
-teal → purple → orange → light blue, then neutrals. This is the one place purple/orange appear freely.
+**Charts & graphs.** Flat, no gradients, minimal gridlines. Series color order: Rhapsody Blue → teal →
+purple → orange → light blue → navy, gray for the remainder; two series = Rhapsody Blue + navy.
 Same order feeds pathways. Label directly where possible; keep to as few series as the story needs.
 Types shown: bar, line, stacked bar, donut.
+
+**Website feature image.** 1200×630, export 2×. Fixed system: navy + Aurora glow top right, text
+left (1.5fr) / motif right (1fr), 90px side padding. Four slots: IBM Plex Mono teal eyebrow (17px),
+Poppins Medium 48px headline with a light-blue emphasis (46px if long, 58px for 1–3-word stacks), a
+line-art motif (viewBox 200×180; #B4D8FF outlines 3–3.4; #3D6587 connectors 3.5 drawn first; teal
+check badge + one accent; grounded pulse; optional mono text chips like EHR/FHIR; never a redrawn
+third-party logo), and a 25px lockup. No single-word lines. Template:
+`templates/feature-image/` (Claude Design `FeatureImage.dc.html`; code `source/` + `render-feature.mjs`).
 
 **Partner logos (brackets).** Present partner/customer logo walls inside a **bracket treatment** —
 thin brackets frame the set. Keep partner logos monochrome/neutral where possible so they sit evenly.
@@ -86,10 +94,7 @@ without a full field.
 **Devices at a glance.** The master overview: each device, its meaning, its color lead, and when to
 use it. Consult it to choose between dots and a light device — and remember, only one per layout.
 
-**Dots overview.** What the dots mean, dot field vs. big dot, and approved backgrounds/dot colors.
-Structured field only (graduated grid retired). White-on-blue and multicolor are both on-brand.
-
-**Scattered dot field.** The uniform field — equal-size dots, densest at an edge, thinning inward.
+**Fluid dot pattern.** A half-tone dot grid — identical dots that gather into a dense core and dissolve fluidly outward; registers white-on-navy, white-on-blue, dots-on-white, multicolor-on-navy. Replaces the retired scattered field.
 Structured dispersion with defined anchors. Do: keep density purposeful and directional. Don't:
 random scatter, or graduated sizing.
 
@@ -97,10 +102,9 @@ random scatter, or graduated sizing.
 transparent SVG + 2× PNG. Use as-is, flipped, or rotated 90°. Never hand-build or restyle. Anchor +
 companion colors are fixed by the background; the anchor is never the background hue.
 
-**Light devices.** Aurora is the one light device: the soft wash (teal-led, everyday) and the Aurora
-ribbon (motion/large scale). Burst and Plexus are retired (Oct 2026) — use Aurora in their place.
-**Navy grounds only.** Glow = teal/blue/purple, never orange, ≤3 colors. Offset into open space; copy
-on the calm side. Approved masters, not effects.
+**Light devices.** Aurora is the one light device — a single glow with range, soft wash to flowing, that allows movement (navy only, teal-led). Burst, Plexus, and the separate Aurora ribbon are retired (Oct 2026).
+**Navy grounds only.** Glow = teal/blue/purple, never orange, ≤3 colors. The soft wash may sit behind copy
+(website hero) if contrast holds. Approved masters, not effects.
 
 ## Iconography
 
@@ -114,13 +118,13 @@ no shadows/outlines/effects. Two-color line icons and icon-on-circle art are ret
 photography, product/interface imagery, diagrams, data viz, or the abstract devices instead.
 
 **Photography & portraits.** Bright, natural-lit, tech-forward, faces-forward, inclusive. Avoid
-tech-noir, blur, harsh flare, backs-to-camera, staged/stiff poses. Portrait treatments: thin ring, arc
-accent, rounded-rectangle card, editorial split — brand-colored, never a thick ring or white outline.
+tech-noir, blur, harsh flare, backs-to-camera, staged/stiff poses. Portrait treatments: brand ring (navy band +
+blue edge) by default, thin ring for small avatars, arc accent, rounded-rectangle card, editorial split.
 
 ## Patterns
 
-**Hero.** Three registers: **light** (white ground, navy/blue type), **dark** (navy ground, white +
-light-blue two-tone headline, optional light device), and **photography** (image with copy on the calm
+**Hero.** Three registers: **light** (white ground, navy/blue type), **dark** (navy ground, white headline
+with an optional light-blue two-tone phrase, optional light device), and **photography** (image with copy on the calm
 side). Structure: eyebrow (mono) → headline → subhead → single CTA. Keep one graphic device.
 
 **Email template.** Header banner options: Aurora glow, big dot, or photo. Teal seam under the header.

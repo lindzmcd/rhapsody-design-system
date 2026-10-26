@@ -35,7 +35,7 @@ assets/               Tightly-cropped logo/monogram rasters the cards reference 
 brand/                Full downloadable logo package (SVG + EPS vectors, 300/72 dpi PNG/JPG)
 components/           One HTML preview per component/pattern — each becomes a card in Claude Design
 downloads/            Ready-to-use masters (e.g. the 2026 PowerPoint template .pptx)
-templates/            Claude Design canvas templates (e.g. display-ads/DisplayAds.dc.html)
+templates/            Claude Design canvas templates (e.g. feature-image/FeatureImage.dc.html)
 deliverables/         Shareable, self-contained outputs (brand guideline HTML/PDF, signature package)
 ```
 
@@ -80,7 +80,7 @@ Tokens (from `tokens.css` — these exact hex values are the standard):
 |---|---|---|---|
 | `--blue` | `#1A81F4` | Primary | Rhapsody Blue — the dominant brand color: panels, CTAs, links, brand moments |
 | `--navy` | `#0B2C47` | Primary | Rhapsody Navy — page/section grounds, dark headers, the only ground for light devices |
-| `--lblue` | `#B4D8FF` | Secondary | Light blue — accent on dark grounds, second tone in two-tone headlines |
+| `--lblue` | `#B4D8FF` | Secondary | Light blue — the text accent on navy (two-tone highlight, stat numerals) |
 | `--teal` | `#23C5BF` | Secondary | Teal — separator seam, "automate" pathway, one optional accent |
 | `--purple` | `#7340E4` | Tertiary | Accent only |
 | `--orange` | `#FA7E2E` | Tertiary | Accent only |
@@ -90,6 +90,10 @@ Tokens (from `tokens.css` — these exact hex values are the standard):
 | `--grayblue` | `#E8EDF2` | Neutral | Section background fill |
 | `--tile` | `#E9EEF4` | Neutral | Icon-tile background |
 
+**Print color.** HEX/RGB are for digital. For **print**, Rhapsody Blue is **CMYK 100 50 0 0** — set the
+swatch explicitly (`C100 M50 Y0 K0`); don't let the layout program auto-convert the hex, which comes
+out muddy. Other colors use their CMYK/Pantone equivalents in print.
+
 **Default palette hierarchy.** Most layouts should be **White or Navy + Rhapsody Blue**, with **one**
 optional secondary accent (Light Blue or Teal) only when needed. **No more than three brand colors
 per layout**, and reaching three is not a goal.
@@ -98,15 +102,20 @@ per layout**, and reaching three is not a goal.
 exceptional emphasis, and **data visualization**. Never use either as a general section color,
 headline color, CTA color, background theme, pathway color, or decorative fill. They do **not** count
 as a freely available third color — use them only where a rule explicitly authorizes them (e.g. the
-multicolor dot field, chart series).
+multicolor fluid dot pattern, chart series).
 
-**No custom gradients.** Flat brand colors only. The light devices (Section 5) are the only glow/blend
-element, and they are approved masters — not gradients you build.
+**No custom gradients.** Flat brand colors only. Two sanctioned exceptions, no others: the Aurora
+glow (Section 5, approved masters; also the web hero background), and a navy scrim
+graded across the type side of a photo for legibility.
+
+**Functional (status) colors** — UI state only (status tags, validation, pass/fail), never decoration:
+success `#157A4B` (white text), warning `#FA7E2E` (navy text), error `#C0392B` (white text) — all ≥4.5:1; always with a text label.
 
 **Text color**
 - Navy (`--navy`) or black ink on white/light grounds; Rhapsody Blue for links and small emphasis.
-- White on navy, blue, teal, purple, or orange grounds.
-- On navy, a white + **light-blue** two-tone headline is the signature treatment.
+- White on navy or Rhapsody Blue grounds. **Never set text on teal, purple, or orange grounds.**
+- Two-tone headline: one phrase in **light blue on navy**, **Rhapsody Blue on white** (matches the
+  website). Navy or white grounds only — never on a Rhapsody Blue ground (set those in one color).
 
 **Accessibility & pairings**
 - Maintain readable contrast; favor the approved pairings (white on navy/blue, navy on white/gray-blue).
@@ -120,11 +129,15 @@ element, and they are approved masters — not gradients you build.
   16×3px teal bar before a navy mono label), links stay Rhapsody Blue, and meaningful teal graphics
   get direct navy labels. If a teal application fails contrast, change the ground or the role — never
   the hex. The teal-filled pill is retired (its label sat on teal).
-- Rhapsody Blue on navy is fine for **large** elements and accents, not for long body copy.
+- On navy, text is **white with light-blue accents at every size** (two-tone highlight, stat numerals, large quotes, labels). **Rhapsody Blue on navy is graphics only** — bars, blocks, big dots, the primary pill — never text.
 
-**Charts / data viz color order** (same order is used for pathways):
-Navy → Rhapsody Blue → Teal → Purple → Orange → Light blue, then neutrals. Keep series minimal;
-this is the one place Purple and Orange appear freely.
+**Color order** (one order, shared by charts and pathways):
+Rhapsody Blue → Teal → Purple → Orange → Light blue → Navy; gray `#D9DFE6` for the remainder.
+**Two-series charts: Rhapsody Blue + navy.** Add colors only as the data needs; charts and the dot
+devices are exempt from the three-color rule.
+
+**Color in composition** (indicative): neutral ground ~60%, Rhapsody Blue ~25%, secondary ~10%,
+tertiary under 5% (most layouts none).
 
 ---
 
@@ -136,19 +149,30 @@ this is the one place Purple and Orange appear freely.
 - **IBM Plex Mono** (`--mono`, 400/500) for **eyebrows** and technical annotations only — the small
   uppercase, letter-spaced label above a headline. It is an accent typeface, never body copy.
 
-Type scale (from `tokens.css`):
+Type scale — the live website values, the same at every screen width (the `tokens.css` heading
+sizes are documentation chrome, not this scale):
 
-| Style | Weight | Size |
-|---|---|---|
-| H1 / hero | Poppins Medium (500) | 38px |
-| H2 | Poppins Regular (400) | 27px |
-| H3 | Poppins Regular (400), blue | 18px |
-| H4 / label | Poppins Regular (400), uppercase, tracked, gray | 13px |
-| Body (`p`) | Poppins Regular (400) | 15px |
-| Eyebrow | IBM Plex Mono Medium (500), uppercase, `0.17em` tracking, blue | 12px |
+| Style | Spec |
+|---|---|
+| Hero / H1 | Poppins Medium (500), 48px / 60px line |
+| Stat number | Poppins Medium (500), 40px; Rhapsody Blue on light, light blue on navy |
+| H2 (section) | Poppins Regular (400), 24px / 30px |
+| Card title | Poppins Medium (500), 20px / 30px |
+| Body (P1) | Poppins Regular (400), 16px / 24px |
+| Supporting (P2) | Poppins Regular (400), 14px / 21px |
+| Caption | Poppins Regular (400), 12px minimum |
+| Eyebrow | IBM Plex Mono Medium (500), 13px, uppercase, 0.17em tracking (hero eyebrow and group labels: Regular 14px) |
+| Button | Poppins Medium (500), 15px in a 44px pill (compact: 14px, 40px) |
+
+Floors (web): body 16px, supporting text 14px, captions and labels 12px, legal 11px only where
+unavoidable. Copy caps: hero headline ≤40 characters, supporting line ≤110, quote ≤60, testimonial
+≤120. Sentence case everywhere except the mono eyebrow. **No end period on headlines** (or
+subheads, card titles, buttons, labels): one sentence, no period; two or more short sentences for
+impact ("Integrate. Govern. Automate."), a period after each. Questions keep "?", "!" only for
+confirmation moments, quotes keep their own punctuation, body copy punctuates normally.
 
 Rules that matter:
-- **Two-tone headline**: on navy, lead white and finish the key phrase in **light blue** (`--lblue`).
+- **Two-tone headline**: color one phrase — **light blue on navy, Rhapsody Blue on white**; the rest stays white (navy) or navy (white). Navy or white grounds only; one highlight per headline, used sparingly.
 - **`strong` is Medium (500)**, not bold — emphasis stays quiet.
 - **If content doesn't fit, change the copy — don't crush the type.** Never tighten tracking/leading
   or shrink below the minimums to force a fit. Rewrite shorter instead.
@@ -198,36 +222,40 @@ Rules:
 stacked with heavy photography treatments.
 
 ### Dots (primary device)
-- **Structured only.** Use the **uniform scattered field** — equal-size dots, densest at one edge and
-  thinning inward. Never a random scatter. **The size-graduated grid is retired.**
-- Two registers are equally on-brand: **white dots on Rhapsody Blue**, and the **multicolor field**.
-  (An earlier draft wrongly called multicolor off-brand — it is approved.)
-- **Big dot**: a closed, approved family (one per background/placement/format, plus three variants),
-  shipped as transparent SVG + 2× PNG. Use one **as-is, flipped, or rotated 90°** — never hand-build
-  or restyle it. Anchor color and companions are set by the background and are not interchangeable;
-  the anchor is never the background hue.
-- Dots belong on blue or navy grounds (or as the multicolor field) — not scattered on plain white as
-  filler.
+- **Fluid dot pattern** (the primary dot composition). A **half-tone dot grid** — identical dots on
+  one grid that gather into a dense core at an edge/corner and **dissolve fluidly outward** (dense to
+  sparse). Registers: **white on navy**, **white on Rhapsody Blue**, **dots on white**, and the
+  **multicolor field** (blue/light-blue/teal/purple/white + up to 3 orange). It replaces the earlier
+  scattered/structured dot field (retired Oct 2026). Use an approved master **as-is, flipped, or
+  rotated 90°**; never hand-build or recolor.
+- **Big dot ecosystem**: a closed, approved set — one dominant cropped circle (anchor) with 2–4
+  companions, one set per ground (navy, blue, white) in three crops each. Use one **as-is, flipped,
+  or rotated 90°** — never hand-build or restyle it. Anchor is never the background hue: navy ground →
+  blue anchor (white/light-blue/teal companions); blue ground → navy/white/light-blue anchor
+  (white/navy/light-blue/teal/purple companions); white ground → navy/blue anchor
+  (blue/light-blue/teal/navy/purple companions). Purple/orange never on the anchor.
+- One dot device per layout; dots belong on blue or navy grounds, or dots-on-white / the multicolor
+  field — not scattered on plain white as filler.
 
 ### Aurora light device (navy grounds only)
-Aurora is the one soft light-based device; it carries atmosphere for photo-free digital moments
-(heroes, social, slides). It has two registers:
+Aurora is the **one** light device, and it carries atmosphere for photo-free digital moments (heroes,
+social, slides, video). It is a single device with range — from a calm **soft wash** to a **flowing**
+form — and **Aurora allows movement**, so the same device covers still and moving work. (There is no
+separate "Aurora ribbon" register anymore; the flowing form is part of Aurora.)
 
-| Register | Meaning | Color lead |
-|---|---|---|
-| **Aurora** (soft wash) | A soft blended wash — harmony across the system; the everyday register | Teal-led |
-| **Aurora ribbon** | A flowing band of light — motion & large-scale (video, animated headers, big heroes) | Runs through teal/blue/purple |
-
-> **Burst and Plexus are retired (Oct 2026).** The light-device family is Aurora only. Anywhere Burst
-> or Plexus once appeared (product launch, social quote banner), use the Aurora glow.
+> **Burst, Plexus, and the separate Aurora ribbon are retired (Oct 2026).** The light device is Aurora
+> only. Anywhere Burst or Plexus once appeared (product launch, social quote banner), use Aurora.
 
 Aurora rules:
 - **Navy ground only.** Never on blue, white, or photography. On those, use dots or photography.
 - **The glow uses teal, blue, and purple only — never orange.** Keep each glow within three colors;
   Aurora is teal-led.
-- **Offset the glow into open space** so copy sits on the calm side, never on the brightest point.
-- Reserve the **Aurora ribbon** for motion/large scale; use the plain **Aurora** wash for everyday
-  layouts where text sits close.
+- The **soft wash may sit behind copy** (as on the website hero) if white type holds contrast; keep the flowing form clear of copy.
+- **Motion defaults (proposed):** 20–30s seamless loop (website hero: 26s); slow drift ≤10% of frame
+  width, scale 95–105%, ease-in-out sine; colors stay teal/blue/purple; opacity 80–100%, no flashing;
+  fade in 600–800ms; static soft-wash master for reduced motion; animate transform/opacity only.
+- Lean into the **flowing** form for motion/video/large backdrops; keep to the calmer **wash** for
+  everyday layouts where text sits close.
 - These are approved masters, not effects you build.
 
 ---
@@ -250,9 +278,11 @@ Aurora rules:
   over purely clinical/healthcare scenes.
 - **Avoid** dark "tech-noir" imagery, blur, harsh flare, backs-to-camera, tight huddles turned away,
   staged handshakes, and generic stock.
-- **Portrait treatments** (modern set — the thick color ring is retired): **thin ring**, **arc
-  accent**, **rounded-rectangle card**, or **editorial split**. Rings/arcs use brand colors (blue,
-  teal, orange, purple) — never a thick ring, never white or thin white outlines.
+- **Portrait treatments**: the **brand ring** (bold navy band + Rhapsody-Blue outer edge, the
+  website-hero weight) is the default at feature scale; small avatars (≈96px and under — name lockups,
+  quote cards) use a **thin ring** (2–3px Rhapsody Blue, no navy band). Also **arc accent**,
+  **rounded-rectangle card**, **editorial split**. Accent edges use primary/secondary colors only —
+  never purple or orange, never white outlines. The legacy thick single-color rings are retired.
 
 ## 8. Illustration
 
@@ -271,7 +301,7 @@ Each item below is a card in the design system. For the exact treatment of any o
 **Brand** — Logo & wordmark
 **Components** — Buttons & CTAs · Charts & graphs · Partner logos (brackets) · Quotes & testimonials ·
 Stats · Tables · Dot accents
-**Graphic devices** — Devices at a glance · Dots overview · Scattered dot field · Big dot · Light devices
+**Graphic devices** — Devices at a glance · Fluid dot pattern · Big dot · Light devices
 **Iconography** — Icon library
 **Imagery** — Illustration · Photography & portraits
 **Patterns** — Hero · Email template · Email signature · Social posts · Product launch announcement ·
@@ -299,13 +329,25 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - **Light blue refreshed to `#B4D8FF`.**
 - **Tertiary tightened**: Purple and Orange are accents / emphasis / data-viz only.
 - **"Text on teal" removed** — omit it.
-- **Graduated dot grid retired** → uniform scattered field only. Multicolor dots are approved.
-- **Light device** is Aurora only — the soft wash and the Aurora ribbon (Burst and Plexus retired Oct 2026; Pulse earlier).
+- **Scattered dot field retired** → the **Fluid dot pattern** (half-tone grid, dense-to-sparse). Multicolor dots are approved.
+- **Light device** is Aurora only — one glow, soft to flowing, movement allowed (Burst, Plexus, and the separate Aurora ribbon retired Oct 2026; Pulse earlier).
 - **Icons** → single outline family (stroke-only, 1.7 weight, `currentColor`, 44px gray tile).
-- **Portraits** → thin ring / arc / card / editorial split (thick color ring retired).
+- **Portraits** → brand ring (default) / thin ring (small avatars) / arc / card / editorial split; legacy thick single-color rings retired.
 - **Illustration** legacy styles retired.
 - New sections added: **Brand Expression** and **Illustration**.
 - Rule: **if copy doesn't fit, shorten the copy — don't crush the type.**
+
+### Mascot — Teddie Mercury (draft)
+
+Use sparingly, for culture, event, and swag moments only (SKO, customer events and the Connect
+Developer Conference, merchandise, sales incentives). Never in product, web, technical, clinical,
+security, regulatory, executive, PR, analyst, proposal, or customer-story content, and never beside a
+product claim or lockup. One per asset; he counts as the layout's one graphic device (no dots or
+Aurora with him); outside the logo's clear space and never in a lockup; master art only. Spelled
+"Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
+
+**Not the Rhapsody Axon mark:** the robot character in the homepage hero and on the Rhapsody Axon AI
+feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
 
 ---
 
@@ -314,24 +356,27 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 ```
 □ Ground + primary is White/Navy + Rhapsody Blue; ≤ 3 brand colors; three is not a target
 □ Purple/Orange only as accent, emphasis, or data viz — never section/headline/CTA/background
-□ No custom gradients (light devices are the only glow, and they're approved masters)
+□ No custom gradients (only Aurora masters, incl. the web hero, and photo scrims)
 □ Navy is #0B2C47; Rhapsody Blue is #1A81F4; light blue is #B4D8FF
 □ Poppins Regular for body/headings, Medium for hero; IBM Plex Mono for eyebrows only
 □ No text set on teal
 □ Teal is #23C5BF everywhere — nothing darkened to pass contrast; teal type on navy only; on light
   grounds teal appears only as an accent (tick / accent line / seam) beside navy text
-□ Two-tone headline on navy = white + light blue
+□ Two-tone headline = light blue on navy / Rhapsody Blue on white; never on a blue ground; no Rhapsody Blue text on navy
 □ If it didn't fit, the copy was shortened — the type was not crushed
-□ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark; RHAPSODY all caps; clear space kept
+□ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark (all-white on Rhapsody Blue); clear space = X (height of the R) on every side
 □ Logo not recolored, stretched, rotated, shadowed, or overlaid
 □ Corners: squared top, rounded bottom on modules; pills reserved for CTAs
-□ Exactly one graphic device in the layout (dots OR a light device — never both)
-□ Dots are the uniform scattered field (not graduated, not random); big dot used as-is/flipped/90°
+□ One lead visual: one dot device OR Aurora OR a photo; the only pairing is a dot device + photo
+□ Dots are the fluid dot pattern (approved master, not hand-built); big dot used as-is/flipped/90°
 □ Light devices on navy only; glow is teal/blue/purple (never orange); offset into open space
 □ Icons: single outline family, 1.7 weight, currentColor, 44px gray tile
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur
-□ Portraits use thin ring / arc / card / editorial split — no thick ring
+□ Portraits: brand ring by default, thin ring for small avatars, or arc / card / editorial split
 □ No retired illustration styles
+□ Teddie Mercury only for culture, event, and swag moments; one per asset; never with dots or Aurora; the website robot is the Rhapsody Axon mark, not Teddie
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)
-□ Company name is "Rhapsody," never "Rhapsody Health"
+□ Company name is "Rhapsody," never "Rhapsody Health," never possessive ("Rhapsody's")
+□ Body text ≥16px on web; nothing a reader needs below 12px
+□ No end period on one-sentence headlines; multi-sentence headlines punctuate every sentence
 ```

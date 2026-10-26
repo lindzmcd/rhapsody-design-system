@@ -1,0 +1,75 @@
+<!-- @dsCard group="7 · Patterns" name="Hero badge graphics" subtitle="Website hero badges: a circular image on the fluid dot pattern, thick brand ring, icon badges" width="960" height="1520" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero badge graphics</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  .hbx-wrap{position:relative;flex:none;}
+  .hbx-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;
+    -webkit-mask-image:radial-gradient(72% 72% at 50% 50%, #000 52%, transparent 100%);
+    mask-image:radial-gradient(72% 72% at 50% 50%, #000 52%, transparent 100%);}
+  .hbx-disc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;overflow:hidden;background:var(--navy);display:flex;align-items:center;justify-content:center;}
+  .hbx-disc img{width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block;}
+  .hbx-disc.ill svg{display:block;}
+  .hbx-badge{position:absolute;border-radius:24%;display:flex;align-items:center;justify-content:center;}
+  .hbx-badge.lt{background:#fff;box-shadow:0 0 0 3px var(--blue);}
+  .hbx-badge.dk{background:var(--blue);box-shadow:0 0 0 3px #fff;}
+  .hbx-badge svg{display:block;}
+  .hbx-cap{font-size:13px;color:var(--dgray);text-align:center;margin:8px 0 0;}
+  .hbx-two{display:flex;gap:28px;flex-wrap:wrap;margin:14px 0 4px;}
+  .hbx-two figure{margin:0;}
+  /* icon-badge spec chips */
+  .hb-badges{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0;}
+  .hb-badge{display:flex;align-items:center;gap:12px;}
+  .hb-chip{width:62px;height:62px;border-radius:15px;display:flex;align-items:center;justify-content:center;flex:none;}
+  .hb-chip.lt{background:#fff;box-shadow:0 0 0 4px var(--blue);}
+  .hb-chip.dk{background:var(--blue);box-shadow:0 0 0 4px #fff,0 0 0 5px var(--lgray);}
+  .hb-chip svg{width:30px;height:30px;}
+</style>
+</head><body>
+<div class="wrap">
+<h2>Hero badge graphics</h2>
+<p>The hero badge is the signature Rhapsody treatment for website heroes, product pages, and market-segment pages: a <strong>circular image</strong> (a person photo, or a product / segment illustration) held by a <strong>thick Rhapsody-Blue ring</strong>, sitting on the <strong>fluid dot pattern</strong>, with small <strong>icon badges</strong> tagging what the system does. It is the same dot device used everywhere else, here it simply sits <strong>behind the image</strong>.</p>
+
+<div class="principle"><div class="k">Built from the fluid dot pattern</div><p>The dots around the badge are the <strong>fluid dot pattern</strong> (see Fluid dot pattern), placed behind the image and fading out so it never ends in a hard edge. The badge is a focal device, one per hero, that lets a photo or illustration sit inside the brand system instead of floating on its own. It is not a separate &ldquo;halo&rdquo; device.</p></div>
+
+<h3>The treatment</h3>
+<p>The verbatim example below is the approved website hero badge. Treat it as the reference for ring weight, the circular image crop, how the fluid dot pattern sits behind and fades out, and how the icon badges sit on the ring.</p>
+<div style="border:1px solid var(--lgray);border-radius:16px;background:#fff;padding:20px;margin:14px 0;display:flex;justify-content:center;">
+  <img src="../assets/figures/hero-badge-photo.png" alt="Hero badge: a portrait photo in a navy disc held by a thick Rhapsody-Blue ring, on the fluid dot pattern, with two circular capability icon badges on the ring." style="width:100%;max-width:420px;height:auto;display:block;">
+</div>
+
+<h3>Anatomy</h3>
+<ul>
+  <li><strong>Image.</strong> A circular crop, centered: a person photo, or a single white-and-light-blue product / segment illustration on navy.</li>
+  <li><strong>Ring.</strong> Navy fill (<code>#0B2C47</code>) with a Rhapsody-Blue stroke (<code>#1A81F4</code>): a bold navy band with an <strong>~8px blue outer edge</strong>, even all the way around.</li>
+  <li><strong>Fluid dot pattern behind.</strong> The approved fluid dot pattern sits behind the image (light blue / blue dots), <strong>fading out</strong> so it never ends in a square or cropped edge. Never a radial &ldquo;halo&rdquo; built by hand.</li>
+  <li><strong>Icon badges (optional).</strong> Small round icon badges on the ring that tag a capability, drawn from the Icon library. Two per badge at most, at opposite corners, clear of the face.</li>
+</ul>
+
+<h3>Two fills</h3>
+<p>One badge system, two jobs. <strong>Photos</strong> carry people, customers, teams, and homepage or CTA heroes. <strong>Illustrations</strong> carry products and market segments &mdash; a single white-and-light-blue illustration on the navy disc, drawn from the hero illustration library. Same ring, same dot backdrop; only the fill changes.</p>
+
+<h3>Icon badges</h3>
+<p>Optional capability tags that sit on the ring to signal a feature (exchange, automation, security), as in the verbatim example above. Use <strong>at most two</strong>, at opposite corners and clear of the face. Draw the marks from the <strong>Icon library</strong> &mdash; don&rsquo;t redraw icon styles here.</p>
+
+<div class="compare">
+  <div class="card do"><div class="head">Do</div><div class="body"><ul>
+    <li>Put the fluid dot pattern behind the image and let it fade softly to nothing.</li>
+    <li>One badge per hero; photo for people, illustration for products and segments.</li>
+    <li>Keep the ring even; center the image in the disc.</li>
+    <li>Hold icon badges to two at most, at opposite corners, clear of the face.</li>
+  </ul></div></div>
+  <div class="card dont"><div class="head">Don&rsquo;t</div><div class="body"><ul>
+    <li>Don&rsquo;t hand-build a radial dot &ldquo;halo,&rdquo; or crop the pattern to a hard edge.</li>
+    <li>Don&rsquo;t recolor the ring; it stays navy with the blue edge.</li>
+    <li>Don&rsquo;t stack more than two icon badges, or let them cover the face.</li>
+    <li>Don&rsquo;t mix a photo and an illustration inside one badge.</li>
+  </ul></div></div>
+</div>
+
+<div class="principle"><div class="k">Master-art rule</div><p>Use the approved hero-badge master art (photo rings and segment illustrations) and the fluid dot pattern masters as provided. Recreate the ring and the dot backdrop only from the spec above when a live element is genuinely needed.</p></div>
+</div>
+</body></html>

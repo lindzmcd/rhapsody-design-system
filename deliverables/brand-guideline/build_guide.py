@@ -4,7 +4,7 @@ REPO="/home/user/rhapsody-design-system"
 SCR="/tmp/claude-0/-home-user-rhapsody-design-system/47735526-4992-5771-a7d6-e16dade8eb40/scratchpad"
 DATE="October 2026"
 
-MIME={".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",
+MIME={".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",
       ".woff2":"font/woff2",".ttf":"font/ttf"}
 
 def datauri(path):
@@ -12,10 +12,10 @@ def datauri(path):
     b=open(path,"rb").read()
     return f"data:{MIME.get(ext,'application/octet-stream')};base64,"+base64.b64encode(b).decode()
 
-# ---- fonts.css from downloaded latin woff2 ----
-_prev=open(f"{REPO}/deliverables/brand-guideline/Rhapsody-Brand-Guideline.html",encoding="utf-8").read()
-fonts_css="\n".join(re.findall(r"@font-face\{.*?\}", _prev, re.S))
-assert fonts_css.count("@font-face")>=4, "font extraction failed"
+# ---- fonts: read the committed, self-contained @font-face CSS (embedded woff2 data URIs)
+# Kept as its own file so the build never depends on the prior (and thus corruptible) HTML output.
+fonts_css=open(f"{REPO}/deliverables/brand-guideline/fonts.css",encoding="utf-8").read()
+assert fonts_css.count("@font-face")>=4, "fonts.css missing @font-face blocks"
 
 # ---- tokens.css with assets -> data URIs ----
 tokens=open(f"{REPO}/tokens.css").read()
@@ -60,14 +60,33 @@ sp_re=re.compile(r'<a href="https://rhapsodyhealth\.sharepoint\.com/[^"]*">([^<]
 def delink_sp(html):
     return sp_re.sub(lambda m: SP_MAP.get(m.group(1), m.group(1)), html)
 
+def scope_css(css, sid):
+    # Scope a card's <style> rules to its section so card classes (e.g. a
+    # generic .chip) never leak and collide with other cards or the shared
+    # tokens. Card style blocks are flat (no @media/@keyframes), so a simple
+    # per-rule selector prefix is sufficient.
+    css=re.sub(r"/\*.*?\*/","",css,flags=re.S)
+    def repl(m):
+        sels,decls=m.group(1).strip(),m.group(2)
+        if not sels: return m.group(0)
+        pref=", ".join(f"#{sid} {s.strip()}" for s in sels.split(",") if s.strip())
+        return pref+"{"+decls+"}"
+    return re.sub(r"([^{}]+)\{([^{}]*)\}", repl, css)
+
 sections=[]
 for c in cards:
     p=os.path.join(REPO,c["path"])
     raw=open(p,encoding="utf-8").read()
+    sid=slug(c["name"])
+    # include the card's <head> <style> blocks (dropped otherwise), scoped to
+    # this section so card classes can't collide across the single-page guide.
+    head=raw[:raw.index("<body>")]
+    raw_styles="".join(re.findall(r"<style>(.*?)</style>", head, re.S))
+    styles=f"<style>{scope_css(raw_styles, sid)}</style>" if raw_styles.strip() else ""
     body=raw[raw.index("<body>")+6: raw.index("</body>")]
+    body=styles+body
     body=embed_assets(body)
     body=delink_sp(body)
-    sid=slug(c["name"])
     sections.append(f'<section class="ds-section" id="{sid}" data-group="{c["group"]}">\n{body}\n</section>')
 
 # ---- TOC ----
@@ -107,6 +126,32 @@ body{{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,
 .toc-sub{{display:block;font-size:12px;color:var(--dgray);font-weight:400;}}
 .ds-section{{background:#fff;margin:0;border-bottom:14px solid #eef2f6;}}
 .ds-section .wrap{{max-width:none;padding:34px 60px 46px;}}
+.ds-section code{{overflow-wrap:anywhere;}}
+.ds-section img{{max-width:100%;height:auto;}}
+.ds-section .m-only{{display:none;}}
+/* Mobile: card markup uses inline grids sized for a 1000px page, so the
+   overrides below need !important to win over the inline styles. */
+@media (max-width:700px){{
+  .cover{{padding:44px 20px 40px;}}
+  .cover img.mark{{width:150px;margin-bottom:28px;}}
+  .cover h1{{font-size:30px;}}
+  .cover .sub{{font-size:15px;margin-bottom:20px;}}
+  .cover .meta{{font-size:11px;letter-spacing:.1em;}}
+  .intro,.toc{{padding:24px 16px;}}
+  .ds-section{{border-bottom-width:10px;}}
+  .ds-section .wrap{{padding:26px 16px 34px;}}
+  .ds-section h2{{font-size:23px;}}
+  .ds-section p,.ds-section li{{font-size:14.5px;}}
+  .ds-section .principle{{padding:18px;}}
+  .ds-section .principle p{{font-size:15px;}}
+  .ds-section [style*="grid-template-columns"]{{grid-template-columns:minmax(0,1fr) !important;max-width:none !important;}}
+  .ds-section .swatches{{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}
+  .ds-section [style*="flex-wrap:nowrap"]{{flex-wrap:wrap !important;}}
+  .ds-section table{{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}}
+  .ds-section .comp-bar{{flex-direction:column;height:auto !important;}}
+  .ds-section .m-only{{display:inline;}}
+  .ds-section .comp-bar>div{{flex:none !important;padding:9px 12px;justify-content:flex-start !important;}}
+}}
 @media print{{
   body{{background:#fff;}}
   .doc{{max-width:none;}}
@@ -130,9 +175,9 @@ cover=f"""
 intro=f"""
 <div class="intro">
   <h2>How to use this guide</h2>
-  <p>This is Rhapsody's visual system: logo, color, type, graphic devices (the dots and light glows), photography, buttons, and the common layout patterns — with the rules and correct examples for each. Work from these pages when producing anything that carries the Rhapsody brand.</p>
-  <p>Every example here is live HTML rendered from the real design tokens, so colors, type, and spacing are exact. Use the Contents below to jump to a section.</p>
-  <div class="note"><strong>Master art is included with this package.</strong> The approved logos, monograms, big-dot and scattered-dot device files are provided as separate SVG/PNG files in the accompanying <code>rhapsody-brand-assets</code> folder — use those masters as-is (never rebuild or restyle them). Anything not in the asset folder is available on request from your Rhapsody contact.</div>
+  <p>This is the Rhapsody visual system: logo, color, type, graphic devices (the dots and the Aurora glow), photography, components, and web page patterns, with the rules and correct examples for each. Work from these pages when producing anything that carries the Rhapsody brand.</p>
+  <p>Start with <strong>Brand expression</strong>: its decision hierarchy and pre-ship checklist apply to every asset. Every example here is live HTML rendered from the real design tokens, so colors, type, and spacing are exact. Use the Contents below to jump to a section.</p>
+  <div class="note"><strong>Master art is included with this package.</strong> The approved logos, monograms, big-dot and fluid-dot-pattern device files are provided as separate SVG/PNG files in the accompanying <code>rhapsody-brand-assets</code> folder — use those masters as-is (never rebuild or restyle them). Anything not in the asset folder is available on request from your Rhapsody contact.</div>
 </div>
 """
 

@@ -6,13 +6,13 @@
     {
       "path": "components/brand-expression.html",
       "group": "1 · Foundations",
-      "subtitle": "Visual principles, AI direction, and decision hierarchy",
+      "subtitle": "Visual principles, decision hierarchy, naming, and pre-ship checklist",
       "name": "Brand expression"
     },
     {
       "path": "components/colors.html",
       "group": "1 · Foundations",
-      "subtitle": "Palette, text color, accessibility, blue on navy, text on teal",
+      "subtitle": "Palette, composition, color order, text color, accessibility, blue on navy",
       "name": "Color palette"
     },
     {
@@ -24,7 +24,7 @@
     {
       "path": "components/pathways.html",
       "group": "1 · Foundations",
-      "subtitle": "Color-coding paths and journeys; build vs automate as an example",
+      "subtitle": "Color-coding paths and journeys for wayfinding",
       "name": "Pathways"
     },
     {
@@ -46,6 +46,12 @@
       "name": "Logo & wordmark"
     },
     {
+      "path": "components/mascot.html",
+      "group": "2 · Brand",
+      "subtitle": "Draft: culture, event, and swag moments only; never product, credibility, or web product pages",
+      "name": "Mascot (Teddie Mercury)"
+    },
+    {
       "path": "components/buttons.html",
       "group": "3 · Components",
       "subtitle": "Pill buttons, primary/secondary, text links + arrow",
@@ -54,7 +60,7 @@
     {
       "path": "components/charts.html",
       "group": "3 · Components",
-      "subtitle": "Bar, line, stacked bar, donut, color order + rules",
+      "subtitle": "Bar, line, stacked bar, donut + color rules",
       "name": "Charts & graphs"
     },
     {
@@ -94,27 +100,21 @@
       "name": "Devices at a glance"
     },
     {
-      "path": "components/dots.html",
-      "group": "4 · Graphic devices",
-      "subtitle": "What the dots mean, field vs big dot, backgrounds & dot colors",
-      "name": "Dots overview"
-    },
-    {
       "path": "components/dot-field.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Structured dispersion, anchors, rules, do & don't",
-      "name": "Scattered dot field"
+      "subtitle": "Half-tone dot grid, fluid density gradient, one register per background",
+      "name": "Fluid dot pattern"
     },
     {
       "path": "components/big-dot.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Cropped anchor + companions, three variants, what the parts mean",
+      "subtitle": "The big-dot ecosystem: anchor + companions, one set per ground, three crops each",
       "name": "Big dot"
     },
     {
       "path": "components/light-devices.html",
       "group": "4 · Graphic devices",
-      "subtitle": "Aurora soft wash & Aurora ribbon",
+      "subtitle": "One Aurora glow — soft to flowing, movement allowed; navy only",
       "name": "Light devices"
     },
     {
@@ -136,10 +136,16 @@
       "name": "Photography & portraits"
     },
     {
-      "path": "components/display-ads.html",
+      "path": "components/hero-badge.html",
       "group": "7 · Patterns",
-      "subtitle": "Blue-first display template — logo-led, few large words, one action; every IAB placement",
-      "name": "Display ads"
+      "subtitle": "Website hero badges: a circular image on the fluid dot pattern, thick brand ring, icon badges",
+      "name": "Hero badge graphics"
+    },
+    {
+      "path": "components/feature-image.html",
+      "group": "7 · Patterns",
+      "subtitle": "Brand in context: the 1200×630 feature image for rhapsody.health pages, four slots on a fixed system",
+      "name": "Website feature image"
     },
     {
       "path": "components/powerpoint-template.html",
@@ -148,28 +154,10 @@
       "subtitle": "Official 2026 slide deck — downloadable master (.pptx)"
     },
     {
-      "path": "components/frameworks.html",
-      "group": "7 · Patterns",
-      "subtitle": "System & architecture diagrams: box tiers, mono labels, color-coded maturity connectors",
-      "name": "Framework diagrams"
-    },
-    {
       "path": "components/email-signature.html",
       "group": "7 · Patterns",
       "subtitle": "Employee signature: wordmark, teal divider, name lockup, certifications",
       "name": "Email signature"
-    },
-    {
-      "path": "components/email.html",
-      "group": "7 · Patterns",
-      "subtitle": "Header banners (Aurora, big dot, photo), seam, single CTA, Pardot notes",
-      "name": "Email template"
-    },
-    {
-      "path": "components/hero.html",
-      "group": "7 · Patterns",
-      "subtitle": "Light, dark & photography hero layouts with eyebrow, headline, CTA",
-      "name": "Hero (type in context)"
     },
     {
       "path": "components/name-lockup.html",
@@ -178,22 +166,16 @@
       "name": "Name lockup"
     },
     {
-      "path": "components/social.html",
-      "group": "7 · Patterns",
-      "subtitle": "1:1 posts + quote banner, one device per post",
-      "name": "Social posts"
-    },
-    {
-      "path": "components/product-launch.html",
-      "group": "7 · Patterns",
-      "subtitle": "Launch unit: product name, Aurora glow, one CTA",
-      "name": "Product launch announcement"
-    },
-    {
       "path": "components/corrections.html",
       "group": "8 · Reference",
-      "subtitle": "Retired elements, and direction confirmed",
+      "subtitle": "Retired elements and dated changelog",
       "name": "Quick corrections log"
+    },
+    {
+      "path": "components/web-pages.html",
+      "group": "9 · Web",
+      "subtitle": "Decisions from the refreshed homepage & solutions pages — section grounds, eyebrows, cards, stat rows, emphasis bands",
+      "name": "Web pages (page system)"
     }
   ],
   "templates": [],

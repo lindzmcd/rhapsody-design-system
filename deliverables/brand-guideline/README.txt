@@ -10,8 +10,9 @@ WHAT'S HERE
   rhapsody-brand-assets/         The approved MASTER ART to build with:
                                    - Rhapsody logos (SVG + PNG, all lockups)
                                    - R monograms
-                                   - dot-devices/ : big-dot & scattered-dot
-                                     device masters (SVG) + PNG dot fills
+                                   - dot-devices/ : big-dot masters (SVG) +
+                                     fluid dot pattern samples (JPG). Full
+                                     fluid + Aurora masters: request from Rhapsody.
 
 HOW TO USE
   1. Start with the guideline (HTML or PDF) for the rules and correct examples.
