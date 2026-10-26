@@ -118,3 +118,10 @@ into Claude; the migrated "Rhapsody Design System - Master" artifact
 its owner, and its Design System page shows no templates at all. DesignSync only
 updates this standalone project, which closes 2026-12-14. Updating the in-Claude
 system needs the Artifact tool, not DesignSync.
+
+## Sync 2026-10-26 — /design-sync parity run
+Pinned project confirmed (PROJECT_TYPE_DESIGN_SYSTEM, canEdit). Remote already
+matched local by name (30 cards + `templates/feature-image/`). Parity push of all
+30 cards, `tokens.css`, and the feature-image template folder, fenced by the
+sentinel before and after. No manifest, no deletes. This updates the standalone
+project only; see the 10-26 finding above about the in-Claude copy.
