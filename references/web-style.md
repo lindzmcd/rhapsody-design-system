@@ -165,6 +165,11 @@ drawn only from verified claims. Question phrasing wins long-tail queries.
   Used for blog/resource links that earn a moment; plain text links elsewhere.
 - Content stays embedded in the page's story, not appended: no "related posts" lists at page
   bottom; a resource earns placement inside the section it supports.
+- **Byline variant** of the read callout: kicker "Byline · [Name, role] · [Outlet]", title + ↗
+  (external-link mark — it opens at the outlet). Placement: the last beat before the CTA band, so
+  third-party validation lands right before the ask. One flagship byline runs sitewide (currently
+  the CEO's Healthcare IT Today piece on infrastructure deciding the agentic future, on all three
+  infrastructure pages); swap everywhere when a newer flagship ships — never accumulate several.
 
 ## 12. SEO working practice
 
@@ -197,7 +202,46 @@ Guardian request path.
 - Built-in vs connector POV: contrast on what the agent knows and who answers for it — never
   disparage MCP itself (we support the standard; Guardian governs MCP traffic).
 
+## 15. Feature images (share/OG cards)
+
+One template for every page's 2400×1260 share card; spec, template file, and QA script:
+claude.ai/artifact/RTx5ngkixPoC4SjZaSSK8q.
+
+- Four fill-in slots (eyebrow · headline · motif · lockup); everything else is fixed. Navy
+  ground, top-right glow, text left / motif right in separate grid columns (that split is the
+  no-overlap guarantee), 90px side gutters.
+- **Invariants:** gray `#3D6587` connectors are the first group in the SVG so they paint behind
+  everything; no single-word last line anywhere (`&nbsp;` glue, `&#8209;` in compounds); H1 sizes
+  only 48 / 46 / 58px per the template's comments.
+- Motif vocabulary: `#B4D8FF` outlines (stroke 3–3.4), connectors 3.5 behind, one teal accent plus
+  the teal check badge (navy check), and the grounded-pulse signature (stem · dot r8 · ring r14.5
+  at 45%). Mono text chips (EHR/FHIR/LAB) sparingly. Never redraw third-party marks.
+- Styleguide details ride along: times as **12 p.m. CT**; Corepoint copy says low-code.
+- QA: the render script verifies Poppins and fails on orphans; the motif zoom crop is eyeballed
+  for stray or crossing lines before anything ships.
+
+## 16. Company section rulings (company wireframes doc)
+
+Source of record: the company page wireframes (claude.ai/artifact/6NMXr4BeBLWZm4iEVCXBez).
+
+- **IA:** About, Careers, In the news, Partners are equal-level children of the Company nav group;
+  Contact and Community login live in the top utility nav, not under Company. Press releases are
+  on-site children at `/in-the-news/[release]`; third-party coverage links out to the outlet (↗),
+  no stub pages.
+- **Bio pages:** `/about/bio/[name]` (shortened for the exec NFC cards; `/about` 301s from
+  `/about-us`). The hero is the business card: portrait, name/title, then Save contact (vCard),
+  LinkedIn (tracking parameters stripped), Email, Book time — full-width buttons on mobile. Card
+  taps carry `?src=card`. Each page ships Person JSON-LD; bios double as the press expert roster.
+- **Press kit downloads:** ungated always; permanent `/press/*` redirect slugs point at the
+  current media-library files so links never stale; boilerplate and company facts live on the page
+  as copyable text, not a file; GA download events for measurement.
+- **People motion:** the About/Careers hero people wall (thin-ring headshots flipping on a
+  staggered 9s cycle; reduced-motion shows a static set; employee consent collected with the photo
+  pool) and the proof-band logo carousel (marquee mechanics shared with the trust ticker: seamless
+  loop, edge fades, pause on hover, reduced-motion static grid).
+
 ---
 
 *Maintained alongside the design system. When a web ruling changes, update this file and the
-corrections log in the same commit. Last updated: October 2026 (solutions wireframes v115).*
+corrections log in the same commit. Last updated: October 2026 (solutions wireframes v150 ·
+company wireframes v25 · feature-image system v1).*
