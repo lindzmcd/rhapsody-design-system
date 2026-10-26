@@ -11,7 +11,7 @@
 <p>Every rhapsody.health page gets one feature image: the page-header graphic and the image that shows when the page is shared. It is a <strong>fixed system with four slots</strong>, at <strong>1200 &times; 630</strong>, exported at 2&times; (2400 &times; 1260 PNG). Fill the slots; leave everything else alone.</p>
 
 <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin:16px 0 4px;">
-  <figure style="margin:0;"><img src="../assets/figures/feature-image-payers.png" alt="Feature image: Markets · Payers eyebrow, headline 'Payer data that moves at the speed of care' with the second phrase in light blue, a line-art motif, and the lockup 'Rhapsody for payers'" style="width:100%;height:auto;display:block;border-radius:10px;"><figcaption class="caption" style="margin:6px 0 0;">A one-sentence headline: no end period, emphasis in light blue.</figcaption></figure>
+  <figure style="margin:0;"><img src="../assets/figures/feature-image-guide.webp" alt="Guide feature image: Guide · Integration TCO eyebrow, headline 'The total cost of ownership of healthcare integrations' with 'healthcare integrations' in light blue, a calculator motif with Build, Buy, and Run label tiles, and the lockup 'Rhapsody guides'" style="width:100%;height:auto;display:block;border-radius:10px;"><figcaption class="caption" style="margin:6px 0 0;">A guide: a one-sentence headline with no end period, emphasis in light blue, and mono label tiles (Build, Buy, Run) inside the motif.</figcaption></figure>
   <figure style="margin:0;"><img src="../assets/figures/feature-image-platform.png" alt="Feature image: Platform · Overview eyebrow, headline 'Integrate. Govern. Automate.' set as a short stack, the same motif, and the lockup 'Rhapsody'" style="width:100%;height:auto;display:block;border-radius:10px;"><figcaption class="caption" style="margin:6px 0 0;">A short stack at 58px: a multi-sentence headline takes a period after each sentence, with the last two words glued so no line is a single word.</figcaption></figure>
 </div>
 
@@ -38,13 +38,15 @@
   <li><strong>Teal #23C5BF:</strong> the check badge (a filled circle with a navy check) and at most one other accent.</li>
   <li><strong>The grounded pulse</strong> is the signature: a stem, a teal dot (r8), and a ring (r14.5) at 45% opacity, hanging from the base of the art.</li>
   <li><strong>Clean joins:</strong> every line ends on a shape or passes fully behind one; nothing floats.</li>
+  <li><strong>Text chips</strong> (sparingly): short IBM Plex Mono labels in #B4D8FF inside small tiles, such as EHR, FHIR, or Build, Buy, Run.</li>
+  <li><strong>No third-party marks:</strong> never redraw another company&rsquo;s logo or badge (KLAS, AWS). Use only official, cleared artwork, on a white card if the ground is dark.</li>
 </ul>
 
 <div class="principle"><div class="k">No orphan words</div><p>No line of the headline, eyebrow, or lockup may be a single word. Glue the last two words with a non-breaking space, and use a non-breaking hyphen to stop a hyphenated word splitting.</p></div>
 
 <h3>How to make one</h3>
 <ul>
-  <li><strong>In Claude Design:</strong> choose the <strong>Website Feature Image</strong> template, fill the slots in the Tweaks panel, and capture the artboard at 2&times;. The template glues the last two words automatically.</li>
+  <li><strong>In Claude Design:</strong> use the <strong>Website Feature Image</strong> template (<code>templates/feature-image/FeatureImage.dc.html</code> in the design system), fill the four slots, and capture the artboard at 2&times;. The template glues the last two words automatically.</li>
   <li><strong>In code:</strong> copy <code>templates/feature-image/source/feature-image-template.html</code>, fill the four marked slots, and run <code>render-feature.mjs</code>. It checks that Poppins loaded and that no line ends on a single word, then writes the 2&times; PNG and a close-up crop of the motif to inspect before shipping.</li>
 </ul>
 

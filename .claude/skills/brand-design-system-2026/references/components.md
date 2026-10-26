@@ -67,7 +67,8 @@ Types shown: bar, line, stacked bar, donut.
 left (1.5fr) / motif right (1fr), 90px side padding. Four slots: IBM Plex Mono teal eyebrow (17px),
 Poppins Medium 48px headline with a light-blue emphasis (46px if long, 58px for 1–3-word stacks), a
 line-art motif (viewBox 200×180; #B4D8FF outlines 3–3.4; #3D6587 connectors 3.5 drawn first; teal
-check badge + one accent; grounded pulse), and a 25px lockup. No single-word lines. Template:
+check badge + one accent; grounded pulse; optional mono text chips like EHR/FHIR; never a redrawn
+third-party logo), and a 25px lockup. No single-word lines. Template:
 `templates/feature-image/` (Claude Design `FeatureImage.dc.html`; code `source/` + `render-feature.mjs`).
 
 **Partner logos (brackets).** Present partner/customer logo walls inside a **bracket treatment** —

@@ -4,7 +4,7 @@ REPO="/home/user/rhapsody-design-system"
 SCR="/tmp/claude-0/-home-user-rhapsody-design-system/47735526-4992-5771-a7d6-e16dade8eb40/scratchpad"
 DATE="October 2026"
 
-MIME={".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",
+MIME={".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",
       ".woff2":"font/woff2",".ttf":"font/ttf"}
 
 def datauri(path):
