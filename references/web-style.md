@@ -197,7 +197,7 @@ Guardian request path.
   no per-MCP-tool enforcement, FHIR IG validation, delegated authority, shadow discovery, or auto
   kill-switch claims until shipped; never imply gateway consolidation is required. (Full table:
   Sept 2026 positioning doc appendix.)
-- Country count: **32**. Heritage: "Healthcare only, always · 40+ years" pending final legal/PMM
+- Country count: **33**. Heritage: "Healthcare only, always · 40+ years" pending final legal/PMM
   confirm. NPS 63 pending external-use approval.
 - Built-in vs connector POV: contrast on what the agent knows and who answers for it — never
   disparage MCP itself (we support the standard; Guardian governs MCP traffic).
