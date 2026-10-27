@@ -278,11 +278,11 @@ Aurora rules:
   over purely clinical/healthcare scenes.
 - **Avoid** dark "tech-noir" imagery, blur, harsh flare, backs-to-camera, tight huddles turned away,
   staged handshakes, and generic stock.
-- **Portrait treatments**: the **brand ring** (bold navy band + Rhapsody-Blue outer edge, the
-  website-hero weight) is the default at feature scale; small avatars (≈96px and under — name lockups,
-  quote cards) use a **thin ring** (2–3px Rhapsody Blue, no navy band). Also **arc accent**,
-  **rounded-rectangle card**, **editorial split**. Accent edges use primary/secondary colors only —
-  never purple or orange, never white outlines. The legacy thick single-color rings are retired.
+- **Portrait treatments**: the default is the **Rhapsody Blue ring**, one Rhapsody Blue line around a
+  circular crop, no navy band: 2–3px on small avatars (≈96px and under — name lockups, quote cards),
+  4–6px at feature scale. Always Rhapsody Blue; never purple, orange, white, or a second ring. The bold
+  navy-and-blue ring is the website **hero badge** only, never an everyday headshot. Also **arc accent**,
+  **rounded-rectangle card**, **editorial split**. The legacy thick single-color rings are retired.
 
 ## 8. Illustration
 
@@ -332,7 +332,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - **Scattered dot field retired** → the **Fluid dot pattern** (half-tone grid, dense-to-sparse). Multicolor dots are approved.
 - **Light device** is Aurora only — one glow, soft to flowing, movement allowed (Burst, Plexus, and the separate Aurora ribbon retired Oct 2026; Pulse earlier).
 - **Icons** → single outline family (stroke-only, 1.7 weight, `currentColor`, 44px gray tile).
-- **Portraits** → brand ring (default) / thin ring (small avatars) / arc / card / editorial split; legacy thick single-color rings retired.
+- **Portraits** → Rhapsody Blue ring (default) / arc / card / editorial split; navy-and-blue ring is hero-badge only; legacy thick single-color rings retired.
 - **Illustration** legacy styles retired.
 - New sections added: **Brand Expression** and **Illustration**.
 - Rule: **if copy doesn't fit, shorten the copy — don't crush the type.**
@@ -372,7 +372,7 @@ feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
 □ Light devices on navy only; glow is teal/blue/purple (never orange); offset into open space
 □ Icons: single outline family, 1.7 weight, currentColor, 44px gray tile
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur
-□ Portraits: brand ring by default, thin ring for small avatars, or arc / card / editorial split
+□ Portraits: Rhapsody Blue ring by default (no navy band), or arc / card / editorial split
 □ No retired illustration styles
 □ Teddie Mercury only for culture, event, and swag moments; one per asset; never with dots or Aurora; the website robot is the Rhapsody Axon mark, not Teddie
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)

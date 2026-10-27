@@ -124,8 +124,8 @@ Anything clickable has a **border + arrow**; labels and tags have **neither**. C
 ## 8. Proof and quotes
 
 - Quote treatment: one short line (≤ ~120 chars) set large in Rhapsody Blue with real quotation
-  marks; name lockup (name, title, company in blue); customer logo preferred; thin-ring portrait
-  in a single brand color where the headshot is approved, logo chip as the fallback.
+  marks; name lockup (name, title, company in blue); customer logo preferred; Rhapsody Blue ring
+  portrait where the headshot is approved, logo chip as the fallback.
 - Customer-story cards: kicker → quote → context → fact rows → read-the-story link in the copy
   column; portrait/lockup anchored right. Related assets (webinar, article) live on the story's
   own card, one trail per customer.
@@ -185,8 +185,8 @@ drawn only from verified claims. Question phrasing wins long-tail queries.
 
 ## 13. Photography
 
-Four placements only, per the photography card (bright, natural-lit, faces-forward; thin-ring
-treatment in one brand color): approved customer headshots on named quote cards; the Boost team
+Four placements only, per the photography card (bright, natural-lit, faces-forward; Rhapsody Blue
+ring treatment): approved customer headshots on named quote cards; the Boost team
 photo (people are the product); the Kevin Day CTO pull-quote; the migration team photo.
 Photography stays **off** persona cards, heroes (Aurora holds that slot), proof stats, and the
 Guardian request path.

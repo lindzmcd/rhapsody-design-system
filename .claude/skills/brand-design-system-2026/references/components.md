@@ -118,8 +118,9 @@ no shadows/outlines/effects. Two-color line icons and icon-on-circle art are ret
 photography, product/interface imagery, diagrams, data viz, or the abstract devices instead.
 
 **Photography & portraits.** Bright, natural-lit, tech-forward, faces-forward, inclusive. Avoid
-tech-noir, blur, harsh flare, backs-to-camera, staged/stiff poses. Portrait treatments: brand ring (navy band +
-blue edge) by default, thin ring for small avatars, arc accent, rounded-rectangle card, editorial split.
+tech-noir, blur, harsh flare, backs-to-camera, staged/stiff poses. Portrait treatments: Rhapsody Blue ring
+(single blue line, no navy band; 2–3px small, 4–6px feature) by default, arc accent, rounded-rectangle card,
+editorial split. The navy-and-blue ring is the website hero badge only.
 
 ## Patterns
 
