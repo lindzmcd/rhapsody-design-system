@@ -147,3 +147,6 @@ updated 2026-10-26 14:44Z, so the 10-26 country-count change never reached
 it either. Nothing was written. The standalone project appears to be read-only
 now that Claude Design lives in Claude. Pending: push these five cards once
 edit access returns, or move the system to the in-Claude artifact.
+- 2026-10-27 20:55Z: /design-sync retry. Fresh plan finalized; the first write
+  (the sentinel) still returned HTTP 403 "cannot edit this project". Stopped
+  before any content write. Remote unchanged since 2026-10-26 14:44Z.
