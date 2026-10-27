@@ -135,3 +135,15 @@ Gallery now: Email Signature Banner, Website Feature Image. The original upload
 `uploads/Rhapsody Axon Connect Pitch Deck.dc.html` was kept as a fallback. The
 template was never in git, so the uploads copy is the only remaining source.
 Lesson: re-list right before a delete; GUI renames move template folders.
+
+## 2026-10-27 — Portrait ring sync BLOCKED (write permission)
+Local change: portraits default to a single Rhapsody Blue ring (2–3px small,
+4–6px feature); the navy-and-blue ring is the website hero badge only. Cards
+changed: photography, quotes, name-lockup, corrections (+ web-pages, country
+count 33, from the 10-26 merge). Plan finalized, but `write_files` returned
+HTTP 403 "cannot edit this project" twice. `list_projects` still shows the
+project as owned; `get_project` no longer reports `canEdit`. Remote last
+updated 2026-10-26 14:44Z, so the 10-26 country-count change never reached
+it either. Nothing was written. The standalone project appears to be read-only
+now that Claude Design lives in Claude. Pending: push these five cards once
+edit access returns, or move the system to the in-Claude artifact.
