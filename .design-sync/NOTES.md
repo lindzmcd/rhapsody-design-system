@@ -184,3 +184,13 @@ then the index `project/design-system.json` last):
   scattered dot field. Now 12 square-top, round-bottom module tiles (light-blue
   outlines, two blue fills, one teal) on the navy band. Dot devices on the cover
   must be approved masters, and the cover allows no images, so it uses no dots.
+- 2026-11-03: FY27 icon library. Icon library card rewritten to direct everyone to
+  the official library (SharePoint: Marketing > Public > _Rhapsody Brand Materials >
+  Brand Package FY27 > Icon Library; 271 icons x 4 versions, SVG + PNG). 20 sample
+  tiles copied from the library's PNG folders into `assets/icons/` (library file
+  names). The SVGs can't be read through the SharePoint connector, so the stroke was
+  measured from the 184px PNG masters (about 4-5px, lighter than the old 1.7): the
+  rules say "lighter than 1.7, keep as drawn" with no exact number until the SVGs
+  are checked. Published to the Claude design system (Icons, WebPages, Corrections,
+  README, assets/icons, index group "icons"). build_guide.py now keeps SharePoint
+  links in the internal guide page and de-links them only in the external HTML.

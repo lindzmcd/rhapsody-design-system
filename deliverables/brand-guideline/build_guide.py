@@ -2,7 +2,7 @@ import re, os, json, base64, sys
 
 REPO="/home/user/rhapsody-design-system"
 SCR="/tmp/claude-0/-home-user-rhapsody-design-system/47735526-4992-5771-a7d6-e16dade8eb40/scratchpad"
-DATE="October 2026"
+DATE="November 2026"
 
 MIME={".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",
       ".woff2":"font/woff2",".ttf":"font/ttf"}
@@ -73,7 +73,8 @@ def scope_css(css, sid):
         return pref+"{"+decls+"}"
     return re.sub(r"([^{}]+)\{([^{}]*)\}", repl, css)
 
-sections=[]
+sections=[]       # external package: internal SharePoint links de-linked
+sections_int=[]   # internal guide page (org-only): links kept
 for c in cards:
     p=os.path.join(REPO,c["path"])
     raw=open(p,encoding="utf-8").read()
@@ -86,8 +87,9 @@ for c in cards:
     body=raw[raw.index("<body>")+6: raw.index("</body>")]
     body=styles+body
     body=embed_assets(body)
-    body=delink_sp(body)
-    sections.append(f'<section class="ds-section" id="{sid}" data-group="{c["group"]}">\n{body}\n</section>')
+    wrap=lambda b: f'<section class="ds-section" id="{sid}" data-group="{c["group"]}">\n{b}\n</section>'
+    sections_int.append(wrap(body))
+    sections.append(wrap(delink_sp(body)))
 
 # ---- TOC ----
 toc_html=['<nav class="toc"><h2 class="toc-h">Contents</h2>']
@@ -215,7 +217,7 @@ art=f"""<style>
 {cover}
 {intro}
 {toc_html}
-{''.join(sections)}
+{''.join(sections_int)}
 </div>"""
 import os as _os; _os.makedirs(SCR, exist_ok=True); open(f"{SCR}/artifact-body.html","w",encoding="utf-8").write(art)
 print("wrote artifact body", f"{len(art.encode())/1024/1024:.2f} MB")

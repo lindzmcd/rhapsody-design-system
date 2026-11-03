@@ -108,9 +108,12 @@ companion colors are fixed by the background; the anchor is never the background
 
 ## Iconography
 
-**Icon library.** Single outline family: stroke-only, 1.7 weight, `currentColor`. Feature icons on a
-44px gray tile (`--tile`) with a blue glyph. Functional check/cross at weight 3. One color per icon;
-no shadows/outlines/effects. Two-color line icons and icon-on-circle art are retired.
+**Icon library.** Use the official FY27 icon library only (SharePoint: Brand Package FY27 > Icon
+Library; 271 outline icons). Four versions: light-background tile, dark-background tile, Color (blue),
+Color (White); SVG for web, PNG for Office. Light, even stroke, lighter than the old 1.7, never edited.
+Feature icons in a library tile (44px, 11px corners on the web). Functional check/cross at weight 3.
+Never draw icons or use another set. Two-color icons, icon-on-circle art, and the hand-drawn reference
+set are retired.
 
 ## Imagery
 

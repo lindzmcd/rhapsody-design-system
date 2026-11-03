@@ -261,11 +261,19 @@ Aurora rules:
 
 ## 6. Iconography
 
-- **Single outline family**: stroke-only, **1.7 weight**, `currentColor`. (Adopted from the homepage
-  prototype, July 2026 — the old two-color / icon-on-circle line icons are retired.)
-- Feature icons sit on a **44px gray tile** (`--tile`, `#E9EEF4`); the glyph is Rhapsody Blue.
-- Functional marks (check / cross) at **weight 3**.
-- One color per icon. Never add outlines, shadows, or color effects.
+- **Use the official FY27 icon library only** (271 outline icons): SharePoint, Marketing > Public >
+  _Rhapsody Brand Materials > Brand Package FY27 > Icon Library, open to everyone at Rhapsody. Never
+  draw, redraw, or edit an icon, and never use another set (Lucide, Feather, Material, emoji). If
+  nothing fits, use the closest library icon and ask the brand team for a new one.
+- **Four versions per icon** (SVG for web, PNG for Office): Light-background tile (blue glyph in a
+  gray-blue tile, on white/light gray/gray-blue), Dark-background tile (light-blue glyph in a white-10%
+  tile, on navy), Color (blue) (bare glyph on light), Color (White) (bare glyph on navy or blue).
+- **Stroke**: one light, even stroke, lighter than the earlier 1.7 weight. Keep it as drawn; scale the
+  whole icon, never the stroke alone.
+- Feature and benefit icons sit in a library tile (web standard: 44px, 11px corners, glyph about 20px).
+  A sample of tiles is in the repo at `assets/icons/`.
+- Functional marks (check / cross) at **weight 3**, no tile.
+- Blue family only (blue, light blue, white). Never add outlines, shadows, or color effects.
 
 ---
 
@@ -330,7 +338,7 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - **"Text on teal" removed** — omit it.
 - **Scattered dot field retired** → the **Fluid dot pattern** (half-tone grid, dense-to-sparse). Multicolor dots are approved.
 - **Light device** is Aurora only — one glow, soft to flowing, movement allowed (Burst, Plexus, and the separate Aurora ribbon retired Oct 2026; Pulse earlier).
-- **Icons** → single outline family (stroke-only, 1.7 weight, `currentColor`, 44px gray tile).
+- **Icons** → the official FY27 icon library only (four versions, lighter stroke than the old 1.7); the hand-drawn reference set is retired.
 - **Portraits** → Rhapsody Blue ring (default) / arc / card / editorial split; navy-and-blue ring is hero-badge only; legacy thick single-color rings retired.
 - **Illustration** legacy styles retired.
 - New sections added: **Brand Expression** and **Illustration**.
@@ -369,7 +377,7 @@ feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
 □ One lead visual: one dot device OR Aurora OR a photo; the only pairing is a dot device + photo
 □ Dots are the fluid dot pattern (approved master, not hand-built); big dot used as-is/flipped/90°
 □ Light devices on navy only; glow is teal/blue/purple (never orange); offset into open space
-□ Icons: single outline family, 1.7 weight, currentColor, 44px gray tile
+□ Icons: from the FY27 icon library, right version for the ground, stroke untouched, in a tile for features
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur
 □ Portraits: Rhapsody Blue ring by default (no navy band), or arc / card / editorial split
 □ No retired illustration styles
