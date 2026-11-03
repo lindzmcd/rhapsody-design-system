@@ -221,3 +221,17 @@ then the index `project/design-system.json` last):
     wave cut-out isn't a documented device.
   - Claude design system is at 986 of its 1,008-file cap. Removed the 8 duplicate Aurora
     files in uploads/ to make room. Future media needs the asset store or a cleanup.
+- 2026-11-03 (later): icon tiles dropped. Repo and Claude design system keep only the blue
+  and white SVGs; the PNG tile samples (repo and the 20 in the design system) and the
+  repo's light/dark tile SVG folders are removed. Tiles are now built to one recipe
+  (44px, 11px corners, 24px glyph; `.icon-tile` / `.icon-tile.dark` + `.glyph` in tokens.css
+  and bundle.css). Design system now 978 of 1,008 files.
+  - Photo library: SharePoint FY27 Photo Library link added to the Photography card,
+    skill and design system README.
+  - Wave cut-out: approved for the LinkedIn banners only, stated on the banner card,
+    skill and design system README; never a system device.
+  - LinkedIn banners redrawn on brand (deliverables/linkedin-banners/, 4752x1188): no end
+    periods, Poppins Medium, approved Aurora master (navy) on the two navy banners, fluid
+    dots traced from fd-blue.jpg as white on #1A81F4. assets/banners/ and the 1584px
+    figures now hold the redraws; the owner replaces the SharePoint files.
+  - Guide artifact v35; design system v27 (files) + v28 (index).

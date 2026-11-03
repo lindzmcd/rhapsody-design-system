@@ -4,11 +4,10 @@ The official FY27 Rhapsody icon library: 271 outline icons, the only icons to us
 
 ## Files here
 
-- `svg/blue/B_<name>.svg` — Color (blue): bare Rhapsody Blue glyph, 24×24 viewBox, for light grounds
-- `svg/white/<name>.svg` — Color (White): bare white glyph, 24×24, for navy and Rhapsody Blue grounds
-- `svg/light-tile/W_<name>.svg` — Light-background tile, 44×44: blue glyph in a #E9EDF2 tile, for white, light gray, and gray-blue
-- `svg/dark-tile/D_<name>.svg` — Dark-background tile, 44×44: light-blue glyph in a white tile at 10%, for navy
-- `light-tile/`, `dark-tile/` — PNG samples used on the Icon library card
+- `svg/blue/B_<name>.svg` — Color (blue): Rhapsody Blue glyph, 24×24, for light grounds and the light tile
+- `svg/white/<name>.svg` — Color (White): white glyph, 24×24, for navy and Rhapsody Blue grounds and the dark tile
+
+Tiles are built, not stored: a 44×44 square with 11px corners and the 24px glyph centered. Light tile: `tile` (#E9EDF2) with the blue glyph. Dark tile: white at 10% opacity with the white glyph used as a mask in `lblue` (#B4D8FF). Use the `.icon-tile` classes in the stylesheet. Other sizes keep the glyph at 24/44 of the tile and the corners at a quarter.
 
 Use the files as supplied; never redraw, recolor, or change the stroke. Pick an icon by name from the list below.
 

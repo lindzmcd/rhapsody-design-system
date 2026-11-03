@@ -265,15 +265,16 @@ Aurora rules:
   _Rhapsody Brand Materials > Brand Package FY27 > Icon Library, open to everyone at Rhapsody. Never
   draw, redraw, or edit an icon, and never use another set (Lucide, Feather, Material, emoji). If
   nothing fits, use the closest library icon and ask the brand team for a new one.
-- **Four versions per icon** (SVG for web, PNG for Office): Light-background tile (blue glyph in a
-  gray-blue tile, on white/light gray/gray-blue), Dark-background tile (light-blue glyph in a white-10%
-  tile, on navy), Color (blue) (bare glyph on light), Color (White) (bare glyph on navy or blue).
+- **Two versions** (SVG): Color (blue), the bare glyph for light grounds and the light tile; Color (White),
+  for navy or blue grounds and the dark tile.
 - **Stroke**: glyphs on a 24×24 grid with the stroke set per icon, mostly 0.85–0.9 (down from 1.7),
   round caps and joins. Keep it as drawn; scale the whole icon, never the stroke alone.
 - Feature and benefit icons sit in a library tile: 44×44, 11px corners, 24px glyph centered; light tile
   `#E9EDF2` (`--tile`) with a `#1A81F4` glyph, dark tile white at 10% with a `#B4D8FF` glyph.
-- **All four versions are in the repo** at `assets/icons/svg/{blue,white,light-tile,dark-tile}/` with a
-  name index in `assets/icons/README.md`. Use those files directly.
+- **Build tiles, don't download them**: 44×44, 11px corners, 24px glyph centered (10px each side); light =
+  `--tile` with the blue glyph; dark = white 10% with the white glyph masked to `#B4D8FF`. Other sizes keep
+  glyph 24/44 and corners 1/4 of the tile. Use the `.icon-tile` / `.icon-tile.dark` + `.glyph` classes in
+  `tokens.css`. Glyphs live in `assets/icons/svg/{blue,white}/`, indexed in `assets/icons/README.md`.
 - Functional marks (check / cross) at **weight 3**, no tile.
 - Blue family only (blue, light blue, white). Never add outlines, shadows, or color effects.
 
@@ -292,13 +293,14 @@ Aurora rules:
   4–6px at feature scale. Always Rhapsody Blue; never purple, orange, white, or a second ring. The bold
   navy-and-blue ring is the website **hero badge** only, never an everyday headshot. Also **arc accent**,
   **rounded-rectangle card**, **editorial split**. The legacy thick single-color rings are retired.
-- **Photo library first**: about 100 approved single-person photos in the repo at
-  `assets/photos/3x2/` (cards, articles, slides, web photo slots) and `assets/photos/1x1/` (portraits,
-  avatars, speaker graphics, the Rhapsody Blue ring), web-size copies; originals from the brand team.
+- **Photo library first**: about 100 approved single-person photos (SharePoint: Brand Package FY27 > Photo Library;
+  web copies in the repo at `assets/photos/3x2/` (cards, articles, slides, web photo slots) and `assets/photos/1x1/` (portraits,
+  avatars, speaker graphics, the Rhapsody Blue ring)).
   Use the crop that matches the slot; no re-cropping through faces, flips, filters, or tints. **They are
   stock models: never present them as named customers, employees, speakers, or quote sources.**
 - **LinkedIn employee banners**: four approved cover images (`assets/banners/`; SharePoint Brand
-  Package FY27 > Social Media Cover Images), used as supplied. Finished art, not a model for new work.
+  Package FY27 > Social Media Cover Images), used as supplied. Finished art, not a model for new work;
+  their wave cut-out is approved for those banners only and is never a device elsewhere.
 
 ## 8. Illustration
 

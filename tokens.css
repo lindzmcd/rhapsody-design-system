@@ -111,8 +111,13 @@ a{color:var(--blue);}
 .icon{border:1px solid var(--lgray);border-radius:10px;padding:18px 12px;text-align:center;}
 .icon img{height:52px;width:auto;object-fit:contain;}
 .icon span{display:block;font-size:12px;color:var(--dgray);margin-top:10px;text-transform:capitalize;}
+/* Icon tile, built from the FY27 library glyphs (24px glyph centered in a 44px tile, 11px corners).
+   Light: <span class="icon-tile"><img src="…/svg/blue/B_Name.svg" alt=""></span>
+   Dark:  <span class="icon-tile dark"><span class="glyph" style="-webkit-mask-image:url(…/svg/white/Name.svg);mask-image:url(…/svg/white/Name.svg)"></span></span> */
 .icon-tile{width:44px;height:44px;border-radius:11px;background:var(--tile);display:inline-flex;align-items:center;justify-content:center;color:var(--blue);flex:none;}
-.icon-tile svg{width:24px;height:24px;display:block;}
+.icon-tile img,.icon-tile svg{width:24px;height:24px;display:block;}
+.icon-tile.dark{background:rgba(255,255,255,0.10);color:var(--lblue);}
+.icon-tile .glyph{width:24px;height:24px;display:block;background:currentColor;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;}
 
 .tworeg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
 .tworeg .lbl{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--dgray);margin-bottom:6px;}
