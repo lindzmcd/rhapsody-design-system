@@ -130,8 +130,8 @@ Anything clickable has a **border + arrow**; labels and tags have **neither**. C
   column; portrait/lockup anchored right. Related assets (webinar, article) live on the story's
   own card, one trail per customer.
 - Stats are plain-language outcomes, verified against a source, or they don't ship. Analyst
-  economic-impact stats carry generic attribution only ("per an independent economic impact
-  study") — the firm is never named.
+  studies are named only when we have permission to share; otherwise use generic attribution
+  ("per an independent economic impact study").
 - **Proof chips that name a customer link to that customer's story** (blue text + arrow, per the
   affordance rule); aggregate claims with no story behind them stay static.
 
