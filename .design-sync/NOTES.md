@@ -235,3 +235,8 @@ then the index `project/design-system.json` last):
     dots traced from fd-blue.jpg as white on #1A81F4. assets/banners/ and the 1584px
     figures now hold the redraws; the owner replaces the SharePoint files.
   - Guide artifact v35; design system v27 (files) + v28 (index).
+- 2026-11-03: design system cover rebuilt on brand (the earlier tile-pattern cover was an
+  invented device with four brand colors and no logo). Now: navy ground, the approved Aurora
+  master (assets/light-devices/aurora-navy.jpg, flipped, left edge feathered into navy),
+  one-color white logo, Poppins Medium 48px "Rhapsody Design System" with "Design System"
+  in light blue, white 16px tagline. Source kept in .design-sync/cover/. Design system v29 + v30 (index).

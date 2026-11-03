@@ -1,0 +1,22 @@
+<!-- @dsCard height=300 -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../tokens.css">
+<style>
+  html,body{margin:0;background:#0B2C47;}
+  .cover{position:relative;width:960px;height:300px;overflow:hidden;background:var(--navy,#0B2C47);font-family:var(--font-sans,'Poppins',Arial,sans-serif);}
+  /* Approved Aurora master (navy), flipped so the glow sits right; the left edge fades into the navy ground */
+  .glow{position:absolute;left:150px;top:-525px;width:900px;height:900px;transform:scaleX(-1);
+    -webkit-mask-image:linear-gradient(to right,#000 45%,transparent 88%);mask-image:linear-gradient(to right,#000 45%,transparent 88%);}
+  .logo{position:absolute;left:26px;top:18px;width:240px;height:auto;display:block;}
+  .name{position:absolute;left:48px;top:138px;margin:0;font-weight:500;font-size:48px;line-height:1.25;color:#fff;white-space:nowrap;}
+  .name span{color:var(--lblue,#B4D8FF);}
+  .tag{position:absolute;left:48px;top:206px;margin:0;font-weight:400;font-size:16px;line-height:1.5;color:#fff;max-width:640px;}
+</style></head><body>
+<div class="cover">
+  <img class="glow" src="../../assets/light-devices/aurora-navy.jpg" alt="">
+  <img class="logo" src="../../brand/Rhapsody%20logo%20-%20white/Rhapsody_logo_white.svg" alt="Rhapsody">
+  <h1 class="name">Rhapsody <span>Design System</span></h1>
+  <p class="tag">Color, type, logo, devices, and patterns for everything that carries the brand</p>
+</div>
+</body></html>
