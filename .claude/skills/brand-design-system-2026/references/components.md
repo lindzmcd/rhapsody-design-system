@@ -110,8 +110,8 @@ companion colors are fixed by the background; the anchor is never the background
 
 **Icon library.** Use the official FY27 icon library only (SharePoint: Brand Package FY27 > Icon
 Library; 271 outline icons). Four versions: light-background tile, dark-background tile, Color (blue),
-Color (White); SVG for web, PNG for Office. Light, even stroke, lighter than the old 1.7, never edited.
-Feature icons in a library tile (44px, 11px corners on the web). Functional check/cross at weight 3.
+Color (White); SVG for web, PNG for Office. 24px grid, stroke set per icon (mostly 0.85–0.9, down from 1.7), never edited.
+Feature icons in a library tile (44px, 11px corners, 24px glyph). SVGs of all four versions: `assets/icons/svg/`. Functional check/cross at weight 3.
 Never draw icons or use another set. Two-color icons, icon-on-circle art, and the hand-drawn reference
 set are retired.
 

@@ -160,6 +160,12 @@
       "name": "Email signature"
     },
     {
+      "path": "components/linkedin-banners.html",
+      "group": "7 · Patterns",
+      "subtitle": "Four approved LinkedIn cover images for employees, used as supplied",
+      "name": "LinkedIn employee banners"
+    },
+    {
       "path": "components/name-lockup.html",
       "group": "7 · Patterns",
       "subtitle": "Attribution: name, title, company; logo vs written name; portrait pairing",

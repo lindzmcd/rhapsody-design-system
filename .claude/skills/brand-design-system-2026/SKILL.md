@@ -87,7 +87,7 @@ Tokens (from `tokens.css` — these exact hex values are the standard):
 | `--dgray` | `#7E858C` | Neutral | Secondary text, captions |
 | `--lgray` | `#D9DFE6` | Neutral | Hairlines, borders |
 | `--grayblue` | `#E8EDF2` | Neutral | Section background fill |
-| `--tile` | `#E9EEF4` | Neutral | Icon-tile background |
+| `--tile` | `#E9EDF2` | Neutral | Icon-tile background (FY27 icon library) |
 
 **Print color.** HEX/RGB are for digital. For **print**, Rhapsody Blue is **CMYK 100 50 0 0** — set the
 swatch explicitly (`C100 M50 Y0 K0`); don't let the layout program auto-convert the hex, which comes
@@ -268,10 +268,12 @@ Aurora rules:
 - **Four versions per icon** (SVG for web, PNG for Office): Light-background tile (blue glyph in a
   gray-blue tile, on white/light gray/gray-blue), Dark-background tile (light-blue glyph in a white-10%
   tile, on navy), Color (blue) (bare glyph on light), Color (White) (bare glyph on navy or blue).
-- **Stroke**: one light, even stroke, lighter than the earlier 1.7 weight. Keep it as drawn; scale the
-  whole icon, never the stroke alone.
-- Feature and benefit icons sit in a library tile (web standard: 44px, 11px corners, glyph about 20px).
-  A sample of tiles is in the repo at `assets/icons/`.
+- **Stroke**: glyphs on a 24×24 grid with the stroke set per icon, mostly 0.85–0.9 (down from 1.7),
+  round caps and joins. Keep it as drawn; scale the whole icon, never the stroke alone.
+- Feature and benefit icons sit in a library tile: 44×44, 11px corners, 24px glyph centered; light tile
+  `#E9EDF2` (`--tile`) with a `#1A81F4` glyph, dark tile white at 10% with a `#B4D8FF` glyph.
+- **All four versions are in the repo** at `assets/icons/svg/{blue,white,light-tile,dark-tile}/` with a
+  name index in `assets/icons/README.md`. Use those files directly.
 - Functional marks (check / cross) at **weight 3**, no tile.
 - Blue family only (blue, light blue, white). Never add outlines, shadows, or color effects.
 
@@ -290,6 +292,13 @@ Aurora rules:
   4–6px at feature scale. Always Rhapsody Blue; never purple, orange, white, or a second ring. The bold
   navy-and-blue ring is the website **hero badge** only, never an everyday headshot. Also **arc accent**,
   **rounded-rectangle card**, **editorial split**. The legacy thick single-color rings are retired.
+- **Photo library first**: about 100 approved single-person photos in the repo at
+  `assets/photos/3x2/` (cards, articles, slides, web photo slots) and `assets/photos/1x1/` (portraits,
+  avatars, speaker graphics, the Rhapsody Blue ring), web-size copies; originals from the brand team.
+  Use the crop that matches the slot; no re-cropping through faces, flips, filters, or tints. **They are
+  stock models: never present them as named customers, employees, speakers, or quote sources.**
+- **LinkedIn employee banners**: four approved cover images (`assets/banners/`; SharePoint Brand
+  Package FY27 > Social Media Cover Images), used as supplied. Finished art, not a model for new work.
 
 ## 8. Illustration
 
@@ -354,7 +363,9 @@ security, regulatory, legal, executive, PR, analyst, financial), proposal, contr
 content; never beside a product claim or lockup; never a template fixture (slide masters, email
 signatures, web chrome). One per asset, not on every piece in a set; he counts as the layout's one
 graphic device (no dots or Aurora with him); outside the logo's clear space, never in a lockup.
-Master art only, from SharePoint: Brand Package FY27 > Character Library > Teddie Mercury. Spelled
+Master art only, from SharePoint: Brand Package FY27 > Character Library > Teddie Mercury (also
+in the repo at `assets/mascot/`: full color, full-color standing, and navy, white, and light gray
+one-color versions; full color on light grounds, one-color for single-color production or dark grounds). Spelled
 "Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
 
 **Not the Rhapsody Axon mark:** the robot character in the homepage hero and on the Rhapsody Axon AI

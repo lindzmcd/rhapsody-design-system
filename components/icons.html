@@ -39,7 +39,7 @@
   <figure style="margin:0;text-align:center;"><img src="../assets/icons/light-tile/W_Medical-stethoscope.png" alt="Stethoscope icon, light-background tile" style="width:64px;height:64px;display:block;margin:0 auto;"><figcaption class="caption" style="margin:6px 0 0;font-size:12px;">Stethoscope</figcaption></figure>
   <figure style="margin:0;text-align:center;"><img src="../assets/icons/light-tile/W_Knowlege-lightbulb-idea.png" alt="Idea icon, light-background tile" style="width:64px;height:64px;display:block;margin:0 auto;"><figcaption class="caption" style="margin:6px 0 0;font-size:12px;">Idea</figcaption></figure>
 </div>
-<p class="caption" style="margin:0 0 6px;">A sample of the light-background tiles. Browse all 271 in the library.</p>
+<p class="caption" style="margin:0 0 6px;">A sample of the light-background tiles. Browse all 271 in the library; the SVGs of every version are also in this design system under <code>assets/icons/svg/</code>.</p>
 
 <h3>On navy</h3>
 <div style="background:var(--navy);border-radius:12px;padding:22px 20px 16px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px 10px;margin:12px 0 6px;">
@@ -54,16 +54,16 @@
 <h3>How the icons are drawn</h3>
 <ul>
   <li><strong>Outline only:</strong> one light, even stroke with rounded caps and joins. No fills, solid glyphs, or duotone.</li>
-  <li><strong>A lighter stroke than before.</strong> The FY27 library thinned the stroke from the earlier 1.7 weight so icons stay crisp, not clunky. Keep it exactly as drawn: never thicken, thin, or outline it, and scale the whole icon, never the stroke on its own.</li>
-  <li><strong>Blue family only:</strong> Rhapsody Blue on light grounds, light blue in dark tiles, white on navy or Rhapsody Blue. Never teal, purple, or orange.</li>
-  <li><strong>The tile:</strong> a rounded square with corners at about a quarter of its width; the glyph fills a little under half the tile. The standard web size is a 44px tile (11px corners, glyph about 20px).</li>
+  <li><strong>A lighter stroke than before.</strong> Glyphs are drawn on a 24&times;24 grid, and the FY27 library thinned the stroke from the earlier 1.7 to mostly 0.85&ndash;0.9, so icons stay crisp, not clunky. Each icon&rsquo;s stroke is set in its file: never thicken, thin, or outline it, and scale the whole icon, never the stroke on its own.</li>
+  <li><strong>Blue family only:</strong> Rhapsody Blue <code>#1A81F4</code> on light grounds, light blue <code>#B4D8FF</code> in dark tiles, white on navy or Rhapsody Blue. Never teal, purple, or orange.</li>
+  <li><strong>The tile:</strong> a 44&times;44 rounded square with 11px corners and the 24px glyph centered. Light tile <code>#E9EDF2</code>; dark tile white at 10% opacity.</li>
 </ul>
 
 <h3>The icon tile</h3>
 <p><strong>Feature and benefit icons always sit in a library tile,</strong> light or dark to match the ground. Use the tile files as supplied; don&rsquo;t invent tile colors or set feature icons without a tile. Two documented exceptions: the round icon badges on the hero badge ring (see Hero badge graphics), and white icon chains on Rhapsody Blue emphasis bands (see Web pages), which use the Color (White) version.</p>
 <ul>
   <li><strong>In slides and documents,</strong> place the PNG from the matching tile folder.</li>
-  <li><strong>On the web,</strong> use the SVG. Building a live tile in code: a 44px square with 11px corners in <code>tile</code> on light (glyph <code>blue</code>) or white at 10% opacity on navy (glyph <code>lblue</code>), with the library glyph centered at about 20px.</li>
+  <li><strong>On the web,</strong> use the SVG from the matching tile folder as is. Where a tile has to be live CSS, use a 44px square with 11px corners in <code>tile</code> on light or white at 10% on navy, with the library glyph centered at 24px.</li>
 </ul>
 
 <h3>Functional marks</h3>

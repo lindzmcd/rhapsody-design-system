@@ -202,3 +202,22 @@ then the index `project/design-system.json` last):
   Office TVs, Social Media Cover Images); re-check the link once it syncs. No
   Teddie art in the system yet. Published to the Claude design system (Mascot,
   Corrections, README).
+- 2026-11-03: Media added from owner uploads.
+  - Icons: the four FY27 SVG folders are in the repo at assets/icons/svg/{blue,white,
+    light-tile,dark-tile}/ (271 each) with a name index in assets/icons/README.md. Spec
+    read from the files: 24x24 grid, stroke set per icon (mostly 0.85-0.9), tiles 44x44
+    rx 11, light #E9EDF2 (the `tile` token now matches), dark white @10%, glyph 24px
+    centered. QA for the designer: 19 icons use #2889F5 on some strokes, the White
+    Patient-multiple-records has a blue stroke, 4 lack round caps, 35 have strokes
+    1.1-1.4. Claude design system holds blue + white only (file cap).
+  - Photos: 102 3:2 + 103 1:1 single-person photos as web masters (1200x800, 800x800,
+    q82, metadata stripped) in assets/photos/. Originals: no public SharePoint folder
+    found yet (nearest: Private/Graphic Design/Projects/Photo Library Sourcing-R2).
+  - Teddie: 9 files (color, standing, navy, white, lightgray; SVG + PNG) in assets/mascot/.
+  - LinkedIn employee banners: 4 files from SharePoint FY27 Social Media Cover Images in
+    assets/banners/ (full res; the guide uses 1584px copies in assets/figures/). New card
+    components/linkedin-banners.html. Off-system details flagged to the owner: periods on
+    one-sentence headlines (all four), Blue Dots uses #3D7FED and light-gray dots, the
+    wave cut-out isn't a documented device.
+  - Claude design system is at 986 of its 1,008-file cap. Removed the 8 duplicate Aurora
+    files in uploads/ to make room. Future media needs the asset store or a cleanup.
