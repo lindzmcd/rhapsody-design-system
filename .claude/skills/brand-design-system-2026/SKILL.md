@@ -344,13 +344,17 @@ Fold these in — they supersede earlier drafts and the older `rhapsody-brand` P
 - New sections added: **Brand Expression** and **Illustration**.
 - Rule: **if copy doesn't fit, shorten the copy — don't crush the type.**
 
-### Mascot — Teddie Mercury (draft)
+### Mascot — Teddie Mercury (character mark)
 
-Use sparingly, for culture, event, and swag moments only (SKO, customer events and the Connect
-Developer Conference, merchandise, sales incentives). Never in product, web, technical, clinical,
-security, regulatory, executive, PR, analyst, proposal, or customer-story content, and never beside a
-product claim or lockup. One per asset; he counts as the layout's one graphic device (no dots or
-Aurora with him); outside the logo's clear space and never in a lockup; master art only. Spelled
+A character mark for limited appearances that add fun; **never a primary device** in the system.
+Approved uses: internal communications, culture moments (team events, sales incentives, employee
+swag), and Connect Developer Conference materials. **Any other use needs marketing team approval
+first** (ask; leave him out until approved). Never in product, web, technical, credibility (clinical,
+security, regulatory, legal, executive, PR, analyst, financial), proposal, contract, or customer-story
+content; never beside a product claim or lockup; never a template fixture (slide masters, email
+signatures, web chrome). One per asset, not on every piece in a set; he counts as the layout's one
+graphic device (no dots or Aurora with him); outside the logo's clear space, never in a lockup.
+Master art only, from SharePoint: Brand Package FY27 > Character Library > Teddie Mercury. Spelled
 "Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
 
 **Not the Rhapsody Axon mark:** the robot character in the homepage hero and on the Rhapsody Axon AI
@@ -381,7 +385,7 @@ feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
 □ Photography: bright, natural-lit, tech-forward, faces-forward, inclusive; no tech-noir/blur
 □ Portraits: Rhapsody Blue ring by default (no navy band), or arc / card / editorial split
 □ No retired illustration styles
-□ Teddie Mercury only for culture, event, and swag moments; one per asset; never with dots or Aurora; the website robot is the Rhapsody Axon mark, not Teddie
+□ Teddie Mercury only on internal, culture, or Connect Developer Conference pieces (else marketing approval); one per asset; never with dots or Aurora; the website robot is the Rhapsody Axon mark, not Teddie
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)
 □ Company name is "Rhapsody," never "Rhapsody Health," never possessive ("Rhapsody's")
 □ Body text ≥16px on web; nothing a reader needs below 12px

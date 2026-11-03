@@ -52,6 +52,7 @@ SP_MAP={
     "Rhapsody logos": "Rhapsody logos are included in this package",
     "Product logos": f"product logos are {ONREQ}",
     "Rhapsody icon library": f"Rhapsody icon library ({ONREQ})",
+    "Teddie Mercury character library": f"Teddie Mercury character library ({ONREQ})",
     "Light Devices": ONREQ,
     "Brand devices": INPKG,
     "Scattered Dots": INPKG,

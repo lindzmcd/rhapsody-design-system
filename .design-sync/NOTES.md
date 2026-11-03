@@ -194,3 +194,11 @@ then the index `project/design-system.json` last):
   are checked. Published to the Claude design system (Icons, WebPages, Corrections,
   README, assets/icons, index group "icons"). build_guide.py now keeps SharePoint
   links in the internal guide page and de-links them only in the external HTML.
+- 2026-11-03: Mascot (Teddie Mercury) rules finalized at the owner's direction:
+  internal, culture, and Connect Developer Conference only; other uses need
+  marketing approval; never a primary device or template fixture. Card links to
+  SharePoint Brand Package FY27 > Character Library > Teddie Mercury, but that
+  folder was NOT on SharePoint yet when checked (FY27 has only Icon Library,
+  Office TVs, Social Media Cover Images); re-check the link once it syncs. No
+  Teddie art in the system yet. Published to the Claude design system (Mascot,
+  Corrections, README).
