@@ -179,3 +179,8 @@ then the index `project/design-system.json` last):
   original), email-signature template, light-devices masters, brand/, fonts/.
 - The Claude design system shows no template gallery; templates are files there.
 - Going forward: edit the repo, then republish changed files to that artifact.
+- 2026-11-03: Cover (`project/components/Cover/preview.html`) redone at the owner's
+  request. The old top band had hand-placed white dots imitating the retired
+  scattered dot field. Now 12 square-top, round-bottom module tiles (light-blue
+  outlines, two blue fills, one teal) on the navy band. Dot devices on the cover
+  must be approved masters, and the cover allows no images, so it uses no dots.
