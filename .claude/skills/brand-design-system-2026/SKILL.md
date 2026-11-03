@@ -52,23 +52,22 @@ anatomy, hero tiers and the trust ticker, the clickable-affordance rule, the pro
 pattern, FAQ placement, the CTA dot field, SEO working practice, and web claims guardrails. Follow
 it for any rhapsody.health page so patterns stay consistent.
 
-## Syncing to Claude Design (`/design-sync`)
+## The design system in Claude
 
-The design system is pushed to the **Rhapsody Design System** project in Claude Design with the
-`design-sync` skill. **This skill is invoked by the user only** — you cannot trigger it. When the
-user wants to add or update a card, tell them to type `/design-sync` themselves, choose the
-**Rhapsody Design System** project, and review the plan before approving.
+Claude Design moved into Claude. The team's design system is now the Claude design system
+**"Rhapsody Design System - Master"** (claude.ai/artifact/HZExMiNnfussfoDeDHnMB2), shared with the
+org. The standalone claude.ai/design project is read-only and closes December 14, 2026, so
+`/design-sync` no longer updates anything the team uses.
 
-- Sync is **incremental**: edit one `components/*.html` file, re-sync, and its card updates in place.
-- Each card's identity comes from its **first line** marker:
-  `<!-- @dsCard group="…" name="…" subtitle="…" width="…" height="…" -->`. Claude Design reads these
-  to build and group the pane.
-- **Never hand-edit or upload `_ds_manifest.json`.** The app compiles it (including the `templates`
-  registry that powers the "Choose a template" gallery). Uploading your own copy can wipe registered
-  templates. Add cards by adding `components/*.html` files with `@dsCard` markers, then let the user
-  run `/design-sync`.
-- **Watch every plan for deletions** before the user approves — a delete can remove a card or a
-  registered template.
+- The repo stays the master copy. To update the Claude design system, edit the repo, then ask Claude
+  to update it; Claude publishes the changed files to it with the Artifact tool.
+- Each card becomes `project/components/<Name>/preview.html` (the card HTML with paths rewritten to
+  `../../tokens.css`, `../bundle.css` and `../../assets/`) plus a written guideline at
+  `project/components/<Name>/README.md`. Tokens live in `project/tokens.json` (compiled to
+  `project/tokens.css`); the card classes in `project/components/bundle.css`.
+- The Claude design system has no template gallery. Templates sit under `project/templates/` as files
+  that Claude uses when asked.
+- See `.design-sync/NOTES.md` (2026-11-03) for the card-to-folder map and what was removed.
 
 ---
 

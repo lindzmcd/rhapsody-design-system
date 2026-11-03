@@ -150,3 +150,32 @@ edit access returns, or move the system to the in-Claude artifact.
 - 2026-10-27 20:55Z: /design-sync retry. Fresh plan finalized; the first write
   (the sentinel) still returned HTTP 403 "cannot edit this project". Stopped
   before any content write. Remote unchanged since 2026-10-26 14:44Z.
+
+## 2026-11-03 — Moved to the Claude design system (owner request)
+The standalone project is read-only (writes return 403) and closes 2026-12-14, so
+the team's design system is now the Claude design system "Rhapsody Design System -
+Master" (claude.ai/artifact/HZExMiNnfussfoDeDHnMB2, shared with the org). It was
+the 2026-10-13 migration snapshot; the owner ran "Finish setting up" on 10-26.
+Refreshed it from this repo with the Artifact tool, in two publishes (content,
+then the index `project/design-system.json` last):
+
+- **Cards:** all 30 (the 29 guide cards + Business card) as
+  `project/components/<Name>/preview.html`, paths rewritten to `../../tokens.css`,
+  `../bundle.css`, `../../assets/`; marker `group height width subtitle`. Each card
+  also got `README.md` guidelines converted from its text. Folder names: kebab →
+  PascalCase (powerpoint-template → PowerPointTemplate).
+- **Tokens:** `project/tokens.json` updated (usage notes for blue/lblue/teal per the
+  website rules; status-success/-warning/-error; live web type scale: hero 48,
+  stat-number 40, h2 24, card-title 20, p1 16, p2 14, small 12, eyebrow 13 at
+  0.17em, annotation 12). `project/tokens.css` regenerated in the page's layout.
+  `project/components/bundle.css` = repo `tokens.css` minus `:root`.
+- **Added:** fluid-dots masters, big-dots/eco set, new figures, dupimg2.png,
+  `templates/feature-image/` (template, README, source HTML + render script).
+- **Removed (84 files):** retired cards (DisplayAds, Email, Hero, Social,
+  ProductLaunch, Dots, Frameworks), the migration's 32 flat `components/*.html`
+  copies, `templates/axon-connect-pitch-deck/`, retired assets (dot-fields,
+  old bd-*.svg, dots-*.png, display-ads, unreferenced figures), stale
+  `manifest.json` and `_ds_manifest.json`. Kept: `uploads/` (incl. the pitch deck
+  original), email-signature template, light-devices masters, brand/, fonts/.
+- The Claude design system shows no template gallery; templates are files there.
+- Going forward: edit the repo, then republish changed files to that artifact.
