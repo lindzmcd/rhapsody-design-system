@@ -1,0 +1,144 @@
+<!-- @dsCard group="7 · Patterns" name="Ebooks" subtitle="Page system, color roles, components, and page order for Rhapsody ebooks" width="960" height="3300" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebooks</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  .spec td,.spec th{padding:9px 12px;text-align:left;vertical-align:top;}
+  .spec th{font-weight:500;}
+  /* page mockups: real 816x1056 pages scaled to 45% */
+  .mocks{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 6px;}
+  .mock{width:367px;height:475px;overflow:hidden;border:1px solid var(--lgray);flex:none;}
+  .mock .xpg{width:816px;height:1056px;transform:scale(.45);transform-origin:0 0;box-sizing:border-box;padding:56px 60px 72px;display:flex;flex-direction:column;position:relative;background:#fff;color:var(--navy);font-family:var(--font-sans,'Poppins'),Arial,sans-serif;}
+  .mock .xpg.dark{background:var(--navy);color:#fff;}
+  .xpg .xr{width:44px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:14px;}
+  .xpg.dark .xr{background:var(--lblue);}
+  .xpg .xe{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+  .xpg.dark .xe{color:var(--lblue);}
+  .xpg .xh{display:block;text-align:left;font-weight:400;font-size:36px;line-height:1.18;margin:0 0 14px;text-wrap:balance;}
+  .xpg .xh span{color:var(--blue);} .xpg.dark .xh span{color:var(--lblue);}
+  .xpg .xi{display:block;background:none;padding:0;font-size:16px;line-height:1.6;max-width:600px;margin:0 0 26px;}
+  .xpg .xm{height:260px;border-radius:0 0 12px 12px;background:center/cover no-repeat;margin-bottom:26px;}
+  .xpg .xfr{display:grid;grid-template-columns:44px 220px 1fr;gap:18px;align-items:start;padding:16px 0;border-top:1px solid var(--lgray);}
+  .xpg .xfr .x3{margin:0;font-weight:400;font-size:18px;line-height:1.3;color:var(--blue);}
+  .xpg .xfr .xp{margin:0;font-size:15px;line-height:1.55;}
+  .xpg .xt{margin-top:auto;font-size:18px;line-height:1.5;padding-top:18px;}
+  .xpg .xt span{color:var(--blue);} .xpg.dark .xt span{color:var(--lblue);}
+  .xpg .xss{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;}
+  .xpg .xs{border-top:1px solid rgba(255,255,255,.2);padding:22px 0 26px;}
+  .xpg .xs .xn{font-weight:500;font-size:60px;line-height:1;color:var(--lblue);}
+  .xpg .xs .xc{font-size:15px;line-height:1.5;margin-top:10px;}
+  .xpg .xf{position:absolute;left:60px;right:60px;bottom:28px;display:flex;align-items:center;gap:16px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dgray);}
+  .xpg.dark .xf{color:var(--lblue);}
+  .xpg .xf .logo-i{width:108px;aspect-ratio:6.897;flex:none;}
+  .xpg .xf .xpn{margin-left:auto;}
+</style>
+</head><body>
+<div class="wrap">
+<h2>Ebooks</h2>
+<p>The system for Rhapsody ebooks, taken from the ebooks updated in November 2026, with <em>Slay the interoperability dragons</em> as the reference. Every ebook uses the same page system, color roles, and components; only the campaign illustration and one enumerated page change from ebook to ebook.</p>
+
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:14px 0 6px;">
+  <figure style="margin:0;"><img src="../assets/figures/ebook-cover.jpg" alt="Cover: navy, white logo top left, mono eyebrow, two-tone headline, subtitle, and the campaign dragon illustration in a blue ring bleeding off the bottom right" style="width:100%;display:block;border:1px solid var(--lgray);"><figcaption class="caption">Cover</figcaption></figure>
+  <figure style="margin:0;"><img src="../assets/figures/ebook-landscape.jpg" alt="Landscape page: header stack, two cards with colored top borders, a checklist, and a Rhapsody Blue closing panel" style="width:100%;display:block;border:1px solid var(--lgray);"><figcaption class="caption">Header stack, cards, checklist</figcaption></figure>
+  <figure style="margin:0;"><img src="../assets/figures/ebook-features.jpg" alt="How Rhapsody helps page: header stack and feature rows with icon tiles, blue H3s, and descriptions divided by hairlines" style="width:100%;display:block;border:1px solid var(--lgray);"><figcaption class="caption">Feature rows</figcaption></figure>
+  <figure style="margin:0;"><img src="../assets/figures/ebook-proof.jpg" alt="Proof page on navy: light-blue eyebrow and headline span, stats in light blue in a two-column grid with thin top borders" style="width:100%;display:block;border:1px solid var(--lgray);"><figcaption class="caption">Proof page (navy)</figcaption></figure>
+  <figure style="margin:0;"><img src="../assets/figures/ebook-cta.jpg" alt="CTA page on navy: two-tone headline, short line, blue pill button, the dragon at smaller scale, white logo bottom left and rhapsody.health in light blue" style="width:100%;display:block;border:1px solid var(--lgray);"><figcaption class="caption">CTA page (navy)</figcaption></figure>
+</div>
+<p class="caption">The reference ebook, <em>Slay the interoperability dragons</em> (November 2026). The full PDF is in <code>examples/ebooks/</code> in the design system repository. It predates three of the rules below: new ebooks add the logo to the footer, use FY27 library icons, and drop the arrow from the CTA pill.</p>
+
+<h3>Template pages</h3>
+<div class="mocks">
+  <div class="mock"><div class="xpg">
+    <div class="xr"></div><div class="xe">What to look for</div>
+    <div class="xh">Five questions to ask <span>before you choose a platform</span></div>
+    <div class="xi">Use these questions to compare integration platforms on what matters once you are live: scale, control, and the work your team no longer has to do by hand.</div>
+    <div class="xm" style="background-image:url(../assets/photos/3x2/iStock-2209373661-3x2.jpg)"></div>
+    <div class="xfr"><span class="icon-tile"><img src="../assets/icons/svg/blue/B_Cloud-integration.svg" alt=""></span><div class="x3">Deployment choice</div><div class="xp">Run it in your cloud, ours, or on premises, with the same tools.</div></div>
+    <div class="xfr"><span class="icon-tile"><img src="../assets/icons/svg/blue/B_Server-secure-locked-security.svg" alt=""></span><div class="x3">Security by default</div><div class="xp">Encryption, audit trails, and access control built in, not bolted on.</div></div>
+    <div class="xt">The right platform <span>takes work off your team, not just your servers.</span></div>
+    <div class="xf"><span class="logo-i logo-bb" role="img" aria-label="Rhapsody"></span><span>Ebook title</span><span class="xpn">06</span></div>
+  </div></div>
+  <div class="mock"><div class="xpg dark">
+    <div class="xr"></div><div class="xe">Proof</div>
+    <div class="xh">Results our customers <span>can measure</span></div>
+    <div class="xi">Organizations running Rhapsody report faster integration delivery and fewer interface failures.</div>
+    <div class="xss">
+      <div class="xs"><div class="xn">00%</div><div class="xc">Verified figure and what it measures</div></div>
+      <div class="xs"><div class="xn">00x</div><div class="xc">Verified figure and what it measures</div></div>
+      <div class="xs"><div class="xn">00</div><div class="xc">Verified figure and what it measures</div></div>
+      <div class="xs"><div class="xn">00%</div><div class="xc">Verified figure and what it measures</div></div>
+    </div>
+    <div class="xt">Proof comes from production, <span>not a pilot.</span></div>
+    <div class="xf"><span class="logo-i logo-wht" role="img" aria-label="Rhapsody"></span><span>Ebook title</span><span class="xpn">09</span></div>
+  </div></div>
+</div>
+<p class="caption">Two interior pages at 45%: a light content page (photo slot, feature rows, takeaway) and a navy proof page. Figures are placeholders; use verified stats only.</p>
+
+<h3>Page system</h3>
+<ul>
+  <li><strong>Letter-proportion pages, 816 &times; 1056px.</strong> Every interior page has a fixed padding of 56px top, 60px sides, 72px bottom. Content is a single flex column; the page&rsquo;s closing block uses <code>margin-top:auto</code> so it pins to the bottom.</li>
+  <li><strong>Header stack</strong> opens every interior page: the 44 &times; 3px Rhapsody Blue rule, an IBM Plex Mono eyebrow (12px, 500, 0.17em tracking, uppercase, blue), the H2 (Poppins 400, 36px, line height 1.18, navy), then an intro paragraph (16px, line height 1.6, max width about 600px).</li>
+  <li><strong>Running footer</strong> on every interior page, 28px from the bottom: the logo at left (108px wide, the minimum size: the primary logo on light pages, all white on navy pages), then the ebook title, and the two-digit page number at right, in Plex Mono 10px uppercase with 0.14em tracking, gray #7E858C. The logo appears once on every page: the cover and the CTA page carry it in their layouts and have no footer.</li>
+  <li><strong>Navy pages:</strong> the cover and the final CTA page are full-bleed navy; proof and stat pages may be navy too. On navy, the rule, eyebrow, footer, and accents switch to light blue #B4D8FF.</li>
+</ul>
+
+<h3>Color roles</h3>
+<table class="spec" style="width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 18px;">
+  <thead><tr style="background:var(--navy);color:#fff;"><th>Color</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Navy #0B2C47</strong></td><td>Body text; the &ldquo;weight&rdquo; color for the cover, dark pages, and dark panels</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Rhapsody Blue #1A81F4</strong></td><td>On light pages: eyebrows, rules, icons, checkmarks, card top borders, stat numerals, and the emphasis span in a headline</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Light blue #B4D8FF</strong></td><td>On navy: headline spans, stat numerals, eyebrows, rules, and the footer</td></tr>
+    <tr style="background:#F7F9FB;"><td><strong>Neutrals</strong></td><td>Gray-blue #E8EDF2 for soft panels and the icon tile #E9EDF2; light gray #D9DFE6 for 1px dividers and card borders; dark gray #7E858C for secondary labels. Light panels carry navy text, with one blue sentence span per panel for emphasis.</td></tr>
+  </tbody>
+</table>
+
+<h3>Components</h3>
+<table class="spec" style="width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 18px;">
+  <thead><tr style="background:var(--navy);color:#fff;"><th>Component</th><th>Treatment</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Cards</strong></td><td>Square top with a 3px colored top border, bottom corners rounded 12px (<code>border-radius:0 0 12px 12px</code>), 1px #D9DFE6 border. Card body 13.5px, line height 1.45.</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Image slots</strong></td><td>Rectangular photo, same bottom-only 12px radius, between the intro and the content, 260&ndash;330px tall</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Icon tiles</strong></td><td>The standard tile: 44 &times; 44, 11px radius, #E9EDF2, with a 24px FY27 library glyph in Rhapsody Blue (<code>.icon-tile</code>). For feature lists, benefit grids, and card headers.</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Feature rows</strong></td><td>Three columns: 44px icon tile | about 220px blue H3 at 18px (Poppins 400) | description. Rows divided by 1px #D9DFE6 lines; no boxes.</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Checklists</strong></td><td>A 16px Rhapsody Blue check at stroke 3, in a two-column grid; no boxes</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Stat callouts</strong></td><td>Poppins 500 at 52&ndash;64px, Rhapsody Blue on light pages, light blue on navy, with a 15&ndash;16px caption below. On navy pages, stats sit in a two-column grid separated by 1px white-at-20% top borders.</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Pull-quote and closing panels</strong></td><td>A navy or Rhapsody Blue block with 17&ndash;26px white text. On navy, the second half of the sentence turns light blue (the &ldquo;turn&rdquo;); on blue, the text stays all white.</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>CTA button</strong></td><td>The pill: 999px radius, Rhapsody Blue fill, white Poppins 500 15px, 13 &times; 26px padding (44px tall). No arrow in the pill.</td></tr>
+    <tr><td><strong>Campaign badges</strong></td><td>Campaign-specific numbered badges (for example navy &ldquo;shields&rdquo; with white Plex Mono numerals) for the enumerated field-guide items only</td></tr>
+  </tbody>
+</table>
+
+<div class="principle"><div class="k">One boxed element per page</div><p>The bottom-only 12px radius is the ebook&rsquo;s repeating shape, on image slots, cards, and panels. But each page has <strong>at most one boxed element</strong>: a card grid counts as one, and so does a single panel or callout. Lists, checklists, and feature rows stay open, divided by hairlines. Image slots are frames, not boxes.</p></div>
+
+<h3>Typography</h3>
+<ul>
+  <li>Poppins for all display and body text. IBM Plex Mono only for eyebrows, labels, footers, and numerals used as labels.</li>
+  <li>Headlines are Poppins 400. Only the cover H1, the CTA H2, and stat figures are 500. Nothing anywhere is heavier than 500.</li>
+  <li>Body 15&ndash;16px at line height 1.55&ndash;1.6; card body 13.5px at 1.45.</li>
+  <li>Small section lead-ins (&ldquo;You need to&rdquo;) are Plex Mono, 12px, uppercase, 0.14em tracking, gray #7E858C.</li>
+  <li><code>text-wrap:balance</code> on H1 and H2; <code>text-wrap:pretty</code> on long callouts.</li>
+</ul>
+
+<h3>Imagery and the logo</h3>
+<ul>
+  <li><strong>Campaign illustration</strong> (for example the dragon): the approved art for that campaign only. Hero scale on the cover, bleeding off the right or bottom edge; smaller on the final CTA page; and at most one or two cropped fragments (a head, a tail) as low-contrast accents on interior pages, never as the subject. It is the graphic device on the pages it appears on, so no dots or Aurora there. Campaign art isn&rsquo;t one of the retired illustration styles, and it never moves into other Rhapsody materials.</li>
+  <li><strong>Photos</strong> sit in the image slots above, from the photo library.</li>
+  <li><strong>Logo:</strong> all white at 170&ndash;180px wide, top left on the cover and bottom left on the CTA page, paired with &ldquo;rhapsody.health&rdquo; in light blue outside the logo&rsquo;s clear space. On interior pages, the logo is in the footer.</li>
+</ul>
+
+<h3>Structure</h3>
+<ul>
+  <li><strong>Page order:</strong> Cover &rarr; Introduction &rarr; Landscape &rarr; Challenge &rarr; Enumerated field guide &rarr; What to look for &rarr; How Rhapsody helps &rarr; Deployment choice &rarr; Proof (stats) &rarr; CTA.</li>
+  <li>Each page ends on a short takeaway sentence with a blue span (light blue on navy), pinned to the bottom, never on trailing content.</li>
+  <li>Eyebrows are functional section names (Introduction, The landscape, Proof), not the campaign metaphor. The metaphor lives in H2s and callouts.</li>
+  <li>The campaign-specific device (badges and meta-labels such as &ldquo;Breathes&rdquo; and &ldquo;Weak to&rdquo;) is isolated to the one enumerated field-guide page, so it can be swapped per ebook without touching the system.</li>
+  <li>Ebooks are often read on phones as PDFs: check a page at phone width and keep body at 15px or more.</li>
+</ul>
+
+<div class="principle"><div class="k">Settled against the system</div><p>A few details from the source ebooks follow the rest of the system here. Icon tiles use the FY27 library glyph at 24px with its own stroke (the 22px icon at stroke 1.7 is the retired weight). Stat numerals on navy are light blue, not Rhapsody Blue. The CTA pill has no arrow. Section lead-ins are set in the mono, because capitals are reserved for mono labels. The tile fill is the #E9EDF2 token. And per the owner: the logo appears once on every page (footer on interior pages), and each page has at most one boxed element.</p></div>
+</div>
+</body></html>

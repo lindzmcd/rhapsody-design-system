@@ -338,6 +338,24 @@ Notable patterns:
 - **Display ads** are **blue-first**: Rhapsody Blue ground by default, logo always prominent, very few
   large words (billboard style), one clear action. Covers every IAB placement. Canvas template lives at
   `templates/display-ads/DisplayAds.dc.html`.
+- **Ebooks** (reference: `examples/ebooks/`, Ebooks card): 816×1056 pages, padding 56 top / 60
+  sides / 72 bottom, single flex column with the closing takeaway pinned to the bottom. Every interior
+  page opens with the header stack: 44×3 blue rule → Plex Mono eyebrow (12px, 500, 0.17em, caps,
+  blue) → H2 Poppins 400 36px/1.18 navy → intro 16px/1.6, max ~600px. Running footer 28px from the
+  bottom: logo (108px; primary on light, all white on navy) + ebook title + two-digit page number,
+  Plex Mono 10px caps 0.14em #7E858C. Cover and CTA full-bleed navy (logo white 170–180px, with
+  "rhapsody.health" in light blue); proof pages may be navy (accents, eyebrow, footer → light blue).
+  Components: cards (3px colored top border, radius 0 0 12px 12px, #D9DFE6 border, 13.5px body),
+  image slots (260–330px, same radius), FY27 icon tiles, feature rows (44px tile | ~220px blue H3
+  18px | description, hairlines), checklists (16px blue check, stroke 3, two columns), stats (Poppins
+  500 52–64px; blue on light, light blue on navy; two-column grid with white-20% rules on navy),
+  closing panels (navy or blue, white text; on navy the second half turns light blue), CTA pill
+  (no arrow). At most ONE boxed element per page (a card grid counts as one); lists and feature rows
+  stay open. Weights 400 (500 only for cover H1, CTA H2, stats). Page order: Cover → Introduction →
+  Landscape → Challenge → Field guide → What to look for → How Rhapsody helps → Deployment choice →
+  Proof → CTA. Each page ends on a blue-accented takeaway; eyebrows are functional section names;
+  the campaign metaphor and campaign illustration/badges stay isolated (cover, CTA, one field-guide
+  page, at most one or two fragments).
 - **Webinar promo (social)**, 1200×627: navy; mono eyebrow (event type) top left in light blue
   and the date in white mono caps top right after the light-blue library calendar icon; Poppins
   Medium headline (≤2 lines, one light-blue phrase, sentence case); one-sentence description;

@@ -178,6 +178,12 @@
       "name": "Technical documents"
     },
     {
+      "path": "components/ebooks.html",
+      "group": "7 · Patterns",
+      "subtitle": "Page system, color roles, components, and page order for Rhapsody ebooks",
+      "name": "Ebooks"
+    },
+    {
       "path": "components/name-lockup.html",
       "group": "7 · Patterns",
       "subtitle": "Attribution: name, title, company; logo vs written name; portrait pairing",

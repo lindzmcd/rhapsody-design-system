@@ -267,3 +267,9 @@ then the index `project/design-system.json` last):
   uses Poppins caps). The example's dots (#3D7FEC blue on navy, core bottom right) don't match any
   of the four fluid dot masters in assets/fluid-dots/; flagged to the owner. Photography card notes
   black-and-white speaker headshots. Guide v40; design system v41 (files) + v42 (index).
+- 2026-11-10 (later): Ebooks card from the owner's ebook rules and the reference ebook
+  (examples/ebooks/Slay-the-Interoperability-Dragons-Ebook.pdf). Owner decisions: logo once on every
+  page (108px in the interior footer), and at most one boxed element per page (card grid = one).
+  Settled against the system: FY27 icons at 24px (not 22px/1.7), stat numerals light blue on navy,
+  no arrow in the CTA pill, section lead-ins in Plex Mono, tile #E9EDF2. Guide v41; design system
+  v43 (files) + v44 (index).

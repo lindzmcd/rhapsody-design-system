@@ -12,7 +12,7 @@ reusable classes; otherwise use these specs. All items link `tokens.css` and pul
 - Graphic devices: Devices at a glance · Dots · Fluid dot pattern · Big dot · Light devices
 - Iconography: Icon library
 - Imagery: Illustration · Photography & portraits
-- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · PowerPoint · Technical documents
+- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · PowerPoint · Technical documents · Ebooks · Webinar promo
 - Reference: Quick corrections log
 
 ---
@@ -155,6 +155,14 @@ simpler than the rest of the system — resist adding detail.
 Blue-first (Rhapsody Blue default ground, navy occasional, logo always prominent, few large words). Use
 it as the starting point for any deck. For deck-editing mechanics load the `pptx` skill; for slide copy
 and Rhapsody Axon™ naming load `rhapsody-brand`.
+
+**Ebooks.** 816×1056 letter pages; padding 56/60/72; header stack (44×3 blue rule, Plex Mono
+eyebrow 12px blue, H2 Poppins 400 36px, intro 16px/1.6); running footer with logo (108px) + title +
+page number in Plex Mono 10px gray; cover and CTA navy, proof pages may be navy (light-blue accents).
+Cards with 3px top border and bottom-only 12px radius; image slots 260–330px; FY27 icon tiles; feature
+rows with hairlines; two-column checklists; stats 52–64px; navy/blue closing panels; pill CTA without
+arrow. One boxed element per page. Fixed page order and a blue-accented takeaway closing each page.
+Campaign illustration and badges isolated to cover, CTA, and the field-guide page. See the Ebooks card.
 
 **Webinar promo (social).** 1200×627 navy graphic for webinars and live events. Top row: light-blue
 Plex Mono eyebrow (WEBINAR) left; date/time in white mono caps right, after the light-blue calendar
