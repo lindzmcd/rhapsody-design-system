@@ -160,6 +160,12 @@
       "name": "Email signature"
     },
     {
+      "path": "components/webinar-promo.html",
+      "group": "7 · Patterns",
+      "subtitle": "Event and webinar promotion for LinkedIn and other social feeds: navy, speakers in the blue ring, fluid dots",
+      "name": "Webinar promo (social)"
+    },
+    {
       "path": "components/linkedin-banners.html",
       "group": "7 · Patterns",
       "subtitle": "Four approved LinkedIn cover images for employees, used as supplied",

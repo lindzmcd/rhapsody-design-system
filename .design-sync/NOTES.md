@@ -261,3 +261,9 @@ then the index `project/design-system.json` last):
   Blue (new figure assets/figures/monogram-white.png from brand/Rhapsody Monograms/white monogram
   R), and (2) document contents are an open list, not a box (Word templates rebuilt and
   validated). Guide v39; design system v39 (files) + v40 (index).
+- 2026-11-10 (later): Webinar promo (social) added from the approved Rhapsody Axon webinar promo
+  (examples/social/). Spec settled against the system: eyebrow light blue (example uses Rhapsody
+  Blue text on navy), sentence-case headline (example is title case), date in mono caps (example
+  uses Poppins caps). The example's dots (#3D7FEC blue on navy, core bottom right) don't match any
+  of the four fluid dot masters in assets/fluid-dots/; flagged to the owner. Photography card notes
+  black-and-white speaker headshots. Guide v40; design system v41 (files) + v42 (index).

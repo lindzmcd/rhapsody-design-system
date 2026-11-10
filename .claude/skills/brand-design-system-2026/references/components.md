@@ -156,6 +156,13 @@ Blue-first (Rhapsody Blue default ground, navy occasional, logo always prominent
 it as the starting point for any deck. For deck-editing mechanics load the `pptx` skill; for slide copy
 and Rhapsody Axon™ naming load `rhapsody-brand`.
 
+**Webinar promo (social).** 1200×627 navy graphic for webinars and live events. Top row: light-blue
+Plex Mono eyebrow (WEBINAR) left; date/time in white mono caps right, after the light-blue calendar
+icon. Headline Poppins Medium ~52px, ≤2 lines, one light-blue phrase, sentence case. Description one
+sentence, ~22px. 1–3 speakers: ~130px headshots (black and white allowed) in a 3px Rhapsody Blue ring,
+name Medium + title/company. All-white logo bottom left. Fluid dots bottom right, off two edges, clear
+of copy. No button, no containers; check legibility at feed size (~350px wide).
+
 **Technical documents.** White papers, release notes, and customer security advisories share one
 system, modeled on the approved eMudhra advisories (`examples/technical-documents/`). Cover: white,
 primary logo top left, white-ground fluid dots in Rhapsody Blue top right, mono eyebrow (document

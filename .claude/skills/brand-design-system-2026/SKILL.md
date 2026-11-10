@@ -338,6 +338,12 @@ Notable patterns:
 - **Display ads** are **blue-first**: Rhapsody Blue ground by default, logo always prominent, very few
   large words (billboard style), one clear action. Covers every IAB placement. Canvas template lives at
   `templates/display-ads/DisplayAds.dc.html`.
+- **Webinar promo (social)**, 1200×627: navy; mono eyebrow (event type) top left in light blue
+  and the date in white mono caps top right after the light-blue library calendar icon; Poppins
+  Medium headline (≤2 lines, one light-blue phrase, sentence case); one-sentence description;
+  1–3 speakers in the Rhapsody Blue ring (black-and-white headshots allowed for real speakers) with
+  name + title; all-white logo bottom left; a fluid dot master bottom right bleeding off two edges.
+  No button, no containers. Reference: `examples/social/`; see the Webinar promo card.
 - **Technical documents** (white papers, release notes, customer security advisories) follow the
   approved eMudhra advisories (`examples/technical-documents/`): white cover with the logo top left,
   the white-ground fluid dots (Rhapsody Blue) top right, a mono eyebrow naming the type, a two-tone

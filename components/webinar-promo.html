@@ -1,0 +1,68 @@
+<!-- @dsCard group="7 · Patterns" name="Webinar promo (social)" subtitle="Event and webinar promotion for LinkedIn and other social feeds: navy, speakers in the blue ring, fluid dots" width="960" height="1700" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webinar promo (social)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  .spec td,.spec th{padding:9px 12px;text-align:left;vertical-align:top;}
+  .spec th{font-weight:500;}
+</style>
+</head><body>
+<div class="wrap">
+<h2>Webinar promo (social)</h2>
+<p>The social graphic that promotes a webinar or live event, built from the approved promo for &ldquo;Put Agentic AI to Work: The Latest from Rhapsody Axon&trade;&rdquo; (November 2026). Use it for webinars, virtual events, and speaker sessions on LinkedIn and other feeds.</p>
+
+<figure style="margin:14px 0 6px;"><img src="../assets/figures/social-webinar-promo.jpg" alt="Webinar promo: navy ground; WEBINAR eyebrow top left and the date with a calendar icon top right; two-line headline with 'Agentic AI' in light blue; a two-line description; two speakers in black-and-white portraits inside Rhapsody Blue rings with name and title; the all-white Rhapsody logo bottom left; blue fluid dots bleeding off the bottom right" style="width:100%;display:block;border-radius:8px;"><figcaption class="caption" style="margin:6px 0 0;">The reference example. The full-size file is in <code>examples/social/</code> in the design system repository.</figcaption></figure>
+
+<h3>Anatomy</h3>
+<ul>
+  <li><strong>Ground:</strong> navy, with the fluid dot pattern as the one graphic device, anchored bottom right and bleeding off the bottom and right edges. Nothing sits on the dots.</li>
+  <li><strong>Top row:</strong> the event type as a mono eyebrow at left (&ldquo;WEBINAR&rdquo;); the date and time at right with the library calendar icon in light blue.</li>
+  <li><strong>Headline:</strong> Poppins Medium, white, two lines at most, with one phrase in light blue.</li>
+  <li><strong>Description:</strong> one sentence, two lines at most, Poppins Regular, white.</li>
+  <li><strong>Speakers:</strong> one to three, in a row. Each is a circular headshot in the Rhapsody Blue ring, then the name (Poppins Medium) and the title and company (Poppins Regular, light blue-gray or white at reduced weight).</li>
+  <li><strong>Logo:</strong> the all-white logo, bottom left, once.</li>
+</ul>
+
+<h3>Spec (1200 &times; 627, export at 2&times;)</h3>
+<table class="spec" style="width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 18px;">
+  <thead><tr style="background:var(--navy);color:#fff;"><th>Element</th><th>Treatment</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Canvas</strong></td><td>1200 &times; 627 (LinkedIn link and feed image), navy #0B2C47, about 56px side margins</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Eyebrow</strong></td><td>IBM Plex Mono Medium, about 22px, all caps, 0.17em tracking, <strong>light blue #B4D8FF</strong></td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Date and time</strong></td><td>IBM Plex Mono, about 22px, all caps, white (&ldquo;NOVEMBER 19 &middot; 12 P.M. CT&rdquo;), after the calendar icon from the FY27 library (white glyph colored light blue), about 32px</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Headline</strong></td><td>Poppins Medium, about 52px, line height 1.2, white, one light-blue phrase, sentence case, two lines at most</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Description</strong></td><td>Poppins Regular, about 22px, white, two lines at most</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Speakers</strong></td><td>Headshots about 130px across in a 3px Rhapsody Blue ring; name Poppins Medium about 22px, white; title and company Poppins Regular about 19px, two lines at most</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Logo</strong></td><td>All white, about 290px wide, bottom left</td></tr>
+    <tr style="background:#F7F9FB;"><td><strong>Dots</strong></td><td>An approved fluid dot master, bottom right, bleeding off two edges; never cropped through the core, never behind copy or portraits</td></tr>
+  </tbody>
+</table>
+
+<h3>Rules</h3>
+<ul>
+  <li><strong>Speaker headshots</strong> may be black and white so photos from different sources match. This applies to real speakers only; library stock photos are never filtered.</li>
+  <li>Names and titles are exactly as the speaker approves them, in the name lockup order: name, then title and company.</li>
+  <li>No button on the image; the post and the link carry the call to action.</li>
+  <li>No box or rounded container on the graphic; the layout is open.</li>
+  <li><strong>Check it at phone size</strong> before it&rsquo;s final: most people see it in a feed about 350px wide, where the headline, date, and names must still read. Keep to the sizes above and cut words before shrinking type.</li>
+</ul>
+
+<div class="compare">
+  <div class="card do"><div class="head">Do</div><div class="body"><ul>
+    <li>Keep one light-blue phrase in the headline.</li>
+    <li>Use the all-white logo and the Rhapsody Blue ring.</li>
+    <li>Leave the dots clear of copy and portraits.</li>
+  </ul></div></div>
+  <div class="card dont"><div class="head">Don&rsquo;t</div><div class="body"><ul>
+    <li>Set the eyebrow or any text in Rhapsody Blue on navy.</li>
+    <li>Add Aurora, photos behind the copy, or a second device.</li>
+    <li>Squeeze in a third line of headline or a long agenda.</li>
+  </ul></div></div>
+</div>
+
+<div class="principle"><div class="k">Settled against the system</div><p>Three details in the reference example are adjusted to match the rest of the system: the eyebrow is light blue instead of Rhapsody Blue (text on navy is white or light blue); the headline is sentence case instead of title case; and the date is set in the mono, since capitals are reserved for mono labels.</p></div>
+</div>
+</body></html>
