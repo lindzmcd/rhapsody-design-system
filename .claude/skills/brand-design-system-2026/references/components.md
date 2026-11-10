@@ -12,7 +12,7 @@ reusable classes; otherwise use these specs. All items link `tokens.css` and pul
 - Graphic devices: Devices at a glance · Dots · Fluid dot pattern · Big dot · Light devices
 - Iconography: Icon library
 - Imagery: Illustration · Photography & portraits
-- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · PowerPoint
+- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · PowerPoint · Technical documents
 - Reference: Quick corrections log
 
 ---
@@ -154,6 +154,21 @@ simpler than the rest of the system — resist adding detail.
 Blue-first (Rhapsody Blue default ground, navy occasional, logo always prominent, few large words). Use
 it as the starting point for any deck. For deck-editing mechanics load the `pptx` skill; for slide copy
 and Rhapsody Axon™ naming load `rhapsody-brand`.
+
+**Technical documents.** White papers, release notes, and customer security advisories share one
+system, modeled on the approved eMudhra advisories (`examples/technical-documents/`). Cover: white,
+primary logo top left, white-ground fluid dots in Rhapsody Blue top right, mono eyebrow (document
+type), two-tone Poppins Medium title (one Rhapsody Blue phrase), subtitle, hairline, four-column meta
+row with blue mono labels. Interior: running header (logo left, mono label right, hairline), footer
+document line + page number; page 2 repeats the title over a gray-blue contents box (blue mono
+numbers). Sections open with a short blue rule + "SECTION 01" in spaced blue mono, then Poppins
+Medium H1; subsections numbered "3.1" in blue mono. Callout = gray-blue + 3pt blue left rule +
+Medium lead-in. Assessment panel = gray-blue + blue top rule, mono label, large blue value (e.g.
+Likelihood: Low). Warning panel = navy top rule ("What not to do"). Audience cards = two outlined
+cards (Rhapsody Cloud / customer-hosted). Tables = navy header, alternating gray-blue rows; key-value
+tables with hairlines. Code = IBM Plex Mono on gray-blue (blocks and inline). Round bullets,
+numbered steps with Medium lead-ins, underlined blue links. Word templates (.dotx) for all three in
+`templates/word-documents/`.
 
 ## Reference
 

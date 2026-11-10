@@ -1,0 +1,89 @@
+<!-- @dsCard group="7 · Patterns" name="Technical documents" subtitle="White papers, release notes, and security advisories: one document system, with Word templates" width="960" height="2600" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical documents</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  .pages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:14px 0 6px;}
+  .pages figure{margin:0;}
+  .pages img{width:100%;display:block;border:1px solid var(--lgray);border-radius:6px;}
+  @media (max-width:640px){.pages{grid-template-columns:repeat(2,minmax(0,1fr));}}
+  .spec td,.spec th{padding:9px 12px;text-align:left;vertical-align:top;}
+  .spec th{font-weight:500;}
+</style>
+</head><body>
+<div class="wrap">
+<h2>Technical documents</h2>
+<p>White papers, release notes, and customer security advisories share one document system. It&rsquo;s built from two approved Rhapsody customer security advisories (eMudhra CA compromise, Rhapsody Engine and Rhapsody Identity, October and November 2026), which are the reference examples. When Claude creates any of these documents, it follows this card.</p>
+
+<div class="pages">
+  <figure><img src="../assets/figures/techdoc-cover.jpg" alt="Cover: Rhapsody logo top left, the fluid dot pattern in the top-right corner, mono eyebrow 'Customer security advisory', two-tone title, subtitle, and a four-column meta row"><figcaption class="caption">Cover</figcaption></figure>
+  <figure><img src="../assets/figures/techdoc-contents.jpg" alt="Second page: running header, two-tone document title, shaded contents box with blue mono numbers, then Section 01 Summary"><figcaption class="caption">Title and contents</figcaption></figure>
+  <figure><img src="../assets/figures/techdoc-panels.jpg" alt="Likelihood panel with a large blue 'Low', and two outlined audience cards for Rhapsody Cloud and customer-hosted customers"><figcaption class="caption">Assessment panel and audience cards</figcaption></figure>
+  <figure><img src="../assets/figures/techdoc-table.jpg" alt="Section 04 with a navy-header table and alternating gray-blue rows"><figcaption class="caption">Data table</figcaption></figure>
+  <figure><img src="../assets/figures/techdoc-steps.jpg" alt="Numbered steps with bold lead-ins, code blocks on gray-blue, and inline code"><figcaption class="caption">Steps and code</figcaption></figure>
+</div>
+<p class="caption">Reference examples (full PDFs): <code>examples/technical-documents/</code> in the design system repository.</p>
+
+<h3>Word templates</h3>
+<p>Start every new document from a template. All three share the same styles, so content moves between them cleanly.</p>
+<table style="width:100%;border-collapse:collapse;font-size:14px;margin:8px 0 18px;">
+  <thead><tr style="background:var(--navy);color:#fff;text-align:left;"><th style="padding:10px 12px;font-weight:500;">Template</th><th style="padding:10px 12px;font-weight:500;">Eyebrow</th><th style="padding:10px 12px;font-weight:500;">Section skeleton</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--lgray);"><td style="padding:10px 12px;"><code>Rhapsody-Security-Advisory-Template.dotx</code></td><td style="padding:10px 12px;">Customer security advisory</td><td style="padding:10px 12px;">Summary (with the likelihood panel and audience cards), Likelihood of exploitation, Is your deployment affected?, What Rhapsody is doing, What you can do now, FAQ, References, Appendix</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td style="padding:10px 12px;"><code>Rhapsody-Release-Notes-Template.dotx</code></td><td style="padding:10px 12px;">Release notes</td><td style="padding:10px 12px;">Highlights, New features, Improvements, Fixed issues, Known issues, Upgrade notes, Compatibility, References</td></tr>
+    <tr><td style="padding:10px 12px;"><code>Rhapsody-White-Paper-Template.dotx</code></td><td style="padding:10px 12px;">White paper</td><td style="padding:10px 12px;">Executive summary (with a key-figure panel), The challenge, The approach, What it delivers, Getting started, References</td></tr>
+  </tbody>
+</table>
+<p>The templates are in <code>templates/word-documents/</code> in the design system repository, and in Word under <strong>File &gt; New</strong> once they&rsquo;re added to Rhapsody&rsquo;s Microsoft templates. Every element is a named Word style (Eyebrow, Document Title, Section Label, Callout, Code Block, Panel Label, Table Header, Lead-in, Code Inline, Accent), so apply styles rather than formatting by hand. Install <strong>Poppins</strong> and <strong>IBM Plex Mono</strong> (free from Google Fonts) before you use them.</p>
+
+<h3>Anatomy</h3>
+<ul>
+  <li><strong>Cover:</strong> white page. The primary logo top left; the fluid dot pattern (white-ground register, Rhapsody Blue dots) in the top-right corner. Lower third: a mono eyebrow naming the document type, the title in Poppins Medium with one phrase in Rhapsody Blue, a one-line subtitle, a hairline, then a four-column meta row (blue mono labels: Prepared by, Date, Audience, Version; for release notes: Product, Release, Date, Audience).</li>
+  <li><strong>Running header</strong> on every page after the cover: the logo at left and a mono label at right (&ldquo;Customer security advisory &middot; V1.0&rdquo;), over a hairline. <strong>Footer:</strong> the document line (product, title, date, version) in small gray text, the page number at right.</li>
+  <li><strong>Title and contents:</strong> page 2 repeats the two-tone title, then a gray-blue contents box: a blue mono &ldquo;Contents&rdquo; label and two columns of entries with blue mono numbers (01, 02 &hellip; A for an appendix).</li>
+  <li><strong>Sections:</strong> each opens with a section label (a short blue rule and &ldquo;SECTION 01&rdquo; in spaced blue mono), then the heading. Subsections are numbered: &ldquo;3.1&rdquo; in blue mono before a Poppins Medium subhead. An unnumbered subhead carries a key point a reader must not miss.</li>
+  <li><strong>Body:</strong> Poppins Regular, navy, generous leading. Lead-ins (&ldquo;<strong>How the fix works.</strong>&rdquo;) and step names are Poppins Medium, never bold 700.</li>
+</ul>
+
+<h3>Components</h3>
+<table class="spec" style="width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 18px;">
+  <thead><tr style="background:var(--navy);color:#fff;"><th>Element</th><th>Treatment</th><th>Use for</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Callout</strong></td><td>Gray-blue fill, 3pt Rhapsody Blue left rule, Medium lead-in (&ldquo;Important:&rdquo;, &ldquo;Note:&rdquo;, &ldquo;Caution:&rdquo;)</td><td>Status, cautions, prerequisites</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Assessment panel</strong></td><td>Gray-blue fill, Rhapsody Blue top rule; mono label and a large Medium value in Rhapsody Blue at left, the reasoning at right</td><td>A rating (Likelihood: Low) or one key figure</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Warning panel</strong></td><td>Gray-blue fill, navy top rule, mono label (&ldquo;What not to do&rdquo;, &ldquo;Changed defaults&rdquo;)</td><td>Unsafe workarounds, behavior changes</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Audience cards</strong></td><td>Two outlined cards side by side, light-gray hairline, blue mono label</td><td>Rhapsody Cloud vs customer-hosted actions</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Data table</strong></td><td>Navy header with white Medium text, alternating white and gray-blue rows, hairline under the last row; first column often Medium</td><td>Connections, versions, fixed issues</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>Key-value table</strong></td><td>No header; hairline rules; Medium left column</td><td>Who does what (customer type &rarr; action)</td></tr>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>Code</strong></td><td>IBM Plex Mono on gray-blue: blocks for commands (an optional gray mono label such as WINDOWS or LINUX), inline chips for file names, settings, and values</td><td>Anything a reader types or searches for</td></tr>
+    <tr style="background:#F7F9FB;"><td><strong>Lists and links</strong></td><td>Round bullets; numbered steps with a Medium lead-in; links in Rhapsody Blue, underlined</td><td>Conditions, procedures, references</td></tr>
+  </tbody>
+</table>
+
+<h3>Writing them</h3>
+<ul>
+  <li>Sentence case for titles, headings, and labels; no end period on a one-sentence heading. Section headings can be questions (&ldquo;Is your deployment affected?&rdquo;).</li>
+  <li>Lead with what the reader must know and do. In advisories: what happened, how likely exploitation is and why, who is affected, what Rhapsody is doing, and what the customer does now, split by Rhapsody Cloud and customer-hosted.</li>
+  <li>Cite sources in References with full URLs; name CVEs in full. Use verified facts only, and date the document (&ldquo;current as of&rdquo;).</li>
+  <li>&ldquo;Rhapsody&rdquo;, never &ldquo;Rhapsody Health&rdquo;; product names follow the naming rules in <code>rhapsody-brand</code>.</li>
+</ul>
+
+<div class="compare">
+  <div class="card do"><div class="head">Do</div><div class="body"><ul>
+    <li>Start from the Word template for the document type.</li>
+    <li>Keep one two-tone phrase in the title, Rhapsody Blue on white.</li>
+    <li>Use the callout, panels, and tables above rather than inventing new boxes.</li>
+  </ul></div></div>
+  <div class="card dont"><div class="head">Don&rsquo;t</div><div class="body"><ul>
+    <li>Add photos, Aurora, extra dot patterns, or icons inside the document; the cover dots are the one device.</li>
+    <li>Color panels or table headers with teal, purple, or orange.</li>
+    <li>Set body copy in the mono, or use bold 700 for emphasis.</li>
+  </ul></div></div>
+</div>
+
+<div class="principle"><div class="k">Settled between the two examples</div><p>The two reference advisories differ in small ways. The system uses round bullets (not dashes), underlined links, a running header and page numbers on every page after the cover, and the cover dots in Rhapsody Blue (the white-ground fluid dot master is #3D7FED, so the templates redraw its dots in #1A81F4).</p></div>
+</div>
+</body></html>

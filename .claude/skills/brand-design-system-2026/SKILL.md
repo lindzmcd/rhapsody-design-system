@@ -1,6 +1,6 @@
 ---
 name: brand-design-system-2026
-description: "The Rhapsody visual design system — the 2026 code-based brand identity (Rhapsody Brand VisID Guide, September 2026). Load this whenever you DESIGN or PRODUCE a visual Rhapsody asset: web/landing pages, HTML mockups, heroes, email templates and signatures, social graphics, display/banner ads, slide/PowerPoint visuals, charts and data viz, icons, or any layout that must look on-brand. Also load when applying Rhapsody colors, typography, the logo, the dots device, the Aurora light device (glow), portrait treatments, or component styling, and when someone says 'make this on-brand,' 'use the design system,' 'use Rhapsody colors/fonts,' 'brand this layout,' 'build a landing page,' 'design an ad,' or wants to sync the design system in Claude Design (design-sync). This governs VISUAL output; for voice, copywriting, and product-naming/trademark rules use rhapsody-brand alongside it. When in doubt on anything visual and Rhapsody, use this skill."
+description: "The Rhapsody visual design system — the 2026 code-based brand identity (Rhapsody Brand VisID Guide, September 2026). Load this whenever you DESIGN or PRODUCE a visual Rhapsody asset: web/landing pages, HTML mockups, heroes, email templates and signatures, social graphics, display/banner ads, slide/PowerPoint visuals, white papers, release notes, security advisories and other technical documents (including Word templates), charts and data viz, icons, or any layout that must look on-brand. Also load when applying Rhapsody colors, typography, the logo, the dots device, the Aurora light device (glow), portrait treatments, or component styling, and when someone says 'make this on-brand,' 'use the design system,' 'use Rhapsody colors/fonts,' 'brand this layout,' 'build a landing page,' 'design an ad,' or wants to sync the design system in Claude Design (design-sync). This governs VISUAL output; for voice, copywriting, and product-naming/trademark rules use rhapsody-brand alongside it. When in doubt on anything visual and Rhapsody, use this skill."
 ---
 
 # Rhapsody Brand Design System 2026
@@ -323,13 +323,25 @@ Stats · Tables · Dot accents
 **Iconography** — Icon library
 **Imagery** — Illustration · Photography & portraits
 **Patterns** — Hero · Email template · Email signature · Social posts · Product launch announcement ·
-Name lockup · **Display ads (blue-first)** · **PowerPoint deck template (downloadable .pptx master)**
+Name lockup · **Display ads (blue-first)** · **PowerPoint deck template (downloadable .pptx master)** ·
+**Technical documents (white papers, release notes, security advisories; Word .dotx templates)**
 **Reference** — Quick corrections log
 
 Notable patterns:
 - **Display ads** are **blue-first**: Rhapsody Blue ground by default, logo always prominent, very few
   large words (billboard style), one clear action. Covers every IAB placement. Canvas template lives at
   `templates/display-ads/DisplayAds.dc.html`.
+- **Technical documents** (white papers, release notes, customer security advisories) follow the
+  approved eMudhra advisories (`examples/technical-documents/`): white cover with the logo top left,
+  the white-ground fluid dots (Rhapsody Blue) top right, a mono eyebrow naming the type, a two-tone
+  Poppins Medium title, a subtitle and a four-column meta row; then a running header (logo + mono
+  label), a gray-blue contents box, sections opened by a blue rule + "SECTION 01" mono label,
+  numbered subsections ("3.1" in blue mono), callouts with a blue left rule, assessment panels
+  (blue top rule, large blue value), audience cards, navy-header tables, and Plex Mono code on
+  gray-blue. Start from the Word templates in `templates/word-documents/` (also in Word under
+  File > New once published to Rhapsody's Microsoft templates): `Rhapsody-Security-Advisory-Template.dotx`, `Rhapsody-Release-Notes-Template.dotx`,
+  `Rhapsody-White-Paper-Template.dotx`. For a .docx, apply their named styles (load the `docx`
+  skill); for HTML or PDF, reproduce the same anatomy. See the Technical documents card.
 - **PowerPoint**: the official 2026 deck master is `downloads/Rhapsody-PowerPoint-Template-2026.pptx`.
   It is **blue-first** (Rhapsody Blue default ground, navy occasional, logo always prominent). For the
   mechanics of editing decks, also load the `pptx` skill; for slide copy and the Axon™ rules, load

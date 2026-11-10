@@ -240,3 +240,12 @@ then the index `project/design-system.json` last):
   master (assets/light-devices/aurora-navy.jpg, flipped, left edge feathered into navy),
   one-color white logo, Poppins Medium 48px "Rhapsody Design System" with "Design System"
   in light blue, white 16px tagline. Source kept in .design-sync/cover/. Design system v29 + v30 (index).
+- 2026-11-10: Technical documents. The two approved eMudhra customer security advisories
+  (Rhapsody Engine and Rhapsody Identity) are saved as reference examples in
+  examples/technical-documents/ and are the model for white papers, release notes and security
+  advisories. New card components/technical-documents.html (anatomy, components, writing rules,
+  what was settled between the two examples). Word templates (.dotx) for all three in
+  templates/word-documents/ (build.js + art/; validated against the OOXML schema). The design
+  system can't serve .dotx, so the card points to the repo and Word's File > New. Cover dots
+  traced from fd-white.jpg and set in #1A81F4 (the master is #3D7FED). Guide v36/v37; design
+  system v35 (files) + v36 (index).

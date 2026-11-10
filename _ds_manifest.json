@@ -166,6 +166,12 @@
       "name": "LinkedIn employee banners"
     },
     {
+      "path": "components/technical-documents.html",
+      "group": "7 · Patterns",
+      "subtitle": "White papers, release notes, and security advisories: one document system, with Word templates",
+      "name": "Technical documents"
+    },
+    {
       "path": "components/name-lockup.html",
       "group": "7 · Patterns",
       "subtitle": "Attribution: name, title, company; logo vs written name; portrait pairing",
