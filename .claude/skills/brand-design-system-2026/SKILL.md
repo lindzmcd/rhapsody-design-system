@@ -189,7 +189,8 @@ Bundled art (in this skill's `assets/`, mirrored from the repo):
 | `logo-white.png` | **Navy, Aurora over navy, and Rhapsody Blue backgrounds — always the all-white logo** |
 | `logo-blueline.png` | Blue wordmark + white line — **not used on navy or Aurora** (Nov 2026) |
 | `logo-black.png` | One-color navy/black on light backgrounds |
-| `monogram-blue-navy.png` | The "R" monogram — small spaces only (favicon, avatar, merch) |
+| `monogram-blue-navy.png` | The "R" monogram on light — small spaces only (favicon, avatar, merch) |
+| `brand/Rhapsody Monograms/white monogram R.svg` (repo) | The R monogram on navy, Aurora over navy, and Rhapsody Blue — always all white |
 
 In HTML the repo also exposes these as background classes via `tokens.css`: `.logo-i` plus
 `.logo-bb` (primary), `.logo-blk`, `.logo-wht` (all white: navy, Aurora, Rhapsody Blue), `.logo-blw` (not for navy or Aurora).
@@ -341,7 +342,7 @@ Notable patterns:
   approved eMudhra advisories (`examples/technical-documents/`): white cover with the logo top left,
   the white-ground fluid dots (Rhapsody Blue) top right, a mono eyebrow naming the type, a two-tone
   Poppins Medium title, a subtitle and a four-column meta row; then a running header (logo + mono
-  label), a gray-blue contents box, sections opened by a blue rule + "SECTION 01" mono label,
+  label), an open contents list (no box), sections opened by a blue rule + "SECTION 01" mono label,
   numbered subsections ("3.1" in blue mono), callouts with a blue left rule, assessment panels
   (blue top rule, large blue value), audience cards, navy-header tables, and Plex Mono code on
   gray-blue. Start from the Word templates in `templates/word-documents/` (also in Word under

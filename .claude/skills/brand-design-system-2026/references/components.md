@@ -49,7 +49,7 @@ Pills are CTA-only. Keep the corner treatment consistent across a page/deck.
 ## Brand
 
 **Logo & wordmark.** See SKILL.md §3. Primary = navy bar + blue wordmark (light grounds). Navy, Aurora over
-navy, and Rhapsody Blue = the all-white logo at every size (never a blue-wordmark version there). Monogram for tight spaces only. Clear space =
+navy, and Rhapsody Blue = the all-white logo at every size (never a blue-wordmark version there). Monogram for tight spaces only (navy-and-blue on light, all white on navy, Aurora, and Rhapsody Blue). Clear space =
 the "R" mark on all sides. Product & co-brand lockups keep "Rhapsody" on the mark. Never modify,
 recolor, rotate, or overlay.
 
@@ -161,8 +161,8 @@ system, modeled on the approved eMudhra advisories (`examples/technical-document
 primary logo top left, white-ground fluid dots in Rhapsody Blue top right, mono eyebrow (document
 type), two-tone Poppins Medium title (one Rhapsody Blue phrase), subtitle, hairline, four-column meta
 row with blue mono labels. Interior: running header (logo left, mono label right, hairline), footer
-document line + page number; page 2 repeats the title over a gray-blue contents box (blue mono
-numbers). Sections open with a short blue rule + "SECTION 01" in spaced blue mono, then Poppins
+document line + page number; page 2 repeats the title over an open contents list (no box; blue mono
+numbers, hairline below). Sections open with a short blue rule + "SECTION 01" in spaced blue mono, then Poppins
 Medium H1; subsections numbered "3.1" in blue mono. Callout = gray-blue + 3pt blue left rule +
 Medium lead-in. Assessment panel = gray-blue + blue top rule, mono label, large blue value (e.g.
 Likelihood: Low). Warning panel = navy top rule ("What not to do"). Audience cards = two outlined

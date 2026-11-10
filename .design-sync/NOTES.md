@@ -257,3 +257,7 @@ then the index `project/design-system.json` last):
   44x44px, checklist rows tappable, checkboxes at least 24px. Updated: Logo, Corners, Technical
   documents, Web pages, Corrections cards; skill (logo, shape, documents, mobile, checklist);
   design system README. Guide v38; design system v37 (files) + v38 (index).
+- 2026-11-10 (later): owner confirmed (1) the R monogram is all white on navy, Aurora and Rhapsody
+  Blue (new figure assets/figures/monogram-white.png from brand/Rhapsody Monograms/white monogram
+  R), and (2) document contents are an open list, not a box (Word templates rebuilt and
+  validated). Guide v39; design system v39 (files) + v40 (index).

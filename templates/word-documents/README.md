@@ -30,7 +30,7 @@ font. The fonts aren't embedded in the templates.
   Label, Meta Value. Character styles: Accent (Rhapsody Blue), Lead-in, Code Inline, Heading Number.
 - **Two-tone title:** select the highlight phrase and apply **Accent (Rhapsody Blue)**. Use it once per title.
 - **Section labels:** copy an existing one (the blue rule is a small inline image) and change the number.
-- **Contents box:** static text that you edit by hand to match the section headings.
+- **Contents:** an open two-column list, not a box. It's static text that you edit by hand to match the section headings.
 - **Panels and cards:** they're tables. Copy one and keep its shading and rules.
 - **Header and footer:** edit the header label (document type and version) and the footer line
   (product, title, date and version) on page 2. They repeat on every page after the cover.

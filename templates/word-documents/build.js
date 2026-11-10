@@ -222,16 +222,16 @@ function twoUp(a, b) {
     new Paragraph({ spacing: { before: 0, after: 200 }, children: [] })];
 }
 
-// Contents box: shaded, two columns, blue mono numbers
+// Contents: a plain list (no box): blue mono label and numbers, two open columns, hairline below
 function contents(items) {
   const half = Math.ceil(items.length / 2), L = items.slice(0, half), R = items.slice(half);
   const w = TEXT_W / 2;
-  const entry = ([n, t]) => new Paragraph({ style: "ContentsItem", children: [new TextRun({ text: n, font: F.mono, color: C.blue }), new TextRun(" " + t)] });
-  const colCell = (list, first) => cell(list.map(entry), { w, fill: C.grayblue, margins: pad(0, first ? 120 : 300, 220, first ? 300 : 120) });
-  return [new Table({ width: { size: TEXT_W, type: WidthType.DXA }, columnWidths: [w, w], layout: TableLayoutType.FIXED, borders: NOBORDERS, rows: [
-    new TableRow({ children: [cell([new Paragraph({ style: "PanelLabel", children: [new TextRun("Contents")] })], { w, fill: C.grayblue, margins: pad(280, 120, 60, 300) }),
-                             cell([new Paragraph("")], { w, fill: C.grayblue, margins: pad(280, 300, 60, 120) })] }),
-    new TableRow({ children: [colCell(L, true), colCell(R, false)] }) ] }),
+  const hair = { style: BorderStyle.SINGLE, size: 6, color: C.lgray };
+  const entry = ([n, t]) => new Paragraph({ style: "ContentsItem", children: [new TextRun({ text: n, font: F.mono, color: C.blue }), new TextRun("\u2002" + t)] });
+  const colCell = (list, first) => cell(list.map(entry), { w, borders: { top: NONE, left: NONE, right: NONE, bottom: hair }, margins: pad(0, first ? 240 : 0, 200, first ? 0 : 240) });
+  return [new Paragraph({ style: "PanelLabel", spacing: { before: 0, after: 140 }, children: [new TextRun("Contents")] }),
+    new Table({ width: { size: TEXT_W, type: WidthType.DXA }, columnWidths: [w, w], layout: TableLayoutType.FIXED, borders: NOBORDERS, rows: [
+      new TableRow({ children: [colCell(L, true), colCell(R, false)] }) ] }),
     new Paragraph({ spacing: { before: 0, after: 120 }, children: [] })];
 }
 
