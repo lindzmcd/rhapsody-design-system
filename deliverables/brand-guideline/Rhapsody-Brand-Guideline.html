@@ -525,6 +525,15 @@ body{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,s
   <li><strong>Module frame:</strong> square the top two corners, round the bottom two to about <strong>12px</strong> (<code>border-radius: 0 0 12px 12px</code>). All four corners rounded (~12px) or fully square is also fine, for example charts and dense grids.</li>
   <li><strong>One treatment per page or deck</strong>, don&rsquo;t mix squared-top frames with fully rounded ones in the same view.</li>
 </ul>
+<div class="principle">
+  <div class="k">One container per page, and only where it helps</div>
+  <p>Use the rounded-bottom container for <strong>one element per page</strong> (slide, document page, or screen): the one thing that should stand out. Choose the layout that fits the content instead of forcing it into boxes.</p>
+</div>
+<ul>
+  <li><strong>Lists</strong> are plain bullets or numbered steps, never a stack of boxes.</li>
+  <li><strong>Comparisons and specs</strong> go in a table; repeated items go in rows with hairlines or in open columns.</li>
+  <li>Save the container for a single highlight: a key stat, a quote, a summary, or a call to action.</li>
+</ul>
 </div>
 
 </section><section class="ds-section" id="pathways" data-group="1 · Foundations">
@@ -783,9 +792,9 @@ body{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,s
   <div class="lbl" style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);">On light</div>
   <div class="lbl" style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dgray);">On dark</div>
   <div class="lv"><div class="frame light"><span class="logo-i logo-bb" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="Primary logo, navy bar and blue wordmark on light"></span></div><div class="lab"><strong>Primary: navy bar, blue wordmark.</strong> The bar is Rhapsody Navy (#0B2C47), not black.</div></div>
-  <div class="lv"><div class="frame dark"><span class="logo-i logo-blw" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="Logo, blue wordmark and white line on dark"></span></div><div class="lab"><strong>Blue wordmark, white line.</strong> The two-color version for navy and dark backgrounds, at larger sizes only, about <strong>240px / 2.25in wide and up</strong>, where the Rhapsody-blue wordmark stays vibrant. Below that size, use the all-white version instead.</div></div>
+  <div class="lv"><div class="frame dark"><span class="logo-i logo-wht" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="All-white logo on navy"></span></div><div class="lab"><strong>All white.</strong> The logo on <strong>navy</strong>, on <strong>Aurora over navy</strong>, and on Rhapsody Blue, at every size.</div></div>
   <div class="lv"><div class="frame light"><span class="logo-i logo-blk" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="One-color navy logo"></span></div><div class="lab">One-color navy, for light or limited-color use.</div></div>
-  <div class="lv"><div class="frame dark"><span class="logo-i logo-wht" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="All-white logo on dark"></span></div><div class="lab"><strong>All white.</strong> The default on navy and dark backgrounds at smaller sizes, and for one-color or limited-color use.</div></div>
+  <div class="lv"><div class="frame dark"><span class="logo-i logo-blw" style="width:88%;aspect-ratio:6.897;opacity:.45;" role="img" aria-label="Blue wordmark and white line logo, not used on navy"></span></div><div class="lab"><strong>Not on navy: blue wordmark, white line.</strong> No longer used on navy or Aurora backgrounds, at any size (November 2026). Use the all-white logo.</div></div>
 </div>
 
 <h3>Monogram</h3>
@@ -816,9 +825,8 @@ body{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,s
 
 <h3>In short</h3>
 <ul>
-  <li>Navy bar and blue wordmark on light. On navy or dark backgrounds, use the blue-wordmark / white-line version at larger sizes; below the size threshold above, use the all-white wordmark.</li>
-  <li>On a <strong>Rhapsody Blue</strong> ground, use the all-white wordmark at any size; the blue wordmark disappears into the ground.</li>
-  <li><strong>Never the all-blue wordmark on navy at small sizes</strong> (low contrast); drop to all-white.</li>
+  <li>Navy bar and blue wordmark on light.</li>
+  <li><strong>All white on navy, on Aurora over navy, and on Rhapsody Blue</strong>, at every size. The blue-wordmark versions are not used on these backgrounds.</li>
   <li>One-color navy or white for limited-color contexts.</li>
   <li>Always all capital letters. Maintain clear space. Use official logo files only.</li>
 </ul>
@@ -2057,7 +2065,8 @@ body{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,s
 <h3>Anatomy</h3>
 <ul>
   <li><strong>Cover:</strong> white page. The primary logo top left; the fluid dot pattern (white-ground register, Rhapsody Blue dots) in the top-right corner. Lower third: a mono eyebrow naming the document type, the title in Poppins Medium with one phrase in Rhapsody Blue, a one-line subtitle, a hairline, then a four-column meta row (blue mono labels: Prepared by, Date, Audience, Version; for release notes: Product, Release, Date, Audience).</li>
-  <li><strong>Running header</strong> on every page after the cover: the logo at left and a mono label at right (&ldquo;Customer security advisory &middot; V1.0&rdquo;), over a hairline. <strong>Footer:</strong> the document line (product, title, date, version) in small gray text, the page number at right.</li>
+  <li><strong>Running header</strong> on every page after the cover, identical from page 2 on: the logo at left and a mono label at right (&ldquo;Customer security advisory &middot; V1.0&rdquo;), over a hairline. Keep it compact (logo about 1.4in wide, the band no deeper than about 0.75in) so content pages keep ample room. <strong>Footer</strong>, also identical from page 2 on: the document line (product, title, date, version) in small gray text, the page number at right.</li>
+  <li><strong>The logo appears exactly once on every page:</strong> on the cover, top left; after that, in the header only. Never add a second logo to the body or footer.</li>
   <li><strong>Title and contents:</strong> page 2 repeats the two-tone title, then a gray-blue contents box: a blue mono &ldquo;Contents&rdquo; label and two columns of entries with blue mono numbers (01, 02 &hellip; A for an appendix).</li>
   <li><strong>Sections:</strong> each opens with a section label (a short blue rule and &ldquo;SECTION 01&rdquo; in spaced blue mono), then the heading. Subsections are numbered: &ldquo;3.1&rdquo; in blue mono before a Poppins Medium subhead. An unnumbered subhead carries a key point a reader must not miss.</li>
   <li><strong>Body:</strong> Poppins Regular, navy, generous leading. Lead-ins (&ldquo;<strong>How the fix works.</strong>&rdquo;) and step names are Poppins Medium, never bold 700.</li>
@@ -2090,7 +2099,7 @@ body{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,s
   <div class="card do"><div class="head">Do</div><div class="body"><ul>
     <li>Start from the Word template for the document type.</li>
     <li>Keep one two-tone phrase in the title, Rhapsody Blue on white.</li>
-    <li>Use the callout, panels, and tables above rather than inventing new boxes.</li>
+    <li>Use the callout, panels, and tables above rather than inventing new boxes, and at most one panel per page.</li>
   </ul></div></div>
   <div class="card dont"><div class="head">Don&rsquo;t</div><div class="body"><ul>
     <li>Add photos, Aurora, extra dot patterns, or icons inside the document; the cover dots are the one device.</li>
@@ -2180,6 +2189,10 @@ body{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,s
     <li><strong>Icon library:</strong> the official FY27 icon library (271 icons, four versions, on SharePoint) replaces the hand-drawn reference set. Its stroke is lighter: mostly 0.85&ndash;0.9 on a 24px grid, down from 1.7. Use library icons only. The <code>tile</code> color matches the library&rsquo;s light tile, #E9EDF2.</li>
     <li><strong>Mascot (Teddie Mercury)</strong> rules finalized: a character mark for limited appearances on internal, culture, and Connect Developer Conference materials; other uses need marketing approval. Never a primary device. Master art in the FY27 Character Library, with the five versions shown on the Mascot card.</li>
     <li><strong>Photo library</strong> added to Photography: about 100 approved single-person photos in 3:2 and 1:1 crops. Stock models are never presented as named people.</li>
+    <li><strong>Logo on navy:</strong> all white on navy and on Aurora over navy, at every size; the blue-wordmark / white-line version is no longer used there.</li>
+    <li><strong>Rounded-bottom container:</strong> one per page, for a single highlight; lists and comparisons use bullets, steps, or tables instead of boxes.</li>
+    <li><strong>Documents:</strong> the same compact header and footer from page 2 on; the logo exactly once per page.</li>
+    <li><strong>Mobile:</strong> test every digital asset at phone width before finalizing; touch targets at least 44&times;44px (checklist rows tappable, checkboxes at least 24px).</li>
     <li><strong>Technical documents</strong> added: white papers, release notes, and customer security advisories follow the eMudhra advisories (October and November 2026), with three Word templates (.dotx).</li>
     <li><strong>LinkedIn employee banners</strong> added: four approved cover images, used as supplied. Redrawn on brand: no end periods, Poppins Medium headlines, the approved Aurora master on the navy banners, and white dots on Rhapsody Blue.</li>
   </ul>
@@ -2375,6 +2388,14 @@ body{background:#eef2f6;margin:0;color:var(--navy);font-family:'Poppins',Arial,s
 <div class="principle"><div class="k">Footer</div><p>Navy ground, white wordmark and tagline (&ldquo;Healthcare interoperability infrastructure for the agentic era.&rdquo;), outlined-circle social icons, mono uppercase column headers (Get help, Trust), and a legal row with &copy; year.</p></div>
 
 <p class="caption">Captured from the refreshed rhapsody.health homepage and solutions pages (launched Oct 2026) as the reference for transitioning all remaining pages.</p>
+<h3>Test on mobile before you finalize</h3>
+<p>Every digital asset (pages, emails, interactive tools, checklists, forms) is checked at phone width before content is final.</p>
+<ul>
+  <li>Check at <strong>375px wide</strong> (and 320px for anything critical): no horizontal scrolling, no clipped text, body copy at 16px or more.</li>
+  <li><strong>Touch targets at least 44&times;44px</strong>, with about 8px between them. On interactive checklists, the whole row is the tap target and the checkbox itself is at least 24px, never the browser&rsquo;s default 13px box.</li>
+  <li>Multi-column layouts stack to one column; tables either scroll inside their own frame or reflow to stacked rows.</li>
+  <li>Buttons stay full-size pills (44px tall); don&rsquo;t shrink them to fit.</li>
+</ul>
 </div>
 
 </section>

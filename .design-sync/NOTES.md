@@ -249,3 +249,11 @@ then the index `project/design-system.json` last):
   system can't serve .dotx, so the card points to the repo and Word's File > New. Cover dots
   traced from fd-white.jpg and set in #1A81F4 (the master is #3D7FED). Guide v36/v37; design
   system v35 (files) + v36 (index).
+- 2026-11-10 (later): brand corrections from the owner. (1) All-white logo on navy and on Aurora
+  over navy, at every size; the blue wordmark + white line is no longer used there. (2) Multi-page
+  documents: same header and footer from page 2 on, logo exactly once per page, compact interior
+  header. (3) The rounded-bottom container is for one element per page; lists and specs use
+  bullets, steps or tables. (4) Test every digital asset at phone width; touch targets at least
+  44x44px, checklist rows tappable, checkboxes at least 24px. Updated: Logo, Corners, Technical
+  documents, Web pages, Corrections cards; skill (logo, shape, documents, mobile, checklist);
+  design system README. Guide v38; design system v37 (files) + v38 (index).

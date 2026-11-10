@@ -8,8 +8,8 @@ It is a code version of the approved *Rhapsody Brand VisID Guide*
 (current standard, 2026). Company name is always **Rhapsody**, never "Rhapsody Health".
 
 Latest guide update folded in: light blue refreshed to `#B4D8FF`; all headings set in
-Poppins Regular (400); logo is navy-bar + blue wordmark on light and blue-bar + white
-wordmark on dark (`logo-inv`); the scattered/structured dot field is retired and replaced by the
+Poppins Regular (400); logo is navy-bar + blue wordmark on light and all white on navy,
+Aurora, and Rhapsody Blue; the scattered/structured dot field is retired and replaced by the
 **Fluid dot pattern** (a half-tone grid, dense-to-sparse, with a two-tone color-territory split);
 the light device is **Aurora only** — one glow, soft to flowing, movement allowed (Burst, Plexus,
 and the separate Aurora ribbon retired Oct 2026; Pulse earlier); Rhapsody Blue carries a print

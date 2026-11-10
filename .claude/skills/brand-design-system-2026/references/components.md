@@ -43,12 +43,13 @@ teal**. Pathways use the **same color order as charts** (navy → blue → teal 
 blue). Keep a path's color stable wherever it recurs (wayfinding).
 
 **Corners & shape.** Square the top two corners, round the bottom two (≈12px) on module/content frames.
+Use that container for ONE element per page; lists are bullets or steps and specs are tables, never stacked boxes.
 Pills are CTA-only. Keep the corner treatment consistent across a page/deck.
 
 ## Brand
 
-**Logo & wordmark.** See SKILL.md §3. Primary = navy bar + blue wordmark (light grounds). Dark grounds
-= blue wordmark + white line (large) or one-color white. Monogram for tight spaces only. Clear space =
+**Logo & wordmark.** See SKILL.md §3. Primary = navy bar + blue wordmark (light grounds). Navy, Aurora over
+navy, and Rhapsody Blue = the all-white logo at every size (never a blue-wordmark version there). Monogram for tight spaces only. Clear space =
 the "R" mark on all sides. Product & co-brand lockups keep "Rhapsody" on the mark. Never modify,
 recolor, rotate, or overlay.
 

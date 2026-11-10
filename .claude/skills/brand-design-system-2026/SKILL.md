@@ -186,17 +186,18 @@ Bundled art (in this skill's `assets/`, mirrored from the repo):
 | File | Use on |
 |---|---|
 | `logo-primary.png` / `logo-primary.svg` | Light backgrounds — navy bar + blue wordmark (the primary lockup) |
-| `logo-blueline.png` | Dark/navy backgrounds — blue wordmark + white line (large sizes only) |
-| `logo-white.png` | Dark backgrounds where one-color white is needed |
+| `logo-white.png` | **Navy, Aurora over navy, and Rhapsody Blue backgrounds — always the all-white logo** |
+| `logo-blueline.png` | Blue wordmark + white line — **not used on navy or Aurora** (Nov 2026) |
 | `logo-black.png` | One-color navy/black on light backgrounds |
 | `monogram-blue-navy.png` | The "R" monogram — small spaces only (favicon, avatar, merch) |
 
 In HTML the repo also exposes these as background classes via `tokens.css`: `.logo-i` plus
-`.logo-bb` (primary), `.logo-blk`, `.logo-wht`, `.logo-blw` (blue wordmark + white line, dark).
+`.logo-bb` (primary), `.logo-blk`, `.logo-wht` (all white: navy, Aurora, Rhapsody Blue), `.logo-blw` (not for navy or Aurora).
 
 Rules:
-- **Light ground → navy-bar + blue wordmark.** **Dark/navy ground → blue wordmark + white line**
-  (large) or one-color white. Never place the light-ground lockup on a dark ground or vice versa.
+- **Light ground → navy-bar + blue wordmark.** **Navy, Aurora glow over navy, or Rhapsody Blue → the
+  all-white logo, at every size.** Never use a blue-wordmark version (including blue wordmark + white
+  line) on navy or Aurora, and never the light-ground lockup on a dark ground or vice versa.
 - Wordmark always reads **RHAPSODY** in all caps. Keep clear space equal to the "R" mark on all sides.
 - Minimum size: 108px on screen / 1.5in in print. Monogram only when the full logo won't fit.
 - **Never** recolor, stretch, rotate, add shadow/outline/effects, tilt, or lay content over the logo.
@@ -210,6 +211,11 @@ Rules:
 - **Square the top, round the bottom.** For framing modules and content blocks, square the top two
   corners and round the bottom two (≈12px). "Engineered at the top, settled at the base." This is the
   default frame; keep it consistent across a page or deck.
+- **One rounded-bottom container per page** (slide, document page, or screen), for the single
+  element that should stand out (a key stat, quote, summary, or CTA). Fit the layout to the
+  content instead of forcing containers: lists are plain bullets or numbered steps, never a stack
+  of boxes; comparisons and specs go in tables; repeated items go in rows with hairlines or open
+  columns.
 - **Pills are for CTAs only.** Fully rounded pill shapes are reserved for buttons/CTAs — don't use
   pill framing for content cards, images, or panels.
 
@@ -342,6 +348,15 @@ Notable patterns:
   File > New once published to Rhapsody's Microsoft templates): `Rhapsody-Security-Advisory-Template.dotx`, `Rhapsody-Release-Notes-Template.dotx`,
   `Rhapsody-White-Paper-Template.dotx`. For a .docx, apply their named styles (load the `docx`
   skill); for HTML or PDF, reproduce the same anatomy. See the Technical documents card.
+- **Any multi-page document** (technical document, report, one-pager set, proposal): the **same
+  header and footer on page 2 and every page after**; the **logo exactly once per page** (cover
+  top left, then the header only, never also in the body or footer); keep interior headers compact
+  (logo about 1.4in wide, band no deeper than about 0.75in) so editorial pages keep ample room for
+  content.
+- **Digital assets: test on mobile before finalizing.** Check at 375px (and 320px for critical
+  pieces): no horizontal scroll, no clipped text, body 16px or more, columns stack. Touch targets at
+  least 44×44px with about 8px between them; on interactive checklists the whole row is tappable and
+  the checkbox itself is at least 24px (never the default 13px box). Buttons stay 44px pills.
 - **PowerPoint**: the official 2026 deck master is `downloads/Rhapsody-PowerPoint-Template-2026.pptx`.
   It is **blue-first** (Rhapsody Blue default ground, navy occasional, logo always prominent). For the
   mechanics of editing decks, also load the `pptx` skill; for slide copy and the Axon™ rules, load
@@ -400,9 +415,11 @@ feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
   grounds teal appears only as an accent (tick / accent line / seam) beside navy text
 □ Two-tone headline = light blue on navy / Rhapsody Blue on white; never on a blue ground; no Rhapsody Blue text on navy
 □ If it didn't fit, the copy was shortened — the type was not crushed
-□ Logo: navy-bar/blue on light, blue-wordmark/white-line on dark (all-white on Rhapsody Blue); clear space = X (height of the R) on every side
+□ Logo: navy-bar/blue on light; ALL WHITE on navy, Aurora over navy, and Rhapsody Blue; clear space = X (height of the R) on every side
 □ Logo not recolored, stretched, rotated, shadowed, or overlaid
 □ Corners: squared top, rounded bottom on modules; pills reserved for CTAs
+□ At most ONE rounded-bottom container per page; lists/specs use bullets, steps, or tables, not boxes
+□ Documents: same header + footer from page 2 on; logo exactly once per page; compact interior header
 □ One lead visual: one dot device OR Aurora OR a photo; the only pairing is a dot device + photo
 □ Dots are the fluid dot pattern (approved master, not hand-built); big dot used as-is/flipped/90°
 □ Light devices on navy only; glow is teal/blue/purple (never orange); offset into open space
@@ -414,5 +431,6 @@ feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
 □ Copy follows rhapsody-brand voice; Rhapsody Axon™ naming/trademark rules applied (that skill)
 □ Company name is "Rhapsody," never "Rhapsody Health," never possessive ("Rhapsody's")
 □ Body text ≥16px on web; nothing a reader needs below 12px
+□ Digital: tested at 375px wide; no horizontal scroll; touch targets ≥44×44px; checkboxes ≥24px with the whole row tappable
 □ No end period on one-sentence headlines; multi-sentence headlines punctuate every sentence
 ```
