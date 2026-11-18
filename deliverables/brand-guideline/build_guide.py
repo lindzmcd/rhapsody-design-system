@@ -55,6 +55,7 @@ SP_MAP={
     "Rhapsody photo library": f"Rhapsody photo library ({ONREQ})",
     "Teddie Mercury character library": f"Teddie Mercury character library ({ONREQ})",
     "Light Devices": ONREQ,
+    "Graphic Devices library": f"Graphic Devices library ({ONREQ})",
     "Brand devices": INPKG,
     "Scattered Dots": INPKG,
 }

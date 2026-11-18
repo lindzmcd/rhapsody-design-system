@@ -227,15 +227,34 @@ Rules:
 **Use exactly one graphic device per layout** — dots *or* a light device, never both, and never
 stacked with heavy photography treatments.
 
+**The library (Nov 2026):** every device is a verbatim master in the SharePoint **Graphic Devices
+library** — https://rhapsodyhealth.sharepoint.com/:f:/r/Shared%20Documents/Marketing/Private/Graphic%20Design/_Asset%20Library/Graphic%20Devices?d=wf6fdf9bcc922469ba66e85bb803d7fed&csf=1&web=1&e=rzllkh
+(Marketing > Private > Graphic Design > _Asset Library > Graphic Devices; SVG + PNG + .ai). PNGs are in
+the repo at `assets/graphic-devices/` (1152×648, numbered as in the library):
+`fluid-dot/fluid-dot-01…42`, `dot-grid/{medium,small}/…-01…16`, `big-dot/ecosystem/…-01…09`,
+`big-dot/corner-crop/…-01…12`, `gradients/gradient-01…12` (Aurora). Use them as supplied; never
+rebuild, recolor, or trace a device. Point people to the library for SVG and source files.
+
 ### Dots (primary device)
 - **Fluid dot pattern** (the primary dot composition). A **half-tone dot grid** — identical dots on
   one grid that gather into a dense core at an edge/corner and **dissolve fluidly outward** (dense to
-  sparse). Registers: **white on navy**, **white on Rhapsody Blue**, **dots on white**, and the
-  **multicolor field** (blue/light-blue/teal/purple/white + up to 3 orange). It replaces the earlier
+  sparse). 42 masters = six layouts × seven color versions: 01–06 Rhapsody Blue
+  on navy, 07–12 white on navy, 13–18 navy on Rhapsody Blue, 19–24 white on Rhapsody Blue, 25–30 navy
+  on white, 31–36 multicolor on navy, 37–42 multicolor on white (blue/light-blue/teal/purple/white +
+  a few orange). Layouts (position 1–6 in each row): right edge; low wide field along the bottom;
+  bottom-right corner; top-right corner; two peaks from the bottom; low strip bottom right. It replaces the earlier
   scattered/structured dot field (retired Oct 2026). Use an approved master **as-is, flipped, or
   rotated 90°**; never hand-build or recolor.
+- **Dot grid** (new, Nov 2026): identical dots on a fixed grid stepping up from the bottom or right
+  edge — quieter and more structured than the fluid pattern (backgrounds, proof/stat pages, supporting
+  graphics). Medium and small, each 16 masters: 01–04 Rhapsody Blue on navy, 05–08 white on Rhapsody
+  Blue, 09–12 multicolor on white, 13–16 multicolor on navy; layouts: bottom skyline, right-edge column,
+  small bottom-right cluster, large diagonal field to the bottom-right. Use as-is or flipped; one size
+  per layout.
 - **Big dot ecosystem**: a closed, approved set — one dominant cropped circle (anchor) with 2–4
-  companions, one set per ground (navy, blue, white) in three crops each. Use one **as-is, flipped,
+  companions; library files 01–09 = three compositions (anchor top right, bottom right, bottom left)
+  each on navy, Rhapsody Blue, white. **Corner crops** (01–12): a single big dot cropped by the frame,
+  no companions — blue dot on navy (01–04), blue dot on white (05–08), navy dot on blue (09–12). Use one **as-is, flipped,
   or rotated 90°** — never hand-build or restyle it. Anchor is never the background hue: navy ground →
   blue anchor (white/light-blue/teal companions); blue ground → navy/white/light-blue anchor
   (white/navy/light-blue/teal/purple companions); white ground → navy/blue anchor
@@ -262,7 +281,8 @@ Aurora rules:
   fade in 600–800ms; static soft-wash master for reduced motion; animate transform/opacity only.
 - Lean into the **flowing** form for motion/video/large backdrops; keep to the calmer **wash** for
   everyday layouts where text sits close.
-- These are approved masters, not effects you build.
+- These are approved masters, not effects you build: the twelve Aurora masters are the library's
+  **gradients** folder (`assets/graphic-devices/gradients/gradient-01…12`).
 
 ---
 

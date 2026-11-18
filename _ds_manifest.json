@@ -106,6 +106,12 @@
       "name": "Fluid dot pattern"
     },
     {
+      "path": "components/dot-grid.html",
+      "group": "4 · Graphic devices",
+      "subtitle": "Identical dots on a fixed grid, stepping up from an edge; medium and small, four color versions",
+      "name": "Dot grid"
+    },
+    {
       "path": "components/big-dot.html",
       "group": "4 · Graphic devices",
       "subtitle": "The big-dot ecosystem: anchor + companions, one set per ground, three crops each",

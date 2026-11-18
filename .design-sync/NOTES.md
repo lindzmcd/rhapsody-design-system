@@ -273,3 +273,14 @@ then the index `project/design-system.json` last):
   Settled against the system: FY27 icons at 24px (not 22px/1.7), stat numerals light blue on navy,
   no arrow in the CTA pill, section lead-ins in Plex Mono, tile #E9EDF2. Guide v41; design system
   v43 (files) + v44 (index).
+- 2026-11-18: Graphic Devices library (SharePoint _Asset Library > Graphic Devices) adopted as the
+  verbatim source for every device. 107 PNGs (1152x648, byte-identical to SharePoint) in
+  assets/graphic-devices/ (fluid-dot 42, dot-grid medium/small 32, big-dot ecosystem 9 and corner
+  crops 12, gradients 12 = Aurora), labeled contact sheets in assets/figures/gd-*.jpg. New Dot grid
+  card; Fluid dot, Big dot, Light devices and Devices at a glance cards point to the library. Old
+  assets/fluid-dots and assets/big-dots retired. Design system got a starter set (27 PNGs + sheets)
+  and dropped the old masters, the retired Aurora ribbon and the old monogram figure (net +9 files).
+  Flags for the designer: the PNG exports are off-hex (navy #002D49, blue #0083FC, light blue
+  #ABD9FF, teal #00C9C0, purple #7B3DED), and Corner Crop-06 has a 36px transparent strip at the
+  left. The library has no Rhapsody Blue-on-white fluid dot (the technical document templates use
+  one, traced from the old fd-white). Guide v42; design system v51 (files) + v53 (index).
