@@ -19,6 +19,7 @@ Use them as supplied: never rebuild, recolor or trace a device.
 | 25–30 | Navy dots on white |
 | 31–36 | Multicolor on navy |
 | 37–42 | Multicolor on white |
+| not yet in the library | Rhapsody Blue dots on white (approved; ask the brand team for the file) |
 
 Layouts (the position within each group of six):
 1. core at the right edge
@@ -27,21 +28,6 @@ Layouts (the position within each group of six):
 4. top-right corner
 5. two peaks rising from the bottom
 6. low strip in the bottom-right corner
-
-## dot-grid/medium and dot-grid/small (16 each): four layouts in four color versions
-
-| Files | Color version |
-|---|---|
-| 01–04 | Rhapsody Blue dots on navy |
-| 05–08 | White dots on Rhapsody Blue |
-| 09–12 | Multicolor on white |
-| 13–16 | Multicolor on navy |
-
-Layouts:
-1. full-width skyline along the bottom
-2. column up the right edge
-3. small cluster in the bottom-right corner
-4. larger field rising diagonally to the bottom-right corner
 
 ## big-dot/ecosystem (9)
 
@@ -60,9 +46,11 @@ A single big dot cropped by the frame:
 Within each group of four, the crops are right edge (small), right edge (large), bottom-right corner
 and bottom edge.
 
-## gradients (12): Aurora
+## aurora-glow (12): Aurora
 
-The Aurora masters on navy, gradient-01 to gradient-12.
+The Aurora masters on navy (library folder "Aurora Glow"), gradient-01 to gradient-12.
+
+The dot grid is retired (library Retired folder); the fluid dot pattern replaces it.
 
 ## Note on color
 

@@ -95,13 +95,11 @@ without a full field.
 **Devices at a glance.** The master overview: each device, its meaning, its color lead, and when to
 use it. Consult it to choose between dots and a light device — and remember, only one per layout.
 
-**Graphic Devices library.** All device masters (fluid dot 42, dot grid 32, big dot ecosystem 9 and
-corner crops 12, Aurora gradients 12) are verbatim files in SharePoint _Asset Library > Graphic Devices,
+**Graphic Devices library.** All device masters (fluid dot 42, big dot ecosystem 9 and corner crops 12,
+Aurora Glow 12) are verbatim files in SharePoint _Asset Library > Graphic Devices,
 mirrored as PNG in `assets/graphic-devices/`. Use as supplied.
 
-**Dot grid.** Identical dots on a fixed grid, stepping up from the bottom or right edge; medium and
-small; four color versions (blue on navy, white on blue, multicolor on white, multicolor on navy) ×
-four layouts. Structured, quieter than the fluid pattern; one dot device per layout.
+**Dot grid.** Retired (Nov 2026); use the fluid dot pattern instead.
 
 **Fluid dot pattern.** A half-tone dot grid — identical dots that gather into a dense core and dissolve fluidly outward; registers white-on-navy, white-on-blue, dots-on-white, multicolor-on-navy. Replaces the retired scattered field.
 Structured dispersion with defined anchors. Do: keep density purposeful and directional. Don't:

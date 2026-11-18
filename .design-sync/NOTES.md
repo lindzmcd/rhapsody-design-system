@@ -284,3 +284,9 @@ then the index `project/design-system.json` last):
   #ABD9FF, teal #00C9C0, purple #7B3DED), and Corner Crop-06 has a 36px transparent strip at the
   left. The library has no Rhapsody Blue-on-white fluid dot (the technical document templates use
   one, traced from the old fd-white). Guide v42; design system v51 (files) + v53 (index).
+- 2026-11-18 (later): owner confirmed the dot grid is retired (library moved it to a Retired
+  folder; the fluid dot pattern replaces it): card, PNGs and sheets removed. The library renamed
+  "gradients" to "Aurora Glow"; repo folder is now assets/graphic-devices/aurora-glow/. Rhapsody
+  Blue dots on white are approved but missing from the library (the technical-document covers keep
+  them). The KR comments PDF predates this work; owner said to ignore it. Guide v43; design system
+  v54 (files) + v55 (index).
