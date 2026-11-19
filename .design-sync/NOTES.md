@@ -290,3 +290,7 @@ then the index `project/design-system.json` last):
   Blue dots on white are approved but missing from the library (the technical-document covers keep
   them). The KR comments PDF predates this work; owner said to ignore it. Guide v43; design system
   v54 (files) + v55 (index).
+- 2026-11-19: Print color added from the owner's CMYK palette (examples/print/): CMYK and closest
+  Pantone for all eleven colors on the Colors card (new Print color section), in the skill and the
+  design system README, with the rule to proof and adjust per print job (printer, paper, profile,
+  size). Skill zip now kept in deliverables/skill-package/. Guide v44; design system v58 + v59 (index).

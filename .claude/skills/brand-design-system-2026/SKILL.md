@@ -91,7 +91,25 @@ Tokens (from `tokens.css` — these exact hex values are the standard):
 
 **Print color.** HEX/RGB are for digital. For **print**, Rhapsody Blue is **CMYK 100 50 0 0** — set the
 swatch explicitly (`C100 M50 Y0 K0`); don't let the layout program auto-convert the hex, which comes
-out muddy. Other colors use their CMYK/Pantone equivalents in print.
+out muddy. Full print palette (CMYK C,M,Y,K / closest Pantone C, both to be verified):
+
+| Color | HEX | CMYK | Pantone |
+|---|---|---|---|
+| Rhapsody Blue | #1A81F4 | 100, 50, 0, 0 | 2727 C |
+| Rhapsody Navy | #0B2C47 | 100, 83, 43, 49 | 7463 C |
+| Light blue | #B4D8FF | 28, 11, 0, 0 | 2717 C |
+| Teal | #23C5BF | 99, 14, 33, 0 | 3262 C |
+| Purple | #7340E4 | 71, 81, 0, 0 | 2665 C |
+| Orange | #FA7E2E | 0, 61, 87, 0 | 1575 C |
+| Black | #050F19 | 84, 73, 60, 79 | Black 6 C |
+| Dark gray | #7E858C | 53, 42, 38, 5 | 430 C |
+| Light gray | #D9DFE6 | 13, 9, 6, 0 | 649 C |
+| Gray-blue | #E8EDF2 | 7, 4, 2, 0 | 656 C |
+| White | #FFFFFF | 0, 0, 0, 0 | none (paper) |
+
+These are starting points: **proof and adjust them for every print job**, since printer, paper,
+coating, profile, and the size of the piece (large color fields vs small type) all change the result.
+Check Pantone references against a physical Pantone guide before production.
 
 **Default palette hierarchy.** Most layouts should be **White or Navy + Rhapsody Blue**, with **one**
 optional secondary accent (Light Blue or Teal) only when needed. **No more than three brand colors
