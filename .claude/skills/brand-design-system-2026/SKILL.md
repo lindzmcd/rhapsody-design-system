@@ -221,17 +221,19 @@ Rules:
 - Minimum size: 108px on screen / 1.5in in print. Monogram only when the full logo won't fit.
 - **Never** recolor, stretch, rotate, add shadow/outline/effects, tilt, or lay content over the logo.
 - **Rhapsody Axon mark** (the robot character; Rhapsody Axon™ only, not Teddie, not a graphic device):
-  files in SharePoint _Asset Library > Characters > Axon Character Mark (PNG 16–1024px, JPG, SVG; 512px
-  PNGs in `assets/axon-mark/`). Versions: **full color** (`axon-mark-fullcolor`, primary, white/light
+  files in SharePoint _Asset Library > Logos > _Rhapsody Product Logos > Axon Mark
+  (https://rhapsodyhealth.sharepoint.com/:f:/r/Shared%20Documents/Marketing/Private/Graphic%20Design/_Asset%20Library/Logos/_Rhapsody%20Product%20Logos/Axon%20Mark?d=w6067838a70a84fdc92e379cc22d366fb&csf=1&web=1&e=TUsDhm;
+  PNG 1024px, JPG, SVG; 1024px PNGs in `assets/axon-mark/`). Versions: **full color** (`axon-mark-fullcolor`, primary, white/light
   grounds), **navy** (one color, light), **reversed** (`axon-mark-reversed`: light-blue cap, white face,
   navy eyes; navy/dark grounds), **white** (one color; dark grounds and Rhapsody Blue). Never the full-
   color mark on a dark ground; strong contrast always (switch versions if any part is hard to see);
   keep clear space incl. the antenna. Never recolor, stretch, rotate, add effects, crop/rearrange, place
-  on busy/low-contrast grounds, or crowd with other logos/text. Animated states (GIF/Lottie/JSON/SVG):
-  idle, thinking, working, reading, success, offline — match the state to what the product is doing.
+  on busy/low-contrast grounds, or crowd with other logos/text. Animated states: idle, thinking, working, reading,
+  success, offline — animated SVG for product/web (`axon-<state>.svg`, `axon-<state>-dark.svg` for dark
+  grounds) and 1080px 30fps transparent PNG sequences for video; match the state to what the product is doing.
 - **Axon Connected badge** (partner status mark for vendors with a live integration playbook in
-  Rhapsody Axon™ Broadcast; files: SharePoint _Rhapsody Brand Package > 2026_Brand > Logos > Product
-  Logos > Axon Broadcast Badge; PNGs in `assets/axon-badge/`). It shows a published playbook only —
+  Rhapsody Axon™ Broadcast; files: SharePoint _Asset Library > Logos > _Rhapsody Product Logos > Axon
+  Broadcast Badge (https://rhapsodyhealth.sharepoint.com/:f:/r/Shared%20Documents/Marketing/Private/Graphic%20Design/_Asset%20Library/Logos/_Rhapsody%20Product%20Logos/Axon%20Broadcast%20Badge?d=w467cadfea1db44d59df6bb7446e0000a&csf=1&web=1&e=tO3YOr); PNGs in `assets/axon-badge/`). It shows a published playbook only —
   never certification, validation, approval, endorsement, partnership, or guaranteed/fast integration.
   Five badges: Navy Circle and Blue Circle (light grounds), White Circle (gray/navy/blue), Blue Bar
   (light), White Bar (gray/navy/blue); circles for small spaces, bars for wide layouts. On photos or

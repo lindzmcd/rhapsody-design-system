@@ -55,12 +55,12 @@ recolor, rotate, or overlay.
 
 **Rhapsody Axon mark.** The robot character for Rhapsody Axon™. Full color on light (primary), navy
 one-color on light, reversed on navy/dark, white on dark and on Rhapsody Blue. Never full color on dark.
-Files in _Asset Library > Characters > Axon Character Mark; six animated states. Use as provided.
+Files in _Asset Library > Logos > _Rhapsody Product Logos > Axon Mark; six animated states (animated SVG light/dark, PNG sequences). Use as provided.
 
 **Axon Connected badge.** Vendor status mark for a published Rhapsody Axon™ Broadcast playbook (never
 certification or endorsement). Navy/Blue Circle and Blue Bar on light; White Circle/Bar on gray, navy,
 blue. Clear space ¼ width (circle) / ¼ height (bar); min 64px / 160px. Link to the Directory playbook
-page; alt "Axon Connected badge"; approved wording only. Files in Product Logos > Axon Broadcast Badge.
+page; alt "Axon Connected badge"; approved wording only. Files in _Asset Library > Logos > _Rhapsody Product Logos > Axon Broadcast Badge.
 
 ## Components
 

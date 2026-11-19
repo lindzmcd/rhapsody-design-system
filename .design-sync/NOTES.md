@@ -304,3 +304,9 @@ then the index `project/design-system.json` last):
   The five official PNGs come from SharePoint _Rhapsody Brand Package > 2026_Brand > Logos > Product
   Logos > Axon Broadcast Badge (exact brand hex, transparent) and are in assets/axon-badge/. Guide v46;
   design system v62 (files) + v63 (index).
+- 2026-11-19 (later): owner gave the official library folders for the Axon Mark and the Axon
+  Broadcast Badge (_Asset Library > Logos > _Rhapsody Product Logos). Cards, skill and design system
+  README now link there. The Axon Mark static folder holds 1024px PNGs only, so assets/axon-mark/ now
+  has the 1024px files (byte-identical to SharePoint) instead of 512px; animated states are now
+  animated SVG (light and dark) plus 1080px 30fps PNG sequences. Badge files unchanged. Guide v47;
+  design system v64 (files) + v65 (index).
