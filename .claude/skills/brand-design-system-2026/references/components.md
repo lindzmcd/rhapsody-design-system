@@ -53,6 +53,10 @@ navy, and Rhapsody Blue = the all-white logo at every size (never a blue-wordmar
 the "R" mark on all sides. Product & co-brand lockups keep "Rhapsody" on the mark. Never modify,
 recolor, rotate, or overlay.
 
+**Rhapsody Axon mark.** The robot character for Rhapsody Axon™. Full color on light (primary), navy
+one-color on light, reversed on navy/dark, white on dark and on Rhapsody Blue. Never full color on dark.
+Files in _Asset Library > Characters > Axon Character Mark; six animated states. Use as provided.
+
 ## Components
 
 **Buttons & CTAs.** **Pill** shape (fully rounded). **Primary** = Rhapsody Blue fill, white label.

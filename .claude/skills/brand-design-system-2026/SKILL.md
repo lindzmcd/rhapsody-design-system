@@ -220,6 +220,15 @@ Rules:
 - Wordmark always reads **RHAPSODY** in all caps. Keep clear space equal to the "R" mark on all sides.
 - Minimum size: 108px on screen / 1.5in in print. Monogram only when the full logo won't fit.
 - **Never** recolor, stretch, rotate, add shadow/outline/effects, tilt, or lay content over the logo.
+- **Rhapsody Axon mark** (the robot character; Rhapsody Axon™ only, not Teddie, not a graphic device):
+  files in SharePoint _Asset Library > Characters > Axon Character Mark (PNG 16–1024px, JPG, SVG; 512px
+  PNGs in `assets/axon-mark/`). Versions: **full color** (`axon-mark-fullcolor`, primary, white/light
+  grounds), **navy** (one color, light), **reversed** (`axon-mark-reversed`: light-blue cap, white face,
+  navy eyes; navy/dark grounds), **white** (one color; dark grounds and Rhapsody Blue). Never the full-
+  color mark on a dark ground; strong contrast always (switch versions if any part is hard to see);
+  keep clear space incl. the antenna. Never recolor, stretch, rotate, add effects, crop/rearrange, place
+  on busy/low-contrast grounds, or crowd with other logos/text. Animated states (GIF/Lottie/JSON/SVG):
+  idle, thinking, working, reading, success, offline — match the state to what the product is doing.
 - Product lockups follow the copy rule — the mark reads "Rhapsody Axon," never "Axon" alone (see
   `rhapsody-brand` for the full Axon™ trademark rules).
 

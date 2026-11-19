@@ -42,8 +42,14 @@
     {
       "path": "components/logo.html",
       "group": "2 · Brand",
-      "subtitle": "Navy-bar/blue on light, blue-wordmark/white-line on dark, monogram, lockups",
+      "subtitle": "Navy-bar/blue on light, all white on navy, Aurora, and Rhapsody Blue; monogram; clear space",
       "name": "Logo & wordmark"
+    },
+    {
+      "path": "components/axon-mark.html",
+      "group": "2 · Brand",
+      "subtitle": "The Rhapsody Axon™ character mark: four versions, backgrounds, clear space, animated states",
+      "name": "Rhapsody Axon mark"
     },
     {
       "path": "components/mascot.html",
