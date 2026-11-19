@@ -229,6 +229,22 @@ Rules:
   keep clear space incl. the antenna. Never recolor, stretch, rotate, add effects, crop/rearrange, place
   on busy/low-contrast grounds, or crowd with other logos/text. Animated states (GIF/Lottie/JSON/SVG):
   idle, thinking, working, reading, success, offline — match the state to what the product is doing.
+- **Axon Connected badge** (partner status mark for vendors with a live integration playbook in
+  Rhapsody Axon™ Broadcast; files: SharePoint _Rhapsody Brand Package > 2026_Brand > Logos > Product
+  Logos > Axon Broadcast Badge; PNGs in `assets/axon-badge/`). It shows a published playbook only —
+  never certification, validation, approval, endorsement, partnership, or guaranteed/fast integration.
+  Five badges: Navy Circle and Blue Circle (light grounds), White Circle (gray/navy/blue), Blue Bar
+  (light), White Bar (gray/navy/blue); circles for small spaces, bars for wide layouts. On photos or
+  patterns, set it on a solid panel. Clear space = ¼ badge width (circle) or ¼ height (bar); minimum
+  64px / 0.75in (circle), 160px / 1.5in (bar). Link it to the vendor's Directory playbook page, alt
+  text "Axon Connected badge". Approved wording: "Our integration playbook is published in Rhapsody
+  Axon™ Broadcast." / "Health systems can ask Axon how to connect with us." / "Find our playbook in
+  the Directory." Never "Rhapsody certified/approved", "Validated by Axon", "guaranteed integration",
+  "instant connection". The artwork reads "Axon Connected" exactly; it is a status mark, not a product
+  name. No shadows, outlines, recoloring, tilting, distortion, cropping, animation, merging into a logo,
+  or use after the playbook is unpublished. Placement: site footer/integrations page (Blue Bar, White
+  Bar on dark), product sign-in (circles), RFPs (Blue Bar on white cover), email signature (Navy
+  Circle 64px), dark slides (white versions).
 - Product lockups follow the copy rule — the mark reads "Rhapsody Axon," never "Axon" alone (see
   `rhapsody-brand` for the full Axon™ trademark rules).
 

@@ -52,6 +52,12 @@
       "name": "Rhapsody Axon mark"
     },
     {
+      "path": "components/axon-connected-badge.html",
+      "group": "2 · Brand",
+      "subtitle": "The partner badge for vendors with a published playbook in Rhapsody Axon™ Broadcast: meaning, five badges, placement, claims",
+      "name": "Axon Connected badge"
+    },
+    {
       "path": "components/mascot.html",
       "group": "2 · Brand",
       "subtitle": "Draft: culture, event, and swag moments only; never product, credibility, or web product pages",

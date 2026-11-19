@@ -300,3 +300,7 @@ then the index `project/design-system.json` last):
   (it still said blue-wordmark/white-line on dark). Teddie card now points to the Axon card. Noted:
   a Teddie Mercury folder now exists at _Asset Library > Characters (empty); the Teddie card still
   links Brand Package FY27 > Character Library. Guide v45; design system v60 + v61 (index).
+- 2026-11-19 (later): Axon Connected badge card from the vendor usage guidelines (examples/brand/).
+  The five official PNGs come from SharePoint _Rhapsody Brand Package > 2026_Brand > Logos > Product
+  Logos > Axon Broadcast Badge (exact brand hex, transparent) and are in assets/axon-badge/. Guide v46;
+  design system v62 (files) + v63 (index).

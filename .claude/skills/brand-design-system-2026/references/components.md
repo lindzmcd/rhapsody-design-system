@@ -57,6 +57,11 @@ recolor, rotate, or overlay.
 one-color on light, reversed on navy/dark, white on dark and on Rhapsody Blue. Never full color on dark.
 Files in _Asset Library > Characters > Axon Character Mark; six animated states. Use as provided.
 
+**Axon Connected badge.** Vendor status mark for a published Rhapsody Axon™ Broadcast playbook (never
+certification or endorsement). Navy/Blue Circle and Blue Bar on light; White Circle/Bar on gray, navy,
+blue. Clear space ¼ width (circle) / ¼ height (bar); min 64px / 160px. Link to the Directory playbook
+page; alt "Axon Connected badge"; approved wording only. Files in Product Logos > Axon Broadcast Badge.
+
 ## Components
 
 **Buttons & CTAs.** **Pill** shape (fully rounded). **Primary** = Rhapsody Blue fill, white label.
