@@ -310,3 +310,7 @@ then the index `project/design-system.json` last):
   has the 1024px files (byte-identical to SharePoint) instead of 512px; animated states are now
   animated SVG (light and dark) plus 1080px 30fps PNG sequences. Badge files unchanged. Guide v47;
   design system v64 (files) + v65 (index).
+- 2026-11-19 (later): Teddie Mercury files renamed on SharePoint (_Asset Library > Teddie Mercury)
+  from connect-mascot-* to teddie-mercury-* (all nine; item ids unchanged, so sharing links still
+  work). Repo assets/mascot/ and the design system renamed to match; the Teddie card, skill and design
+  system README now point to the new library folder. Guide v48; design system v66 + v67 (index).

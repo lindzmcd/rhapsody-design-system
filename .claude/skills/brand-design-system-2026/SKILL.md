@@ -478,7 +478,9 @@ security, regulatory, legal, executive, PR, analyst, financial), proposal, contr
 content; never beside a product claim or lockup; never a template fixture (slide masters, email
 signatures, web chrome). One per asset, not on every piece in a set; he counts as the layout's one
 graphic device (no dots or Aurora with him); outside the logo's clear space, never in a lockup.
-Master art only, from SharePoint: Brand Package FY27 > Character Library > Teddie Mercury (also
+Master art only, from SharePoint: _Asset Library > Teddie Mercury
+(https://rhapsodyhealth.sharepoint.com/:f:/r/Shared%20Documents/Marketing/Private/Graphic%20Design/_Asset%20Library/Teddie%20Mercury?d=w6c46ad9543794dc7bae476c0fb24428f&csf=1&web=1&e=YBUukC;
+files `teddie-mercury-color`, `-color-standing`, `-navy`, `-white`, `-lightgray`, SVG + 2000px PNG; also
 in the repo at `assets/mascot/`: full color, full-color standing, and navy, white, and light gray
 one-color versions; full color on light grounds, one-color for single-color production or dark grounds). Spelled
 "Teddie" (never "Teddy"); "Teddie Mercury" on first mention.
