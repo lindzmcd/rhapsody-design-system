@@ -166,10 +166,17 @@ prominent**, **very few large words** (billboard style), **one clear action**. C
 Canvas template: `templates/display-ads/DisplayAds.dc.html`. This pattern is intentionally louder and
 simpler than the rest of the system — resist adding detail.
 
-**PowerPoint deck template.** Official 2026 master: `downloads/Rhapsody-PowerPoint-Template-2026.pptx`.
-Blue-first (Rhapsody Blue default ground, navy occasional, logo always prominent, few large words). Use
-it as the starting point for any deck. For deck-editing mechanics load the `pptx` skill; for slide copy
-and Rhapsody Axon™ naming load `rhapsody-brand`.
+**PowerPoint deck template.** The reference for every Rhapsody slide and deck, in PowerPoint or in
+Claude: the 2026 PowerPoint template (November 2026, work in progress, in use now) at SharePoint >
+Marketing > Private > Graphic Design > Projects > 2026 > 2026 Rebrand > PPT Template (https://rhapsodyhealth.sharepoint.com/:p:/r/Shared%20Documents/Marketing/Private/Graphic%20Design/Projects/2026/2026%20Rebrand/PPT%20Template/Rhapsody%20PowerPoint%20Template%20-%202026%20KASS%20.pptx?d=w997112cd3f564c969bec4b6f4af82261&csf=1&web=1&e=yTQhhs).
+Layouts: cover (headline, deck name, mono "PREPARED BY … · DATE" eyebrow, cover image), title and
+section, agenda (AGENDA eyebrow, "What we'll cover," topics 01–07), two-, three- and four-column
+content (small title plus three points), four numbered titles, stats (25k+ provider connections
+worldwide, 100% healthcare focused, >7,000 customers through OEM partners, 24/7 global support),
+speaker, quote. Footer on every slide after the cover: "© 2026 Rhapsody. All rights reserved." and
+the slide number. Replace the template's old dots with fluid dot masters and its placeholder icons
+with FY27 library icons; never copy them. The earlier 65-slide master is retired. For deck-editing
+mechanics load the `pptx` skill; for slide copy and Rhapsody Axon™ naming load `rhapsody-brand`.
 
 **Ebooks.** 816×1056 letter pages; padding 56/60/72; header stack (44×3 blue rule, Plex Mono
 eyebrow 12px blue, H2 Poppins 400 36px, intro 16px/1.6); running footer with logo (108px) + title +

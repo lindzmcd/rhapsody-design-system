@@ -34,7 +34,6 @@ tokens.css            Design tokens (color, type) + reusable classes + logo imag
 assets/               Tightly-cropped logo/monogram rasters the cards reference inline
 brand/                Full downloadable logo package (SVG + EPS vectors, 300/72 dpi PNG/JPG)
 components/           One HTML preview per component/pattern — each becomes a card in Claude Design
-downloads/            Ready-to-use masters (e.g. the 2026 PowerPoint template .pptx)
 templates/            Claude Design canvas templates (e.g. feature-image/FeatureImage.dc.html)
 deliverables/         Shareable, self-contained outputs (brand guideline HTML/PDF, signature package)
 ```
@@ -391,7 +390,7 @@ Stats · Tables · Dot accents
 **Iconography** — Icon library
 **Imagery** — Illustration · Photography & portraits
 **Patterns** — Hero · Email template · Email signature · Social posts · Product launch announcement ·
-Name lockup · **Display ads (blue-first)** · **PowerPoint deck template (downloadable .pptx master)** ·
+Name lockup · **Display ads (blue-first)** · **PowerPoint deck template (the reference for slides; work in progress)** ·
 **Technical documents (white papers, release notes, security advisories; Word .dotx templates)**
 **Reference** — Quick corrections log
 
@@ -443,10 +442,17 @@ Notable patterns:
   pieces): no horizontal scroll, no clipped text, body 16px or more, columns stack. Touch targets at
   least 44×44px with about 8px between them; on interactive checklists the whole row is tappable and
   the checkbox itself is at least 24px (never the default 13px box). Buttons stay 44px pills.
-- **PowerPoint**: the official 2026 deck master is `downloads/Rhapsody-PowerPoint-Template-2026.pptx`.
-  It is **blue-first** (Rhapsody Blue default ground, navy occasional, logo always prominent). For the
-  mechanics of editing decks, also load the `pptx` skill; for slide copy and the Axon™ rules, load
-  `rhapsody-brand`.
+- **PowerPoint and slides**: the reference for every Rhapsody slide and deck, in PowerPoint or in
+  Claude, is the 2026 PowerPoint template (November 2026, a work in progress but in use now):
+  SharePoint > Marketing > Private > Graphic Design > Projects > 2026 > 2026 Rebrand > PPT Template >
+  *Rhapsody PowerPoint Template - 2026 KASS* (https://rhapsodyhealth.sharepoint.com/:p:/r/Shared%20Documents/Marketing/Private/Graphic%20Design/Projects/2026/2026%20Rebrand/PPT%20Template/Rhapsody%20PowerPoint%20Template%20-%202026%20KASS%20.pptx?d=w997112cd3f564c969bec4b6f4af82261&csf=1&web=1&e=yTQhhs). Match its layouts (cover, title and section,
+  agenda with up to seven numbered topics, two-, three- and four-column content, stats, speaker,
+  quote), type and footer ("© 2026 Rhapsody. All rights reserved." plus the slide number on every
+  slide after the cover). **Two parts are being replaced:** the template's dots are the old version,
+  so use fluid dot masters from the Graphic Devices library; its icons are placeholders, so use the
+  FY27 icon library. Never copy the template's dots or icons into new work. The earlier 65-slide
+  master (`downloads/…2026.pptx`, November 3) is retired. For deck-editing mechanics also load the
+  `pptx` skill; for slide copy and the Axon™ rules, load `rhapsody-brand`.
 
 ---
 

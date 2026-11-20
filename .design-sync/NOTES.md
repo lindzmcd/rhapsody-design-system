@@ -314,3 +314,12 @@ then the index `project/design-system.json` last):
   from connect-mascot-* to teddie-mercury-* (all nine; item ids unchanged, so sharing links still
   work). Repo assets/mascot/ and the design system renamed to match; the Teddie card, skill and design
   system README now point to the new library folder. Guide v48; design system v66 + v67 (index).
+- 2026-11-20: owner named the 2026 PowerPoint template (SharePoint > Graphic Design > Projects > 2026 >
+  2026 Rebrand > PPT Template > "Rhapsody PowerPoint Template - 2026 KASS", work in progress) as the
+  reference for every slide and deck, in PowerPoint and in Claude. Its dots are the old version and its
+  icons are placeholders (a designer is replacing both): use fluid dot masters and FY27 icons instead.
+  The M365 connector returns only slide text for .pptx, so the card lists the layouts from the text
+  (cover, title/section, agenda 01-07, 2/3/4-column content, stats, speaker, quote, footer) with no
+  thumbnails yet. The earlier 65-slide master (downloads/, Nov 3) is retired and removed; the old
+  "blue-first" claim is dropped until the new template can be seen. Guide v49; design system v71 + v72
+  (index). Skill zip rebuilt.

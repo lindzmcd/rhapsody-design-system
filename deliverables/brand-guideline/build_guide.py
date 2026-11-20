@@ -56,6 +56,7 @@ SP_MAP={
     "Teddie Mercury character library": f"Teddie Mercury character library ({ONREQ})",
     "Light Devices": ONREQ,
     "Graphic Devices library": f"Graphic Devices library ({ONREQ})",
+    "PPT Template folder": f"PPT Template folder ({ONREQ})",
     "Brand devices": INPKG,
     "Scattered Dots": INPKG,
 }
