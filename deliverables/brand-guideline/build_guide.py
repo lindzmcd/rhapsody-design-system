@@ -61,7 +61,9 @@ SP_MAP={
     "Scattered Dots": INPKG,
 }
 sp_re=re.compile(r'<a href="https://rhapsodyhealth\.sharepoint\.com/[^"]*">([^<]*)</a>')
+ex_re=re.compile(r'<a href="https://express\.adobe\.com/[^"]*">([^<]*)</a>')
 def delink_sp(html):
+    html=ex_re.sub(lambda m: m.group(1), html)  # Adobe Express links are internal-only
     return sp_re.sub(lambda m: SP_MAP.get(m.group(1), m.group(1)), html)
 
 def scope_css(css, sid):

@@ -12,7 +12,7 @@ reusable classes; otherwise use these specs. All items link `tokens.css` and pul
 - Graphic devices: Devices at a glance · Dots · Fluid dot pattern · Big dot · Light devices
 - Iconography: Icon library
 - Imagery: Illustration · Photography & portraits
-- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · PowerPoint · Technical documents · Ebooks · Webinar promo
+- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · Social templates · PowerPoint · Technical documents · Ebooks
 - Reference: Quick corrections log
 
 ---
@@ -186,12 +186,17 @@ rows with hairlines; two-column checklists; stats 52–64px; navy/blue closing p
 arrow. One boxed element per page. Fixed page order and a blue-accented takeaway closing each page.
 Campaign illustration and badges isolated to cover, CTA, and the field-guide page. See the Ebooks card.
 
-**Webinar promo (social).** 1200×627 navy graphic for webinars and live events. Top row: light-blue
-Plex Mono eyebrow (WEBINAR) left; date/time in white mono caps right, after the light-blue calendar
-icon. Headline Poppins Medium ~52px, ≤2 lines, one light-blue phrase, sentence case. Description one
-sentence, ~22px. 1–3 speakers: ~130px headshots (black and white allowed) in a 3px Rhapsody Blue ring,
-name Medium + title/company. All-white logo bottom left. Fluid dots bottom right, off two edges, clear
-of copy. No button, no containers; check legibility at feed size (~350px wide).
+**Social templates.** Every social graphic starts from the approved Adobe Express templates (1200×628):
+product release (2 options; button allowed here only; option 2 can swap the badge for a product
+screenshot), webinar (1/2/3 speakers × flat navy or Aurora Glow), event, customer story (4 options:
+stat light, stat navy, headline Aurora, headline blue with circles), employee spotlight (3 options).
+Title Case headlines with no end period; one mono eyebrow naming the post type; all-white logo on
+navy/Aurora/blue, primary on light gray; co-brand lockup with a thin plus; speakers and employees
+black and white in the Rhapsody Blue ring; the templates' dot and circle art is approved in these
+templates only. Links and option details: see SKILL.md and the Social templates card.
+
+**Email signature banners.** Three layouts from the Express Email Signature template (event on blue,
+event on Aurora Glow, content with device mockup); one banner below the text signature, linked.
 
 **Technical documents.** White papers, release notes, and customer security advisories share one
 system, modeled on the approved eMudhra advisories (`examples/technical-documents/`). Cover: white,

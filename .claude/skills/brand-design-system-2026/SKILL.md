@@ -106,8 +106,11 @@ out muddy. Full print palette (CMYK C,M,Y,K / closest Pantone C, both to be veri
 | Gray-blue | #E8EDF2 | 7, 4, 2, 0 | 656 C |
 | White | #FFFFFF | 0, 0, 0, 0 | none (paper) |
 
-These are starting points: **proof and adjust them for every print job**, since printer, paper,
-coating, profile, and the size of the piece (large color fields vs small type) all change the result.
+These are starting points. **Test them per project for every print piece: wait for a proof of the
+job being printed, then adjust the values slightly as needed.** Coated vs uncoated stock, paper color,
+the printer, and matte or gloss coatings all change how the same CMYK values look, as does the size of
+the piece (large color fields vs small type), so small per-project adjustments are normal. When you
+prepare print files, say so in the handoff: the values are a starting point pending the printer's proof.
 Check Pantone references against a physical Pantone guide before production.
 
 **Default palette hierarchy.** Most layouts should be **White or Navy + Rhapsody Blue**, with **one**
@@ -182,7 +185,7 @@ sizes are documentation chrome, not this scale):
 
 Floors (web): body 16px, supporting text 14px, captions and labels 12px, legal 11px only where
 unavoidable. Copy caps: hero headline ≤40 characters, supporting line ≤110, quote ≤60, testimonial
-≤120. Sentence case everywhere except the mono eyebrow. **No end period on headlines** (or
+≤120. Sentence case everywhere except the mono eyebrow and **social-graphic headlines, which are Title Case** (per the Express social templates). **No end period on headlines** (or
 subheads, card titles, buttons, labels): one sentence, no period; two or more short sentences for
 impact ("Integrate. Govern. Automate."), a period after each. Questions keep "?", "!" only for
 confirmation moments, quotes keep their own punctuation, body copy punctuates normally.
@@ -416,12 +419,25 @@ Notable patterns:
   Proof → CTA. Each page ends on a blue-accented takeaway; eyebrows are functional section names;
   the campaign metaphor and campaign illustration/badges stay isolated (cover, CTA, one field-guide
   page, at most one or two fragments).
-- **Webinar promo (social)**, 1200×627: navy; mono eyebrow (event type) top left in light blue
-  and the date in white mono caps top right after the light-blue library calendar icon; Poppins
-  Medium headline (≤2 lines, one light-blue phrase, sentence case); one-sentence description;
-  1–3 speakers in the Rhapsody Blue ring (black-and-white headshots allowed for real speakers) with
-  name + title; all-white logo bottom left; a fluid dot master bottom right bleeding off two edges.
-  No button, no containers. Reference: `examples/social/`; see the Webinar promo card.
+- **Social graphics come from the approved Adobe Express templates** (1200×628; see the Social
+  templates card). Start from the template, or match it exactly when designing in Claude, and change
+  only words, photos, logos, and speakers. Templates (options are pages in each file):
+  product release (https://express.adobe.com/id/urn:aaid:sc:US:2e2038d4-1619-5728-98a5-b2fd3a6b05ce; option 1 navy-to-blue with a blue pill,
+  option 2 Rhapsody Blue with a white pill and the product badge, or a product screenshot in its
+  place); webinar with 1 (https://express.adobe.com/id/urn:aaid:sc:US:0223aa38-9e0e-57e5-9a19-27970a836225), 2
+  (https://express.adobe.com/id/urn:aaid:sc:US:c198443c-9a2a-52f1-8fcf-5c64bb1e00a7) or 3 speakers (https://express.adobe.com/id/urn:aaid:sc:US:e36c88be-0719-50f7-98be-93510494db59),
+  each in flat navy (stepped white dots, light-blue names) and Aurora Glow (teal rule, teal calendar
+  icon, teal names); event (https://express.adobe.com/id/urn:aaid:sc:US:f73380bf-3ac7-55b1-8f15-d35cd8f4ae03; "MEET RHAPSODY AT [EVENT]",
+  booth, date, multicolor dot arc); customer story (https://express.adobe.com/id/urn:aaid:sc:US:3f42cb73-12d6-50b2-a352-b86fa27ef16d; stat on
+  light gray with photo, stat on navy with customer-site photo, headline on Aurora Glow, headline on
+  Rhapsody Blue with big circles; co-brand lockup "Rhapsody + customer logo"); employee spotlight
+  (https://express.adobe.com/id/urn:aaid:sc:US:650933de-207c-5db8-93ff-441dc7ef5fa2; light gray quote + navy panel, navy with circles, navy +
+  blue panel with the multicolor dot column). Rules: **Title Case headlines, no end period** on a
+  one-sentence headline (some template pages still show one; remove it); one mono eyebrow naming the
+  post type; all-white logo on navy/Aurora/blue, primary on light gray, once; real people in the
+  Rhapsody Blue ring, black and white allowed; **the templates' dot and circle art is approved there
+  only** (never move it onto other work); **a button only on product release**; check at ~350px.
+  Exports: `examples/social/express/`.
 - **Technical documents** (white papers, release notes, customer security advisories) follow the
   approved eMudhra advisories (`examples/technical-documents/`): white cover with the logo top left,
   the white-ground fluid dots (Rhapsody Blue) top right, a mono eyebrow naming the type, a two-tone
@@ -442,6 +458,10 @@ Notable patterns:
   pieces): no horizontal scroll, no clipped text, body 16px or more, columns stack. Touch targets at
   least 44×44px with about 8px between them; on interactive checklists the whole row is tappable and
   the checkbox itself is at least 24px (never the default 13px box). Buttons stay 44px pills.
+- **Email signature campaign banners** come only from the Express Email Signature template
+  (https://express.adobe.com/id/urn:aaid:sc:US:8454d147-db37-4f31-bfda-0847c811770a): event on Rhapsody Blue with a navy logo panel, event on
+  Aurora Glow, or content with a device mockup. One banner, below the text signature, linked, with
+  alt text naming the destination; remove it when the campaign ends.
 - **PowerPoint and slides**: the reference for every Rhapsody slide and deck, in PowerPoint or in
   Claude, is the 2026 PowerPoint template (November 2026, a work in progress but in use now):
   SharePoint > Marketing > Private > Graphic Design > Projects > 2026 > 2026 Rebrand > PPT Template >

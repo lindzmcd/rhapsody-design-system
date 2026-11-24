@@ -16,7 +16,7 @@
 </div>
 <div class="note"><strong>Rhapsody Blue in print.</strong> Any print use of Rhapsody Blue must use <strong>CMYK 100 50 0 0</strong>. Don&rsquo;t let a layout program auto-convert the hex (a raw #1A81F4 conversion comes out muddy); set the swatch to <strong>C100 M50 Y0 K0</strong> explicitly. Keep HEX/RGB for digital.</div>
 <h4>Secondary</h4>
-<div class="swatches" style="grid-template-columns:repeat(3,1fr);max-width:470px;">
+<div class="swatches" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));max-width:470px;">
   <div class="sw"><div class="chip" style="background:#0B2C47"></div><div class="meta"><div class="name">Rhapsody Navy</div><div class="tier">Secondary</div><div class="hex">#0B2C47</div></div></div>
   <div class="sw"><div class="chip" style="background:#B4D8FF"></div><div class="meta"><div class="name">Light blue</div><div class="tier">Secondary</div><div class="hex">#B4D8FF</div></div></div>
   <div class="sw"><div class="chip" style="background:#23C5BF"></div><div class="meta"><div class="name">Teal</div><div class="tier">Secondary</div><div class="hex">#23C5BF</div></div></div>
@@ -47,7 +47,7 @@
 </div>
 <h3>Print color</h3>
 <p>HEX and RGB are for screens. In print, use the CMYK values below, or the Pantone spot color where the job prints spot. Set each swatch explicitly; never let a layout program convert the hex for you.</p>
-<div style="overflow-x:auto;">
+<div style="overflow-x:auto;max-width:100%;min-width:0;">
 <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 12px;min-width:620px;">
   <thead><tr style="background:var(--navy);color:#fff;text-align:left;"><th style="padding:9px 10px;font-weight:500;">Color</th><th style="padding:9px 10px;font-weight:500;">HEX</th><th style="padding:9px 10px;font-weight:500;">RGB</th><th style="padding:9px 10px;font-weight:500;">CMYK (C, M, Y, K)</th><th style="padding:9px 10px;font-weight:500;">Pantone (closest)</th></tr></thead>
   <tbody>
@@ -65,7 +65,7 @@
   </tbody>
 </table>
 </div>
-<div class="principle"><div class="k">Test every print job</div><p>These CMYK values are starting points, not guarantees: results change with the printer, paper, coating, and color profile, and with the size of the piece (large fields of color, such as a navy backdrop or a trade-show wall, print differently from small type or a logo). <strong>Proof and adjust the values for each print job.</strong> The Pantone references are the closest spot-color matches; check them against a physical Pantone guide before production.</p></div>
+<div class="principle"><div class="k">Test every print job</div><p>These CMYK values are starting points, not guarantees. <strong>Test them per project: wait for a proof of the piece being printed, then adjust the values slightly as needed.</strong> The same CMYK values look different on coated and uncoated stock, on different paper colors, on different printers, and under matte or gloss coatings, and the size of the piece matters too (large fields of color, such as a navy backdrop or a trade-show wall, print differently from small type or a logo). The Pantone references are the closest spot-color matches; check them against a physical Pantone guide before production.</p></div>
 
 <h3>Color in composition</h3>
 <p>Beyond which colors we use, the <strong>proportion</strong> matters. In a finished layout, most of the surface is a neutral ground (white or navy); <strong>Rhapsody Blue leads the accents</strong>; the secondary colors (light blue, teal) support in smaller, specific moments; tertiary colors (purple, orange) are rare sparks or data-only. Aim for this balance rather than spreading color evenly across a layout.</p>
@@ -127,7 +127,7 @@
   <li><strong>Decorative graphics:</strong> contrast requirements do not apply only when the element conveys no information.</li>
 </ul>
 <h4>Approved color-pair matrix</h4>
-<div style="overflow-x:auto;">
+<div style="overflow-x:auto;max-width:100%;min-width:0;">
 <table style="width:100%;border-collapse:collapse;margin:12px 0 18px;font-size:13.5px;min-width:680px;">
 <thead><tr style="text-align:left;border-bottom:2px solid var(--lgray);"><th style="padding:9px 10px;">Foreground</th><th style="padding:9px 10px;">Background</th><th style="padding:9px 10px;">Status</th><th style="padding:9px 10px;">Usage</th></tr></thead>
 <tbody>
@@ -148,10 +148,10 @@
 
 <h3>Rhapsody Blue on navy</h3>
 <p>On navy (<code>#0B2C47</code>), set text in <strong>white</strong>, with <strong>light blue (#B4D8FF, about 9.7:1)</strong> as the accent at every size &mdash; the two-tone headline highlight, stat numerals, large quotes, labels, and small icons. This matches the website. Rhapsody Blue on navy (3.75:1) is kept for <strong>graphics</strong>: bars, blocks, big dots, and the primary pill, never for text.</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:760px;margin:8px 0 22px;">
-  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:#B4D8FF;font-weight:500;font-size:24px;line-height:1;">Connected</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;white-space:nowrap;">Large light blue &middot; 9.7:1</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
-  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:#B4D8FF;font-weight:400;font-size:12px;line-height:1.3;">Small caption in light blue</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;white-space:nowrap;">Small light blue &middot; 9.7:1</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
-  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--blue);font-weight:500;font-size:24px;line-height:1;">Connected</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;white-space:nowrap;">Rhapsody Blue text &middot; 3.75:1</span></div><span class="pfbadge fail" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10005; Off-brand</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin:8px 0 22px;">
+  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:#B4D8FF;font-weight:500;font-size:24px;line-height:1;">Connected</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;">Large light blue &middot; 9.7:1</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
+  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:#B4D8FF;font-weight:400;font-size:12px;line-height:1.3;">Small caption in light blue</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;">Small light blue &middot; 9.7:1</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
+  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--blue);font-weight:500;font-size:24px;line-height:1;">Connected</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;">Rhapsody Blue text &middot; 3.75:1</span></div><span class="pfbadge fail" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10005; Off-brand</span></div>
 </div>
 <h4>When to use which on navy</h4>
 <ul>
@@ -161,10 +161,10 @@
 </ul>
 <h3>Teal in small applications</h3>
 <p>Small teal elements on light grounds keep failing contrast checks, and the common &ldquo;fix&rdquo;&mdash;darkening the teal&mdash;creates an off-brand second teal. The rule that prevents it: <strong>when a teal application fails contrast, change the ground or the role, never the hex.</strong> Teal (#23C5BF) reads at <strong>6.7:1 on navy</strong> (passes at any size) and <strong>2.1:1 on white</strong> (fails at any size), so the ground decides the role.</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:760px;margin:8px 0 22px;">
-  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--teal);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.17em;text-transform:uppercase;">Automate the work</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;white-space:nowrap;">Teal type on navy &middot; 6.7:1</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
-  <div style="position:relative;background:#fff;border:1px solid var(--lgray);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--navy);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.17em;text-transform:uppercase;display:flex;align-items:center;gap:8px;"><span style="width:16px;height:3px;background:var(--teal);flex:none;"></span>Automate the work</div><div style="margin-top:9px;"><span style="color:var(--dgray);font-size:10px;white-space:nowrap;">Navy type + teal tick &middot; accent carries the color</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
-  <div style="position:relative;background:#fff;border:1px solid var(--lgray);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--teal);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.17em;text-transform:uppercase;">Automate the work</div><div style="margin-top:9px;"><span style="color:var(--dgray);font-size:10px;white-space:nowrap;">Teal type on white &middot; 2.1:1</span></div><span class="pfbadge fail" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10005; Fail</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:760px;margin:8px 0 22px;">
+  <div style="position:relative;background:var(--navy);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--teal);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.17em;text-transform:uppercase;">Automate the work</div><div style="margin-top:9px;"><span style="color:#B4D8FF;font-size:10px;">Teal type on navy &middot; 6.7:1</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
+  <div style="position:relative;background:#fff;border:1px solid var(--lgray);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--navy);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.17em;text-transform:uppercase;display:flex;align-items:center;gap:8px;"><span style="width:16px;height:3px;background:var(--teal);flex:none;"></span>Automate the work</div><div style="margin-top:9px;"><span style="color:var(--dgray);font-size:10px;">Navy type + teal tick &middot; accent carries the color</span></div><span class="pfbadge pass" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10003; Pass</span></div>
+  <div style="position:relative;background:#fff;border:1px solid var(--lgray);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;min-height:78px;"><div style="color:var(--teal);font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.17em;text-transform:uppercase;">Automate the work</div><div style="margin-top:9px;"><span style="color:var(--dgray);font-size:10px;">Teal type on white &middot; 2.1:1</span></div><span class="pfbadge fail" style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);">&#10005; Fail</span></div>
 </div>
 <h4>The rules</h4>
 <ul>

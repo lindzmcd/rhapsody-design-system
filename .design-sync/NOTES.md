@@ -323,3 +323,14 @@ then the index `project/design-system.json` last):
   thumbnails yet. The earlier 65-slide master (downloads/, Nov 3) is retired and removed; the old
   "blue-first" claim is dropped until the new template can be seen. Guide v49; design system v71 + v72
   (index). Skill zip rebuilt.
+- 2026-11-24: Social templates card from the owner's Adobe Express templates (PDF exports in
+  examples/social/express/): product release (2), webinar 1/2/3 speakers (2 each), event (page 1
+  preview via the Adobe connector), customer story (4), employee spotlight (3). Owner rulings: social
+  headlines are Title Case with no end period; the templates' dot and circle art is approved in those
+  templates only; a button only on product release. Webinar promo card retired (folded in).
+  Email signature card gained the three Express campaign banners (examples/email/). Colors card and
+  skill: test CMYK per project against a proof (stock, paper color, printer, coatings). Colors card
+  mobile overflow fixed (sample grids now wrap). Adobe connector: asset_search + asset_inline_preview
+  give ~600px page-1 previews; download_design is blocked by the Adobe account type. Design system is
+  near its 1,008-file cap, so each template is one contact sheet; removed the retired 65-slide .pptx
+  and the old webinar figure from it. Guide v50; design system v76 + index.

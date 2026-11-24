@@ -168,14 +168,14 @@
     {
       "path": "components/email-signature.html",
       "group": "7 · Patterns",
-      "subtitle": "Employee signature: wordmark, teal divider, name lockup, certifications",
+      "subtitle": "Employee signature: wordmark, teal divider, name lockup, certifications, campaign banners",
       "name": "Email signature"
     },
     {
-      "path": "components/webinar-promo.html",
+      "path": "components/social-templates.html",
       "group": "7 · Patterns",
-      "subtitle": "Event and webinar promotion for LinkedIn and other social feeds: navy, speakers in the blue ring, fluid dots",
-      "name": "Webinar promo (social)"
+      "subtitle": "The approved Adobe Express social templates: product release, webinar, event, customer story, employee spotlight",
+      "name": "Social templates"
     },
     {
       "path": "components/linkedin-banners.html",
