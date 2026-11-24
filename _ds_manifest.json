@@ -190,6 +190,12 @@
       "name": "Technical documents"
     },
     {
+      "path": "components/letterhead.html",
+      "group": "7 · Patterns",
+      "subtitle": "The default for letters and everyday Word documents: one letterhead per office, with Word templates",
+      "name": "Letterhead (Word)"
+    },
+    {
       "path": "components/ebooks.html",
       "group": "7 · Patterns",
       "subtitle": "Page system, color roles, components, and page order for Rhapsody ebooks",

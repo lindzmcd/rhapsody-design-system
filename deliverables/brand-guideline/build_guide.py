@@ -57,6 +57,7 @@ SP_MAP={
     "Light Devices": ONREQ,
     "Graphic Devices library": f"Graphic Devices library ({ONREQ})",
     "PPT Template folder": f"PPT Template folder ({ONREQ})",
+    "Letterhead folder": f"Letterhead folder ({ONREQ})",
     "Brand devices": INPKG,
     "Scattered Dots": INPKG,
 }

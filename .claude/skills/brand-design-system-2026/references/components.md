@@ -12,7 +12,7 @@ reusable classes; otherwise use these specs. All items link `tokens.css` and pul
 - Graphic devices: Devices at a glance · Dots · Fluid dot pattern · Big dot · Light devices
 - Iconography: Icon library
 - Imagery: Illustration · Photography & portraits
-- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · Social templates · PowerPoint · Technical documents · Ebooks
+- Patterns: Hero · Email · Email signature · Social · Product launch · Name lockup · Display ads · Social templates · PowerPoint · Letterhead (Word) · Technical documents · Ebooks
 - Reference: Quick corrections log
 
 ---
@@ -197,6 +197,16 @@ templates only. Links and option details: see SKILL.md and the Social templates 
 
 **Email signature banners.** Three layouts from the Express Email Signature template (event on blue,
 event on Aurora Glow, content with device mockup); one banner below the text signature, linked.
+
+**Letterhead (Word).** The default for letters and everyday Word documents. One letterhead per office,
+as .dotx (SharePoint > Marketing > Private > Graphic Design > Templates > Document Templates >
+Letterhead) and as .docx in this skill's `assets/letterhead/`: US Boston (One Beacon Street, Suite
+16400, Boston, MA 02108; +1 857-277-5678), UK Bristol (Suite 2, Ground Floor, Templeback, 10 Temple
+Back, Bristol, BS1 6FL), APAC Shanghai (Suite 06, 47th Floor, Hong Kong New World Tower, No. 300 Huai
+Hai Zhong Road, Huang Pu, Shanghai 200021). Use the sender's office, US Boston if unknown. Page 1:
+logo, tagline, hairline, office address footer. Page 2 on: small logo and hairline, "rhapsody.health ·
+Page N." Arial 11pt navy, US Letter, 1in side margins. Start from the file and replace the
+placeholders; never rebuild the header. Technical documents use their own templates.
 
 **Technical documents.** White papers, release notes, and customer security advisories share one
 system, modeled on the approved eMudhra advisories (`examples/technical-documents/`). Cover: white,

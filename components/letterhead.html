@@ -1,0 +1,59 @@
+<!-- @dsCard group="7 · Patterns" name="Letterhead (Word)" subtitle="The default for letters and everyday Word documents: one letterhead per office, with Word templates" width="960" height="2020" -->
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letterhead (Word)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  .spec td,.spec th{padding:9px 12px;text-align:left;vertical-align:top;}
+  .spec th{font-weight:500;}
+</style>
+</head><body>
+<div class="wrap">
+<div class="eyebrow">Templates</div>
+<h2>Letterhead (Word)</h2>
+<p>Every letter and everyday Word document from Rhapsody starts from the letterhead for the sender&rsquo;s office, whether someone builds it in Word or Claude creates it. There is one letterhead per office, as a Word template (.dotx) and a ready-to-edit document (.docx). Find them in the <a href="https://rhapsodyhealth.sharepoint.com/Shared%20Documents/Marketing/Private/Graphic%20Design/Templates/Document%20Templates/Letterhead">Letterhead folder</a> on SharePoint (Marketing &gt; Private &gt; Graphic Design &gt; Templates &gt; Document Templates &gt; Letterhead). They replace the 2023 and FY26 letterhead templates.</p>
+
+<figure style="margin:14px 0 6px;"><img src="../assets/figures/letterhead-pages.jpg" alt="Four letter pages. US Boston page 1: the Rhapsody logo top left, the tagline below it, a hairline, the letter placeholders, and the Boston address, phone, email, and website centered in the footer. Page 2: a smaller logo with a hairline at the top and 'rhapsody.health · Page 2' in the footer. UK Bristol and APAC Shanghai page 1 match the Boston page with their own office addresses in the footer." style="width:100%;display:block;border-radius:8px;"><figcaption class="caption" style="margin:6px 0 0;">Page 1 for each office, and page 2 and on, which are the same for every office.</figcaption></figure>
+
+<h3>Which template to use</h3>
+<table class="spec" style="width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 18px;">
+  <thead><tr style="background:var(--navy);color:#fff;"><th style="width:40%;">Document</th><th>Start from</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--lgray);"><td>Letters, memos, notices, cover letters, statements, and any other everyday Word document</td><td><strong>The letterhead</strong> for the sender&rsquo;s office</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td>White papers, release notes, and customer security advisories</td><td>The technical document templates (see Technical documents)</td></tr>
+    <tr><td>Designed marketing pieces, like ebooks</td><td>Their own pattern (see Ebooks)</td></tr>
+  </tbody>
+</table>
+
+<h3>Offices</h3>
+<table class="spec" style="width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 18px;">
+  <thead><tr style="background:var(--navy);color:#fff;"><th style="width:28%;">Template</th><th>Footer on page 1</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--lgray);"><td><strong>US Boston</strong></td><td>One Beacon Street, Suite 16400 &middot; Boston, MA 02108 &middot; +1 857-277-5678 &middot; marketing@rhapsody.health &middot; rhapsody.health</td></tr>
+    <tr style="background:#F7F9FB;border-bottom:1px solid var(--lgray);"><td><strong>UK Bristol</strong></td><td>Suite 2, Ground Floor, Templeback, 10 Temple Back &middot; Bristol, BS1 6FL, United Kingdom &middot; marketing@rhapsody.health &middot; rhapsody.health</td></tr>
+    <tr><td><strong>APAC Shanghai</strong></td><td>Suite 06, 47th Floor, Hong Kong New World Tower, No. 300 Huai Hai Zhong Road &middot; Huang Pu, Shanghai 200021, China &middot; +86 21 5116 2826 &middot; marketing@rhapsody.health &middot; rhapsody.health</td></tr>
+  </tbody>
+</table>
+<p>Use the sender&rsquo;s office. If it isn&rsquo;t known, use US Boston.</p>
+
+<h3>What&rsquo;s on the page</h3>
+<ul>
+  <li><strong>Page 1:</strong> the Rhapsody logo top left, the tagline &ldquo;Healthcare interoperability infrastructure for the agentic era&rdquo; below it, and a hairline. The footer holds the office address, phone, email, and website, centered, in gray with the email and website in Rhapsody Blue.</li>
+  <li><strong>Page 2 and on:</strong> a smaller logo with a hairline at the top, and &ldquo;rhapsody.health &middot; Page&nbsp;N&rdquo; in the footer. Word adds these on its own when the letter runs over.</li>
+  <li><strong>Letter:</strong> date, recipient block, salutation, body, sign-off, then name and title, all as bracketed placeholders.</li>
+  <li><strong>Type and page:</strong> Arial 11pt in Rhapsody Navy #0B2C47 (Arial so the letter looks the same on every computer), US Letter, 1in side margins.</li>
+</ul>
+
+<h3>Using it</h3>
+<ul>
+  <li><strong>In Word:</strong> open the template from the Letterhead folder (or from File &gt; New once it&rsquo;s in Rhapsody&rsquo;s Microsoft templates) and replace the bracketed placeholders.</li>
+  <li><strong>In Claude:</strong> start from the .docx for the sender&rsquo;s office and replace the placeholders; never rebuild the letterhead or draw a new header. Keep the page 1 and page 2 headers and footers as they are.</li>
+  <li>The logo appears once per page, in the header. Don&rsquo;t add it to the body or the signature.</li>
+  <li>Keep body text in the template&rsquo;s Arial 11pt navy. If a document needs headings, set them in Arial navy, not Word&rsquo;s default blue heading styles.</li>
+  <li>Delete any placeholder lines you don&rsquo;t use, like the recipient block in a memo. Don&rsquo;t leave brackets in a finished document.</li>
+</ul>
+<p class="caption">The templates are in <code>templates/word-documents/letterhead/</code> in the design system repository, and the .docx copies are in the brand skill.</p>
+</div>
+</body></html>

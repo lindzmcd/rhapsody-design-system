@@ -1,6 +1,6 @@
 ---
 name: brand-design-system-2026
-description: "The Rhapsody visual design system — the 2026 code-based brand identity (Rhapsody Brand VisID Guide, September 2026). Load this whenever you DESIGN or PRODUCE a visual Rhapsody asset: web/landing pages, HTML mockups, heroes, email templates and signatures, social graphics, display/banner ads, slide/PowerPoint visuals, white papers, release notes, security advisories and other technical documents (including Word templates), charts and data viz, icons, or any layout that must look on-brand. Also load when applying Rhapsody colors, typography, the logo, the dots device, the Aurora light device (glow), portrait treatments, or component styling, and when someone says 'make this on-brand,' 'use the design system,' 'use Rhapsody colors/fonts,' 'brand this layout,' 'build a landing page,' 'design an ad,' or wants to sync the design system in Claude Design (design-sync). This governs VISUAL output; for voice, copywriting, and product-naming/trademark rules use rhapsody-brand alongside it. When in doubt on anything visual and Rhapsody, use this skill."
+description: "The Rhapsody visual design system — the 2026 code-based brand identity (Rhapsody Brand VisID Guide, September 2026). Load this whenever you DESIGN or PRODUCE a visual Rhapsody asset: web/landing pages, HTML mockups, heroes, email templates and signatures, social graphics, display/banner ads, slide/PowerPoint visuals, letters and everyday Word documents (on the office letterhead), white papers, release notes, security advisories and other technical documents (including Word templates), charts and data viz, icons, or any layout that must look on-brand. Also load when applying Rhapsody colors, typography, the logo, the dots device, the Aurora light device (glow), portrait treatments, or component styling, and when someone says 'make this on-brand,' 'use the design system,' 'use Rhapsody colors/fonts,' 'brand this layout,' 'build a landing page,' 'design an ad,' or wants to sync the design system in Claude Design (design-sync). This governs VISUAL output; for voice, copywriting, and product-naming/trademark rules use rhapsody-brand alongside it. When in doubt on anything visual and Rhapsody, use this skill."
 ---
 
 # Rhapsody Brand Design System 2026
@@ -34,7 +34,7 @@ tokens.css            Design tokens (color, type) + reusable classes + logo imag
 assets/               Tightly-cropped logo/monogram rasters the cards reference inline
 brand/                Full downloadable logo package (SVG + EPS vectors, 300/72 dpi PNG/JPG)
 components/           One HTML preview per component/pattern — each becomes a card in Claude Design
-templates/            Claude Design canvas templates (e.g. feature-image/FeatureImage.dc.html)
+templates/            Claude Design canvas templates and Word templates (letterhead, technical documents)
 deliverables/         Shareable, self-contained outputs (brand guideline HTML/PDF, signature package)
 ```
 
@@ -438,6 +438,21 @@ Notable patterns:
   Rhapsody Blue ring, black and white allowed; **the templates' dot and circle art is approved there
   only** (never move it onto other work); **a button only on product release**; check at ~350px.
   Exports: `examples/social/express/`.
+- **Word documents and letters: start from the letterhead.** Any letter, memo, notice, cover
+  letter, statement, or other everyday Word document is built on the letterhead for the sender's
+  office, never on a blank document or a header you draw: `assets/letterhead/Rhapsody_Letterhead_US_Boston.docx`,
+  `…_UK_Bristol.docx`, or `…_APAC_Shanghai.docx` in this skill (US Boston when the office isn't known).
+  Copy the file, replace the bracketed placeholders (date, recipient block, salutation, body,
+  sign-off, name, title), delete unused lines, and leave no brackets. Keep its headers and footers
+  as they are: page 1 has the logo, the tagline "Healthcare interoperability infrastructure for the
+  agentic era," a hairline, and the office address footer; page 2 and on have a small logo with a
+  hairline and "rhapsody.health · Page N." Body text stays Arial 11pt Rhapsody Navy #0B2C47 (the
+  template's font, chosen so letters look the same on every computer); headings, if any, in Arial
+  navy, not Word's default blue heading styles; the logo once per page, in the header only. Load the
+  `docx` skill for the editing mechanics. Templates (.dotx) for Word: SharePoint > Marketing >
+  Private > Graphic Design > Templates > Document Templates > Letterhead (https://rhapsodyhealth.sharepoint.com/Shared%20Documents/Marketing/Private/Graphic%20Design/Templates/Document%20Templates/Letterhead). White papers,
+  release notes, and security advisories use the technical document templates below instead. See
+  the Letterhead (Word) card.
 - **Technical documents** (white papers, release notes, customer security advisories) follow the
   approved eMudhra advisories (`examples/technical-documents/`): white cover with the logo top left,
   the white-ground fluid dots (Rhapsody Blue) top right, a mono eyebrow naming the type, a two-tone

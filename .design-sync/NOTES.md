@@ -334,3 +334,14 @@ then the index `project/design-system.json` last):
   give ~600px page-1 previews; download_design is blocked by the Adobe account type. Design system is
   near its 1,008-file cap, so each template is one contact sheet; removed the retired 65-slide .pptx
   and the old webinar figure from it. Guide v50; design system v76 + index.
+- 2026-11-24 (later): Letterhead (Word) card from the owner's new letterhead (US Boston, UK Bristol,
+  APAC Shanghai; .dotx as supplied plus .docx copies made by switching only the package content type)
+  in templates/word-documents/letterhead/ and in the skill's assets/letterhead/ so Claude can build
+  letters from the real file. Rule: every letter and everyday Word document starts from the sender's
+  office letterhead (US Boston if unknown); technical documents keep their own templates. Master
+  folder: SharePoint > Marketing > Private > Graphic Design > Templates > Document Templates >
+  Letterhead (also holds an Australia Sydney letterhead the owner didn't send). Flags for the owner:
+  all three are US Letter (UK and APAC usually use A4); the templates' Heading 1/2 styles are Word's
+  default blue #2E74B5 (the card says set headings in Arial navy); old 2023 letterheads are still in
+  the Organization Assets Library (Rhapsody Office Templates), which feeds Word's File > New. Guide
+  v51; design system v78 + v79 (index). Skill zip rebuilt.
