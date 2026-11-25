@@ -11,6 +11,26 @@ logo, graphic devices, components, and layout patterns. It is the September 2026
 
 **Company name is always "Rhapsody" — never "Rhapsody Health."**
 
+## REQUIRED: the all-white logo on every dark background
+
+This is a requirement, not a preference, in every format: web pages, document and report
+headers and footers, slides, social graphics, email, ads, letters, and anything else.
+
+- **Navy, Aurora Glow over navy, Rhapsody Blue, a dark photo, or any other dark background: the
+  all-white logo** (`assets/logo-on-dark.svg` or `.png`) and the all-white R monogram
+  (`assets/monogram-on-dark.svg` or `.png`). Every size, every time.
+- **White or light backgrounds: the full-color logo** (`assets/logo-on-light.svg` or `.png`: navy
+  bar, blue wordmark) or one-color navy (`assets/logo-one-color-navy.png`).
+- **Never** put the full-color logo, or any version with a blue wordmark, on a dark background.
+  Its navy bar disappears and the blue letters lose contrast. A navy header band with a blue
+  wordmark is the most common mistake: it is always wrong.
+- **In HTML,** give every dark band a ground class (`.ground-navy`, `.ground-blue`,
+  `.ground-aurora`, or `data-ground="dark"`). The tokens.css rules then turn any Rhapsody logo
+  inside it white automatically. Still pick the white file yourself; the CSS is a safety net.
+- **Before you deliver, check every logo:** find each one, look at what is directly behind it, and
+  use the all-white logo wherever that background is dark. Check the header and footer on every
+  page of a document or deck, not just the first.
+
 ## What this skill is, and how it relates to `rhapsody-brand`
 
 - **This skill (`brand-design-system-2026`)** governs how Rhapsody **looks** — anything you design
@@ -205,15 +225,14 @@ Bundled art (in this skill's `assets/`, mirrored from the repo):
 
 | File | Use on |
 |---|---|
-| `logo-primary.png` / `logo-primary.svg` | Light backgrounds — navy bar + blue wordmark (the primary lockup) |
-| `logo-white.png` | **Navy, Aurora over navy, and Rhapsody Blue backgrounds — always the all-white logo** |
-| `logo-blueline.png` | Blue wordmark + white line — **not used on navy or Aurora** (Nov 2026) |
-| `logo-black.png` | One-color navy/black on light backgrounds |
-| `monogram-blue-navy.png` | The "R" monogram on light — small spaces only (favicon, avatar, merch) |
-| `brand/Rhapsody Monograms/white monogram R.svg` (repo) | The R monogram on navy, Aurora over navy, and Rhapsody Blue — always all white |
+| `logo-on-light.svg` / `logo-on-light.png` | White and light backgrounds only: navy bar + blue wordmark (the full-color logo) |
+| `logo-on-dark.svg` / `logo-on-dark.png` | **Navy, Aurora over navy, Rhapsody Blue, and every other dark background: the all-white logo, always** |
+| `logo-one-color-navy.png` | One-color navy, on light backgrounds |
+| `monogram-on-light.png` | The R monogram on light backgrounds; small spaces only (favicon, avatar, merch) |
+| `monogram-on-dark.svg` / `monogram-on-dark.png` | The R monogram on navy, Aurora over navy, and Rhapsody Blue: always all white |
 
 In HTML the repo also exposes these as background classes via `tokens.css`: `.logo-i` plus
-`.logo-bb` (primary), `.logo-blk`, `.logo-wht` (all white: navy, Aurora, Rhapsody Blue), `.logo-blw` (not for navy or Aurora).
+`.logo-bb` (full color, light only), `.logo-blk` (one-color navy), `.logo-wht` (all white: navy, Aurora, Rhapsody Blue). Inside a dark ground class (`.ground-navy`, `.ground-blue`, `.ground-aurora`, `[data-ground="dark"]`) any logo turns white automatically. The blue wordmark + white line version is retired.
 
 Rules:
 - **Light ground → navy-bar + blue wordmark.** **Navy, Aurora glow over navy, or Rhapsody Blue → the
@@ -544,7 +563,7 @@ feature bands is the Rhapsody Axon mark, the product's own visual, not Teddie.
   grounds teal appears only as an accent (tick / accent line / seam) beside navy text
 □ Two-tone headline = light blue on navy / Rhapsody Blue on white; never on a blue ground; no Rhapsody Blue text on navy
 □ If it didn't fit, the copy was shortened — the type was not crushed
-□ Logo: navy-bar/blue on light; ALL WHITE on navy, Aurora over navy, and Rhapsody Blue; clear space = X (height of the R) on every side
+□ Logo checked one by one: ALL WHITE on navy, Aurora over navy, Rhapsody Blue, and any dark background or photo (headers and footers on every page included); full color only on white or light; clear space = X (height of the R) on every side
 □ Logo not recolored, stretched, rotated, shadowed, or overlaid
 □ Corners: squared top, rounded bottom on modules; pills reserved for CTAs
 □ At most ONE rounded-bottom container per page; lists/specs use bullets, steps, or tables, not boxes

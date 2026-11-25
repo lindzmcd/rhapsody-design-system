@@ -9,19 +9,19 @@ WHAT CHANGED
   black monogram R           ->  navy monogram R
   black blue monogram R      ->  navy blue monogram R
 
-DARK-BACKGROUND SETS (added)
-  Rhapsody logo - blue-white   blue wordmark + WHITE line accent (the 2-color dark logo)
-  Rhapsody logo - white        one-color all-white wordmark
-  blue white monogram R        blue R + white line accent
-  white monogram R             one-color all-white R
-  These are for navy/dark backgrounds. PNGs are transparent; JPGs sit on a
-  navy (#0B2C47) background so the white parts are visible.
+REQUIRED: THE ALL-WHITE LOGO ON DARK BACKGROUNDS (November 2026)
+  On navy, Aurora Glow over navy, Rhapsody Blue, a dark photo, or any other dark
+  background, the logo is ALL WHITE, at every size and in every format:
+    Rhapsody logo - white      one-color all-white wordmark
+    white monogram R           one-color all-white R
+  The full-color logo (Rhapsody logo - blue-navy, navy bar + blue wordmark) and
+  the navy monogram go on white and light backgrounds only.
+  PNGs are transparent; the white JPGs sit on navy (#0B2C47) so they are visible.
 
-DARK LOGO SIZE RULE
-  Use the blue-white (blue wordmark + white line) logo on dark ONLY when it is
-  large enough for the blue to stay legible and vibrant, about 240px / 2.25in
-  wide and up. Below that size, use the all-white logo instead. On light
-  backgrounds keep using blue-navy (primary) or one-color navy.
+RETIRED
+  Rhapsody logo - blue-white (blue wordmark + white line) and blue white monogram R
+  are no longer used on navy, Aurora, or any dark background, at any size. They
+  are kept in "_Retired - do not use" for reference only.
 
 SOURCE
   Recolored from your Illustrator EPS masters. Vectors (.svg/.eps) were rebuilt
@@ -41,8 +41,7 @@ MONOGRAMS
   -72.png/.jpg      128x128 px  (favicon / web)
 
 PRINT COLOR NOTE
-  No official Pantone/CMYK navy was provided, so the EPS uses RGB #0B2C47.
-  If you have the brand's official CMYK or Pantone navy, swap it in the .eps
-  before print use.
+  The EPS uses RGB #0B2C47. CMYK and Pantone values for the palette are on the
+  Colors card of the brand guideline; proof and adjust them for each print job.
 
 Colors: Rhapsody Navy #0B2C47  |  Rhapsody Blue #1A81F4

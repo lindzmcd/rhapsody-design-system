@@ -1,4 +1,4 @@
-<!-- @dsCard group="2 · Brand" name="Logo & wordmark" subtitle="Navy-bar/blue on light, all white on navy, Aurora, and Rhapsody Blue; monogram; clear space" width="960" height="1700" -->
+<!-- @dsCard group="2 · Brand" name="Logo & wordmark" subtitle="Navy-bar/blue on light, all white on navy, Aurora, and Rhapsody Blue; monogram; clear space" width="960" height="3080" -->
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Logo</title>
@@ -10,6 +10,13 @@
 <h2>Logo</h2>
 <p>The Rhapsody wordmark is the core of the identity. Lead with the primary version wherever possible; the alternates exist for dark backgrounds, one-color use, and tight spaces.</p>
 
+<div class="principle"><div class="k">Required</div><p><strong>On navy, Aurora Glow over navy, Rhapsody Blue, a dark photo, or any other dark background, the logo is all white.</strong> Every size, every format: web pages, document headers and footers, slides, social, email, ads, and letters. The full-color logo (navy bar, blue wordmark) goes on white and light backgrounds only. Before anything ships, check each logo against what is directly behind it, on every page.</p></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:6px 0 18px;">
+  <div><div style="background:var(--navy);border-radius:10px;padding:22px 20px;display:flex;align-items:center;border-bottom:4px solid var(--teal);"><span class="logo-i logo-bb" style="width:62%;aspect-ratio:6.897;" role="img" aria-label="Full-color logo on a navy header band: the navy bar disappears"></span></div><div style="font-size:13px;margin-top:8px;"><span class="pfbadge fail" style="font-size:10px;padding:2px 9px;">&#10005; Never</span> The full-color logo on a navy header. The navy bar disappears and the blue letters lose contrast.</div></div>
+  <div><div style="background:var(--navy);border-radius:10px;padding:22px 20px;display:flex;align-items:center;border-bottom:4px solid var(--teal);"><span class="logo-i logo-wht" style="width:62%;aspect-ratio:6.897;" role="img" aria-label="All-white logo on a navy header band"></span></div><div style="font-size:13px;margin-top:8px;"><span class="pfbadge pass" style="font-size:10px;padding:2px 9px;">&#10003; Always</span> The all-white logo on the same header.</div></div>
+</div>
+<p class="caption">In HTML, give every dark band a ground class (<code>.ground-navy</code>, <code>.ground-blue</code>, <code>.ground-aurora</code>, or <code>data-ground="dark"</code>). tokens.css then renders any Rhapsody logo inside it all white, as a safety net.</p>
+
 <h3>Variations</h3>
 <p>Four versions across light and dark backgrounds: the full-color wordmark and a one-color version of each.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;margin:18px 0 6px;max-width:760px;">
@@ -18,7 +25,7 @@
   <div class="lv"><div class="frame light"><span class="logo-i logo-bb" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="Primary logo, navy bar and blue wordmark on light"></span></div><div class="lab"><strong>Primary: navy bar, blue wordmark.</strong> The bar is Rhapsody Navy (#0B2C47), not black.</div></div>
   <div class="lv"><div class="frame dark"><span class="logo-i logo-wht" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="All-white logo on navy"></span></div><div class="lab"><strong>All white.</strong> The logo on <strong>navy</strong>, on <strong>Aurora over navy</strong>, and on Rhapsody Blue, at every size.</div></div>
   <div class="lv"><div class="frame light"><span class="logo-i logo-blk" style="width:88%;aspect-ratio:6.897;" role="img" aria-label="One-color navy logo"></span></div><div class="lab">One-color navy, for light or limited-color use.</div></div>
-  <div class="lv"><div class="frame dark"><span class="logo-i logo-blw" style="width:88%;aspect-ratio:6.897;opacity:.45;" role="img" aria-label="Blue wordmark and white line logo, not used on navy"></span></div><div class="lab"><strong>Not on navy: blue wordmark, white line.</strong> No longer used on navy or Aurora backgrounds, at any size (November 2026). Use the all-white logo.</div></div>
+  <div class="lv"><div class="frame dark"><span class="logo-i logo-blw" style="width:88%;aspect-ratio:6.897;opacity:.45;" role="img" aria-label="Blue wordmark and white line logo, not used on navy"></span></div><div class="lab"><strong>Retired: blue wordmark, white line.</strong> Not used on navy, Aurora, or any dark background, at any size (November 2026). Use the all-white logo.</div></div>
 </div>
 
 <h3>Monogram</h3>

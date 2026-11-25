@@ -48,8 +48,10 @@ Pills are CTA-only. Keep the corner treatment consistent across a page/deck.
 
 ## Brand
 
-**Logo & wordmark.** See SKILL.md §3. Primary = navy bar + blue wordmark (light grounds). Navy, Aurora over
-navy, and Rhapsody Blue = the all-white logo at every size (never a blue-wordmark version there). Monogram for tight spaces only (navy-and-blue on light, all white on navy, Aurora, and Rhapsody Blue). Clear space =
+**Logo & wordmark.** See the REQUIRED block at the top of SKILL.md and §3. Full color (navy bar + blue
+wordmark, `assets/logo-on-light.*`) on white and light only. Navy, Aurora over navy, Rhapsody Blue, and any
+dark background or photo = the all-white logo (`assets/logo-on-dark.*`) at every size, in every format, on
+every page; check each logo before delivering. Monogram for tight spaces only (navy-and-blue on light, all white on navy, Aurora, and Rhapsody Blue). Clear space =
 the "R" mark on all sides. Product & co-brand lockups keep "Rhapsody" on the mark. Never modify,
 recolor, rotate, or overlay.
 

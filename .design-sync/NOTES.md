@@ -345,3 +345,15 @@ then the index `project/design-system.json` last):
   default blue #2E74B5 (the card says set headings in Arial navy); old 2023 letterheads are still in
   the Organization Assets Library (Rhapsody Office Templates), which feeds Word's File > New. Guide
   v51; design system v78 + v79 (index). Skill zip rebuilt.
+- 2026-11-25: owner saw Claude output with the full-color logo (blue wordmark, navy bar) on a navy
+  header and asked to make the all-white logo a requirement. Done in layers: a REQUIRED block at the
+  top of SKILL.md and of the design system README (plus a per-logo pre-delivery check); skill logo
+  files renamed by background (logo-on-light, logo-on-dark incl. a white SVG, logo-one-color-navy,
+  monogram-on-light/-on-dark) and the blue-line logo dropped from the skill; tokens.css gains dark
+  ground classes (.ground-navy/.ground-blue/.ground-aurora/[data-ground="dark"]) that force any
+  Rhapsody logo inside them white (background swap for logo classes, brightness(0) invert(1) for logo
+  images), tested in Chromium; Logo card gets a Required box with a never/always header demo. The
+  logo package README no longer calls blue-white "the 2-color dark logo"; blue-white logo and
+  blue-white monogram moved to brand/_Retired - do not use/ (and in the external package). Flag: the
+  HCITT display ads (deliverables/hcitt-display-ads) use the blue-white logo. Guide v52; design system
+  v82 + index.

@@ -125,11 +125,19 @@ a{color:var(--blue);}
 /* Logo & shared image classes — point to extracted brand assets.
    url() resolves relative to this stylesheet (repo root). */
 .logo-i{display:inline-block;background-repeat:no-repeat;background-size:contain;background-position:left center;}
-.logo-bb{background-image:url(assets/logo-primary.png);}     /* navy bar + blue wordmark, light bg */
-.logo-blk{background-image:url(assets/logo-black.png);}      /* one-color navy/black */
-.logo-wht{background-image:url(assets/logo-white.png);}      /* one-color white */
-.logo-a{background-image:url(assets/logo-clearspace.png);}   /* mark for clear-space art */
-.logo-blw{background-image:url(assets/logo-blueline.png);}   /* blue wordmark + white line, dark bg (large only) */
+.logo-bb{background-image:url(logo-on-light.png);}     /* navy bar + blue wordmark, light bg */
+.logo-blk{background-image:url(logo-one-color-navy.png);}      /* one-color navy/black */
+.logo-wht{background-image:url(logo-on-dark.png);}      /* one-color white */
+
+/* Dark grounds. Put one of these on every navy, Rhapsody Blue, or Aurora band.
+   REQUIRED logo rule: every Rhapsody logo on a dark background is ALL WHITE. These rules are the
+   safety net: inside a dark ground, the full-color and navy logo classes and any Rhapsody logo
+   image (or element marked .rh-logo) render all white automatically. */
+.ground-navy{background-color:var(--navy);color:#fff;}
+.ground-blue{background-color:var(--blue);color:#fff;}
+.ground-aurora{background-color:var(--navy);color:#fff;}
+:is(.ground-navy,.ground-blue,.ground-aurora,[data-ground="dark"]) :is(.logo-bb,.logo-blk){background-image:url(logo-on-dark.png)!important;}
+:is(.ground-navy,.ground-blue,.ground-aurora,[data-ground="dark"]) :is(img.rh-logo,svg.rh-logo,.rh-logo img,.rh-logo svg,img[src*="logo-primary"],img[src*="logo-on-light"],img[src*="logo-black"],img[src*="logo-one-color"],img[src*="logo_blue-navy"],img[src*="logo_navy"],img[src*="logo-blueline"],img[src*="logo_blue-white"]){filter:brightness(0) invert(1)!important;}
 
 .dupimg0{background-image:url(assets/dupimg0.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:360/360;display:block;}
 .dupimg2{background-image:url(assets/dupimg2.jpg);background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:600/600;display:block;}

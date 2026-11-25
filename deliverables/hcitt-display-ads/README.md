@@ -40,7 +40,7 @@ copy, which is what buys the extra room.
   name-only derivative in `source/axon-lockup-name-only.svg`.
 
 The supplied lockup's RHAPSODY is the genuine official wordmark: its path data is
-byte-identical to `brand/Rhapsody logo - blue-white/Rhapsody_logo_blue-white.svg`
+byte-identical to `brand/_Retired - do not use/Rhapsody logo - blue-white/Rhapsody_logo_blue-white.svg`
 under a uniform `scale(4.2918)`, and its ink box is 232.22 × 24.00, aspect 9.6758,
 matching all three official vectors exactly. Nothing is stretched or recolored.
 
